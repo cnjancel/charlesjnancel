@@ -1,0 +1,979 @@
+name,NetWorth_billions,Country,Source,Rank,Age,Industry,company_founded,company_relationship,company_type,demographics_gender,location_region,wealth_type,wealth_how_category,wealth_how_industry,wealth_how_inherited
+Jeff Bezos,177,United States,Amazon,1,57,Technology,1995,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Elon Musk,151,United States,"Tesla, SpaceX",2,49,Automotive,1999,investor/founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Bill Gates,124,United States,Microsoft,4,65,Technology,1975,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Mark Zuckerberg,97,United States,Facebook,5,36,Technology,2004,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Warren Buffett,96,United States,Berkshire Hathaway,6,90,Finance & Investments,1839,founder,aquired,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Larry Ellison,93,United States,software,7,76,Technology,1977,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Larry Page,91.5,United States,Google,8,48,Technology,1998,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Sergey Brin,89,United States,Google,9,47,Technology,1998,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Mukesh Ambani,84.5,India,diversified,10,63,Diversified,1980,relation,new,male,South Asia,inherited,Resource Related,Energy,not inherited
+Amancio Ortega,77,Spain,Zara,11,85,Fashion & Retail,1975,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Steve Ballmer,68.7,United States,Microsoft,14,65,Technology,1975,CEO,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Ma Huateng,65.8,China,internet media,15,49,Technology,1998,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Alice Walton,61.8,United States,Walmart,17,71,Fashion & Retail,1962,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Jim Walton,60.2,United States,Walmart,18,72,Fashion & Retail,1962,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Michael Bloomberg,59,United States,Bloomberg LP,20,79,Media & Entertainment,1981,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Daniel Gilbert,51.9,United States,Quicken Loans,23,59,Finance & Investments,1985,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Jack Ma,48.4,China,e-commerce,26,56,Technology,1999,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Charles Koch,46.4,United States,Koch Industries,27,85,Diversified,1940,relation,new,male,North America,inherited,Financial,Diversified financial,father
+Masayoshi Son,45.4,Japan,"internet, telecom",29,63,Telecom,1981,founder/CEO,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Michael Dell,45.1,United States,Dell computers,30,56,Technology,1984,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Wang Wei,39,China,package delivery,35,50,Service,1993,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+He Xiangjian,37.7,China,home appliances,37,78,Manufacturing,1968,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Dieter Schwarz,36.9,Germany,retail,38,81,Fashion & Retail,1930,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Alain Wertheimer,34.5,France,Chanel,41,72,Fashion & Retail,1909,relation,new,male,Europe,inherited,Traded Sectors,Consumer,3rd generation
+Gerard Wertheimer,34.5,France,Chanel,41,70,Fashion & Retail,1909,relation,new,male,Europe,inherited,Traded Sectors,Consumer,3rd generation
+Li Ka-shing,33.7,Hong Kong,diversified,43,92,Diversified,1950,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Len Blavatnik,32,United States,"music, chemicals",46,63,Diversified,1990,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Lee Shau Kee,31.7,Hong Kong,real estate,47,93,Real Estate,1976,founder/chairman,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Jacqueline Mars,31.3,United States,"candy, pet food",48,81,Food & Beverage,1911,relation,new,female,North America,inherited,Traded Sectors,Consumer,3rd generation
+John Mars,31.3,United States,"candy, pet food",48,85,Food & Beverage,1911,relation,new,male,North America,inherited,Traded Sectors,Consumer,3rd generation
+Hui Ka Yan,27.7,China,real estate,53,62,Real Estate,1997,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Susanne Klatten,27.7,Germany,"BMW, pharmaceuticals",53,58,Automotive,1916,relation,new,female,Europe,inherited,Traded Sectors,Consumer,father
+Vladimir Potanin,27,Russia,metals,55,60,Metals & Mining,1991,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Dietrich Mateschitz,26.9,Austria,Red Bull,56,76,Food & Beverage,1984,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Pang Kang,26.4,China,soy sauce,57,65,Food & Beverage,1720,chairman,new,male,East Asia,executive,Traded Sectors,Consumer,not inherited
+Klaus-Michael Kuehne,26.3,Germany,shipping,58,83,Logistics,1890,relation,new,male,Europe,inherited,Traded Sectors,Other,3rd generation
+Vladimir Lisin,26.2,Russia,"steel, transport",59,64,Metals & Mining,1992,owner,aquired,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Takemitsu Takizaki,25.8,Japan,sensors,62,75,Manufacturing,1974,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Leonard Lauder,25.5,United States,Estee Lauder,64,88,Fashion & Retail,1946,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Thomas Peterffy,25,United States,discount brokerage,65,76,Finance & Investments,1977,"founder, chairman, ceo",new,male,North America,self-made finance,Financial,Money Management,not inherited
+Vagit Alekperov,24.9,Russia,oil,66,70,Energy,1990,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Leonid Mikhelson,24.9,Russia,"gas, chemicals",66,65,Energy,1994,chairman of management committee,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Gina Rinehart,23.6,Australia,mining,70,67,Metals & Mining,1955,relation,new,female,North America,inherited,Resource Related,Mining and metals,father
+Shiv Nadar,23.5,India,software services,71,75,Technology,1976,founder,new,male,South Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Zhang Zhidong,23.4,China,internet media,73,49,Technology,1998,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Lei Jun,23,China,smartphones,75,51,Technology,2010,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Gennady Timchenko,22,Russia,"oil, gas",78,68,Energy,2000,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Stephen Schwarzman,21.9,United States,investments,79,74,Finance & Investments,1985,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Goh Cheng Liang,21.7,Singapore,paints,80,93,Manufacturing,1962,chairman,joint venture,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Stefan Quandt,21.6,Germany,BMW,81,54,Automotive,1916,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Pierre Omidyar,21.4,United States,"eBay, PayPal",83,53,Technology,1995,founder and chairman,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Stefan Persson,21.3,Sweden,H&M,84,73,Fashion & Retail,1947,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Abigail Johnson,20.9,United States,money management,85,59,Finance & Investments,1946,relation,new,female,North America,inherited,Financial,Money Management,3rd generation
+Andrew Forrest,20.4,Australia,mining,87,59,Metals & Mining,2003,Chairman,new,male,North America,privatized and resources,Resource Related,Mining and metals,not inherited
+Ray Dalio,20.3,United States,hedge funds,88,71,Finance & Investments,1975,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Michael Hartono,19.7,Indonesia,"banking, tobacco",89,81,Manufacturing,1951,relation,new,male,East Asia,executive,Traded Sectors,Consumer,not inherited
+Li Shufu,19.7,China,automobiles,89,57,Automotive,1986,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Emmanuel Besnier,19.1,France,cheese,94,50,Food & Beverage,1933,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Eric Schmidt,18.9,United States,Google,96,65,Technology,1998,executive chairman,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Sun Piaoyang,18.9,China,pharmaceuticals,96,62,Healthcare,1970,chairman,new,male,East Asia,executive,New Sectors,Technology-Medical,not inherited
+Alisher Usmanov,18.4,Russia,"steel, telecom, investments",99,67,Metals & Mining,1999,founder,new,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Robert Pera,18.3,United States,wireless networking gear,100,43,Technology,2005,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Wu Yajun,18.3,China,real estate,100,57,Real Estate,1995,founder,new,female,East Asia,privatized and resources,Financial,Real Estate,not inherited
+Dhanin Chearavanont,18.1,Thailand,diversified,103,81,Diversified,1921,relation,new,male,East Asia,inherited,Traded Sectors,Consumer,father
+Peter Woo,18,Hong Kong,real estate,104,74,Real Estate,1955,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+Chen Bang,17.9,China,hospitals,105,55,Healthcare,0,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Andrey Melnichenko,17.9,Russia,"coal, fertilizers",105,49,Energy,1993,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Dustin Moskovitz,17.8,United States,Facebook,107,36,Technology,2004,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Donald Newhouse,17.6,United States,media,109,91,Media & Entertainment,1909,relation,new,male,North America,inherited,Non-Traded Sectors,Media,father
+Petr Kellner,17.5,Czechia,"finance, telecommunications",110,56,Finance & Investments,1991,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Lee Man Tat,17.4,Hong Kong,food,111,91,Food & Beverage,1888,relation,new,male,East Asia,inherited,Traded Sectors,Consumer,3rd generation
+James Ratcliffe,17,United Kingdom,chemicals,113,68,Manufacturing,1998,founder,new,male,Europe,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Wang Chuanfu,16.3,China,"batteries, automobiles",118,55,Automotive,1995,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Steve Cohen,16,United States,hedge funds,119,64,Finance & Investments,1992,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Ken Griffin,16,United States,hedge funds,119,52,Finance & Investments,1990,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Uday Kotak,15.9,India,banking,121,62,Finance & Investments,1985,founder,new,male,South Asia,self-made finance,Financial,Money Management,not inherited
+Carl Icahn,15.8,United States,investments,124,85,Finance & Investments,1968,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Mikhail Fridman,15.5,Russia,"oil, banking, telecom",128,56,Energy,1989,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Donald Bren,15.3,United States,real estate,132,88,Real Estate,1864,owner,aquired,male,North America,self-made finance,Financial,Real Estate,not inherited
+Lakshmi Mittal,14.9,India,steel,133,70,Metals & Mining,1989,founder,new,male,South Asia,inherited,Resource Related,Non-consumer industrial,father
+Georg Schaeffler,14.9,Germany,auto parts,133,56,Automotive,1946,relation,new,male,Europe,inherited,Traded Sectors,Non-consumer industrial,father
+Wang Jianlin,14.8,China,real estate,137,66,Real Estate,1988,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Robin Li,14.7,China,internet search,138,52,Technology,2000,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Pallonji Mistry,14.6,Ireland,construction,140,91,Construction & Engineering,1865,Relation,new,male,Europe,inherited,Non-Traded Sectors,Constrution,father
+Eduardo Saverin,14.6,Brazil,Facebook,140,39,Technology,2004,founder,new,male,Latin America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Roman Abramovich,14.5,Russia,"steel, investments",142,54,Diversified,1988,founder,new,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+David Tepper,14.5,United States,hedge funds,142,63,Finance & Investments,1993,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+"John Menard, Jr.",14.2,United States,home improvement stores,145,81,Fashion & Retail,1972,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Liang Wengen,14.1,China,construction equipment,148,64,Manufacturing,1989,founder,new,male,East Asia,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Finn Rausing,13.9,Sweden,packaging,151,66,Food & Beverage,1951,relation,new,male,Europe,inherited,0,Other,3rd generation
+Jorn Rausing,13.9,Sweden,packaging,151,61,Food & Beverage,1951,relation,new,male,Europe,inherited,0,Other,3rd generation
+Kirsten Rausing,13.9,Sweden,packaging,151,68,Food & Beverage,1951,relation,new,female,Europe,inherited,Traded Sectors,Consumer,3rd generation
+Joseph Lau,13.6,Hong Kong,real estate,155,69,Real Estate,1978,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+David Duffield,13.5,United States,business software,156,80,Technology,1987,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Charoen Sirivadhanabhakdi,13.5,Thailand,"alcohol, real estate",156,76,Food & Beverage,1941,founder,privatization,male,East Asia,privatized and resources,Traded Sectors,Consumer,not inherited
+Robert & Philip Ng,13.3,Singapore,real estate,158,69,Real Estate,1970,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+Anders Holch Povlsen,13.2,Denmark,fashion retail,161,48,Fashion & Retail,1975,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Wang Wenyin,13.2,China,"mining, copper products",161,53,Metals & Mining,1994,owner,new,male,East Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Michael Platt,13,United Kingdom,hedge funds,164,53,Finance & Investments,2000,founder,new,male,Europe,self-made finance,Financial,Hedge funds,not inherited
+Kumar Birla,12.8,India,commodities,168,53,Diversified,1857,relation,new,male,South Asia,inherited,Resource Related,Mining and metals,4th generation
+Cyrus Poonawalla,12.7,India,vaccines,169,79,Healthcare,1966,founder,new,male,South Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Robert Kuok,12.6,Malaysia,"palm oil, shipping, property",171,97,Diversified,1971,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Hank & Doug Meijer,12.6,United States,supermarkets,171,66,Fashion & Retail,1934,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",3rd generation
+Jack Dorsey,12.5,United States,"Twitter, Square",173,44,Technology,2006,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+John Doerr,12.4,United States,venture capital,177,69,Technology,1972,employee,new,male,North America,self-made finance,Financial,Venture Capital,not inherited
+Gordon Moore,12.1,United States,Intel,182,92,Technology,1968,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Patrick Drahi,11.8,France,telecom,186,57,Telecom,1994,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Joseph Tsai,11.6,Canada,e-commerce,189,57,Technology,1999,founder/vice chairman,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Aliko Dangote,11.5,Nigeria,"cement, sugar",191,63,Manufacturing,1981,founder and CEO,new,male,Sub-Saharan Africa,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Marcel Herrmann Telles,11.5,Brazil,beer,191,71,Food & Beverage,1885,founder,aquired,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Mikhail Prokhorov,11.4,Russia,investments,193,55,Finance & Investments,1993,owner,privatization,male,Europe,privatized and resources,Financial,Diversified financial,not inherited
+Viktor Rashnikov,11.2,Russia,steel,195,72,Manufacturing,1925,general director,privatization,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Harry Triguboff,11.2,Australia,real estate,195,88,Real Estate,1968,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Eyal Ofer,11.1,Israel,"real estate, shipping",197,70,Diversified,1950,relation,new,male,Middle East/North Africa,inherited,Financial,Real Estate,father
+Luis Carlos Sarmiento,11,Colombia,banking,200,88,Finance & Investments,1971,founder,aquired,male,Latin America,self-made finance,Financial,Money Management,not inherited
+Dilip Shanghvi,10.9,India,pharmaceuticals,203,65,Healthcare,1983,founder,new,male,South Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Anthony Pratt,10.8,Australia,manufacturing,205,60,Manufacturing,1948,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Wang Laisheng,10.8,China,electronics components,205,56,Technology,2004,owner,new,male,East Asia,executive,New Sectors,Technology-Computer,not inherited
+Wang Laichun,10.7,China,electronics components,208,53,Technology,2004,chairwomen,new,female,East Asia,executive,New Sectors,Technology-Computer,not inherited
+Chen Jianhua,10.6,China,chemicals,210,50,Manufacturing,2002,chairman,new,male,East Asia,executive,Traded Sectors,Non-consumer industrial,not inherited
+Charles Schwab,10.6,United States,discount brokerage,210,83,Finance & Investments,1971,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Cai Kui,10.4,China,real estate,216,58,Real Estate,1995,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+John Fredriksen,10.4,Cyprus,shipping,216,76,Logistics,1985,founder,aquired,male,Europe,founder non-finance,Traded Sectors,Other,not inherited
+"Chase Coleman, III.",10.3,United States,investments,219,45,Finance & Investments,2000,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Hui Wing Mau,10.3,Hong Kong,real estate,219,70,Real Estate,1988,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+"Edward Johnson, III.",10.3,United States,money management,219,90,Finance & Investments,1946,relation,new,male,North America,inherited,Financial,Money Management,father
+Philip Anschutz,10.1,United States,investments,224,81,Finance & Investments,1961,investor,aquired,male,North America,self-made finance,Financial,Diversified financial,not inherited
+German Khan,10.1,Russia,"oil, banking, telecom",224,59,Energy,1989,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Jan Koum,9.9,United States,WhatsApp,230,45,Technology,2009,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+James Dyson,9.7,United Kingdom,vacuums,234,73,Manufacturing,1993,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Friedhelm Loh,9.7,Germany,manufacturing,234,74,Manufacturing,1961,relation,new,male,Europe,inherited,Traded Sectors,Non-consumer industrial,father
+Iskander Makhmudov,9.7,Russia,"mining, metals, machinery",234,57,Metals & Mining,1999,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Stefano Pessina,9.7,Italy,drugstores,234,79,Fashion & Retail,1849,relation,aquired,male,Europe,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Quek Leng Chan,9.7,Malaysia,"banking, property",234,79,Diversified,1963,founder,new,male,East Asia,self-made finance,Financial,Money Management,not inherited
+Israel Englander,9.6,United States,hedge funds,241,72,Finance & Investments,1989,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Charles Ergen,9.6,United States,satellite TV,241,68,Media & Entertainment,1980,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Jim Pattison,9.6,Canada,diversified,241,92,Diversified,1961,founder CEO owner,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+David Geffen,9.5,United States,"movies, record labels",245,78,Media & Entertainment,1970,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Jim Kennedy,9.4,United States,"media, automotive",247,73,Media & Entertainment,1898,relation,aquired,male,North America,inherited,Non-Traded Sectors,Media,3rd generation
+Blair Parry-Okeden,9.4,United States,"media, automotive",247,70,Media & Entertainment,1898,relation,aquired,female,North America,inherited,Non-Traded Sectors,Media,3rd generation
+Ding Shijia,9.3,China,sports apparel,251,57,Fashion & Retail,1994,deputy chairman,new,male,East Asia,executive,Traded Sectors,Consumer,not inherited
+Ian & Richard Livingstone,9.3,United Kingdom,real estate,251,58,Real Estate,1987,founder,new,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Sun Hongbin,9.3,United States,real estate,251,58,Real Estate,1994,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Lu Xiangyang,9.1,China,"automobiles, batteries",256,58,Automotive,1995,vice chairman,new,male,East Asia,executive,Traded Sectors,Consumer,not inherited
+David Sun,9.1,United States,computer hardware,256,69,Technology,1987,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+John Tu,9.1,United States,computer hardware,256,79,Technology,1987,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Viktor Vekselberg,9,Russia,"metals, energy",262,63,Energy,1990,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Jerry Jones,8.9,United States,Dallas Cowboys,264,78,Sports,1970,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Michael Otto,8.9,Germany,"retail, real estate",264,77,Fashion & Retail,1949,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Steven Rales,8.9,United States,manufacturing,264,70,Manufacturing,1979,founder,new,male,North America,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+David Cheriton,8.8,Canada,Google,269,70,Technology,1998,investor,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Xavier Niel,8.8,France,"internet, telecom",269,53,Telecom,1999,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Computer,not inherited
+August von Finck,8.8,Germany,investments,269,91,Finance & Investments,1890,relation,new,male,Europe,inherited,Financial,Diversified financial,father
+Zong Qinghou,8.8,China,beverages,269,75,Food & Beverage,1987,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Benu Gopal Bangur,8.7,India,cement,274,89,Manufacturing,1918,relation,new,male,South Asia,inherited,Non-Traded Sectors,Constrution,father
+Graeme Hart,8.7,New Zealand,investments,274,65,Finance & Investments,1987,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Kjeld Kirk Kristiansen,8.7,Denmark,Lego,274,73,Manufacturing,1949,relation,new,male,Europe,inherited,Traded Sectors,Consumer,3rd generation
+Shigenobu Nagamori,8.7,Japan,motors,274,76,Manufacturing,1973,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Ernesto Bertarelli,8.6,Switzerland,"biotech, investments",288,55,Healthcare,1906,relation,new,male,Europe,inherited,New Sectors,Technology-Medical,3rd generation
+Leon Black,8.6,United States,private equity,288,69,Finance & Investments,1990,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Azim Premji,8.6,India,software services,288,75,Technology,1945,relation,new,male,South Asia,inherited,New Sectors,Technology-Computer,father
+George Soros,8.6,United States,hedge funds,288,90,Finance & Investments,1969,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Marc Benioff,8.4,United States,business software,294,56,Technology,1999,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Ann Walton Kroenke,8.4,United States,Walmart,294,72,Fashion & Retail,1962,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Jay Y. Lee,8.3,South Korea,Samsung,297,52,Diversified,1938,relation,new,male,East Asia,inherited,New Sectors,Technology-Computer,3rd generation
+Nassef Sawiris,8.3,Egypt,"construction, investments",297,60,Construction & Engineering,1950,relation,new,male,Europe,inherited,Non-Traded Sectors,Constrution,father
+Kushal Pal Singh,8.3,India,real estate,297,89,Real Estate,1946,relation and chairman,new,male,South Asia,inherited,Financial,Real Estate,father
+Stanley Kroenke,8.2,United States,"sports, real estate",304,73,Sports,1991,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Niels Peter Louis-Hansen,8.2,Denmark,medical devices,304,73,Healthcare,1957,relation,new,male,Europe,inherited,New Sectors,Technology-Medical,father
+Diane Hendricks,8,United States,roofing,308,74,Construction & Engineering,1982,founder,new,female,North America,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Shahid Khan,8,United States,auto parts,308,70,Automotive,1956,owner,aquired,male,North America,executive,Traded Sectors,Consumer,not inherited
+Andrew Beal,7.9,United States,"banks, real estate",311,68,Finance & Investments,1988,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Alexei Kuzmichev,7.8,Russia,"oil, banking, telecom",316,58,Energy,1989,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+John Malone,7.8,United States,cable television,316,80,Media & Entertainment,1968,CEO,merger,male,North America,executive,Non-Traded Sectors,Media,not inherited
+Giorgio Armani,7.7,Italy,luxury goods,323,86,Fashion & Retail,1975,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Frederik Paulsen,7.7,Sweden,health care,323,70,Healthcare,1950,relation,new,male,Europe,inherited,New Sectors,Technology-Medical,father
+Alexander Abramov,7.6,Russia,"steel, mining",327,62,Metals & Mining,1992,Chairman,aquired,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Rinat Akhmetov,7.6,Ukraine,"steel, coal",327,54,Metals & Mining,2000,founder,,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+George Roberts,7.6,United States,private equity,327,77,Finance & Investments,1976,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Nancy Walton Laurie,7.5,United States,Walmart,334,69,Fashion & Retail,1962,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Patrick Soon-Shiong,7.5,United States,pharmaceuticals,334,68,Healthcare,1997,founder,new,male,North America,founder non-finance,New Sectors,Technology-Medical,not inherited
+George Lucas,7.4,United States,Star Wars,339,76,Media & Entertainment,1971,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Zhang Jindong,7.4,China,appliance retailer,339,58,Fashion & Retail,1990,founder/president,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Henry Kravis,7.3,United States,private equity,344,77,Finance & Investments,1976,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Sandra Ortega Mera,7.3,Spain,Zara,344,52,Fashion & Retail,1975,relation,new,female,Europe,inherited,Traded Sectors,Consumer,father
+Pham Nhat Vuong,7.3,Vietnam,diversified,344,52,Diversified,1993,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+David Shaw,7.3,United States,hedge funds,344,70,Finance & Investments,1988,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Michael Kadoorie,7.2,Hong Kong,"hotels, energy",352,79,Energy,1901,relation,new,male,East Asia,inherited,Financial,Diversified financial,father
+Bernard Marcus,7.2,United States,Home Depot,352,91,Fashion & Retail,1979,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Manuel Villar,7.2,Philippines,real estate,352,71,Real Estate,1975,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Christy Walton,7.2,United States,Walmart,352,72,Fashion & Retail,1962,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",spouse/widow
+Carl Bennet,7.1,Sweden,investments,358,69,Finance & Investments,1989,investor,new,male,Europe,self-made finance,Financial,Diversified financial,not inherited
+Rahel Blocher,7.1,Switzerland,chemicals,358,45,Manufacturing,1936,relation,aquired,female,Europe,inherited,Traded Sectors,Non-consumer industrial,father
+Johann Graf,7.1,Austria,gambling,358,74,Gambling & Casinos,1980,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Ralph Lauren,7.1,United States,apparel,358,81,Fashion & Retail,1967,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Magdalena Martullo-Blocher,7.1,Switzerland,chemicals,358,52,Manufacturing,1936,relation and ceo,aquired,female,Europe,inherited,Traded Sectors,Non-consumer industrial,father
+Igor Altushkin,7,Russia,metals,369,50,Metals & Mining,1997,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Gustaf Douglas,7,Sweden,investments,369,83,Diversified,1984,founder,new,male,Europe,founder non-finance,0,Other,not inherited
+Terry Gou,7,Taiwan,electronics,369,70,Technology,1974,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+"Paul Tudor Jones, II.",7,United States,hedge funds,369,66,Finance & Investments,1980,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Richard Kinder,7,United States,pipelines,369,76,Energy,1997,founder,new,male,North America,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Ludwig Merckle,7,Germany,pharmaceuticals,369,56,Finance & Investments,1881,relation,new,male,Europe,inherited,New Sectors,Technology-Medical,4th generation
+Stephen Ross,7,United States,real estate,369,80,Real Estate,1972,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Eli Broad,6.9,United States,investments,380,87,Finance & Investments,1957,founder,new/aquired,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Guo Guangchang,6.9,China,conglomerate,380,54,Diversified,1992,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Robert Kraft,6.9,United States,New England Patriots,380,79,Sports,1972,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Wee Cho Yaw,6.8,Singapore,banking,384,92,Finance & Investments,1935,relation,new,male,East Asia,inherited,Financial,Money Management,father
+Aloys Wobben,6.8,Germany,wind turbines,384,69,Energy,1984,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Micky Arison,6.7,United States,Carnival Cruises,391,71,Service,1972,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Jean-Michel Besnier,6.7,France,cheese,391,53,Food & Beverage,1933,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Marie Besnier Beauvalot,6.7,France,cheese,391,40,Food & Beverage,1933,relation,new,female,Europe,inherited,Traded Sectors,Consumer,father
+Fredrik Lundberg,6.7,Sweden,"real estate, investments",391,69,Real Estate,1944,relation,new,male,Europe,inherited,Financial,Real Estate,father
+Hiroshi Mikitani,6.7,Japan,online retail,391,56,Fashion & Retail,1997,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Dmitry Rybolovlev,6.7,Russia,fertilizer,391,54,Manufacturing,1930,owner,aquired,male,Europe,executive,Traded Sectors,Consumer,not inherited
+Reinhold Schmieding,6.7,United States,medical devices,391,66,Healthcare,1981,founder,new,male,North America,founder non-finance,New Sectors,Technology-Medical,not inherited
+Francis Choi,6.6,Hong Kong,real estate,400,73,Real Estate,1972,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Bruce Kovner,6.6,United States,hedge funds,400,76,Finance & Investments,1983,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Wang Wenjing,6.6,China,business software,400,56,Technology,1988,chairman,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Denise Coates,6.5,United Kingdom,online gambling,404,53,Gambling & Casinos,2000,founder,new,female,Europe,founder non-finance,New Sectors,Technology-Computer,not inherited
+James Goodnight,6.5,United States,software,404,78,Technology,1976,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Antti Herlin,6.5,Finland,"elevators, escalators",404,64,Manufacturing,1910,relation,aquired,male,Europe,inherited,Traded Sectors,Non-consumer industrial,4th generation
+Liu Yongxing,6.5,China,diversified,404,72,Service,1982,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Sri Prakash Lohia,6.5,Indonesia,petrochemicals,404,68,Manufacturing,1973,founder,new,male,East Asia,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Prajogo Pangestu,6.5,Indonesia,petrochemicals,404,76,Diversified,1977,founder,new,male,East Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Horst Julius Pudwill,6.5,Germany,manufacturing,404,76,Manufacturing,1985,founder,new,male,Europe,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Ronda Stryker,6.5,United States,medical equipment,404,66,Healthcare,1941,relation,new,female,North America,inherited,New Sectors,Technology-Medical,3rd generation
+Pauline MacMillan Keinath,6.4,United States,Cargill,418,87,Food & Beverage,1865,relation,new,female,North America,inherited,Financial,Money Management,3rd generation
+Dennis Washington,6.4,United States,"construction, mining",418,86,Logistics,1964,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Rahul Bajaj,6.3,India,diversified,421,82,Diversified,1926,relation,new,male,South Asia,inherited,Traded Sectors,Consumer,3rd generation
+Andreas Halvorsen,6.3,Norway,hedge funds,421,59,Finance & Investments,1999,founder and ceo,new,male,Europe,self-made finance,Financial,Hedge funds,not inherited
+Andrei Kozitsyn,6.3,Russia,metals,421,60,Metals & Mining,1935,president,privatization,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Axel Oberwelland,6.3,Germany,candy,421,54,Food & Beverage,1903,relation,new,male,Europe,inherited,Traded Sectors,Consumer,4th generation
+Shi Yuzhu,6.3,China,"online games, investments",421,58,Diversified,2005,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Murat Ulker,6.3,Turkey,food,421,62,Food & Beverage,1944,relation,new,male,Middle East/North Africa,inherited,Traded Sectors,Consumer,father
+Arthur Blank,6.2,United States,Home Depot,432,78,Sports,1979,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Jiang Bin,6.2,China,acoustic components,432,54,Technology,2001,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Mitchell Rales,6.2,United States,"manufacturing, investments",432,64,Manufacturing,1969,founder,new,male,North America,founder non-finance,Traded Sectors,Technology-Medical,not inherited
+Mike Adenuga,6.1,Nigeria,"telecom, oil",440,67,Diversified,1990,founder,new,male,Sub-Saharan Africa,privatized and resources,Non-Traded Sectors,Media,not inherited
+Huang Li,6.1,China,imaging systems,440,57,Technology,1999,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Law Kar Po,6.1,Hong Kong,real estate,440,72,Real Estate,1961,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Idan Ofer,6.1,Israel,"drilling, shipping",440,65,Diversified,1950,relation,new,male,Middle East/North Africa,inherited,Resource Related,Energy,father
+Henry Samueli,6.1,United States,semiconductors,440,66,Technology,1991,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Dannine Avara,6,United States,pipelines,451,57,Energy,1968,relation,new,female,North America,inherited,Traded Sectors,Non-consumer industrial,father
+Dulce Pugliese de Godoy Bueno,6,Brazil,"hospitals, health care",451,73,Healthcare,1972,founder,new,female,Latin America,founder non-finance,Financial,Real Estate,not inherited
+Scott Duncan,6,United States,pipelines,451,38,Energy,1968,relation,new,male,North America,inherited,Traded Sectors,Non-consumer industrial,father
+Judy Faulkner,6,United States,health IT,451,77,Technology,1979,founder,new,female,North America,founder non-finance,New Sectors,Technology-Medical,not inherited
+Milane Frantz,6,United States,pipelines,451,51,Energy,1968,relation,new,female,North America,inherited,Traded Sectors,Non-consumer industrial,father
+Frits Goldschmeding,6,Netherlands,temp agency,451,87,Service,1960,founder,new,male,Europe,founder non-finance,0,Other,not inherited
+Jane Lauder,6,United States,Estée Lauder,451,48,Fashion & Retail,1946,relation,new,female,North America,inherited,Traded Sectors,Consumer,3rd generation
+Isaac Perlmutter,6,United States,Marvel comics,451,78,Media & Entertainment,1998,CEO,aquired,male,North America,executive,Non-Traded Sectors,Media,not inherited
+Ronald Wanek,6,United States,furniture,451,79,Manufacturing,1970,founder,aquired,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Hansjoerg Wyss,6,Switzerland,medical devices,451,86,Healthcare,1974,founder/CEO,new division,male,Europe,founder non-finance,New Sectors,Technology-Medical,not inherited
+Chen Fashu,5.9,China,investments,472,60,Finance & Investments,2000,investor,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Christopher Hohn,5.9,United Kingdom,hedge funds,472,54,Finance & Investments,2003,founder,new,male,Europe,self-made finance,Financial,Hedge funds,not inherited
+George Kaiser,5.8,United States,"oil & gas, banking",476,78,Energy,1940,relation,new,male,North America,inherited,Resource Related,Energy,father
+Ananda Krishnan,5.8,Malaysia,"telecoms, media, oil-services",476,83,Telecom,1984,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,Media,not inherited
+Augusto & Giorgio Perfetti,5.8,Italy,candy,476,,Food & Beverage,1946,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Meg Whitman,5.8,United States,eBay,476,64,Technology,1935,president and ceo,new,female,North America,executive,New Sectors,Technology-Computer,not inherited
+Neil Bluhm,5.7,United States,real estate,486,83,Real Estate,1969,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Tom Gores,5.7,United States,private equity,486,56,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Michael Moritz,5.7,United States,venture capital,486,66,Technology,1972,partner,new,male,North America,self-made finance,Financial,Venture Capital,not inherited
+Nicolas Puech,5.7,France,Hermes,486,78,Fashion & Retail,1837,relation,new,male,Europe,inherited,Traded Sectors,Consumer,5th generation or longer
+Teh Hong Piow,5.7,Malaysia,banking,486,91,Finance & Investments,1966,founder,new,male,East Asia,self-made finance,Financial,Money Management,not inherited
+Jack Dangermond,5.6,United States,mapping software,496,75,Technology,1969,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Stanley Druckenmiller,5.6,United States,hedge funds,496,67,Finance & Investments,1981,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Tamara Gustavson,5.6,United States,self storage,496,59,Service,1972,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Kwee brothers,5.6,Singapore,Real Estate,496,,Real Estate,1961,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+Clive Calder,5.5,United Kingdom,record label,502,74,Media & Entertainment,1975,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Ken Fisher,5.5,United States,money management,502,70,Finance & Investments,1979,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Ivan Glasenberg,5.5,Switzerland,mining,502,64,Metals & Mining,1974,CEO,new,male,North America,privatized and resources,Resource Related,Mining and metals,not inherited
+Karel Komarek,5.5,Czechia,"oil and gas, IT, lotteries",502,52,Gambling & Casinos,1995,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Ronald Lauder,5.5,United States,Estee Lauder,502,77,Fashion & Retail,1946,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+J. Christopher Reyes,5.5,United States,food distribution,502,67,Food & Beverage,1976,ceo,aquired,male,North America,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Jude Reyes,5.5,United States,food distribution,502,65,Food & Beverage,1976,ceo,aquired,male,North America,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Kjell Inge Rokke,5.5,Norway,"shipping, seafood",502,62,Logistics,1841,owner,aquired,male,Europe,executive,0,Other,not inherited
+"Edward Roski, Jr.",5.5,United States,real estate,502,82,Real Estate,1948,relation,new,male,North America,inherited,Financial,Real Estate,father
+An Kang,5.4,China,pharmaceuticals,520,72,Healthcare,1992,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+"Henry Nicholas, III.",5.4,United States,semiconductors,520,61,Technology,1991,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Terrence Pegula,5.4,United States,natural gas,520,70,Energy,1983,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Harry Stine,5.4,United States,agriculture,520,79,Food & Beverage,1965,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Pyotr Aven,5.3,Russia,"oil, banking, telecom",529,66,Finance & Investments,1989,chairman of the board,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Barry Lam,5.3,Taiwan,electronics,529,71,Technology,1988,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Carlos Rodriguez-Pastor,5.3,Peru,finance,529,61,Finance & Investments,1994,owner,privatization,male,Latin America,privatized and resources,Financial,Money Management,not inherited
+Shen Guojun,5.3,China,retail,529,58,Fashion & Retail,1988,chairman,new,male,East Asia,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Sam Zell,5.3,United States,"real estate, private equity",529,79,Real Estate,1968,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+John Brown,5.2,United States,medical equipment,539,86,Healthcare,1941,Chairman,new,male,North America,executive,New Sectors,Technology-Medical,not inherited
+Frank Lowy,5.2,Australia,shopping malls,539,90,Real Estate,1960,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Joe Mansueto,5.2,United States,investment research,539,64,Finance & Investments,1984,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Akio Nitori,5.2,Japan,home furnishings,539,77,Fashion & Retail,1967,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Teddy Sagi,5.2,Israel,gambling software,539,49,Gambling & Casinos,1999,founder,new,male,Middle East/North Africa,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Wong Man Li,5.2,Hong Kong,furniture,539,56,Manufacturing,1992,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Robert Bass,5.1,United States,"oil, investments",550,73,Energy,1919,relation,new,male,North America,inherited,Resource Related,Energy,father
+Michael Herz,5.1,Germany,coffee,550,77,Fashion & Retail,1949,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Wolfgang Herz,5.1,Germany,coffee,550,70,Fashion & Retail,1949,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Patrick Lee,5.1,Hong Kong,paper,550,79,Manufacturing,1994,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Theo Mueller,5.1,Germany,dairy,550,81,Food & Beverage,1896,relation,new,male,Europe,executive,Traded Sectors,Consumer,not inherited
+Bernard Broermann,5,Germany,hospitals,561,77,Healthcare,1984,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Medical,not inherited
+Jason Chang,5,Singapore,electronics,561,76,Technology,1984,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Joshua Harris,5,United States,private equity,561,56,Finance & Investments,1990,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Pankaj Patel,5,India,pharmaceuticals,561,68,Healthcare,1952,relation,new,male,South Asia,inherited,New Sectors,Technology-Medical,father
+Charles Simonyi,5,United States,Microsoft,561,72,Technology,1975,head of Microsoft's application software group,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Daniel Ziff,5,United States,investments,561,49,Finance & Investments,1927,relation,new,male,North America,inherited,Financial,Diversified financial,3rd generation
+Dirk Ziff,5,United States,investments,561,57,Finance & Investments,1928,relation,new,male,North America,inherited,Financial,Diversified financial,3rd generation
+Robert Ziff,5,United States,investments,561,54,Finance & Investments,1928,relation,new,male,North America,inherited,Financial,Diversified financial,3rd generation
+Stephen Bisciotti,4.9,United States,"staffing, Baltimore Ravens",574,60,Sports,1983,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Marc Ladreit de Lacharriere,4.9,France,finance,574,80,Finance & Investments,1991,founder and CEO,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Joe Lewis,4.9,United Kingdom,investments,574,84,Finance & Investments,1975,founder,new,male,Europe,self-made finance,,Diversified financial,not inherited
+Lin Li,4.9,China,investments,574,57,Finance & Investments,1995,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Karen Pritzker,4.9,United States,"hotels, investments",574,63,Finance & Investments,1957,relation,aquired,female,North America,inherited,Financial,Real Estate,father
+Abdulsamad Rabiu,4.9,Nigeria,"cement, sugar",574,60,Diversified,1988,founder,new,male,Sub-Saharan Africa,founder non-finance,Traded Sectors,Consumer,not inherited
+Howard Schultz,4.9,United States,Starbucks,574,67,Food & Beverage,1971,Chairman and Chief Executive Officer,new,male,North America,executive,Traded Sectors,Consumer,not inherited
+Yasumitsu Shigeta,4.9,Japan,mobile phone retailer,574,56,Telecom,1988,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,Media,not inherited
+Thomas Siebel,4.9,United States,business software,574,68,Technology,1993,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Peter Thiel,4.9,United States,Facebook,574,53,Finance & Investments,1998,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Chip Wilson,4.9,Canada,Lululemon,574,64,Fashion & Retail,1998,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Richard Branson,4.8,United Kingdom,Virgin,589,70,Diversified,1972,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Huang Yi,4.8,Hong Kong,car dealerships,589,59,Automotive,1998,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Bidzina Ivanishvili,4.8,Georgia,investments,589,65,Finance & Investments,1990,founder,new,male,Europe,privatized and resources,Financial,Diversified financial,not inherited
+Yuri Milner,4.8,Israel,tech investments,589,59,Finance & Investments,1999,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Computer,not inherited
+Thomas Schmidheiny,4.8,Switzerland,cement,589,75,Construction & Engineering,1912,relation,new,male,Europe,inherited,Non-Traded Sectors,Constrution,4th generation
+Chairul Tanjung,4.8,Indonesia,diversified,589,58,Diversified,1987,founder,new,male,East Asia,privatized and resources,Financial,Diversified financial,not inherited
+Radovan Vitek,4.8,Czechia,real estate,589,49,Real Estate,1997,founder,aquired,male,Europe,self-made finance,Financial,Real Estate,not inherited
+M.A. Yusuff Ali,4.8,India,retail,589,65,Fashion & Retail,1973,relation,new,male,South Asia,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Nathan Kirsh,4.7,Eswatini (Swaziland),"retail, real estate",608,89,Fashion & Retail,1990,investor,aquired,male,Sub-Saharan Africa,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Michael Pieper,4.7,Switzerland,kitchen appliances,608,75,Manufacturing,1911,relation,aquired,male,Europe,inherited,Traded Sectors,Consumer,father
+Richard Schulze,4.7,United States,Best Buy,608,80,Fashion & Retail,1966,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Oleg Tinkov,4.7,Russia,banking,608,53,Finance & Investments,1990,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Wong Luen Hei,4.7,China,building materials,608,59,Manufacturing,1996,founder,new,male,East Asia,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Patrizio Bertelli,4.6,Italy,luxury goods,622,75,Fashion & Retail,1913,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Martin & Olivier Bouygues,4.6,France,"construction, media",622,,Construction & Engineering,1952,relation,new,male,Europe,inherited,Non-Traded Sectors,Constrution,father
+Chen Lip Keong,4.6,Malaysia,"casinos, property, energy",622,73,Gambling & Casinos,1995,founder,new,male,East Asia,privatized and resources,Financial,Real Estate,not inherited
+Tilman Fertitta,4.6,United States,"Houston Rockets, entertainment",622,63,Food & Beverage,1980,founder,aquired,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Vladimir Kim,4.6,Kazakhstan,mining,622,60,Metals & Mining,1930,investor,privatization,male,South Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Denis O'Brien,4.6,Ireland,telecom,622,62,Telecom,1997,founder,new,male,Europe,privatized and resources,Non-Traded Sectors,Media,not inherited
+Miuccia Prada,4.6,Italy,luxury goods,622,71,Fashion & Retail,1913,relation,new,female,Europe,inherited,Traded Sectors,Consumer,father
+"Robert Rich, Jr.",4.6,United States,frozen foods,622,80,Food & Beverage,1945,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Ron Baron,4.5,United States,money management,638,77,Finance & Investments,1982,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Andre Esteves,4.5,Brazil,banking,638,52,Finance & Investments,2008,founder,new,male,Latin America,self-made finance,Financial,Money Management,not inherited
+Jonathan Gray,4.5,United States,investments,638,51,Finance & Investments,1985,Global Head of Real Estate,new,male,North America,self-made finance,Financial,Other,not inherited
+Richard Li,4.5,Hong Kong,telecom,638,54,Telecom,1971,relation,new,male,East Asia,inherited,Non-Traded Sectors,Media,father
+Igor Olenicoff,4.5,United States,real estate,638,78,Real Estate,1973,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Sergei Popov,4.5,Russia,banking,638,49,Finance & Investments,1996,founder/vice chairman,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Thomas Pritzker,4.5,United States,"hotels, investments",638,70,Finance & Investments,1957,relation,aquired,male,North America,inherited,Financial,Real Estate,father
+"Julian Robertson, Jr.",4.5,United States,hedge funds,638,88,Finance & Investments,1980,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Shari Arison,4.4,Israel,Carnival Cruises,655,63,Service,1972,relation,new,female,Middle East/North Africa,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Mark Cuban,4.4,United States,"online media, Dallas Mavericks",655,62,Media & Entertainment,1995,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Erman Ilicak,4.4,Turkey,construction,655,53,Construction & Engineering,1994,founder,new,male,Middle East/North Africa,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Ralph Dommermuth,4.3,Germany,internet service provider,665,57,Technology,1988,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Computer,not inherited
+Pansy Ho,4.3,Hong Kong,casinos,665,58,Gambling & Casinos,1962,relation,new,female,East Asia,inherited,Financial,Real Estate,father
+Rakesh Jhunjhunwala,4.3,India,investments,665,60,Finance & Investments,1968,investor,new,male,South Asia,self-made finance,Financial,Other,not inherited
+Eric Lefkofsky,4.3,United States,Groupon,665,51,Technology,2008,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Edwin Leong,4.3,Hong Kong,real estate,665,69,Real Estate,1977,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Paul Singer,4.3,United States,hedge funds,665,76,Finance & Investments,1977,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Kerry Stokes,4.3,Australia,"construction equipment, media",665,80,Diversified,1958,investor,aquired,male,North America,executive,Non-Traded Sectors,Media,not inherited
+Steven Udvar-Hazy,4.3,United States,aircraft leasing,665,75,Service,1973,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Takao Yasuda,4.3,Japan,retail,665,71,Fashion & Retail,1980,Chairman and Chief Executive Officer,new,male,East Asia,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Alain Bouchard,4.2,Canada,retail,680,72,Fashion & Retail,1980,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Scott Cook,4.2,United States,software,680,68,Technology,1983,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Barry Diller,4.2,United States,online media,680,79,Media & Entertainment,1986,Chairman and Chief Executive Officer,new,male,North America,executive,Non-Traded Sectors,Media,not inherited
+Fang Wei,4.2,China,steel,680,47,Manufacturing,2002,chairman,new,male,East Asia,privatized and resources,Traded Sectors,Non-consumer industrial,not inherited
+Tom Golisano,4.2,United States,payroll services,680,79,Service,1971,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Peter Hargreaves,4.2,United Kingdom,financial services,680,74,Finance & Investments,1981,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Bertil Hult,4.2,Sweden,education,680,80,Service,1977,founder,new,male,Europe,founder non-finance,0,Other,not inherited
+Ray Lee Hunt,4.2,United States,"oil, real estate",680,78,Energy,1934,relation,new,male,North America,inherited,Resource Related,Energy,father
+James Irving,4.2,Canada,diversified,680,93,Diversified,1882,relation,new,male,North America,inherited,Financial,Diversified financial,3rd generation
+Li Li,4.2,China,healthcare,680,55,Healthcare,1998,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Li Li,1.6,China,pharmaceuticals,1931,57,Healthcare,1998,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Juan Roig,4.2,Spain,supermarkets,680,71,Fashion & Retail,1977,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Leonard Stern,4.2,United States,real estate,680,83,Real Estate,1926,relation,new,male,North America,inherited,Financial,Real Estate,father
+Thomas Straumann,4.2,Switzerland,dental implants,680,57,Healthcare,1954,relation,new,male,Europe,inherited,Traded Sectors,Consumer,3rd generation
+David Bonderman,4.1,United States,private equity,705,78,Finance & Investments,1992,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Cho Tak Wong,4.1,Hong Kong,auto parts,705,74,Manufacturing,1987,CEO,new,male,East Asia,executive,Traded Sectors,Consumer,not inherited
+Dan Friedkin,4.1,United States,Toyota dealerships,705,56,Automotive,1969,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Martin Haefner,4.1,Switzerland,"software, investments",705,67,Technology,1976,relation,new,male,Europe,inherited,New Sectors,Technology-Computer,father
+"Rupert Johnson, Jr.",4.1,United States,money management,705,80,Finance & Investments,1947,relation,new,male,North America,inherited,Financial,Money Management,father
+John Morris,4.1,United States,sporting goods retail,705,73,Fashion & Retail,1972,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Gabe Newell,4.1,United States,videogames,705,58,Gambling & Casinos,1996,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Jon Stryker,4.1,United States,medical equipment,705,62,Healthcare,1941,relation,new,male,North America,inherited,New Sectors,Technology-Medical,3rd generation
+Xu Jingren,4.1,China,pharmaceuticals,705,76,Healthcare,1971,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Samuel Yin,4.1,Taiwan,retail,705,70,Diversified,0,,,male,East Asia,,Financial,Diversified financial,not inherited
+Masatoshi Ito,4,Japan,retail,727,96,Fashion & Retail,1961,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Igor Kesaev,4,Russia,"tobacco distribution, retail",727,54,Fashion & Retail,1991,founder,new,male,Europe,privatized and resources,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Gwendolyn Sontheim Meyer,4,United States,Cargill,727,59,Food & Beverage,1865,relation,new,female,North America,inherited,Financial,Money Management,3rd generation
+Ajay Piramal,4,India,pharmaceuticals,727,65,Healthcare,1984,founder,aquired,male,South Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Trevor Rees-Jones,4,United States,oil & gas,727,69,Energy,1994,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Ira Rennert,4,United States,investments,727,86,Finance & Investments,1975,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Marc Rowan,4,United States,private equity,727,58,Finance & Investments,1990,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Michal Solowow,4,Poland,investments,727,58,Finance & Investments,1945,investor,aquired,male,Europe,self-made finance,Financial,Diversified financial,not inherited
+Zhou Hongyi,4,China,security software,727,50,Technology,2005,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Jeff Greene,3.9,United States,"real estate, investments",752,66,Real Estate,0,founder,,male,North America,self-made finance,Financial,Real Estate,not inherited
+Johnelle Hunt,3.9,United States,trucking,752,89,Logistics,1961,founder,new,female,North America,founder non-finance,0,Other,not inherited
+"Stephen Mandel, Jr.",3.9,United States,hedge funds,752,65,Finance & Investments,1997,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Gilles Martin,3.9,France,laboratory services,752,57,Healthcare,1988,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Medical,not inherited
+Masahiro Miki,3.9,Japan,shoes,752,65,Fashion & Retail,1985,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Dan Olsson,3.9,Sweden,diversified,752,74,Diversified,1939,relation,new,male,Europe,inherited,Financial,Diversified financial,father
+Robert Rowling,3.9,United States,"hotels, investments",752,67,Service,1980,relation,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Mark Shoen,3.9,United States,U-Haul,752,70,Automotive,1945,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Daniel D'Aniello,3.8,United States,private equity,775,74,Finance & Investments,1987,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Oleg Deripaska,3.8,Russia,"aluminum, utilities",775,53,Metals & Mining,1994,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Feng Hailiang,3.8,China,"copper, education",775,60,Metals & Mining,1989,founder,new,male,East Asia,founder non-finance,0,0,not inherited
+John Gandel,3.8,Australia,shopping malls,775,86,Real Estate,1939,relation,aquired,male,North America,inherited,Financial,Real Estate,father
+Jaime Gilinski Bacal,3.8,Colombia,banking,775,63,Finance & Investments,1991,relation,aquired,male,Latin America,self-made finance,Financial,Money Management,not inherited
+"Amos Hostetter, Jr.",3.8,United States,cable television,775,84,Media & Entertainment,1964,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Kuok Khoon Hong,3.8,Singapore,palm oil,775,71,Manufacturing,1991,founder,new,male,East Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Wolfgang Reimann,3.8,Germany,consumer goods,775,68,Fashion & Retail,1923,relation,aquired,male,Europe,inherited,Traded Sectors,Consumer,father
+Matthias Reimann-Andersen,3.8,Germany,consumer goods,775,56,Fashion & Retail,1923,relation,aquired,male,Europe,inherited,Traded Sectors,Consumer,father
+Stefan Reimann-Andersen,3.8,Germany,consumer goods,775,57,Fashion & Retail,1923,relation,aquired,male,Europe,inherited,Traded Sectors,Consumer,father
+Renate Reimann-Haas,3.8,Germany,consumer goods,775,69,Fashion & Retail,1923,relation,aquired,female,Europe,inherited,Traded Sectors,Consumer,father
+Shaul Shani,3.8,Israel,telecom,775,66,Telecom,1961,owner,aquired,male,Middle East/North Africa,founder non-finance,New Sectors,Technology-Computer,not inherited
+Donald Sterling,3.8,United States,real estate,775,86,Real Estate,1961,owner,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Zhu Gongshan,3.8,China,solar panel materials,775,63,Manufacturing,2008,founder,new,male,East Asia,privatized and resources,Resource Related,Energy,not inherited
+Peter Gilgan,3.7,Canada,homebuilding,807,70,Construction & Engineering,1978,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Marian Ilitch,3.7,United States,Little Caesars,807,88,Food & Beverage,1959,founder,new,female,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Mary Alice Dorrance Malone,3.7,United States,Campbell Soup,807,71,Food & Beverage,1869,relation,aquired,female,North America,inherited,Traded Sectors,Consumer,3rd generation
+Michael Milken,3.7,United States,investments,807,74,Finance & Investments,1935,head of high-yield bond trading dept,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Ronald Perelman,3.7,United States,leveraged buyouts,807,78,Finance & Investments,1980,founder,aquired,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Paolo & Gianfelice Mario Rocca,3.7,Italy,pipe manufacturing,807,,Metals & Mining,1945,relation,new,male,Europe,inherited,Traded Sectors,Non-consumer industrial,3rd generation
+Jeff Rothschild,3.7,United States,Facebook,807,66,Technology,2004,Vice President of Infrastructure Software,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+David Rubenstein,3.7,United States,private equity,807,71,Finance & Investments,1987,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Steven Spielberg,3.7,United States,movies,807,74,Media & Entertainment,1994,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Mark Stevens,3.7,United States,venture capital,807,61,Finance & Investments,1972,partner,new,male,North America,self-made finance,Financial,Venture Capital,not inherited
+"Austen Cargill, II.",3.6,United States,Cargill,831,70,Food & Beverage,1865,relation,new,male,North America,inherited,Financial,Money Management,3rd generation
+"James Cargill, II.",3.6,United States,Cargill,831,71,Food & Beverage,1865,relation,new,male,North America,inherited,Financial,Money Management,3rd generation
+Chu Lam Yiu,3.6,Hong Kong,flavorings,831,51,Manufacturing,1990,founder and chairwoman,new,female,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Hu Kaijun,3.6,China,pharmaceuticals,831,59,Healthcare,2005,owner,new,male,East Asia,privatized and resources,New Sectors,Technology-Medical,not inherited
+S. Curtis Johnson,3.6,United States,cleaning products,831,65,Manufacturing,1886,relation,new,male,North America,inherited,Traded Sectors,Consumer,5th generation or longer
+Helen Johnson-Leipold,3.6,United States,cleaning products,831,64,Manufacturing,1886,relation,new,female,North America,inherited,Traded Sectors,Consumer,5th generation or longer
+Daryl Katz,3.6,Canada,pharmacies,831,59,Diversified,1991,Chairman and Chief Executive Officer,franchise rights,male,North America,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Peter Kellogg,3.6,United States,investments,831,78,Finance & Investments,1931,relation,new,male,North America,inherited,Financial,Diversified financial,father
+Samuel Tak Lee,3.6,Hong Kong,real estate,831,81,Real Estate,1958,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+Marianne Liebmann,3.6,United States,Cargill,831,67,Food & Beverage,1865,relation,new,female,North America,inherited,Financial,Money Management,3rd generation
+Daniel Och,3.6,United States,hedge funds,831,60,Finance & Investments,1994,"founder, chairman, ceo",new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Anthony Pritzker,3.6,United States,"hotels, investments",831,60,Service,1957,relation,aquired,male,North America,inherited,Financial,Real Estate,father
+Ty Warner,3.6,United States,"real estate, plush toys",831,76,Real Estate,1986,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Zhang Hongwei,3.6,China,"oil, banking",831,66,Diversified,2007,chairman,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Andrej Babis,3.5,Czechia,agriculture,859,66,Food & Beverage,1993,owner and former CEO,new,male,Europe,executive,Traded Sectors,Consumer,not inherited
+Hubert Burda,3.5,Germany,publishing,859,81,Media & Entertainment,1898,relation,new,male,Europe,inherited,Non-Traded Sectors,Media,father
+David Filo,3.5,United States,Yahoo,859,54,Technology,1994,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Sergei Galitsky,3.5,Russia,retail,859,53,Fashion & Retail,1994,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+H. Fisk Johnson,3.5,United States,cleaning products,859,62,Manufacturing,1886,relation,new,male,North America,inherited,Traded Sectors,Consumer,5th generation or longer
+Daniel Loeb,3.5,United States,hedge funds,859,59,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+N.R. Narayana Murthy,3.5,India,software services,859,74,Technology,1981,founder,new,male,South Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+John Paulson,3.5,United States,hedge funds,859,65,Finance & Investments,1994,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Michael Rubin,3.5,United States,online retail,859,48,Fashion & Retail,1995,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Thomas Secunda,3.5,United States,Bloomberg LP,859,66,Media & Entertainment,1981,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Vivek Chaand Sehgal,3.5,Australia,auto parts,859,64,Automotive,1986,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Romesh T. Wadhwani,3.5,United States,software,859,73,Technology,2002,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Francesco Gaetano Caltagirone,3.4,Italy,"cement, diversified",891,78,Construction & Engineering,1947,owner,aquired,male,Europe,executive,Non-Traded Sectors,Constrution,not inherited
+"William Conway, Jr.",3.4,United States,private equity,891,71,Finance & Investments,1987,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Jim Davis,3.4,United States,staffing & recruiting,891,61,Service,1972,Chairman,aquired,male,North America,executive,Traded Sectors,Consumer,not inherited
+Alexander Frolov,3.4,Russia,"mining, steel",891,56,Metals & Mining,1992,ceo,aquired,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Fiona Geminder,3.4,Australia,manufacturing,891,56,Manufacturing,1948,relation,new,female,North America,inherited,Traded Sectors,Consumer,3rd generation
+Zarakh Iliev,3.4,Russia,real estate,891,54,Real Estate,0,founder,,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Angela Leong,3.4,Hong Kong,casinos,891,60,Real Estate,1962,relation,new,female,East Asia,inherited,Financial,Real Estate,spouse/widow
+Arnon Milchan,3.4,Israel,movie making,891,76,Media & Entertainment,1991,founder,new,male,Middle East/North Africa,founder non-finance,Non-Traded Sectors,Media,not inherited
+Arturo Moreno,3.4,United States,"billboards, Anaheim Angels",891,74,Sports,1947,CEO,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+God Nisanov,3.4,Russia,real estate,891,48,Real Estate,0,founder,,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Remo Ruffini,3.4,Italy,winter jackets,891,59,Fashion & Retail,1954,owner,aquired,male,Europe,executive,Traded Sectors,Consumer,not inherited
+Patrick Ryan,3.4,United States,insurance,891,83,Finance & Investments,1982,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Lynn Schusterman,3.4,United States,"oil & gas, investments",891,82,Energy,1971,relation,new,female,North America,inherited,Resource Related,Energy,spouse/widow
+Bulat Utemuratov,3.4,Kazakhstan,"mining, banking, hotels",891,63,Metals & Mining,1995,founder,new,male,South Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Kelcy Warren,3.4,United States,pipelines,891,65,Energy,1994,Chairman and Chief Executive Officer,new,male,North America,executive,Traded Sectors,Non-consumer industrial,not inherited
+Vladimir Yevtushenkov,3.4,Russia,"telecom, investments",891,72,Telecom,1993,Chairman/founder,new,male,Europe,privatized and resources,Non-Traded Sectors,Media,not inherited
+John Arnold,3.3,United States,hedge funds,925,47,Finance & Investments,2003,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Senapathy Gopalakrishnan,3.3,India,software services,925,66,Technology,1981,founder and executive vice chairman,new,male,South Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+B. Wayne Hughes,3.3,United States,self storage,925,87,Service,1972,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Ravi Jaipuria,3.3,India,"soft drinks, fast food",925,66,Food & Beverage,1960,relation,new,male,South Asia,executive,Traded Sectors,Consumer,not inherited
+Samvel Karapetyan,3.3,Russia,real estate,925,55,Construction & Engineering,1999,founder,new,male,Europe,founder non-finance,Financial,Other,not inherited
+Yuri Kovalchuk,3.3,Russia,"banking, insurance, media",925,69,Finance & Investments,1990,Head of Board of Directors,new,male,Europe,privatized and resources,Financial,Money Management,not inherited
+Jean (Gigi) Pritzker,3.3,United States,"hotels, investments",925,58,Service,1957,relation,aquired,female,North America,inherited,Financial,Real Estate,father
+Qi Xiangdong,3.3,China,software,925,50,Technology,2005,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+"Bernard Saul, II.",3.3,United States,"banking, real estate",925,88,Finance & Investments,1899,relation,new,male,North America,inherited,Financial,Money Management,3rd generation
+Lucio Tan,3.3,Philippines,diversified,925,86,Diversified,1982,founder,new,male,East Asia,privatized and resources,Financial,Diversified financial,not inherited
+Wang Wenxue,3.3,China,real estate,925,53,Real Estate,1998,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Hans Peter Wild,3.3,Switzerland,flavorings,925,79,Food & Beverage,1931,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+"William Wrigley, Jr.",3.3,United States,chewing gum,925,57,Food & Beverage,1891,relation,new,male,North America,inherited,Traded Sectors,Consumer,4th generation
+Giuliana Benetton,3.2,Italy,"fashion retail, investments",956,83,Fashion & Retail,1965,founder,new,female,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Luciano Benetton,3.2,Italy,"fashion retail, investments",956,85,Fashion & Retail,1965,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Juan Carlos Escotet,3.2,Venezuela,banking,956,61,Finance & Investments,1992,founder,new,male,Latin America,self-made finance,Financial,Money Management,not inherited
+Carlo Fidani,3.2,Canada,real estate,956,66,Real Estate,1948,relation,new,male,North America,inherited,Financial,Real Estate,3rd generation
+Don Hankey,3.2,United States,auto loans,956,77,Finance & Investments,1954,founder,aquired,male,North America,self-made finance,Financial,Money Management,not inherited
+Otto Happel,3.2,Germany,engineering,956,73,Construction & Engineering,1920,relation,new,male,Europe,inherited,0,Other,father
+Heidi Horten,3.2,Austria,retail,956,80,Fashion & Retail,1936,relation,new,female,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",spouse/widow
+Maja Oeri,3.2,Switzerland,Pharmaceuticals,956,66,Healthcare,1896,relative,new,female,Europe,inherited,New Sectors,Technology-Medical,father
+James Packer,3.2,Australia,casinos,956,53,Gambling & Casinos,1936,relation,aquired,male,North America,inherited,Financial,Real Estate,3rd generation
+John Sall,3.2,United States,software,956,73,Technology,1976,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Naguib Sawiris,3.2,Egypt,telecom,956,66,Telecom,1950,relation,new,male,Middle East/North Africa,inherited,Non-Traded Sectors,Media,father
+Zygmunt Solorz-Zak,3.2,Poland,TV broadcasting,956,64,Media & Entertainment,1992,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Lawrence Stroll,3.2,Canada,fashion investments,956,61,Fashion & Retail,1981,chairman,new,male,North America,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Tsai Hong-tu,3.2,Taiwan,finance,956,68,Finance & Investments,1962,relation,new,male,East Asia,inherited,Financial,Money Management,father
+Steve Wynn,3.2,United States,"casinos, hotels",956,79,Gambling & Casinos,1973,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Zhang Li,3.2,China,real estate,956,68,Real Estate,1994,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+John Caudwell,3.1,United Kingdom,mobile phones,986,68,Telecom,1986,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Martin Ebner,3.1,Switzerland,investments,986,75,Finance & Investments,1985,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+John Fisher,3.1,United States,Gap,986,59,Fashion & Retail,1969,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Li Zhongchu,3.1,China,software,986,57,Technology,1995,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Prasert Prasarttong-Osoth,3.1,Thailand,hospitals,986,88,Healthcare,1969,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Penny Pritzker,3.1,United States,"hotels, investments",986,61,Finance & Investments,1957,relation,aquired,female,North America,inherited,Financial,Real Estate,father
+Jerry Speyer,3.1,United States,real estate,986,80,Real Estate,1978,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Koos Bekker,3,South Africa,"media, investments",1008,68,Media & Entertainment,1985,founder,new,male,Sub-Saharan Africa,founder non-finance,Non-Traded Sectors,Media,not inherited
+Philippe Foriel-Destezet,3,France,employment agency,1008,85,Service,1996,owner,aquired,male,Europe,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Alec Gores,3,United States,private equity,1008,68,Finance & Investments,1987,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Jimmy Haslam,3,United States,"gas stations, retail",1008,67,Fashion & Retail,1981,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Huang Rulun,3,China,real estate,1008,69,Real Estate,1991,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+James Irsay,3,United States,Indianapolis Colts,1008,61,Sports,1953,relation,aquired,male,North America,inherited,0,Other,father
+Kwek Leng Beng,3,Singapore,diversified,1008,80,Diversified,1948,relation,new,male,East Asia,inherited,Financial,Diversified financial,father
+Louis Le Duff,3,France,bakeries,1008,74,Food & Beverage,1976,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+James Leprino,3,United States,cheese,1008,83,Food & Beverage,1950,relation and chairman,new,male,North America,inherited,Traded Sectors,Consumer,father
+Peter Lim,3,Singapore,investments,1008,67,Finance & Investments,1991,investor,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Or Wai Sheun,3,Hong Kong,real estate,1008,69,Real Estate,1961,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Haim Saban,3,United States,"TV network, investments",1008,76,Media & Entertainment,1988,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Gil Shwed,3,Israel,software,1008,52,Technology,1993,founder,new,male,Middle East/North Africa,founder non-finance,New Sectors,Technology-Computer,not inherited
+Song Zuowen,3,China,"aluminum, diversified",1008,74,Diversified,1978,founder,new,male,East Asia,privatized and resources,Financial,Diversified financial,not inherited
+Friede Springer,3,Germany,publishing,1008,78,Media & Entertainment,1946,relation,new,female,Europe,inherited,Non-Traded Sectors,Media,spouse/widow
+Pat Stryker,3,United States,medical equipment,1008,65,Healthcare,1941,relation,new,female,North America,inherited,New Sectors,Technology-Medical,3rd generation
+Andrew Tan,3,Philippines,diversified,1008,71,Diversified,1993,Chairman and Chief Executive Officer,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Tian Ming,3,China,measuring instruments,1008,67,Technology,1990,owner,new,male,East Asia,executive,Traded Sectors,Non-consumer industrial,not inherited
+Wang Changtian,3,China,"TV, movie production",1008,55,Media & Entertainment,2000,chairman,new,male,East Asia,founder non-finance,Non-Traded Sectors,Media,not inherited
+Juan Abello,2.9,Spain,investments,1064,79,Finance & Investments,1938,relation,new,male,Europe,inherited,Financial,Diversified financial,father
+Sid Bass,2.9,United States,"oil, investments",1064,78,Energy,1919,relation,new,male,North America,inherited,Resource Related,Energy,father
+Bennett Dorrance,2.9,United States,Campbell Soup,1064,75,Food & Beverage,1869,relation,aquired,male,North America,inherited,Traded Sectors,Consumer,3rd generation
+Walter Faria,2.9,Brazil,beer,1064,66,Food & Beverage,1994,owner,aquired,male,Latin America,executive,Traded Sectors,Consumer,not inherited
+Liang Yunchao,2.9,China,nutritional supplements,1064,52,Food & Beverage,1995,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Farhad Moshiri,2.9,United Kingdom,diversified,1064,65,Diversified,1999,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Patrice Motsepe,2.9,South Africa,mining,1064,59,Metals & Mining,1997,founder and executive chairman,new,male,Sub-Saharan Africa,privatized and resources,Resource Related,Mining and metals,not inherited
+Alexander Nesis,2.9,Russia,"metals, banking, fertilizers",1064,58,Finance & Investments,1991,founder,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Alexander Ponomarenko,2.9,Russia,"real estate, airport",1064,56,Logistics,1957,chairman,privatization,male,Europe,privatized and resources,Financial,Real Estate,not inherited
+Chandru Raheja,2.9,India,real estate,1064,80,Real Estate,1956,founder,new,male,South Asia,self-made finance,Financial,Real Estate,not inherited
+Arkady Rotenberg,2.9,Russia,"construction, pipes, banking",1064,69,Construction & Engineering,1930,owner,"new, privitization",male,Europe,privatized and resources,Non-Traded Sectors,Constrution,not inherited
+Alexander Skorobogatko,2.9,Russia,"real estate, airport",1064,53,Logistics,1958,chairman,privatization,male,Europe,privatized and resources,Financial,Real Estate,not inherited
+Jeff Sutton,2.9,United States,real estate,1064,61,Real Estate,1994,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Glen Taylor,2.9,United States,printing,1064,79,Service,1975,founder,aquired,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+William Ackman,2.8,United States,hedge funds,1111,54,Finance & Investments,2005,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Aneel Bhusri,2.8,United States,business software,1111,55,Technology,1965,partner,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Norman Braman,2.8,United States,"art, car dealerships",1111,88,Automotive,1957,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Eva Maria Bucher-Haefner,2.8,Switzerland,"software, investments",1111,64,Technology,1976,relation,new,female,Europe,inherited,New Sectors,Technology-Computer,father
+John Catsimatidis,2.8,United States,"oil, real estate",1111,72,Energy,1971,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+James Clark,2.8,United States,"Netscape, investments",1111,77,Technology,1994,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Bergit Douglas,2.8,Germany,consumer goods,1111,74,Food & Beverage,1891,relation,new,female,Europe,inherited,Traded Sectors,Consumer,4th generation
+Doris Fisher,2.8,United States,Gap,1111,89,Fashion & Retail,1969,founder,new,female,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+David Gottesman,2.8,United States,investments,1111,94,Finance & Investments,1964,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+John Henry,2.8,United States,sports,1111,71,Sports,1981,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Alan Howard,2.8,United Kingdom,hedge funds,1111,57,Finance & Investments,2002,founder,new,male,Europe,self-made finance,Financial,Hedge funds,not inherited
+Micky Jagtiani,2.8,India,retail,1111,69,Fashion & Retail,1973,founder,new,male,South Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Alicia Koplowitz,2.8,Spain,"construction, investments",1111,67,Finance & Investments,1952,relation,aquired,female,Europe,inherited,Non-Traded Sectors,Constrution,father
+Timur Kulibaev,2.8,Kazakhstan,banking,1111,54,Finance & Investments,1923,owner,privatization,male,South Asia,privatized and resources,Financial,Money Management,not inherited
+Dinara Kulibaeva,2.8,Kazakhstan,banking,1111,53,Finance & Investments,1923,owner,privatization,female,South Asia,privatized and resources,Financial,Money Management,not inherited
+Li Sze Lim,2.8,Hong Kong,real estate,1111,64,Real Estate,1994,founder and chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+"Drayton McLane, Jr.",2.8,United States,"Walmart, logistics",1111,84,Fashion & Retail,1894,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Hans Melchers,2.8,Netherlands,"chemicals, investments",1111,82,Finance & Investments,1873,relation,new,male,Europe,executive,Traded Sectors,Non-consumer industrial,not inherited
+Philip Niarchos,2.8,Greece,art collection,1111,67,Diversified,1952,relation,new,male,Europe,inherited,0,Other,father
+Alfred Oetker,2.8,Germany,consumer goods,1111,54,Fashion & Retail,1891,relation,new,male,Europe,inherited,Traded Sectors,Consumer,4th generation
+August Oetker,2.8,Germany,consumer goods,1111,76,Fashion & Retail,1891,relation,new,male,Europe,inherited,Traded Sectors,Consumer,4th generation
+Carl Ferdinand Oetker,2.8,Germany,consumer goods,1111,48,Fashion & Retail,1891,relation,new,male,Europe,inherited,Traded Sectors,Consumer,4th generation
+Christian Oetker,2.8,Germany,consumer goods,1111,72,Fashion & Retail,1891,relation,new,male,Europe,inherited,Traded Sectors,Consumer,4th generation
+Julia Oetker,2.8,Germany,consumer goods,1111,42,Fashion & Retail,1891,relation,new,female,Europe,inherited,Traded Sectors,Consumer,4th generation
+Richard Oetker,2.8,Germany,consumer goods,1111,70,Fashion & Retail,1891,relation,new,male,Europe,inherited,Traded Sectors,Consumer,4th generation
+Filiz Sahenk,2.8,Turkey,diversified,1111,54,Diversified,1951,relation,new,female,Middle East/North Africa,inherited,Financial,Money Management,father
+Rosely Schweizer,2.8,Germany,consumer goods,1111,80,Fashion & Retail,1891,relation,new,female,Europe,inherited,Traded Sectors,Consumer,4th generation
+Warren Stephens,2.8,United States,investment banking,1111,64,Finance & Investments,1933,relation,new,male,North America,inherited,Financial,Money Management,father
+Kenneth Tuchman,2.8,United States,outsourcing,1111,61,Service,1982,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Stefan von Holtzbrinck,2.8,Germany,publishing,1111,57,Media & Entertainment,1948,relation,new,male,Europe,inherited,Non-Traded Sectors,Media,father
+Timothy Boyle,2.7,United States,Columbia Sportswear,1174,71,Fashion & Retail,1938,relation,new,male,North America,inherited,Traded Sectors,Consumer,3rd generation
+John Paul DeJoria,2.7,United States,"hair products, tequila",1174,76,Fashion & Retail,1980,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Mitchell Goldhar,2.7,Canada,real estate,1174,59,Real Estate,1990,owner,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+James Jannard,2.7,United States,sunglasses,1174,71,Fashion & Retail,1975,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Vinod Khosla,2.7,United States,venture capital,1174,66,Technology,1982,founder,new,male,North America,self-made finance,Financial,Venture Capital,not inherited
+Lu Zhiqiang,2.7,China,real estate,1174,68,Real Estate,1985,chairman,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Sergio Mantegazza,2.7,Switzerland,travel,1174,93,Service,1928,relation,new,male,Europe,inherited,0,Other,father
+Nan Cunhui,2.7,China,power equipment,1174,57,Manufacturing,1984,chairman,new,male,East Asia,executive,New Sectors,Technology-Computer,not inherited
+Sean Parker,2.7,United States,Facebook,1174,41,Technology,1999,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Richard Peery,2.7,United States,real estate,1174,82,Real Estate,1960,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+"H. Ross Perot, Jr.",2.7,United States,real estate,1174,62,Real Estate,1962,relation,new,male,North America,inherited,New Sectors,Technology-Computer,father
+Tong Jinquan,2.7,China,real estate,1174,66,Real Estate,1992,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Yitzhak Tshuva,2.7,Israel,real estate,1174,72,Real Estate,1992,founder and chairman,new,male,Middle East/North Africa,self-made finance,Financial,Real Estate,not inherited
+Oprah Winfrey,2.7,United States,TV shows,1174,67,Media & Entertainment,1986,"founder, chairwoman, ceo",new,female,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Mortimer Zuckerman,2.7,United States,"real estate, media",1174,83,Real Estate,1970,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Brian Acton,2.6,United States,WhatsApp,1205,49,Technology,2009,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Choo Chong Ngen,2.6,Singapore,hotels,1205,67,Real Estate,1996,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Abilio dos Santos Diniz,2.6,Brazil,retail,1205,84,Fashion & Retail,1948,relation,new,male,Latin America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+"John Dorrance, III.",2.6,Ireland,Campbell Soup,1205,77,Food & Beverage,1869,relation,aquired,male,Europe,inherited,Traded Sectors,Consumer,3rd generation
+Stein Erik Hagen,2.6,Norway,consumer goods,1205,64,Fashion & Retail,1977,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Brad Kelley,2.6,United States,tobacco,1205,64,Real Estate,1991,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Raj Kumar & Kishin RK,2.6,Singapore,real estate,1205,66,Real Estate,1947,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+Stephen Lansdown,2.6,Guernsey,financial services,1205,68,Finance & Investments,1981,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Aloke Lohia,2.6,India,petrochemicals,1205,62,Manufacturing,1988,founder,new,male,East Asia,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Kalanithi Maran,2.6,India,media,1205,55,Media & Entertainment,1993,"founder, chairman",new,male,South Asia,founder non-finance,Non-Traded Sectors,Media,not inherited
+C. Dean Metropoulos,2.6,United States,investments,1205,74,Food & Beverage,1990,investor,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Daniel Pritzker,2.6,United States,"hotels, investments",1205,61,Finance & Investments,1957,relation,aquired,male,North America,inherited,Financial,Real Estate,father
+Dan Snyder,2.6,United States,Washington Redskins,1205,56,Sports,1988,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Helmut Sohmen,2.6,Austria,shipping,1205,81,Logistics,1955,relation,new,male,Europe,inherited,Traded Sectors,Other,father
+Evan Williams,2.6,United States,Twitter,1205,49,Technology,2006,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Wu Guangming,2.6,China,medical equipment,1205,59,Healthcare,1998,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Charles Zegar,2.6,United States,Bloomberg LP,1205,73,Media & Entertainment,1981,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+John Arrillaga,2.5,United States,real estate,1249,84,Real Estate,1960,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Carol Jenkins Barnett,2.5,United States,Publix supermarkets,1249,64,Food & Beverage,1930,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Andrei Bokarev,2.5,Russia,"metals, mining",1249,54,Manufacturing,2002,president,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Jim Breyer,2.5,United States,venture capital,1249,59,Technology,2006,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Charles Bronfman,2.5,Canada,liquor,1249,89,Food & Beverage,1857,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Leon G. Cooperman,2.5,United States,hedge funds,1249,77,Finance & Investments,1991,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Phillip Frost,2.5,United States,pharmaceuticals,1249,84,Healthcare,1972,Chairman and Chief Executive Officer,aquired,male,North America,executive,New Sectors,Technology-Medical,not inherited
+Mikhail Gutseriev,2.5,Russia,"oil, real estate",1249,63,Energy,2002,owner,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Hans-Werner Hector,2.5,Germany,SAP,1249,81,Technology,1972,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Computer,not inherited
+Mohamed Mansour,2.5,Egypt,diversified,1249,73,Diversified,1952,relation,new,male,Middle East/North Africa,inherited,Financial,Diversified financial,father
+Najib Mikati,2.5,Lebanon,telecom,1249,65,Telecom,1982,founder,new,male,Middle East/North Africa,privatized and resources,Non-Traded Sectors,Media,not inherited
+Taha Mikati,2.5,Lebanon,telecom,1249,76,Telecom,1982,founder,new,male,Middle East/North Africa,privatized and resources,Non-Traded Sectors,Media,not inherited
+Pedro Moreira Salles,2.5,Brazil,"banking, minerals",1249,61,Diversified,1926,relation,new,male,Latin America,inherited,Financial,Money Management,3rd generation
+Nandan Nilekani,2.5,India,software services,1249,65,Technology,1981,founder,new,male,South Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Ravi Pillai,2.5,India,construction,1249,67,Construction & Engineering,1979,chairman,new,male,South Asia,executive,Non-Traded Sectors,Constrution,not inherited
+Victor Pinchuk,2.5,Ukraine,"steel pipes, diversified",1249,60,Metals & Mining,1983,founder,new,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+John Pritzker,2.5,United States,"hotels, investments",1249,67,Finance & Investments,1957,relation,aquired,male,North America,inherited,Financial,Real Estate,father
+Kavitark Ram Shriram,2.5,United States,"venture capital, Google",1249,64,Technology,1998,investor,new,male,North America,self-made finance,Financial,Venture Capital,not inherited
+Peter Unger,2.5,Germany,auto repair,1249,76,Automotive,1985,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Eddie & Sol Zakay,2.5,United Kingdom,real estate,1249,,Real Estate,0,founder,new,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Michael Ashley,2.4,United Kingdom,sports retailing,1299,56,Fashion & Retail,1982,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Yvonne Bauer,2.4,Germany,media,1299,44,Media & Entertainment,1875,relation,new,female,Europe,inherited,Non-Traded Sectors,Media,5th generation or longer
+Alberto Bombassei,2.4,Italy,automotive brakes,1299,80,Automotive,1961,relation,new,male,Europe,executive,Traded Sectors,Consumer,not inherited
+Richard Chandler,2.4,New Zealand,investments,1299,62,Finance & Investments,1986,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Chen Jinxia,2.4,China,investments,1299,53,Finance & Investments,1994,relation,new,female,East Asia,inherited,Financial,Diversified financial,spouse/widow
+Mark Coombs,2.4,United Kingdom,finance,1299,60,Finance & Investments,1998,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Adi Godrej,2.4,India,consumer goods,1299,79,Diversified,1897,relation,new,male,South Asia,inherited,Traded Sectors,Consumer,3rd generation
+Jamshyd Godrej,2.4,India,consumer goods,1299,72,Diversified,1897,relation,new,male,South Asia,inherited,Traded Sectors,Consumer,3rd generation
+Lawrence Ho,2.4,Hong Kong,casinos,1299,44,Gambling & Casinos,1962,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+Douglas Hsu,2.4,Taiwan,diversified,1299,78,Diversified,1940,relation,new,male,East Asia,inherited,Financial,Diversified financial,father
+Vadim Moshkovich,2.4,Russia,"agriculture, land",1299,54,Food & Beverage,1995,founder,new,male,Europe,privatized and resources,Traded Sectors,Consumer,not inherited
+Erwin Franz Mueller,2.4,Germany,drugstores,1299,88,Fashion & Retail,1953,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Rishad Naoroji,2.4,India,consumer goods,1299,69,Diversified,1897,relation,new,male,South Asia,inherited,Traded Sectors,Consumer,3rd generation
+Dmitry Pumpyansky,2.4,Russia,steel pipes,1299,57,Metals & Mining,1934,former CEO,privatization,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Antonio Luiz Seabra,2.4,Brazil,cosmetics,1299,78,Fashion & Retail,1969,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Shen Wenrong,2.4,China,steel production,1299,75,Metals & Mining,1975,chairman,new,male,East Asia,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Donald Trump,2.4,United States,real estate,1299,74,Real Estate,1920,relation,new,male,North America,inherited,Non-Traded Sectors,Media,father
+T.Y. Tsai,2.4,Taiwan,finance,1299,68,Finance & Investments,1954,relation,new,male,East Asia,inherited,Financial,Money Management,not inherited
+Michael Ying,2.4,Hong Kong,retail,1299,71,Fashion & Retail,1968,former chairman and CEO,new,male,East Asia,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Vanich Chaiyawan,2.3,Thailand,"insurance, beverages",1362,89,Finance & Investments,1942,Chairman,new,male,East Asia,self-made finance,Financial,Money Management,not inherited
+"Edward DeBartolo, Jr.",2.3,United States,shopping centers,1362,74,Real Estate,1944,relation,new,male,North America,inherited,Financial,Real Estate,father
+Lindsay Fox,2.3,Australia,"logistics, real estate",1362,83,Logistics,1956,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Noam Gottesman,2.3,United States,hedge funds,1362,59,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Joseph Grendys,2.3,United States,poultry processing,1362,59,Food & Beverage,1985,owner,aquired,male,North America,executive,Traded Sectors,Consumer,not inherited
+David Hains,2.3,Australia,Investments,1362,90,Finance & Investments,1980,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Michael Hintze,2.3,Australia,investment,1362,67,Finance & Investments,1999,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Baba Kalyani,2.3,India,engineering,1362,72,Construction & Engineering,1961,relation,new,male,South Asia,inherited,0,Other,father
+Mustafa Rahmi Koc,2.3,Turkey,diversified,1362,90,Diversified,1926,relation,new,male,Middle East/North Africa,inherited,Financial,Diversified financial,3rd generation
+Lam Kong,2.3,China,pharmaceuticals,1362,56,Healthcare,1995,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Liu Ming Chung,2.3,Brazil,paper,1362,58,Manufacturing,1995,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Alexander Mamut,2.3,Russia,investments,1362,61,Finance & Investments,1999,investor,new,male,Europe,privatized and resources,Financial,Diversified financial,not inherited
+Daniel Mate,2.3,Spain,"mining, commodities",1362,57,Metals & Mining,1974,leadership,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Clayton Mathile,2.3,United States,pet food,1362,80,Food & Beverage,1946,former CEO,new,male,North America,executive,Traded Sectors,Consumer,not inherited
+Aristotelis Mistakidis,2.3,Greece,"mining, commodities",1362,59,Metals & Mining,1974,"co-director of zinc, copper and lead",new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Fernando Roberto Moreira Salles,2.3,Brazil,"banking, minerals",1362,74,Diversified,1926,relation,new,male,Latin America,inherited,Financial,Money Management,3rd generation
+Joao Moreira Salles,2.3,Brazil,"banking, minerals",1362,59,Diversified,1926,relation,new,male,Latin America,inherited,Financial,Money Management,3rd generation
+Walther Moreira Salles Junior,2.3,Brazil,"banking, minerals",1362,64,Finance & Investments,1926,relation,new,male,Latin America,inherited,Financial,Money Management,3rd generation
+Stewart Rahr,2.3,United States,drug distribution,1362,75,Healthcare,1944,relation,new,male,North America,executive,New Sectors,Technology-Medical,not inherited
+Krit Ratanarak,2.3,Thailand,"media, real estate",1362,74,Media & Entertainment,1945,relation,new,male,East Asia,inherited,Non-Traded Sectors,Media,father
+Stephan Schmidheiny,2.3,Switzerland,investments,1362,73,Finance & Investments,1912,relation,new,male,Europe,inherited,Financial,Diversified financial,4th generation
+Sze Man Bok,2.3,China,hygiene products,1362,71,Manufacturing,1985,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Katsumi Tada,2.3,Japan,real estate,1362,75,Real Estate,1974,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Ted Turner,2.3,United States,cable television,1362,82,Media & Entertainment,1970,founder,aquired,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Jitendra Virwani,2.3,India,real estate,1362,55,Real Estate,1993,founder,new,male,South Asia,self-made finance,Financial,Real Estate,not inherited
+Arkady Volozh,2.3,Russia,search engine,1362,57,Media & Entertainment,1997,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Computer,not inherited
+Lang Walker,2.3,Australia,real estate,1362,75,Real Estate,1972,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Wei Ying-Chiao,2.3,Taiwan,"food, beverages",1362,66,Food & Beverage,1991,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Elaine Wynn,2.3,United States,"casinos, hotels",1362,78,Gambling & Casinos,1973,founder,new,female,North America,self-made finance,Financial,Real Estate,not inherited
+Jerry Yang,2.3,United States,Yahoo,1362,52,Technology,1994,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Kostyantin Zhevago,2.3,Ukraine,mining,1362,47,Metals & Mining,1960,founder,privatization,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Edward Bass,2.2,United States,"oil, investments",1444,75,Energy,1919,relation,new,male,North America,inherited,Resource Related,Energy,father
+Bruce Cheng,2.2,Taiwan,electronics,1444,85,Technology,1971,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Dermot Desmond,2.2,Ireland,finance,1444,70,Finance & Investments,1995,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+"Frank Fertitta, III.",2.2,United States,"casinos, mixed martial arts",1444,59,Sports,1976,ceo,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Lorenzo Fertitta,2.2,United States,"casinos, mixed martial arts",1444,52,Sports,1976,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Gu Wei,2.2,China,consumer electronics,1444,56,Manufacturing,2005,chairman,new,male,East Asia,executive,Traded Sectors,Non-consumer industrial,not inherited
+Carlos Hank Rhon,2.2,Mexico,banking,1444,73,Diversified,1992,founder,new,male,Latin America,privatized and resources,Financial,Money Management,not inherited
+Gerry Harvey,2.2,Australia,retail,1444,81,Fashion & Retail,1982,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Huang Wei,2.2,China,real estate,1444,61,Real Estate,1993,president,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Hui Lin Chit,2.2,China,hygiene products,1444,67,Manufacturing,1985,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Miguel Krigsner,2.2,Brazil,cosmetics,1444,71,Fashion & Retail,1977,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Li Shuirong,2.2,China,petrochemicals,1444,64,Manufacturing,1995,chairman,new,male,East Asia,executive,Traded Sectors,Non-consumer industrial,not inherited
+Liang Xinjun,2.2,China,conglomerate,1444,53,Diversified,1992,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Rubens Menin Teixeira de Souza,2.2,Brazil,"home building, banking",1444,65,Diversified,1979,founder,new,male,Latin America,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Bob Parsons,2.2,United States,web hosting,1444,70,Technology,1997,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Alberto Roemmers,2.2,Argentina,pharmaceuticals,1444,94,Healthcare,1921,relation,new,male,Latin America,inherited,New Sectors,Technology-Medical,father
+Tang Yiu,2.2,Hong Kong,fashion retail,1444,87,Fashion & Retail,1981,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+David Walentas,2.2,United States,real estate,1444,82,Real Estate,1979,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Wu Yiling,2.2,China,pharmaceuticals,1444,71,Healthcare,1992,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Gavril Yushvaev,2.2,Russia,"precious metals, real estate",1444,63,Finance & Investments,1992,owner,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Michael Ashcroft,2.1,United Kingdom,security,1517,75,Finance & Investments,1972,founder,new,male,Europe,founder non-finance,0,Other,not inherited
+George Bishop,2.1,United States,oil & gas,1517,83,Energy,1981,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Julio Bozano,2.1,Brazil,banking,1517,85,Finance & Investments,1960,founder,new,male,Latin America,self-made finance,Financial,Money Management,not inherited
+Ray Davis,2.1,United States,pipelines,1517,79,Energy,1995,ceo,aquired,male,North America,executive,Traded Sectors,Non-consumer industrial,not inherited
+William Fisher,2.1,United States,Gap,1517,64,Fashion & Retail,1969,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Gordon Getty,2.1,United States,Getty Oil,1517,87,Energy,1904,relation,new,male,North America,inherited,Resource Related,Energy,father
+Lutz Mario Helmig,2.1,Germany,hospitals,1517,74,Healthcare,1987,founder,new,male,Europe,founder non-finance,New Sectors,Technology-Medical,not inherited
+Ilkka Herlin,2.1,Finland,"elevators, escalators",1517,62,Manufacturing,1924,relation,aquired,male,Europe,inherited,Traded Sectors,Non-consumer industrial,4th generation
+Huang Shih Tsai,2.1,Hong Kong,real estate,1517,69,Real Estate,1990,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Keeree Kanjanapas,2.1,Thailand,transportation,1517,70,Real Estate,1992,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Bruce Karsh,2.1,United States,private equity,1517,65,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Igor Makarov,2.1,Russia,investments,1517,59,Energy,1992,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Howard Marks,2.1,United States,private equity,1517,74,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Vincent McMahon,2.1,United States,entertainment,1517,75,Sports,1952,relation,new,male,North America,inherited,0,0,father
+David Murdock,2.1,United States,"Dole, real estate",1517,97,Food & Beverage,1851,Chairman and Chief Executive Officer,aquired,male,North America,executive,Traded Sectors,Consumer,not inherited
+Roger Penske,2.1,United States,cars,1517,84,Automotive,1965,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Florentino Perez,2.1,Spain,construction,1517,74,Construction & Engineering,1983,Chairman and Chief Executive Officer,aquired,male,Europe,executive,Non-Traded Sectors,Constrution,not inherited
+Dieter Schnabel,2.1,Germany,chemicals,1517,75,Manufacturing,1950,relation,aquired,male,Europe,inherited,Traded Sectors,Non-consumer industrial,father
+S. Daniel Abraham,2,United States,Slim-Fast,1580,96,Food & Beverage,1940,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Roberto Angelini Rossi,2,Chile,"forestry, mining",1580,72,Diversified,1955,relation,new,male,Latin America,inherited,Resource Related,Mining and metals,father
+Anne Beaufour,2,France,pharmaceuticals,1580,57,Healthcare,1929,relation,new,female,Europe,inherited,New Sectors,Technology-Medical,3rd generation
+Henri Beaufour,2,France,pharmaceuticals,1580,55,Healthcare,1929,relation,new,male,Europe,inherited,New Sectors,Technology-Medical,3rd generation
+John de Mol,2,Netherlands,TV programs,1580,66,Media & Entertainment,1994,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Glenn Dubin,2,United States,hedge funds,1580,63,Finance & Investments,1992,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Walter Frey,2,Switzerland,car dealerships,1580,77,Automotive,1926,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Sam Goi,2,Singapore,frozen foods,1580,74,Food & Beverage,1969,executive chairman,aquired,male,East Asia,executive,Traded Sectors,Consumer,not inherited
+Bahaa Hariri,2,Lebanon,"real estate, investments",1580,54,Real Estate,1978,relation,aquired,male,Middle East/North Africa,inherited,Financial,Real Estate,father
+Ilona Herlin,2,Finland,"elevators, escalators",1580,56,Manufacturing,1924,relation,aquired,female,Europe,inherited,Traded Sectors,Non-consumer industrial,4th generation
+Jeffery Hildebrand,2,United States,oil,1580,62,Energy,1989,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Reid Hoffman,2,United States,LinkedIn,1580,53,Technology,2002,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+W. Herbert Hunt,2,United States,oil,1580,92,Energy,1920,relation,new,male,North America,inherited,Resource Related,Energy,father
+George Joseph,2,United States,insurance,1580,99,Finance & Investments,1961,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Thomas Lee,2,United States,private equity,1580,77,Finance & Investments,1974,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Solomon Lew,2,Australia,retail,1580,76,Fashion & Retail,0,chairman,new,male,North America,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Jeffrey Lorberbaum,2,United States,flooring,1580,66,Manufacturing,1875,Chairman and Chief Executive Officer,aquired,male,North America,executive,Traded Sectors,Consumer,not inherited
+Craig McCaw,2,United States,telecom,1580,71,Telecom,1987,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Charles Munger,2,United States,Berkshire Hathaway,1580,97,Finance & Investments,1839,vice-chairman,aquired,male,North America,executive,Traded Sectors,Consumer,not inherited
+David Nahmad,2,Monaco,art collection,1580,73,Fashion & Retail,1960,founder,new,male,Europe,founder non-finance,0,Other,not inherited
+Jonathan Nelson,2,United States,private equity,1580,64,Finance & Investments,1989,founder,new,male,North America,self-made finance,Financial,Private equity/leveraged buyout,not inherited
+Kevin Plank,2,United States,Under Armour,1580,48,Fashion & Retail,1998,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Jennifer Pritzker,2,United States,"hotels, investments",1580,70,Finance & Investments,1957,relation,aquired,female,North America,inherited,Financial,Real Estate,father
+Linda Pritzker,2,United States,"hotels, investments",1580,67,Service,1957,relation,aquired,female,North America,inherited,Financial,Real Estate,father
+Thaksin Shinawatra,2,Thailand,investments,1580,71,Finance & Investments,1986,founder,new,male,East Asia,privatized and resources,Financial,Diversified financial,not inherited
+Martua Sitorus,2,Indonesia,palm oil,1580,61,Manufacturing,1991,founder,new,male,East Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Alexander Svetakov,2,Russia,real estate,1580,53,Finance & Investments,1993,owner,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Alain Taravella,2,France,real estate development,1580,73,Real Estate,1994,founder,new,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Hamdi Ulukaya,2,Turkey,greek yogurt,1580,48,Food & Beverage,2005,founder,new,male,Middle East/North Africa,founder non-finance,Traded Sectors,Consumer,not inherited
+Georg von Opel,2,Switzerland,"real estate, investments",1580,54,Finance & Investments,1862,relation,new,male,Europe,inherited,Financial,Real Estate,4th generation
+Wei Ing-Chou,2,Taiwan,"food, beverages",1580,67,Food & Beverage,1991,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Yan Zhi,2,China,real estate,1580,48,Real Estate,2005,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Joao Alves de Queiroz Filho,1.9,Brazil,pharmaceuticals,1664,68,Diversified,2001,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Lee Bass,1.9,United States,"oil, investments",1664,64,Energy,1919,relation,new,male,North America,inherited,Resource Related,Energy,father
+Nicola Bulgari,1.9,Italy,luxury goods,1664,80,Fashion & Retail,1884,relation,new,male,Europe,inherited,Traded Sectors,Consumer,5th generation or longer
+James Dinan,1.9,United States,hedge funds,1664,61,Finance & Investments,1991,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Mark Dixon,1.9,United Kingdom,office real estate,1664,61,Real Estate,1989,founder,new,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Bulent Eczacibasi,1.9,Turkey,"pharmaceuticals, diversified",1664,71,Diversified,1942,relation,new,male,Middle East/North Africa,inherited,New Sectors,Technology-Medical,father
+Robert Fisher,1.9,United States,Gap,1664,67,Fashion & Retail,1969,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Yusuf Hamied,1.9,India,pharmaceuticals,1664,84,Healthcare,1935,relation,new,male,South Asia,inherited,New Sectors,Technology-Medical,father
+Roberto Hernandez Ramirez,1.9,Mexico,banking,1664,79,Finance & Investments,1884,former CEO,aquired,male,Latin America,self-made finance,Financial,Money Management,not inherited
+Stanley Hubbard,1.9,United States,DirecTV,1664,87,Media & Entertainment,1925,owner,new,male,North America,executive,Non-Traded Sectors,Media,not inherited
+Arthur Irving,1.9,Canada,oil,1664,91,Energy,1924,relation,new,male,North America,inherited,Resource Related,Energy,father
+Hamilton James,1.9,United States,investments,1664,69,Finance & Investments,1985,president,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Jiang Zhaobai,1.9,China,real estate,1664,57,Real Estate,1997,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Yusaku Maezawa,1.9,Japan,online retail,1664,45,Technology,2004,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Lachhman Das Mittal,1.9,India,tractors,1664,90,Automotive,1969,founder,new,male,South Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Ermirio Pereira de Moraes,1.9,Brazil,diversified,1664,88,Diversified,1919,relation,new,male,Latin America,inherited,Financial,Diversified financial,father
+Maria Helena Moraes Scripilliti,1.9,Brazil,diversified,1664,90,Diversified,1919,relation,new,female,Latin America,inherited,Financial,Diversified financial,father
+Stefan Olsson,1.9,Sweden,diversified,1664,72,Diversified,1939,relation,new,male,Europe,inherited,Financial,Diversified financial,father
+Larry Robbins,1.9,United States,hedge funds,1664,51,Finance & Investments,2001,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Brian Roberts,1.9,United States,Comcast,1664,61,Media & Entertainment,1969,relation,new,male,North America,inherited,Non-Traded Sectors,Media,father
+Evgeny (Eugene) Shvidler,1.9,United States,"oil & gas, investments",1664,57,Energy,1990,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Todd Wagner,1.9,United States,online media,1664,60,Media & Entertainment,1995,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Wei Yin-Chun,1.9,Taiwan,"food, beverages",1664,64,Food & Beverage,1991,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Wei Yin-Heng,1.9,Taiwan,"food, beverages",1664,62,Food & Beverage,1991,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Gordon Wu,1.9,Hong Kong,real estate,1664,85,Real Estate,1972,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Zhu Xingliang,1.9,China,construction,1664,61,Construction & Engineering,1994,investor,new,male,East Asia,executive,Non-Traded Sectors,Constrution,not inherited
+Anita Zucker,1.9,United States,chemicals,1664,69,Manufacturing,1670,relation,privatization,female,North America,inherited,Traded Sectors,Non-consumer industrial,spouse/widow
+Mohamed Al Fayed,1.8,Egypt,"retail, investments",1750,92,Fashion & Retail,1849,owner,aquired,male,Middle East/North Africa,executive,0,0,not inherited
+Roman Avdeev,1.8,Russia,"banking, development",1750,53,Finance & Investments,1994,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+O. Francis Biondi,1.8,United States,hedge funds,1750,56,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Vladimir Bogdanov,1.8,Russia,oil,1750,69,Energy,1993,president,privatization,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+David Booth,1.8,United States,mutual funds,1750,75,Finance & Investments,1981,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Robert Duggan,1.8,United States,pharmaceuticals,1750,76,Healthcare,1991,investor,aquired,male,North America,executive,New Sectors,Technology-Medical,not inherited
+Faruk Eczacibasi,1.8,Turkey,"pharmaceuticals, diversified",1750,66,Diversified,1942,relation,new,male,Middle East/North Africa,inherited,New Sectors,Technology-Medical,father
+N. Murray Edwards,1.8,Canada,oil & gas,1750,61,Energy,1989,chairman,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+James France,1.8,United States,"Nascar, racing",1750,76,Sports,1947,relation,new,male,North America,inherited,0,Other,father
+Mario Gabelli,1.8,United States,money management,1750,79,Finance & Investments,1977,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Reinold Geiger,1.8,Austria,beauty products,1750,73,Fashion & Retail,1976,owner,aquired,male,Europe,executive,Traded Sectors,Consumer,not inherited
+Rolf Gerling,1.8,Germany,insurance,1750,66,Finance & Investments,1904,relation,new,male,Europe,inherited,Financial,Money Management,father
+Brian Higgins,1.8,United States,hedge funds,1750,56,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Drew Houston,1.8,United States,cloud storage service,1750,38,Technology,2007,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Stephen Jarislowsky,1.8,Canada,money management,1750,95,Finance & Investments,1955,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Dmitry Kamenshchik,1.8,Russia,airport,1750,52,Service,1964,chairman,privatization,male,Europe,privatized and resources,Financial,Real Estate,not inherited
+Ihor Kolomoyskyy,1.8,Ukraine,"banking, investments",1750,58,Diversified,1992,owner,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Marc Lasry,1.8,United States,hedge funds,1750,60,Finance & Investments,1995,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Lei Jufang,1.8,China,pharmaceuticals,1750,68,Healthcare,1993,founder,new,female,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Wolfgang Leitner,1.8,Austria,engineering,1750,68,Construction & Engineering,1852,president and ceo,new,male,Europe,executive,0,Other,not inherited
+Vincent Lo,1.8,Hong Kong,real estate,1750,72,Real Estate,1971,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Joao Roberto Marinho,1.8,Brazil,media,1750,67,Media & Entertainment,1925,relation,new,male,Latin America,inherited,Non-Traded Sectors,Media,father
+Jose Roberto Marinho,1.8,Brazil,media,1750,65,Media & Entertainment,1925,relation,new,male,Latin America,inherited,Non-Traded Sectors,Media,father
+Miao Shouliang,1.8,China,real estate,1750,66,Real Estate,0,,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Kazuo Okada,1.8,Japan,casinos,1750,78,Gambling & Casinos,1973,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Husnu Ozyegin,1.8,Turkey,"finance, diversified",1750,76,Finance & Investments,1987,founder,new,male,Middle East/North Africa,self-made finance,Financial,Money Management,not inherited
+Tor Peterson,1.8,United States,commodities,1750,56,Metals & Mining,1974,employee,new,male,North America,privatized and resources,Resource Related,Mining and metals,not inherited
+Alvaro Saieh Bendeck,1.8,Chile,banking,1750,71,Finance & Investments,1871,Chairman,new,male,Latin America,self-made finance,Financial,Money Management,not inherited
+Leonard Schleifer,1.8,United States,pharmaceuticals,1750,68,Healthcare,1988,founder,new,male,North America,founder non-finance,New Sectors,Technology-Medical,not inherited
+Shi Wen-long,1.8,Taiwan,plastics,1750,93,Manufacturing,1960,founder,new,male,East Asia,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Sun Guangxin,1.8,China,diversified,1750,58,Diversified,1989,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Henry Swieca,1.8,United States,hedge funds,1750,63,Finance & Investments,1992,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Torbjorn Tornqvist,1.8,Sweden,oil trading,1750,67,Energy,1997,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Martin Viessmann,1.8,Germany,heating and cooling equipment,1750,67,Manufacturing,1917,relation,new,male,Europe,inherited,Traded Sectors,Non-consumer industrial,3rd generation
+Vasily Anisimov,1.7,Russia,real estate,1833,69,Metals & Mining,1999,investor,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Nicolas Berggruen,1.7,United States,investments,1833,59,Finance & Investments,1988,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Henadiy Boholyubov,1.7,Ukraine,"banking, investments",1833,59,Diversified,1992,owner,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Peter Buck,1.7,United States,Subway sandwich shops,1833,90,Food & Beverage,1965,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Richard Chang,1.7,Taiwan,"real estate, electronics",1833,74,Real Estate,1984,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Henry Engelhardt,1.7,United States,insurance,1833,63,Finance & Investments,1993,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Paul Foster,1.7,United States,oil refining,1833,63,Energy,1997,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Bernd Freier,1.7,Germany,fashion retail,1833,64,Fashion & Retail,1969,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Christopher Goldsbury,1.7,United States,salsa,1833,78,Food & Beverage,1947,relation,new,male,North America,inherited,Traded Sectors,Consumer,father
+Christoph Henkel,1.7,Germany,consumer goods,1833,63,Fashion & Retail,1876,relation,new,male,Europe,inherited,Traded Sectors,Consumer,father
+Sergei Katsiev,1.7,Russia,"retail, wholesale",1833,63,Fashion & Retail,1998,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Kagemasa Kozuki,1.7,Japan,video games,1833,80,Technology,1969,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Edward Lampert,1.7,United States,Sears,1833,58,Finance & Investments,1988,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Gary Michelson,1.7,United States,medical patents,1833,72,Healthcare,1949,inventor,new,male,North America,executive,New Sectors,Technology-Medical,not inherited
+Jorge Perez,1.7,United States,real estate,1833,71,Real Estate,1979,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Theodore Rachmat,1.7,Indonesia,diversified,1833,77,Diversified,1998,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Fernando Roig,1.7,Spain,supermarkets,1833,73,Fashion & Retail,1977,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Sheryl Sandberg,1.7,United States,Facebook,1833,51,Technology,2004,COO,new,female,North America,executive,New Sectors,Technology-Computer,not inherited
+Shao Genhuo,1.7,China,agribusiness,1833,55,Food & Beverage,1994,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Pavel Tykac,1.7,Czechia,coal mines,1833,56,Metals & Mining,1995,investor,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Rufino Vigil Gonzalez,1.7,Mexico,steel,1833,72,Metals & Mining,1991,founder,new,male,Latin America,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Wang Junmin,1.7,China,pharmaceuticals,1833,52,Healthcare,2000,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Medical,not inherited
+Charlotte Colket Weber,1.7,United States,Campbell Soup,1833,78,Food & Beverage,1869,relation,aquired,female,North America,inherited,Traded Sectors,Consumer,3rd generation
+Patricia Angelini Rossi,1.6,Chile,"forestry, mining",1931,67,Diversified,1955,relation,new,female,Latin America,inherited,Resource Related,Mining and metals,father
+Domenico Dolce,1.6,Italy,luxury goods,1931,62,Fashion & Retail,1987,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Alfredo Egydio Arruda Villela Filho,1.6,Brazil,banking,1931,51,Finance & Investments,1966,relation,new,male,Latin America,inherited,Financial,Money Management,father
+Stefano Gabbana,1.6,Italy,luxury goods,1931,58,Fashion & Retail,1987,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Alexandre Grendene Bartelle,1.6,Brazil,shoes,1931,71,Fashion & Retail,1971,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Asok Kumar Hiranandani,1.6,Singapore,real estate,1931,66,Real Estate,1947,relation,new,male,East Asia,inherited,Financial,Real Estate,father
+William Koch,1.6,United States,"oil, investments",1931,80,Energy,1940,relation,new,male,North America,inherited,Resource Related,Energy,father
+Manuel Lao Hernandez,1.6,Spain,casinos,1931,76,Gambling & Casinos,1978,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Michael Lee-Chin,1.6,Canada,mutual funds,1931,70,Finance & Investments,1950,relation,new,male,North America,inherited,Financial,Hedge funds,father
+Catherine Lozick,1.6,United States,valve manufacturing,1931,75,Manufacturing,1947,relation,new,female,North America,inherited,Traded Sectors,Non-consumer industrial,father
+Gary Magness,1.6,United States,"cable TV, investments",1931,67,Media & Entertainment,1968,relation,new,male,North America,inherited,Non-Traded Sectors,Media,father
+Massimo Moratti,1.6,Italy,oil refinery,1931,75,Energy,1962,relation,new,male,Europe,inherited,Resource Related,Energy,father
+Rubens Ometto Silveira Mello,1.6,Brazil,"sugar, ethanol",1931,71,Energy,1936,chairman,aquired,male,Latin America,privatized and resources,Resource Related,Energy,not inherited
+Nelson Peltz,1.6,United States,investments,1931,78,Finance & Investments,2005,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Petro Poroshenko,1.6,Ukraine,confectionery,1931,55,Food & Beverage,1993,founder,privatization,male,Europe,privatized and resources,Traded Sectors,Consumer,not inherited
+Francisco Jose Riberas Mera,1.6,Spain,"steel, autoparts",1931,56,Manufacturing,1958,relation,new,male,Europe,inherited,Resource Related,Non-consumer industrial,father
+Juan Maria Riberas Mera,1.6,Spain,"steel, investments",1931,52,Metals & Mining,1958,relation,new,male,Europe,inherited,Resource Related,Non-consumer industrial,father
+Deniz Sahenk,1.6,Turkey,diversified,1931,75,Diversified,1951,relation,new,female,Middle East/North Africa,inherited,Financial,Money Management,spouse/widow
+Leonid Simanovsky,1.6,Russia,investments,1931,71,Finance & Investments,1994,founder,new,male,Europe,self-made finance,Financial,Diversified financial,not inherited
+Peter Sperling,1.6,United States,education,1931,61,Service,1973,relation,new,male,North America,inherited,0,Other,father
+Sun Weijie,1.6,China,oilfield equipment,1931,57,Manufacturing,1997,founder and chairman,new,male,East Asia,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Harindarpal Banga,1.5,India,commodities,2035,70,Finance & Investments,1986,Vice Chairman,new,male,South Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Alex Beard,1.5,United Kingdom,"mining, commodities",2035,53,Metals & Mining,1974,leadership,new,male,Europe,privatized and resources,Resource Related,Mining and metals,not inherited
+Paolo Bulgari,1.5,Italy,luxury goods,2035,83,Fashion & Retail,1884,relation,new,male,Europe,inherited,Traded Sectors,Consumer,5th generation or longer
+Ron Burkle,1.5,United States,"supermarkets, investments",2035,68,Finance & Investments,1986,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Ahmet Calik,1.5,Turkey,"energy, banking, construction",2035,63,Diversified,1981,relation,new,male,Middle East/North Africa,privatized and resources,Resource Related,Energy,not inherited
+Steve Case,1.5,United States,AOL,2035,62,Technology,1985,Chairman and Chief Executive Officer,new,male,North America,executive,New Sectors,Technology-Computer,not inherited
+Alberto Cortina,1.5,Spain,investments,2035,75,Finance & Investments,1952,owner,aquired,male,Europe,self-made finance,Financial,Diversified financial,not inherited
+Bharat Desai,1.5,United States,IT consulting,2035,68,Technology,1980,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+John Farber,1.5,United States,chemicals,2035,95,Manufacturing,1950,founder,new,male,North America,founder non-finance,Traded Sectors,Non-consumer industrial,not inherited
+Alan Gerry,1.5,United States,cable television,2035,92,Media & Entertainment,1956,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Esther Grether,1.5,Switzerland,art collection,2035,85,Fashion & Retail,1899,relation,new,female,Europe,inherited,Traded Sectors,Consumer,spouse/widow
+Bill Gross,1.5,United States,investments,2035,76,Finance & Investments,1971,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Huang Wen Tsai,1.5,China,real estate,2035,67,Real Estate,1996,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Seth Klarman,1.5,United States,investments,2035,63,Finance & Investments,1982,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Pyotr Kondrashev,1.5,Russia,investments,2035,71,Manufacturing,1925,CEO,privatization,male,Europe,privatized and resources,Traded Sectors,Consumer,not inherited
+James Leininger,1.5,United States,medical products,2035,76,Healthcare,1976,founder,new,male,North America,founder non-finance,New Sectors,Technology-Medical,not inherited
+Youssef Mansour,1.5,Egypt,diversified,2035,75,Diversified,1952,relation,new,male,Middle East/North Africa,inherited,Financial,Diversified financial,father
+Billy Joe (Red) McCombs,1.5,United States,"real estate, oil, cars, sports",2035,93,Diversified,1953,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Marius Nacht,1.5,Israel,software,2035,55,Technology,1993,founder,new,male,Middle East/North Africa,founder non-finance,New Sectors,Technology-Computer,not inherited
+Ezra Nahmad,1.5,Monaco,art,2035,75,Finance & Investments,1960,founder,new,male,Europe,founder non-finance,0,Other,not inherited
+Lirio Parisotto,1.5,Brazil,investments,2035,67,Finance & Investments,1988,founder,new,male,Latin America,self-made finance,Financial,Diversified financial,not inherited
+Mark Pincus,1.5,United States,online games,2035,55,Technology,2007,founder,new,male,North America,founder non-finance,New Sectors,Technology-Computer,not inherited
+Helena Revoredo,1.5,Spain,security services,2035,74,Service,1976,relation,new,female,Europe,inherited,Financial,Money Management,spouse/widow
+Fayez Sarofim,1.5,United States,money management,2035,92,Finance & Investments,1958,relation,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Peter Sondakh,1.5,Indonesia,investments,2035,71,Finance & Investments,1980,owner,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Kenny Troutt,1.5,United States,telecom,2035,73,Telecom,1988,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+John Van Lieshout,1.5,Australia,real estate,2035,75,Real Estate,0,founder,new,male,North America,self-made finance,Financial,Real Estate,not inherited
+Ye Cheng,1.5,China,conglomerate,2035,59,Diversified,1992,chairman,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Zhong Sheng Jian,1.5,Singapore,real estate,2035,63,Real Estate,1993,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Farkhad Akhmedov,1.4,Russia,investments,2141,65,Energy,1993,owner,subsidiary,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Alberto Alcocer,1.4,Spain,investments,2141,78,Finance & Investments,1952,owner,aquired,male,Europe,self-made finance,Financial,Diversified financial,not inherited
+Mori Arkin,1.4,Israel,pharmaceuticals,2141,68,Healthcare,1983,owner,new,male,Middle East/North Africa,executive,New Sectors,Technology-Medical,not inherited
+Louis Bacon,1.4,United States,hedge funds,2141,64,Finance & Investments,1989,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Angela Bennett,1.4,Australia,mining,2141,77,Metals & Mining,1955,relation,new,female,North America,inherited,Resource Related,Mining and metals,father
+Binod Chaudhary,1.4,Nepal,diversified,2141,65,Diversified,1970,relation,new,male,South Asia,self-made finance,Financial,Diversified financial,not inherited
+Ana Lucia de Mattos Barretto Villela,1.4,Brazil,banking,2141,47,Finance & Investments,1966,relation,new,female,Latin America,inherited,Financial,Money Management,father
+Darwin Deason,1.4,United States,software,2141,80,Service,1988,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Jayme Garfinkel,1.4,Brazil,insurance,2141,75,Finance & Investments,1945,Chairman and Chief Executive Officer,new,male,Latin America,inherited,Financial,Money Management,father
+Richard Hayne,1.4,United States,Urban Outfitters,2141,73,Fashion & Retail,1970,founder,new,male,North America,founder non-finance,Traded Sectors,Consumer,not inherited
+Timothy Headington,1.4,United States,"oil & gas, investments",2141,70,Energy,1978,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Daniel Hirschfeld,1.4,United States,fashion retail,2141,79,Fashion & Retail,1948,relation,new,male,North America,executive,0,0,not inherited
+Johan Johannson,1.4,Norway,grocery stores,2141,54,Fashion & Retail,1866,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Sidney Kimmel,1.4,United States,retail,2141,93,Fashion & Retail,1970,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Andrei Kosogov,1.4,Russia,Banking,2141,60,Energy,1989,supervisory board or directors,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Guilherme Peirao Leal,1.4,Brazil,cosmetics,2141,71,Fashion & Retail,1969,co-chairman,new,male,Latin America,executive,Traded Sectors,Consumer,not inherited
+Li Denghai,1.4,China,seed production,2141,71,Food & Beverage,1989,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Anatoly Lomakin,1.4,Russia,investments,2141,68,Metals & Mining,1992,owner,privatization,male,Europe,privatized and resources,Traded Sectors,Consumer,not inherited
+Kerr Neilson,1.4,Australia,Investments,2141,71,Finance & Investments,1994,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Vadim Novinsky,1.4,Ukraine,steel,2141,57,Metals & Mining,1995,owner,new,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Jonathan Oringer,1.4,United States,stock photos,2141,46,Technology,2003,founder,new,male,North America,founder non-finance,Non-Traded Sectors,Media,not inherited
+Vito Rodriguez Rodriguez,1.4,Peru,processed milk,2141,82,Diversified,1967,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Airat Shaimiev,1.4,Russia,"refinery, chemicals",2141,59,Energy,1995,owner,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Edward Stack,1.4,United States,Dick's Sporting Goods,2141,66,Fashion & Retail,1948,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",father
+Thomas Steyer,1.4,United States,hedge funds,2141,63,Finance & Investments,1986,founder,new,male,North America,self-made finance,Financial,Hedge funds,not inherited
+Sukanto Tanoto,1.4,Indonesia,diversified,2141,71,Diversified,1973,founder,new,male,East Asia,self-made finance,Financial,Diversified financial,not inherited
+Jim Thompson,1.4,United States,logistics,2141,81,Logistics,1965,founder,new,male,North America,founder non-finance,0,Other,not inherited
+Wilma Tisch,1.4,United States,diversified,2141,93,Finance & Investments,1946,relation,new,female,North America,inherited,Financial,Diversified financial,spouse/widow
+Sunny Varkey,1.4,India,education,2141,63,Service,1959,chairman,new,male,South Asia,executive,0,Other,not inherited
+"Richard Yuengling, Jr.",1.4,United States,beer,2141,78,Food & Beverage,1829,relation,new,male,North America,inherited,Traded Sectors,Consumer,5th generation or longer
+Elena Baturina,1.3,Russia,"investments, real estate",2263,58,Construction & Engineering,1991,founder,new,female,Europe,privatized and resources,Non-Traded Sectors,Constrution,not inherited
+Oleg Boyko,1.3,Russia,diversified,2263,56,Diversified,1995,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Ana Maria Brescia Cafferata,1.3,Peru,"mining, banking",2263,96,Diversified,1889,relation,new,female,Latin America,inherited,Resource Related,Mining and metals,father
+Richard Desmond,1.3,United Kingdom,publishing,2263,69,Media & Entertainment,1974,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Eduardo Eurnekian,1.3,Argentina,"airports, investments",2263,88,Diversified,1988,founder,new,male,Latin America,self-made finance,Financial,Real Estate,not inherited
+Ayman Hariri,1.3,Lebanon,"construction, investments",2263,42,Construction & Engineering,1978,relation,aquired,male,Middle East/North Africa,inherited,Non-Traded Sectors,Constrution,father
+Eduardo Hochschild,1.3,Peru,mining,2263,57,Metals & Mining,1911,relation,new,male,Latin America,inherited,Resource Related,Mining and metals,3rd generation
+Michael Krasny,1.3,United States,retail,2263,67,Technology,1984,founder,new,male,North America,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Mangal Prabhat Lodha,1.3,India,real estate,2263,65,Real Estate,1980,founder,new,male,South Asia,self-made finance,Financial,Real Estate,not inherited
+Yoshiko Mori,1.3,Japan,real estate,2263,80,Real Estate,1959,relation,new,female,East Asia,inherited,Non-Traded Sectors,Constrution,spouse/widow
+Ranjan Pai,1.3,India,education,2263,48,Service,1953,relation,new,male,South Asia,inherited,0,Other,3rd generation
+Lily Safra,1.3,Monaco,banking,2263,83,Finance & Investments,1955,relation,new,female,Europe,inherited,Financial,Money Management,spouse/widow
+Nobutada Saji,1.3,Japan,beverages,2263,75,Food & Beverage,1899,relation,new,male,East Asia,inherited,Traded Sectors,Consumer,3rd generation
+Thomas Sandell,1.3,Sweden,hedge funds,2263,60,Finance & Investments,1988,founder,new,male,Europe,self-made finance,Financial,Hedge funds,not inherited
+Gerald Schwartz,1.3,Canada,finance,2263,79,Finance & Investments,1983,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Anatoly Sedykh,1.3,Russia,steel pipes,2263,56,Metals & Mining,1999,founder,new,male,Europe,privatized and resources,Resource Related,Non-consumer industrial,not inherited
+Radik Shaimiev,1.3,Russia,"refinery, chemicals",2263,56,Energy,1995,owner,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Ron Sim,1.3,Singapore,retail,2263,62,Fashion & Retail,1980,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Joop van den Ende,1.3,Netherlands,TV shows,2263,79,Media & Entertainment,1993,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Wei Shaojun,1.3,China,real estate,2263,58,Real Estate,1995,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Farris Wilks,1.3,United States,natural gas,2263,69,Energy,2002,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Yang Keng,1.3,China,real estate,2263,60,Real Estate,0,chairman,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Luis Enrique Yarur Rey,1.3,Chile,banking,2263,70,Finance & Investments,1937,relation,new,male,Latin America,inherited,Financial,Money Management,father
+Zhou Chengjian,1.3,China,fashion retail,2263,55,Fashion & Retail,1986,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Aras Agalarov,1.2,Russia,real estate,2378,65,Fashion & Retail,1998,founder,new,male,Europe,self-made finance,Financial,Real Estate,not inherited
+Syed Mokhtar AlBukhary,1.2,Malaysia,"engineering, energy, construction",2378,69,Construction & Engineering,1911,owner,privatization,male,East Asia,privatized and resources,Financial,Diversified financial,not inherited
+Thomas Bailey,1.2,United States,money management,2378,84,Finance & Investments,1969,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Cao Kejian,1.2,China,air compressors,2378,58,Manufacturing,1956,chairman,privatization,male,East Asia,privatized and resources,Traded Sectors,Non-consumer industrial,not inherited
+Chen Tianqiao,1.2,China,online games,2378,47,Technology,1999,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Diego Della Valle,1.2,Italy,shoes,2378,67,Fashion & Retail,1920,relation,new,male,Europe,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Aydin Dogan,1.2,Turkey,media,2378,84,Media & Entertainment,1961,founder,new,male,Middle East/North Africa,founder non-finance,Non-Traded Sectors,Media,not inherited
+Gabriel Escarrer,1.2,Spain,hotels,2378,86,Service,1956,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Gleb Fetisov,1.2,Russia,investments,2378,54,Telecom,1989,owner,new,male,Europe,executive,Non-Traded Sectors,Media,not inherited
+Dan Gertler,1.2,Israel,mining,2378,47,Metals & Mining,1996,founder,new,male,Middle East/North Africa,privatized and resources,Resource Related,Mining and metals,not inherited
+Mehmet Nazif Gunal,1.2,Turkey,"tourism, construction",2378,73,Diversified,1976,founder,new,male,Middle East/North Africa,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Stelios Haji-Ioannou,1.2,Cyprus,EasyJet,2378,54,Service,1995,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Liu Baolin,1.2,China,pharmacies,2378,67,Fashion & Retail,1985,chairman,new,male,East Asia,executive,New Sectors,Technology-Medical,not inherited
+Andrei Molchanov,1.2,Russia,construction materials,2378,49,Construction & Engineering,1993,founder,privatization,male,Europe,privatized and resources,Non-Traded Sectors,Constrution,not inherited
+Murdaya Poo,1.2,Indonesia,diversified,2378,80,Diversified,1988,founder,new,male,East Asia,privatized and resources,Financial,Diversified financial,not inherited
+Michael Price,1.2,United States,investments,2378,68,Finance & Investments,2001,founder,new,male,North America,self-made finance,Financial,Diversified financial,not inherited
+Andrei Rappoport,1.2,Russia,investments,2378,57,Finance & Investments,1991,founder,aquired,male,Europe,self-made finance,Financial,Diversified financial,not inherited
+Boris Rotenberg,1.2,Russia,"construction, pipes, chemicals",2378,64,Construction & Engineering,1930,owner,"new, privitization",male,Europe,privatized and resources,Non-Traded Sectors,Constrution,not inherited
+Hajime Satomi,1.2,Japan,"video games, pachinko",2378,79,Gambling & Casinos,1975,founder,new,male,East Asia,founder non-finance,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Albert Shigaboutdinov,1.2,Russia,"refinery, chemicals",2378,68,Diversified,1995,owner,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Michael Steinhardt,1.2,United States,hedge funds,2378,80,Finance & Investments,1967,founder,new,male,North America,self-made finance,Financial,Money Management,not inherited
+Rustem Sulteev,1.2,Russia,"refinery, chemicals",2378,67,Energy,1991,founder,new,male,Europe,privatized and resources,Resource Related,Energy,not inherited
+Thongma Vijitpongpun,1.2,Thailand,real estate,2378,63,Real Estate,1993,founder,new,male,East Asia,self-made finance,Financial,Real Estate,not inherited
+Allan Wong,1.2,Hong Kong,electronics,2378,71,Manufacturing,1976,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Eduardo Belmont Anderson,1.1,Peru,cosmetics,2524,75,Fashion & Retail,1988,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Thomas Bruch,1.1,Germany,retail,2524,70,Fashion & Retail,1828,relation,new,male,Europe,inherited,Non-Traded Sectors,"Retail, Restaurant",5th generation or longer
+Charles Dunstone,1.1,United Kingdom,mobile phones,2524,57,Telecom,1989,founder,new,male,Europe,founder non-finance,Traded Sectors,Consumer,not inherited
+Soichiro Fukutake,1.1,Japan,education,2524,75,Service,1955,relation,new,male,East Asia,inherited,0,Other,father
+Anne Gittinger,1.1,United States,Nordstrom department stores,2524,85,Fashion & Retail,1901,relation,new,female,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",3rd generation
+Polys Haji-Ioannou,1.1,Cyprus,EasyJet,2524,61,Service,1995,owner,new,male,Europe,executive,Non-Traded Sectors,"Retail, Restaurant",not inherited
+Mohammed Ibrahim,1.1,United Kingdom,communications,2524,74,Telecom,1998,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Media,not inherited
+Mitchell Jacobson,1.1,United States,industrial equipment,2524,70,Service,1941,relation,new,male,North America,inherited,Traded Sectors,Non-consumer industrial,father
+Lim Hariyanto Wijaya Sarwono,1.1,Indonesia,"palm oil, nickel mining",2524,92,Energy,1996,founder,new,male,East Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Low Tuck Kwong,1.1,Indonesia,coal,2524,72,Energy,1973,founder,new,male,East Asia,privatized and resources,Resource Related,Mining and metals,not inherited
+Yasseen Mansour,1.1,Egypt,diversified,2524,59,Diversified,1952,relation,new,male,Middle East/North Africa,inherited,Financial,Diversified financial,father
+Bruce Nordstrom,1.1,United States,Nordstrom department stores,2524,87,Fashion & Retail,1901,relation,new,male,North America,inherited,Non-Traded Sectors,"Retail, Restaurant",3rd generation
+Madeleine Olsson Ericksson,1.1,Sweden,diversified,2524,76,Diversified,1939,relation,new,female,Europe,inherited,Financial,Diversified financial,father
+Chanchai Ruayrungruang,1.1,China,real estate,2524,67,Real Estate,1984,founder,new,male,East Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Yoshikazu Tanaka,1.1,Japan,social network,2524,44,Technology,2004,founder,new,male,East Asia,founder non-finance,New Sectors,Technology-Computer,not inherited
+Hary Tanoesoedibjo,1.1,Indonesia,media,2524,55,Media & Entertainment,1989,founder,aquired,male,East Asia,founder non-finance,Non-Traded Sectors,Media,not inherited
+Mehmet Sinan Tara,1.1,Turkey,construction,2524,62,Construction & Engineering,1957,relation,new,male,Middle East/North Africa,inherited,Non-Traded Sectors,Constrution,father
+Wang Kunxiao,1.1,China,oilfield equipment,2524,51,Manufacturing,1997,founder,new,male,East Asia,privatized and resources,Resource Related,Energy,not inherited
+Dan Wilks,1.1,United States,natural gas,2524,64,Energy,2002,founder,new,male,North America,privatized and resources,Resource Related,Energy,not inherited
+Eugene Wu,1.1,Taiwan,finance,2524,75,Finance & Investments,1945,relation,new,male,East Asia,inherited,Financial,Hedge funds,father
+Ahmet Nazif Zorlu,1.1,Turkey,diversified,2524,76,Diversified,1953,founder,new,male,Middle East/North Africa,self-made finance,Financial,Diversified financial,not inherited
+Ina Chan,1,Hong Kong,casinos,2674,67,Gambling & Casinos,1962,relation,new,female,East Asia,inherited,Financial,Real Estate,spouse/widow
+David Harding,1,United Kingdom,finance,2674,59,Finance & Investments,1997,founder,new,male,Europe,self-made finance,Financial,Money Management,not inherited
+Morris Kahn,1,Israel,software,2674,91,Technology,1982,investor,new,male,Middle East/North Africa,executive,New Sectors,Technology-Computer,not inherited
+T.S. Kalyanaraman,1,India,jewelry,2674,73,Fashion & Retail,1993,founder,new,male,South Asia,founder non-finance,Traded Sectors,Consumer,not inherited
+Lev Kvetnoi,1,Russia,cement,2674,55,Finance & Investments,1937,owner,privatization,male,Europe,privatized and resources,Non-Traded Sectors,Constrution,not inherited
+Jose Llado Fernandez-Urrutia,1,Spain,construction,2674,87,Construction & Engineering,1960,founder,new,male,Europe,founder non-finance,Non-Traded Sectors,Constrution,not inherited
+Mofatraj Munot,1,India,real estate,2674,76,Real Estate,1969,founder,new,male,South Asia,self-made finance,Financial,Real Estate,not inherited
+Jorge Rodriguez Rodriguez,1,Peru,processed milk,2674,75,Diversified,1967,founder,new,male,Latin America,founder non-finance,Traded Sectors,Consumer,not inherited
+Alan Rydge,1,Australia,entertainment,2674,68,Media & Entertainment,1913,relation,new,male,North America,inherited,Non-Traded Sectors,Media,father
+Surin Upatkoon,1,Thailand,"telecom, lotteries, insurance",2674,71,Diversified,1983,owner,new,male,East Asia,executive,Non-Traded Sectors,Media,not inherited
+Murat Vargi,1,Turkey,telecom,2674,73,Telecom,1993,founder,new,male,Middle East/North Africa,founder non-finance,Non-Traded Sectors,Media,not inherited
