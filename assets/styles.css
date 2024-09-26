@@ -61,3 +61,31 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+/* Visual Hierarchy */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Sticky Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+/* Interactive Elements for Project Cards */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
