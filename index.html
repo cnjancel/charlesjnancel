@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Charles's Projects</title>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/styles.css">
+    <!-- AOS Library for Animations -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Project Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
+        <nav class="navbar">
+            <h1>Charles's Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" class="section" data-aos="fade-up">
         <h2>About Me</h2>
         <p>Brief introduction about you, your background, and interests.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="section" data-aos="fade-up">
         <h2>Projects</h2>
-        <ul>
-            <li><a href="projects/project1.html">Project 1</a> - Description of your first project.</li>
-            <li><a href="projects/project2.html">Project 2</a> - Description of your second project.</li>
-            <!-- Add more projects as needed -->
-        </ul>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Short description of Project 1.</p>
+                <a href="projects/project1.html">View Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Short description of Project 2.</p>
+                <a href="projects/project2.html">View Details</a>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section" data-aos="fade-up">
         <h2>Contact</h2>
         <p>Feel free to connect with me on <a href="https://github.com/yourusername">GitHub</a> or via email at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
     </section>
@@ -42,5 +52,11 @@
     <footer>
         <p>© 2024 Charles | Built with GitHub Pages</p>
     </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
