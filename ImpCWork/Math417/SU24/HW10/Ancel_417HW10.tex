@@ -1,0 +1,346 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 10}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+%-----------------------------
+\begin{exercise}{1} Given a polyhedron with set \(V\) of vertices of size \(m\), consider the evident action by its symmetry group \(G\) on the set \(V\), which gives a homomorphism \(\phi : G \rightarrow \text{Sym}(V) \simeq S_m\). For each of the four cases (cube, octahedron, dodecahedron, icosahedron), describe the cycle type of \(\phi(g)\) for each type of element \(g\in G\)(according to the classification of elements of \(G\) that I gave in class).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    The symmetry groups of the polyhedra are as follows:
+    \begin{itemize}[label=--]
+        \item Cube and Octahedron: Symmetry group \(S_4\)
+        \item Dodecahedron and Icosahedron: Symmetry group \(A_5\)
+    \end{itemize}
+
+    The cycle type of \(\phi(g)\) in \(S_4\) and \(A_5\) corresponds to the permutation of vertices induced by the symmetry \(g\). 
+
+    \subsection*{Cube and Octahedron (Symmetry Group: \(S_4\))}
+
+    The cube has 8 vertices, and the octahedron has 6 vertices. 
+
+    \textbf{Cube (8 vertices):}
+    \begin{itemize}
+        \item Rotation by \(\pm 2\pi/3\) (order 3): 4-cycle among vertices.
+        \item Rotation by \(\pm \pi/2\) (order 4): 4-cycle among vertices on the face.
+        \item Rotation by \(\pi\) (order 2): product of two 2-cycles.
+    \end{itemize}
+
+    \textbf{Octahedron (6 vertices):}
+    \begin{itemize}
+        \item Rotation by \(\pm 2\pi/3\) (order 3): 3-cycle among vertices.
+        \item Rotation by \(\pi\) (order 2): product of two 2-cycles.
+        \item Rotation by \(\pm 2\pi/4\) (order 4): 4-cycle among vertices.
+    \end{itemize}
+
+    \subsection*{Dodecahedron and Icosahedron (Symmetry Group: \(A_5\))}
+
+    The dodecahedron has 20 vertices, and the icosahedron has 12 vertices. 
+
+    \textbf{Dodecahedron (20 vertices):}
+    \begin{itemize}
+        \item Rotation by \(\pm 2\pi/3\) (order 3): 5-cycle among vertices.
+        \item Rotation by \(\pi\) (order 2): product of two 2-cycles.
+        \item Rotation by \(\pm 2\pi/5\) (order 5): 5-cycle among vertices.
+    \end{itemize}
+
+    \textbf{Icosahedron (12 vertices):}
+    \begin{itemize}
+        \item Rotation by \(\pm 2\pi/3\) (order 3): 3-cycle among vertices.
+        \item Rotation by \(\pi\) (order 2): product of two 2-cycles.
+        \item Rotation by \(\pm 2\pi/5\) (order 5): 5-cycle among vertices.
+    \end{itemize}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{2} Let \(G\) act on a set \(X\). Show that for \(x\in X\) and \(g\in G\) we have \(g\text{Stab}(x)g^{-1}= \text{Stab}(gx)\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+    
+    To prove this, we will show that \(g\text{Stab}(x)g^{-1} \subseteq \text{Stab}(gx)\) and \(\text{Stab}(gx) \subseteq g\text{Stab}(x)g^{-1}\).
+
+    \begin{definition}
+        The stabilizer of an element \(x\in X\) under the action of \(G\) is defined as \(\text{Stab}(x) = \{h \in G \mid h \cdot x = x\}\).
+    \end{definition}
+
+    \begin{proof} \( \)
+        \begin{itemize}
+            \item \textbf{Step 1: Show that \(g\text{Stab}(x)g^{-1} \subseteq \text{Stab}(gx)\)}
+            
+            Let \(h \in \text{Stab}(x)\). By definition, this means \(h \cdot x = x\).
+            Consider an element of \(g\text{Stab}(x)g^{-1}\), which is of the form \(ghg^{-1}\) for some \(h \in \text{Stab}(x)\).
+            \[
+            (ghg^{-1}) \cdot (gx) = g(h(g^{-1} \cdot (gx))) = g(h \cdot x) = g \cdot x = gx
+            \]
+            Therefore, \(ghg^{-1} \in \text{Stab}(gx)\), and hence \(g\text{Stab}(x)g^{-1} \subseteq \text{Stab}(gx)\).
+            
+            \item \textbf{Step 2: Show that \(\text{Stab}(gx) \subseteq g\text{Stab}(x)g^{-1}\)}
+            
+            Let \(k \in \text{Stab}(gx)\). By definition, this means \(k \cdot (gx) = gx\).
+            We need to show that \(k \in g\text{Stab}(x)g^{-1}\), i.e., there exists some \(h \in \text{Stab}(x)\) such that \(k = ghg^{-1}\).
+            
+            Consider the element \(g^{-1}kg \in G\). We apply it to \(x\):
+            \[
+            (g^{-1}kg) \cdot x = g^{-1}(k \cdot (gx)) = g^{-1}(gx) = x
+            \]
+            Thus, \(g^{-1}kg \in \text{Stab}(x)\), and let \(h = g^{-1}kg\). Then \(k = ghg^{-1}\).
+            Therefore, \(\text{Stab}(gx) \subseteq g\text{Stab}(x)g^{-1}\).
+        \end{itemize}
+        
+        Since both inclusions are shown, we conclude that \(g\text{Stab}(x)g^{-1} = \text{Stab}(gx)\).
+    \end{proof}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3} Identify \(D_4\) as the group of rotational symmetries of the square in the \(xy\)-plane with vertices \(\{\pm e_1, \pm e_2\}\). Thus \(D_4\) is a subgroup of \(SO(3)\). Determine the orbits of the evident action by \(D_4\) on \(\R^3\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    The dihedral group \(D_4\) consists of 8 elements that represent the symmetries of the square:
+    \begin{itemize}
+        \item 1 identity element
+        \item 3 rotations by \(90^\circ, 180^\circ, 270^\circ\)
+        \item 4 reflections (over the \(x\)-axis, \(y\)-axis, and the two diagonals)
+    \end{itemize}
+    These elements form a subgroup of the special orthogonal group \(SO(3)\).
+
+    When \(D_4\) acts on \(\mathbb{R}^3\), the orbits of the action are determined by how the group elements move points in \(\mathbb{R}^3\):
+    \begin{itemize}
+        \item \textbf{Orbit of the origin (0,0,0):} The origin is fixed by all elements of \(D_4\), so its orbit is \(\{(0,0,0)\}\).
+        \item \textbf{Orbits of points in the \(xy\)-plane (except the origin):} Points in the \(xy\)-plane are moved around within the plane according to the symmetries of the square. For example, the point \((1,0,0)\) has an orbit of 4 points \(\{(1,0,0), (0,1,0), (-1,0,0), (0,-1,0)\}\) under the rotations, and additional reflections double the count to 8 unique points.
+        \item \textbf{Orbits of points off the \(xy\)-plane:} Points not in the \(xy\)-plane are moved to other points not in the \(xy\)-plane, but their distance from the \(xy\)-plane (the \(z\)-coordinate) is preserved. For example, the point \((1,0,1)\) is rotated and reflected within planes parallel to the \(xy\)-plane. The orbit of \((1,0,1)\) consists of 8 points: \\ \(\{(1,0,1), (0,1,1), (-1,0,1), (0,-1,1), (1,0,-1), (0,1,-1), (-1,0,-1), (0,-1,-1)\}\).
+    \end{itemize}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{4} Show that for a group \(G\), the function \(\tau : G \rightarrow \text{Sym}(G)\) defined by \(\tau(g)(x):= xg\) is a group action if and only if \(G\) is abelian. 
+
+    \noindent\rule{\linewidth}{1pt}
+    
+    \section*{Solution}
+    
+    To show that \(\tau : G \rightarrow \text{Sym}(G)\) defined by \(\tau(g)(x) := xg\) is a group action if and only if \(G\) is abelian, we need to check the properties of a group action and the condition that \(G\) is abelian.
+
+    \begin{definition}
+        A function \(\tau : G \rightarrow \text{Sym}(G)\) is a group action if it satisfies the following properties:
+        \begin{enumerate}
+            \item \(\tau(e)(x) = xe = x\) for all \(x \in G\), where \(e\) is the identity element in \(G\).
+            \item \(\tau(gh)(x) = \tau(g)(\tau(h)(x))\) for all \(x \in G\) and \(g, h \in G\).
+        \end{enumerate}
+    \end{definition}
+
+    \begin{proof} \( \)
+        \begin{itemize}
+            \item \textbf{If \(G\) is abelian:}
+            
+            Assume \(G\) is abelian. Then for any \(g, h \in G\), we have \(gh = hg\). Therefore,
+            \[
+            \tau(gh)(x) = x(gh) = x(hg) = (xh)g = \tau(g)(\tau(h)(x)).
+            \]
+            Thus, \(\tau\) is a group action.
+
+            \item \textbf{If \(\tau\) is a group action:}
+            
+            Assume \(\tau\) is a group action. Then for any \(x \in G\) and \(g, h \in G\),
+            \[
+            \tau(gh)(x) = \tau(g)(\tau(h)(x)) \implies x(gh) = (xg)h.
+            \]
+            This implies \(x(gh) = x(hg)\). For this to hold for all \(x \in G\), we must have \(gh = hg\). Thus, \(G\) must be abelian.
+        \end{itemize}
+
+        Therefore, \(\tau\) is a group action if and only if \(G\) is abelian.
+    \end{proof}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{5} Let \(n=2k+1\) be an odd integer with \(n \geq 3\). Describe all the conjugacy classes in \(D_n\) (there are \(k+2\)) and determine their sizes. Pick a representative from each class. For each of these representatives, describe the elements of its centralizer group.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+    
+    Let \(D_n\) be the dihedral group with \(n = 2k+1\). The elements of \(D_n\) can be written as \(r^i\) and \(r^is\), where \(r\) is a rotation by \(\frac{2\pi}{n}\) and \(s\) is a reflection. The conjugacy classes are as follows:
+    
+    \begin{itemize}
+        \item The class containing the identity element \(e\): \(\{e\}\).
+        \item The class containing the rotations \(r^i\) for \(i=1, \ldots, k\): Each class has size \(\frac{n}{\gcd(i,n)}\).
+        \item The class containing the reflections \(s\): This class has size \(n\).
+    \end{itemize}
+    
+    Representatives from each class:
+    \begin{itemize}
+        \item Identity: \(e\)
+        \item Rotations: \(r, r^2, \ldots, r^k\)
+        \item Reflections: \(s\)
+    \end{itemize}
+    
+    Centralizer groups:
+    \begin{itemize}
+        \item \(C(e) = D_n\)
+        \item \(C(r^i) = \{e, r^i\}\)
+        \item \(C(s) = \{e, s\}\)
+    \end{itemize}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{6} Let \(n=2k\) be an even integer with \(n \geq 4\). Describe all the conjugacy classes in \(D_n\) (there are \(k+3\)) and determine their sizes. Pick a representative from each class. For each of these representatives, describe the elements of its centralizer group.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+    
+    Let \(D_n\) be the dihedral group with \(n = 2k\). The elements of \(D_n\) can be written as \(r^i\) and \(r^is\), where \(r\) is a rotation by \(\frac{2\pi}{n}\) and \(s\) is a reflection. The conjugacy classes are as follows:
+    
+    \begin{itemize}
+        \item The class containing the identity element \(e\): \(\{e\}\).
+        \item The class containing the rotations \(r^i\) for \(i=1, \ldots, k-1\): Each class has size \(\frac{n}{\gcd(i,n)}\).
+        \item The class containing the rotation \(r^k\): \(\{r^k\}\).
+        \item The class containing the reflections \(s\) and \(sr^k\): Each class has size \(\frac{n}{2}\).
+    \end{itemize}
+    
+    Representatives from each class:
+    \begin{itemize}
+        \item Identity: \(e\)
+        \item Rotations: \(r, r^2, \ldots, r^{k-1}, r^k\)
+        \item Reflections: \(s, sr^k\)
+    \end{itemize}
+    
+    Centralizer groups:
+    \begin{itemize}
+        \item \(C(e) = D_n\)
+        \item \(C(r^i) = \{e, r^i\}\)
+        \item \(C(r^k) = \{e, r^k, s, sr^k\}\)
+        \item \(C(s) = \{e, s\}\)
+        \item \(C(sr^k) = \{e, sr^k\}\)
+    \end{itemize}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{7} List the conjugacy classes in \(S_5\) (there are 7) and determine their sizes. Pick a representative from each class. For each of these representatives, describe the elements of its centralizer group.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+    
+    The conjugacy classes in \(S_5\) (symmetric group on 5 elements) are determined by the cycle types of the permutations:
+    
+    \begin{itemize}
+        \item \((1)\) (identity): Size 1
+        \item \((12)\) (transposition): Size 10
+        \item \((123)\) (3-cycle): Size 20
+        \item \((12345)\) (5-cycle): Size 24
+        \item \((12)(34)\) (product of two transpositions): Size 15
+        \item \((1234)\) (4-cycle): Size 30
+        \item \((123)(45)\) (product of 3-cycle and transposition): Size 20
+    \end{itemize}
+    
+    Representatives and their centralizers:
+    \begin{itemize}
+        \item Identity: \(e\) - Centralizer: \(S_5\)
+        \item Transposition: \((12)\) - Centralizer: \(S_3 \times S_2\)
+        \item 3-cycle: \((123)\) - Centralizer: \(C_3 \times S_2\)
+        \item 5-cycle: \((12345)\) - Centralizer: \(C_5\)
+        \item Product of two transpositions: \((12)(34)\) - Centralizer: \((S_2)^2\)
+        \item 4-cycle: \((1234)\) - Centralizer: \(C_4\)
+        \item Product of 3-cycle and transposition: \((123)(45)\) - Centralizer: \(C_3\)
+    \end{itemize}
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{8} Let \(G\) be a group with normal subgroup \(N\). Show that if \(\sigma \in N\), then \(\text{CL}_G(\sigma) \subseteq N\). Give an example to show that it is possible that \(\text{CL}_N(\sigma) \neq \text{CL}_G(\sigma)\). 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+    
+    \begin{itemize}
+        \item \textbf{Show \(\text{CL}_G(\sigma) \subseteq N\):}
+        
+        Let \(\sigma \in N\). Then the conjugacy class of \(\sigma\) in \(G\) is defined as \(\text{CL}_G(\sigma) = \{g\sigma g^{-1} \mid g \in G\}\).
+        
+        Since \(N\) is a normal subgroup, for any \(g \in G\) and \(\sigma \in N\), \(g\sigma g^{-1} \in N\). Therefore, \(\text{CL}_G(\sigma) \subseteq N\).
+        
+        \item \textbf{Example where \(\text{CL}_N(\sigma) \neq \text{CL}_G(\sigma)\):}
+        
+        Consider \(G = S_3\) and \(N = A_3\), the alternating group of even permutations. Let \(\sigma = (123) \in N\).
+        
+        The conjugacy class of \(\sigma\) in \(N\) is \(\text{CL}_N(\sigma) = \{(123), (132)\}\).
+        
+        The conjugacy class of \(\sigma\) in \(G\) is \(\text{CL}_G(\sigma) = \{(123), (132)\}\), since \((123)\) and \((132)\) are the only 3-cycles in \(S_3\).
+        
+        However, consider \(\sigma = (12) \in N\). Then \(\text{CL}_N((12)) = \{(12)\}\), but \(\text{CL}_G((12)) = \{(12), (13), (23)\}\).
+    \end{itemize}
+    
+\end{exercise}
+\newpage
+\end{document}

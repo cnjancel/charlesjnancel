@@ -1,0 +1,228 @@
+---
+title: "ECON425_VA2_CAncel"
+author: "Charles Ancel"
+date: "2024-07-15"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(fredr)
+library(dplyr)
+
+# Set your FRED API key
+fredr_set_key("89e09406a6b0e5d39d06d3b19fec5156")
+```
+
+# Federal Reserve's Process for Implementing Monetary Policy
+
+## Main Instrument of the Fed's Monetary Policy
+
+The main instrument of the Fed's monetary policy is the federal funds rate, which is the interest rate at which banks lend reserves to each other overnight. This rate is influenced through open market operations but is not directly controlled by the Fed.
+
+## Decision Process in FOMC Meetings
+
+Monetary policy is decided in the Federal Open Market Committee (FOMC) meetings, where members review economic data, consider forecasts, and discuss economic conditions before voting on the appropriate level for the federal funds rate.
+
+## Public Announcement
+
+The monetary policy decision is announced to the public via press releases and statements from the Fed, providing transparency and managing market expectations.
+
+## Implementation by the New York Fed’s Open Market Trading Desk
+
+The New York Fed's Open Market Trading Desk implements the FOMC's decision by conducting open market operations, buying or selling government securities to influence the supply of reserves in the banking system.
+
+# Objectives of Monetary Policy
+
+## Price Stability
+
+One of the main objectives of monetary policy is to maintain price stability, which means keeping inflation low and stable.
+
+## Full Employment
+
+Another objective is to achieve full employment, where all who are willing and able to work can find employment.
+
+## Loss Function
+
+The central bank's loss function reflects the trade-offs between these objectives. It typically includes terms for both inflation and output variability:
+
+\[ L = \lambda (\pi_t - \pi^*)^2 + (y_t - y^*)^2 \]
+
+where \(\pi_t\) is the inflation rate, \(\pi^*\) is the target inflation rate, \(y_t\) is the output, and \(y^*\) is the potential output.
+
+# Term Structure of Interest Rates
+
+## Concept of Term Structure
+
+The term structure of interest rates, or yield curve, represents the relationship between interest rates of bonds with different maturities.
+
+## Relevance to Monetary Policy
+
+Monetary policy influences the term structure by setting short-term interest rates, which affect longer-term rates and help achieve the central bank's objectives.
+
+```{r Slide-4, echo=TRUE, message=FALSE, warning=FALSE}
+# Fetching nominal exchange rate and interest rate data from FRED
+nominal_exchange_rate <- fredr(series_id = "DEXUSEU", observation_start = as.Date("2000-01-01"))
+domestic_interest_rate <- fredr(series_id = "DGS10", observation_start = as.Date("2000-01-01"))
+foreign_interest_rate <- fredr(series_id = "IR3TIB01EZM156N", observation_start = as.Date("2000-01-01"))
+
+# Merging and calculating interest rate differential
+data_exchange <- nominal_exchange_rate %>%
+  rename(nominal_rate = value) %>%
+  inner_join(domestic_interest_rate %>% rename(domestic_rate = value), by = "date") %>%
+  inner_join(foreign_interest_rate %>% rename(foreign_rate = value), by = "date") %>%
+  mutate(interest_rate_diff = domestic_rate - foreign_rate) %>%
+  filter(!is.na(interest_rate_diff))
+
+# Interpolating missing values
+data_exchange <- data_exchange %>%
+  mutate(interest_rate_diff = zoo::na.approx(interest_rate_diff, na.rm = FALSE))
+
+# Checking the range of values and printing a sample
+summary(data_exchange)
+head(data_exchange)
+
+# Plotting nominal exchange rate and interest rate differential with smoothing
+exchange_rate_plot <- ggplot(data_exchange, aes(x = date)) +
+  geom_line(aes(y = nominal_rate, color = "Nominal Exchange Rate")) +
+  geom_line(aes(y = interest_rate_diff, color = "Interest Rate Differential")) +
+  
+  labs(title = "Nominal Exchange Rate and Interest Rate Differential (2000-2020)",
+       y = "Value", x = "Year") +
+  scale_color_manual(values = c("Nominal Exchange Rate" = "blue", "Interest Rate Differential" = "red"))
+
+ggsave("Nominal_Exchange_Rate_and_Interest_Rate_Differential.png", plot = exchange_rate_plot)
+exchange_rate_plot
+
+```
+
+Explanation: This graph shows the relationship between the nominal exchange rate (in blue) and the interest rate differential (in red) over the period from 2000 to 2020. The nominal exchange rate is influenced by the difference between domestic and foreign interest rates. When the interest rate differential increases, the nominal exchange rate typically appreciates.
+
+# MP Curve and Optimal Monetary Policy
+
+## Optimal Policy Representation
+
+The MP curve shows the relationship between the real interest rate and inflation. It represents optimal policy when it aligns with the central bank's objectives.
+
+## Non-Optimal Conditions
+
+The MP curve may not be optimal if it doesn't account for other economic conditions or shocks, leading to excessive inflation volatility or failing to address output gaps effectively.
+
+```{r Slide-5, echo=TRUE}
+# Fetching real interest rate and inflation data from FRED
+real_interest_rate <- fredr(series_id = "DFII10", observation_start = as.Date("2000-01-01"))
+inflation_rate <- fredr(series_id = "CPIAUCSL", observation_start = as.Date("2000-01-01"))
+
+# Calculating annual inflation rate
+inflation_rate <- inflation_rate %>%
+  mutate(inflation = (value / lag(value, 12) - 1) * 100) %>%
+  filter(!is.na(inflation))
+
+# Merging data
+mp_data <- left_join(real_interest_rate, inflation_rate, by = "date") %>%
+  rename(real_interest_rate = value.x, inflation = inflation) %>%
+  select(date, real_interest_rate, inflation)
+
+# Plotting MP curve
+mp_curve_plot <- ggplot(mp_data, aes(x = inflation, y = real_interest_rate)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "MP Curve",
+       y = "Real Interest Rate (%)", x = "Inflation (%)")
+ggsave("MP_Curve.png", plot = mp_curve_plot)
+mp_curve_plot
+```
+
+Explanation: This graph represents the MP curve, showing the relationship between the real interest rate and inflation. The downward slope indicates that as inflation increases, the real interest rate set by the central bank decreases. The MP curve is used to illustrate how the central bank adjusts real interest rates in response to changes in inflation to stabilize the economy.
+
+# The Taylor Rule
+
+## Definition and Formula
+
+The Taylor Rule provides a guideline for setting interest rates based on inflation and output gaps:
+
+\[ i_t = r^* + \pi_t + 0.5(\pi_t - \pi^*) + 0.5(y_t - y^*) \]
+
+where \(i_t\) is the nominal interest rate, \(r^*\) is the real equilibrium interest rate, \(\pi_t\) is the inflation rate, \(\pi^*\) is the target inflation rate, \(y_t\) is the output, and \(y^*\) is the potential output.
+
+## Optimality and Usefulness
+
+While not always optimal, the Taylor Rule is useful for its simplicity and transparency, helping guide expectations and improve policy credibility.
+
+# Dangers of Not Following the Taylor Principle
+
+## Taylor Principle Explanation
+
+The Taylor Principle states that the central bank should raise nominal interest rates by more than the increase in inflation to stabilize the economy.
+
+## Consequences of Ignoring the Principle
+
+Failing to follow the Taylor Principle during high inflation can lead to runaway inflation, as real interest rates fall, boosting aggregate demand and further increasing inflation.
+
+```{r Slide-6, echo=TRUE}
+# Simulating inflation dynamics with and without the Taylor Principle
+time <- 1:10
+inflation_with_taylor <- exp(-0.3 * time)
+inflation_without_taylor <- exp(0.3 * time)
+inflation_dynamics_data <- data.frame(Time = rep(time, 2), 
+                                      Inflation = c(inflation_with_taylor, inflation_without_taylor), 
+                                      Scenario = rep(c("With Taylor Principle", "Without Taylor Principle"), each = 10))
+
+inflation_dynamics_plot <- ggplot(inflation_dynamics_data, aes(x = Time, y = Inflation, color = Scenario)) +
+  geom_line(size = 1) +
+  labs(title = "Dynamics of Inflation with and without the Taylor Principle",
+       x = "Time",
+       y = "Inflation Rate")
+
+ggsave("InflationDynamics.png", plot = inflation_dynamics_plot)
+inflation_dynamics_plot
+```
+
+Explanation: This graph illustrates the dynamics of inflation with and without following the Taylor Principle. The red line shows the scenario where the Taylor Principle is followed, resulting in controlled inflation. The blue line represents the scenario without the Taylor Principle, where inflation rises exponentially over time. This demonstrates the importance of adhering to the Taylor Principle to prevent runaway inflation.
+
+# Optimal Stabilization vs. Optimal Disinflation
+
+## Optimal Stabilization
+
+Optimal stabilization aims to minimize the variance of both inflation and output by responding to shocks in a balanced manner.
+
+## Optimal Disinflation
+
+Optimal disinflation focuses on reducing inflation to a lower target level with minimal output loss. This involves a gradual approach to avoid sharp recessions.
+
+# Importance of Expectations
+
+ in Macroeconomics
+
+## Role of Expectations
+
+Expectations about future economic conditions influence current behavior. For example, if people expect higher inflation, they may spend more now, increasing current inflation.
+
+## Rational Expectations
+
+Standard models assume rational expectations, meaning people use all available information to make forecasts, leading to more accurate predictions and efficient markets.
+
+# The Lucas Critique
+
+## Explanation of Lucas Critique
+
+The Lucas Critique argues that traditional econometric models fail to account for changes in policy regimes because they don't consider how agents' behavior changes in response to new policies.
+
+## Importance for Policy Making
+
+This critique highlights the need for models that incorporate rational expectations and policy impacts on behavior.
+
+# Central Bank Preferences and Policy
+
+## Dangers of Alignment
+
+A central bank too aligned with public preferences may prioritize short-term gains over long-term stability, leading to inflationary policies and economic instability.
+
+## Solution: Central Bank Independence
+
+Appointing a conservative central banker who prioritizes inflation control over output stabilization can help mitigate this risk, balancing long-term stability with short-term flexibility.
+
+# Conclusion
+
+Thank you for your attention. This concludes my discussion on monetary policy concepts. I hope this has provided a clear and comprehensive understanding of the topics. If you have any questions, please feel free to ask.

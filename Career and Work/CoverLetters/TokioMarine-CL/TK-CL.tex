@@ -1,0 +1,50 @@
+\documentclass[10pt,letter]{letter}
+\usepackage{bookmark}
+\usepackage[utf8]{inputenc}
+
+\usepackage{TLCcoverletter}
+
+%====================
+% CONTACT INFORMATION
+%====================
+\def\name{Charles Ancel} % Name Here
+\signature{\name}
+\address{Charles Ancel \\
+208 East Clark St Apt. 203 \\
+Champaign, IL 61820}
+\def\phone{(312) 307-7780}
+\def\email{cancel2@illinois.edu}
+\def\LinkedIn{charles-ancel-b2683a278/} % Update if LinkedIn is needed or remove if not
+\def\github{cnjancel} % Update if GitHub is needed or remove if not
+\def\role{Sports Analytics Intern} % Updated JOB TITLE
+
+%====================
+% Company Info
+%====================
+\def\hm{Hiring Manager}
+\def\position{Sports Analytics Intern} % Updated position
+\def\company{Tokio Marine HCC} % Updated company
+\def\source{as advertised} % Updated source of the job posting
+
+% FULL SENTENCES
+\def\companynews{Given your company's innovative approaches in sports analytics,} % Custom sentence related to the company
+
+%==================
+% Document begins
+%==================
+
+\begin{document}
+\begin{letter}{\hm \\ Hiring Manager \\ Tokio Marine HCC \\ [Company Address] \\ Houston, TX}
+    \opening{Dear \hm,}
+    % Change \hm to "hiring manager" or equivalent in company if unknown
+    
+    \setlength\parindent{.5in}
+    \input{sections/opening.tex}
+    \input{sections/second.tex}
+    \input{sections/closing.tex}
+    \input{sections/signoff.tex} 
+    
+    \end{letter}
+    
+    \end{document}
+

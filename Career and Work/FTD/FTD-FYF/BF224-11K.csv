@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Best Wishes Bouquet,,Best Wishes Bouquet,,Best Wishes Bouquet,,Best Wishes Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,72.99,,91.99,,112.99,,
+,Total SRP of Bundle,,72.99,,91.99,,112.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,72.99,,91.99,,112.99,,0
+,Less Commission (20%),,-14.597999999999999,,-18.398,,-22.598,,0
+,Less C/H Fee (9%),,-6.5691,,-8.2791,,-10.169099999999998,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-7.2989999999999995,,-9.199,,-11.299,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.85,,-2.85,,-2.85,,-2.85
+,Less Floral Cost,,-7.18,,-10.32,,-13.3,,0
+,Total Gross Margin,,13.753899999999994,,22.203899999999997,,32.0339,,-23.590000000000003
+,Gross Margin %,,0.188435402109878,,0.2413729753234047,,0.28351093017081164,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+,Standard Carnations,5,2.6500000000000004,6,3.18,8,4.24,,0
+,Daisy Pompon stems,2,1.26,3,1.8900000000000001,4,2.52,,0
+,Button Pompon stems,2,1.26,3,1.8900000000000001,4,2.52,,0
+,Monte Casino stems,2,1.32,3,1.98,4,2.64,,0
+,Variegated Pittosporum stems,1,0.69,2,1.38,2,1.38,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,7.18,,10.32,,13.3,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,Ribbon,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.85,,2.85,,2.85,,2.85

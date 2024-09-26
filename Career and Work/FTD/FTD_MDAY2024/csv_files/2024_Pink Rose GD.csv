@@ -1,0 +1,54 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,95,,125,,175,,260
+,Total SRP of Bundle,,95,,125,,175,,260
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,95,,125,,175,,260
+,Less Commission (20%),,-19,,-25,,-35,,-52
+,Less C/H Fee (9%),,-8.549999999999999,,-11.25,,-15.75,,-23.4
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-6.9,,-6.9,,-10.82,,-10.82
+,Less Floral Cost,,-17.740000000000002,,-25.960000000000004,,-34.18,,-50.620000000000005
+,Total Gross Margin,,22.07,,35.150000000000006,,58.51,,102.41999999999999
+,Gross Margin %,,0.23231578947368423,,0.28120000000000006,,0.3343428571428571,,0.3939230769230769
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Pink,Pink 50 cm Roses,12,16.44,18,24.660000000000004,24,32.88,36,49.32000000000001
+,Salal tips,5,1.3,5,1.3,5,1.3,5,1.3
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,17.740000000000002,,25.960000000000004,,34.18,,50.620000000000005
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,2120GS - Small Gold-Dipped Vase,1,6.9,1,6.9,,0,,0
+,2120GL - Large Gold-Dipped Vase,,0,,0,1,10.82,1,10.82
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,6.9,,6.9,,10.82,,10.82
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,"please update to Vday 23 pricing and note, the srp might change and will be to market value ",,,,,,

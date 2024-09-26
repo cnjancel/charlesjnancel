@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Bursting with Joy Bouquet,,Bursting with Joy Bouquet,,Bursting with Joy Bouquet,,Bursting with Joy Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,84.99,,99.99,,116.99,,136
+,Total SRP of Bundle,,84.99,,99.99,,116.99,,136
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,84.99,,99.99,,116.99,,136
+,Less Commission (20%),,-16.998,,-19.998,,-23.398,,-27.200000000000003
+,Less C/H Fee (9%),,-7.649099999999999,,-8.999099999999999,,-10.5291,,-12.24
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-8.499,,-9.999,,-11.699,,-13.600000000000001
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-13.200000000000001,,-13.200000000000001,,-14.67,,0
+,Total Gross Margin,,15.403899999999988,,24.55389999999999,,33.453900000000004,,59.72
+,Gross Margin %,,0.18124367572655592,,0.24556355635563548,,0.2859552098469955,,0.4391176470588235
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Yellow,50 cm Roses,3,2.88,3,2.88,3,2.88,,0
+Orange,Asiatic Lily stems,1,1.47,1,1.47,2,2.94,,0
+Red,Alstroemeria stems,6,3.7199999999999998,6,3.7199999999999998,6,3.7199999999999998,,0
+Green,Button Pompon stems,5,3.15,5,3.15,5,3.15,,0
+Purple,Monte Casino stems,3,1.98,3,1.98,3,1.98,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,13.200000000000001,,13.200000000000001,,14.67,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

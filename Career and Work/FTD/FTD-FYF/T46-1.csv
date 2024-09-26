@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,81.99,,91.99,,101.99,,
+,Total SRP of Bundle,,81.99,,91.99,,101.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,81.99,,91.99,,101.99,,0
+,Less Commission (20%),,-16.398,,-18.398,,-20.398,,0
+,Less C/H Fee (9%),,-7.379099999999999,,-8.2791,,-9.1791,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-8.199,,-9.199,,-10.199,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-10.39,,-15.3,,-19.42,,0
+,Total Gross Margin,,16.383899999999997,,17.5739,,19.5539,,-23.240000000000002
+,Gross Margin %,,0.19982802780826928,,0.19104141754538537,,0.1917236984018041,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Orange,50 cm Roses,2,1.92,3,2.88,5,4.8,,0
+Orange,Spray Rose stems,2,1.8,4,3.6,5,4.5,,0
+Hot Pink,Mini Carnation stems,2,1.02,3,1.53,4,2.04,,0
+Hot Pink,Matsumoto Aster stems,3,2.37,3,2.37,4,3.16,,0
+,Italian Variegated Pittosporum stems,2,1.64,3,2.46,3,2.46,,0
+,Bupleurum Stems,2,1.64,3,2.46,3,2.46,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,10.39,,15.3,,19.42,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

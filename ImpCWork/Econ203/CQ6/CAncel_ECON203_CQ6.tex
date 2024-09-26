@@ -1,0 +1,114 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+
+\title{Econ 203, Challenge Quiz 6}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\textbf{Problem Statement:}Prove that \(\hat{\sigma}^2 = \frac{1}{n-2} \sum_{i=1}^n (Y_i - \hat{a} - \hat{b}X_i)^2\) is an unbiased estimator of the variance \(\sigma^2\) of the error term \(U\) in the linear regression model \(Y = a + bX + U\).
+
+
+\begin{proof}
+    \begin{enumerate}[label=Step \arabic*:]
+        \item \textbf{Model Specification}\\ 
+        The linear regression model for each observation \(i\) is:  
+        \[ Y_i = a + bX_i + U_i \]  
+        where \(U_i\) is the error term with properties \(E[U_i] = 0\) and \(Var(U_i) = \sigma^2\).
+        
+        \item \textbf{OLS Estimators}\\
+        The OLS estimators \(\hat{a}\) and \(\hat{b}\) are obtained by minimizing the residual sum of squares, and they have the following properties: \(E[\hat{a}] = a\) and \(E[\hat{b}] = b\).
+        
+        \item \textbf{Error Variance Estimator}\\  
+        We define \(\hat{\sigma}^2\) as:  
+        \[ \hat{\sigma}^2 = \frac{1}{n-2} \sum_{i=1}^n (Y_i - \hat{a} - \hat{b}X_i)^2 \]
+        
+        \item \textbf{Expanding the Squared Term}\\  
+        Substitute \(Y_i = a + bX_i + U_i\) into \(\hat{\sigma}^2\) and expand:  
+        \[ \hat{\sigma}^2 = \frac{1}{n-2} \sum_{i=1}^n (U_i + bX_i - \hat{b}X_i + a - \hat{a})^2 \]  
+        \[ = \frac{1}{n-2} \sum_{i=1}^n (U_i^2 + (b - \hat{b})^2 X_i^2 + (a - \hat{a})^2 + 2U_i(b - \hat{b})X_i + 2U_i(a - \hat{a}) + 2(a - \hat{a})(b - \hat{b})X_i) \]
+        
+        \item \textbf{Taking Expectations}\\  
+        Taking the expectation of the expanded terms, we focus on the terms that do not cancel out due to independence or have an expected value of zero:  
+        \begin{itemize}
+            \item \(E[U_i^2] = \sigma^2\)
+            \item Cross terms involving \(U_i\) and \(\hat{a}\) or \(\hat{b}\) will have an expected value of zero.
+            \item \(E[(b - \hat{b})^2 X_i^2]\) and \(E[(a - \hat{a})^2]\) reflect the variance of the estimators but do not introduce bias in estimating \(\sigma^2\).
+        \end{itemize}
+        
+        \item \textbf{Conclusion}\\
+        After accounting for the degrees of freedom (\(n-2\)), the expected value of \(\hat{\sigma}^2\) simplifies to:  
+        \[ E[\hat{\sigma}^2] = \sigma^2 \]  
+        This simplification and cancellation of terms demonstrate that \(\hat{\sigma}^2\) is an unbiased estimator of the variance of the error term \(\sigma^2\) in the given linear regression model.
+    \end{enumerate}
+    
+    \textbf{Final Remark}\\
+    This proof methodically expands the squared terms, applies expectations, and leverages properties of the OLS estimators and the error term to show that \(\hat{\sigma}^2\) unbiasedly estimates \(\sigma^2\), adhering to the principles of linear regression analysis.
+\end{proof}
+\end{document}

@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,89.99,,99.99,,109.99,,
+,Total SRP of Bundle,,89.99,,99.99,,109.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,89.99,,99.99,,109.99,,0
+,Less Commission (20%),,-17.998,,-19.998,,-21.998,,0
+,Less C/H Fee (9%),,-8.0991,,-8.999099999999999,,-9.899099999999999,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-8.999,,-9.999,,-10.999,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-14.89,,-16.240000000000002,,-23.48,,0
+,Total Gross Margin,,16.763899999999985,,21.513899999999992,,20.37389999999999,,-23.240000000000002
+,Gross Margin %,,0.1862862540282252,,0.2151605160516051,,0.18523411219201735,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+White,Asiatic Lily stems,3,4.41,3,4.41,5,7.35,,0
+Yellow,50 cm Roses,3,2.88,3,2.88,5,4.8,,0
+Blue,"Delphinium stems, Belladonna",4,4.24,4,4.24,5,5.300000000000001,,0
+Purple,Monte Casino stems,3,1.98,4,2.64,6,3.96,,0
+,Variegated Pittosporum stems,2,1.38,3,2.07,3,2.07,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,14.89,,16.240000000000002,,23.48,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

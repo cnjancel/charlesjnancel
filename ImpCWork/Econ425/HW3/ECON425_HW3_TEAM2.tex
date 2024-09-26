@@ -1,0 +1,185 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\begin{document}
+
+\title{Homework Three \\
+\large Two-Period Consumption-Saving Model}
+\author{Team Two}
+\date{June 21, 2024}
+\maketitle
+
+\section{The Model}
+
+In this assignment, we explore a simple two-period consumption-saving model. This framework is foundational in understanding intertemporal choice and optimal consumption over time. The setup assumes a representative household that makes consumption and saving decisions over two periods with given income and a fixed interest rate.
+
+\subsection*{Setup}
+\begin{itemize}
+    \item Two periods: Period 1 and Period 2.
+    \item Discrete-time model.
+    \item A single representative household as the decision-maker.
+    \item Income is exogenously given: \(Y_1\) for Period 1 and \(Y_2\) for Period 2.
+    \item In Period 1, the household allocates income \(Y_1\) between consumption \(C_1\) and savings \(S_1\).
+    \item In Period 2, the household has no further savings (\(S_2 = 0\)) and consumes out of income \(Y_2\) and returns from savings from Period 1: \((1 + r_1)S_1\).
+\end{itemize}
+
+\noindent\rule{\linewidth}{1pt}
+
+\section{Questions and Solutions}
+
+\subsection*{Q1. Period Constraints}
+
+\textbf{Context:} To understand the household's decision-making process, we first need to establish the budget constraints for each period. These constraints describe the relationship between income, consumption, and savings within each period.
+
+\textbf{Solution:} The period constraints are derived from the household's budget in each period:
+\begin{align*}
+    \text{Period 1:} \quad & Y_1 = C_1 + S_1 \\
+    \text{Period 2:} \quad & Y_2 + (1 + r_1)S_1 = C_2
+\end{align*}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection*{Q2. Intertemporal Budget Constraint}
+
+\textbf{Context:} The intertemporal budget constraint combines the constraints from both periods into a single equation. This constraint ensures that the present value of total consumption equals the present value of total income over the two periods.
+
+\textbf{Solution:} By solving for savings \(S_1\) in the Period 1 constraint and substituting it into the Period 2 constraint, we derive:
+\begin{align*}
+    S_1 &= Y_1 - C_1 \\
+    Y_2 + (1 + r_1)(Y_1 - C_1) &= C_2 \\
+    \implies Y_1 + \frac{Y_2}{1 + r_1} &= C_1 + \frac{C_2}{1 + r_1}
+\end{align*}
+This represents the intertemporal budget constraint.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection*{Q3. Utility Maximization Problem}
+
+\textbf{Context:} The household aims to maximize its intertemporal utility, which depends on consumption in both periods. This involves setting up a utility maximization problem subject to the intertemporal budget constraint.
+
+\textbf{Solution:} The intertemporal utility function is:
+\[
+U = u(C_1) + \beta u(C_2)
+\]
+where \( \beta \) is the discount factor. The utility maximization problem is:
+\begin{align*}
+    \max_{C_1, C_2} &\quad U = u(C_1) + \beta u(C_2) \\
+    \text{subject to} &\quad Y_1 + \frac{Y_2}{1 + r_1} = C_1 + \frac{C_2}{1 + r_1}
+\end{align*}
+The choice variables are \( C_1 \) and \( C_2 \).
+
+\noindent\rule{\linewidth}{0.5pt}
+
+
+\subsection*{Q4. Lagrange Function}
+
+\textbf{Context:} To solve the optimization problem, we use the method of Lagrange multipliers. This involves forming a Lagrange function that incorporates the utility function and the budget constraint.
+
+\textbf{Solution:} The Lagrange function is:
+\[
+\mathcal{L} = u(C_1) + \beta u(C_2) + \lambda \left(Y_1 + \frac{Y_2}{1 + r_1} - C_1 - \frac{C_2}{1 + r_1}\right)
+\]
+where \( \lambda \) is the Lagrange multiplier.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+
+\subsection*{Q5. First Order Necessary Conditions (FONCs)}
+
+\textbf{Context:} The FONCs are derived by taking the partial derivatives of the Lagrange function with respect to the choice variables and the Lagrange multiplier. These conditions are used to find the optimal consumption levels.
+
+\textbf{Solution:} The FONCs are:
+\begin{align*}
+    \frac{\partial \mathcal{L}}{\partial C_1} &= u'(C_1) - \lambda = 0 \implies u'(C_1) = \lambda \\
+    \frac{\partial \mathcal{L}}{\partial C_2} &= \beta u'(C_2) - \frac{\lambda}{1 + r_1} = 0 \implies \beta u'(C_2) = \frac{\lambda}{1 + r_1} \\
+    \frac{\partial \mathcal{L}}{\partial \lambda} &= Y_1 + \frac{Y_2}{1 + r_1} - C_1 - \frac{C_2}{1 + r_1} = 0
+\end{align*}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection*{Q6. Euler Equation}
+
+\textbf{Context:} The Euler equation is derived from the FONCs and describes the optimal trade-off between consumption in the two periods. It reflects how the household balances marginal utility across time.
+
+\textbf{Solution:}
+\begin{align*}
+    \frac{u'(C_1)}{\beta u'(C_2)} &= 1 + r_1 \\
+    \implies \frac{u'(C_1)}{u'(C_2)} &= \beta (1 + r_1)
+\end{align*}
+\textbf{Interpretation:} The Euler equation ensures that the marginal utility of consumption today, when adjusted for the interest rate and discount factor, equals the marginal utility of consumption tomorrow.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection*{Q7. Explicit Consumption Functions}
+
+\textbf{Context:} Assuming a logarithmic utility function, we solve for explicit consumption functions in terms of model parameters. This allows us to express \( C_1 \) and \( C_2 \) as functions of income, interest rate, and the discount factor.
+
+\textbf{Solution:} Let \( u(C_t) = \ln(C_t) \). Then,
+\[
+u'(C_t) = \frac{1}{C_t}
+\]
+Using the Euler equation:
+\[
+\frac{1/C_1}{1/C_2} = \beta (1 + r_1) \implies \frac{C_2}{C_1} = \beta (1 + r_1)
+\]
+Substitute into the budget constraint:
+\[
+Y_1 + \frac{Y_2}{1 + r_1} = C_1 + \frac{\beta (1 + r_1) C_1}{1 + r_1}
+\]
+Solving, we get:
+\begin{align*}
+    C_1 &= \frac{Y_1 + \frac{Y_2}{1 + r_1}}{1 + \beta} \\
+    C_2 &= \frac{\beta (1 + r_1) (Y_1 + \frac{Y_2}{1 + r_1})}{1 + \beta}
+\end{align*}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection*{Q8. Second Order Sufficient Conditions}
+
+\textbf{Context:} To confirm that the solutions represent a maximum, we verify the second order sufficient conditions. This involves checking the concavity of the utility function.
+
+\textbf{Solution:}
+\begin{itemize}
+    \item The utility function \( u(C_t) = \ln(C_t) \) is concave, as \( u''(C_t) = -\frac{1}{C_t^2} < 0 \).
+    \item The negative second derivative indicates that the function is concave, satisfying the conditions for a maximum.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+
+\subsection*{Q9. Sensitivity Analysis}
+
+\textbf{Context:} We analyze how the optimal consumption choices \( C_1 \) and \( C_2 \) respond to changes in income and the interest rate. This provides insights into the effects of changes in economic conditions on household consumption.
+
+\textbf{Solution:}
+Take partial derivatives:
+\begin{align*}
+    \frac{\partial C_1}{\partial Y_1} &= \frac{1}{1 + \beta} \\
+    \frac{\partial C_1}{\partial Y_2} &= \frac{1}{(1 + r_1)(1 + \beta)} \\
+    \frac{\partial C_1}{\partial r_1} &= -\frac{Y_2}{(1 + r_1)^2 (1 + \beta)} \\
+    \frac{\partial C_2}{\partial Y_1} &= \frac{\beta (1 + r_1)}{1 + \beta} \\
+    \frac{\partial C_2}{\partial Y_2} &= \frac{\beta}{1 + \beta} \\
+    \frac{\partial C_2}{\partial r_1} &= \frac{\beta (Y_1 + Y_2/(1 + r_1))}{1 + \beta}
+\end{align*}
+\textbf{Interpretations:}
+\begin{itemize}
+    \item \textbf{\( \frac{\partial C_1}{\partial Y_1} \)}: An increase in initial income \( Y_1 \) raises current consumption proportionally.
+    \item \textbf{\( \frac{\partial C_1}{\partial Y_2} \)}: An increase in future income \( Y_2 \) raises current consumption, discounted by the interest rate.
+    \item \textbf{\( \frac{\partial C_1}{\partial r_1} \)}: An increase in the interest rate \( r_1 \) decreases current consumption as the return on savings becomes more attractive.
+    \item \textbf{\( \frac{\partial C_2}{\partial Y_1} \)}: An increase in initial income \( Y_1 \) raises future consumption, adjusted for the return on savings.
+    \item \textbf{\( \frac{\partial C_2}{\partial Y_2} \)}: An increase in future income \( Y_2 \) directly raises future consumption.
+    \item \textbf{\( \frac{\partial C_2}{\partial r_1} \)}: An increase in the interest rate \( r_1 \) raises future consumption as it increases returns on savings.
+\end{itemize}
+
+\noindent\rule{\linewidth}{1pt}
+
+\section{References}
+\begin{enumerate}
+    \item Romer, D. (2018). \textit{Advanced Macroeconomics}. McGraw-Hill Education.
+    \item Ljungqvist, L., \& Sargent, T. J. (2018). \textit{Recursive Macroeconomic Theory}. MIT Press.
+    \item Carlin, W., \& Soskice, D. (2014). \textit{Macroeconomics: Imperfections, Institutions, and Policies}. Oxford University Press.
+    \item Challe, E. (2019). \textit{Macroeconomic Fluctuations and Policies}. MIT Press.
+\end{enumerate}
+
+\end{document}

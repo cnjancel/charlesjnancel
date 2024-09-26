@@ -1,0 +1,23 @@
+
+Call:
+lm(formula = return ~ dkr + eps + netinc + salary + sp90, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-76.753 -26.123  -5.251  20.957 125.414 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -1.506896   7.580954  -0.199  0.84274    
+dkr          0.255764   0.194047   1.318  0.18970    
+eps          0.044863   0.075126   0.597  0.55139    
+netinc      -0.003014   0.004534  -0.665  0.50733    
+salary       0.003475   0.002109   1.648  0.10170    
+sp90        -0.220009   0.062948  -3.495  0.00064 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 37.68 on 136 degrees of freedom
+Multiple R-squared:  0.1186,	Adjusted R-squared:  0.08624 
+F-statistic: 3.661 on 5 and 136 DF,  p-value: 0.003861
+

@@ -1,0 +1,742 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 9}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+%-----------------------------
+\begin{exercise}{1} Describe all the elementary divisor forms for abelian groups of order 360. Then determine the corresponding invariant factor forms. (There are six. Forgot to specify ``abelian'' in the original statement, but it should be clear from context.)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    To describe the elementary divisor forms and the corresponding invariant factor forms for abelian groups of order 360, we begin by factorizing 360 into its prime factors:
+    \[
+    360 = 2^3 \cdot 3^2 \cdot 5.
+    \]
+
+    An abelian group of order 360 can be expressed as a direct product of cyclic groups, whose orders are divisors of 360. The elementary divisors are the orders of these cyclic groups. The invariant factor form is obtained by arranging these cyclic group orders into a non-decreasing sequence.
+
+    \subsection*{Elementary Divisor Forms}
+
+    To find the elementary divisor forms, we consider all possible ways to factorize 360 into products of integers greater than 1:
+
+    \begin{enumerate}
+        \item \(360 = 2^3 \cdot 3^2 \cdot 5\):
+            \[
+            \Z_2 \times \Z_2 \times \Z_2 \times \Z_3 \times \Z_3 \times \Z_5
+            \]
+
+        \item \(360 = 4 \cdot 90\):
+            \[
+            \Z_4 \times \Z_{90}
+            \]
+
+        \item \(360 = 2 \cdot 2 \cdot 3 \cdot 3 \cdot 5 \cdot 2\):
+            \[
+            \Z_2 \times \Z_2 \times \Z_3 \times \Z_3 \times \Z_5 \times \Z_2
+            \]
+
+        \item \(360 = 6 \cdot 60\):
+            \[
+            \Z_6 \times \Z_{60}
+            \]
+
+        \item \(360 = 8 \cdot 45\):
+            \[
+            \Z_8 \times \Z_{45}
+            \]
+
+        \item \(360 = 10 \cdot 36\):
+            \[
+            \Z_{10} \times \Z_{36}
+            \]
+    \end{enumerate}
+
+    \subsection*{Invariant Factor Forms}
+
+    The invariant factor form is found by expressing each product of cyclic groups as a product of cyclic groups of order dividing the previous one in the sequence. The invariant factor forms corresponding to the above elementary divisor forms are:
+
+    \begin{enumerate}
+        \item \( \Z_2 \times \Z_2 \times \Z_2 \times \Z_3 \times \Z_3 \times \Z_5 \):
+            \[
+            \Z_2 \times \Z_2 \times \Z_2 \times \Z_3 \times \Z_3 \times \Z_5
+            \]
+
+        \item \( \Z_4 \times \Z_{90} \):
+            \[
+            \Z_4 \times \Z_{90}
+            \]
+
+        \item \( \Z_2 \times \Z_2 \times \Z_3 \times \Z_3 \times \Z_5 \times \Z_2 \):
+            \[
+            \Z_2 \times \Z_2 \times \Z_3 \times \Z_3 \times \Z_5 \times \Z_2
+            \]
+
+        \item \( \Z_6 \times \Z_{60} \):
+            \[
+            \Z_6 \times \Z_{60}
+            \]
+
+        \item \( \Z_8 \times \Z_{45} \):
+            \[
+            \Z_8 \times \Z_{45}
+            \]
+
+        \item \( \Z_{10} \times \Z_{36} \):
+            \[
+            \Z_{10} \times \Z_{36}
+            \]
+    \end{enumerate}
+
+    Hence, the six elementary divisor forms and their corresponding invariant factor forms for abelian groups of order 360 are listed above.
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3.6.7} Find the elementary divisor and invariant factor decomposition of \(\Z_{108}\times \Z_{144} \times \Z_9\)
+
+    \noindent\rule{\linewidth}{1pt}
+    
+    \section*{Solution}
+
+    To find the elementary divisor and invariant factor decomposition of \(\Z_{108} \times \Z_{144} \times \Z_9\), we first factorize each number into its prime power components.
+
+    \begin{align*}
+    108 &= 2^2 \cdot 3^3, \\
+    144 &= 2^4 \cdot 3^2, \\
+    9 &= 3^2.
+    \end{align*}
+
+    The group \(\Z_{108} \times \Z_{144} \times \Z_9\) can be expressed as:
+    \[
+    \Z_{108} \times \Z_{144} \times \Z_9 \cong \Z_{2^2} \times \Z_{3^3} \times \Z_{2^4} \times \Z_{3^2} \times \Z_{3^2}.
+    \]
+
+    \subsection*{Elementary Divisor Decomposition}
+
+    The elementary divisors are the prime power components of the orders of the cyclic groups in the direct product. We combine all terms for each prime factor:
+
+    \begin{align*}
+    2^2, \ 2^4, \ 3^3, \ 3^2, \ 3^2.
+    \end{align*}
+
+    Sorting these elementary divisors in non-decreasing order, we get:
+    \[
+    2^2, \ 2^4, \ 3^2, \ 3^2, \ 3^3.
+    \]
+
+    Therefore, the elementary divisor decomposition of \(\Z_{108} \times \Z_{144} \times \Z_9\) is:
+    \[
+    \Z_{2^2} \times \Z_{2^4} \times \Z_{3^2} \times \Z_{3^2} \times \Z_{3^3}.
+    \]
+
+    \subsection*{Invariant Factor Decomposition}
+
+    The invariant factors are obtained by grouping the elementary divisors into products, each factor dividing the next:
+
+    \begin{itemize}
+        \item Grouping the 2's:
+            \[
+            2^2 \cdot 2^4 = 2^6.
+            \]
+        \item Grouping the 3's:
+            \[
+            3^2 \cdot 3^2 \cdot 3^3 = 3^7.
+            \]
+    \end{itemize}
+
+    Therefore, the invariant factor decomposition is:
+    \[
+    \Z_{2^6} \times \Z_{3^7}.
+    \]
+
+    Hence, the elementary divisor decomposition of \(\Z_{108} \times \Z_{144} \times \Z_9\) is:
+    \[
+    \Z_{2^2} \times \Z_{2^4} \times \Z_{3^2} \times \Z_{3^2} \times \Z_{3^3},
+    \]
+    and the corresponding invariant factor decomposition is:
+    \[
+    \Z_{2^6} \times \Z_{3^7}.
+    \]
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3.6.10} Let \(p\) be a prime number. How many abelian groups are there of order \(p^7\), up to isomorphism?
+
+    \noindent\rule{\linewidth}{1pt}
+
+    To determine the number of abelian groups of order \(p^7\) up to isomorphism, we use the classification theorem for finitely generated abelian groups. This theorem states that every finitely generated abelian group can be expressed as a direct sum of cyclic groups whose orders are powers of the prime \(p\). 
+    
+    For a group of order \(p^7\), we need to find all possible partitions of 7 (since the exponent in each term of the cyclic groups must sum to 7). Each partition corresponds to a unique isomorphism class of abelian groups. The partitions of 7 are:
+    
+    \begin{enumerate}[label= (\arabic*)]
+        \item \(7\)
+        \item \(6 + 1\)
+        \item \(5 + 2\)
+        \item \(5 + 1 + 1\)
+        \item \(4 + 3\)
+        \item \(4 + 2 + 1\)
+        \item \(4 + 1 + 1 + 1\)
+        \item \(3 + 3 + 1\)
+        \item \(3 + 2 + 2\)
+        \item \(3 + 2 + 1 + 1\)
+        \item \(3 + 1 + 1 + 1 + 1\)
+        \item \(2 + 2 + 2 + 1\)
+        \item \(2 + 2 + 1 + 1 + 1\)
+        \item \(2 + 1 + 1 + 1 + 1 + 1\)
+        \item \(1 + 1 + 1 + 1 + 1 + 1 + 1\)
+    \end{enumerate}
+    
+    These partitions correspond to the following abelian groups (written as products of cyclic groups):
+    
+    \begin{enumerate}[label= (\arabic*)]
+        \item \(\Z_{p^7}\)
+        \item \(\Z_{p^6} \times \Z_p\)
+        \item \(\Z_{p^5} \times \Z_{p^2}\)
+        \item \(\Z_{p^5} \times \Z_p \times \Z_p\)
+        \item \(\Z_{p^4} \times \Z_{p^3}\)
+        \item \(\Z_{p^4} \times \Z_{p^2} \times \Z_p\)
+        \item \(\Z_{p^4} \times \Z_p \times \Z_p \times \Z_p\)
+        \item \(\Z_{p^3} \times \Z_{p^3} \times \Z_p\)
+        \item \(\Z_{p^3} \times \Z_{p^2} \times \Z_{p^2}\)
+        \item \(\Z_{p^3} \times \Z_{p^2} \times \Z_p \times \Z_p\)
+        \item \(\Z_{p^3} \times \Z_p \times \Z_p \times \Z_p \times \Z_p\)
+        \item \(\Z_{p^2} \times \Z_{p^2} \times \Z_{p^2} \times \Z_p\)
+        \item \(\Z_{p^2} \times \Z_{p^2} \times \Z_p \times \Z_p \times \Z_p\)
+        \item \(\Z_{p^2} \times \Z_p \times \Z_p \times \Z_p \times \Z_p \times \Z_p\)
+        \item \(\Z_p \times \Z_p \times \Z_p \times \Z_p \times \Z_p \times \Z_p \times \Z_p\)
+    \end{enumerate}
+    
+    There are 15 distinct partitions of 7, and thus, there are 15 abelian groups of order \(p^7\), up to isomorphism.
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3.6.15} Show that \(\Z_a \times \Z_b\) is not cyclic if \(\gcd(a,b) \geq 2\). 
+
+    \noindent\rule{\linewidth}{1pt}
+    
+    To show that \(\Z_a \times \Z_b\) is not cyclic if \(\gcd(a,b) \geq 2\), we need to show that there does not exist an element in \(\Z_a \times \Z_b\) that generates the entire group. 
+
+    \subsection*{Definition of Cyclic Group}
+
+    A group \(G\) is cyclic if there exists an element \(g \in G\) such that every element of \(G\) can be written as \(g^k\) for some integer \(k\). In other words, \(G = \langle g \rangle\).
+
+    \subsection*{Structure of \(\Z_a \times \Z_b\)}
+
+    Consider the group \(\Z_a \times \Z_b\). The order of this group is \(ab\), which means it has \(ab\) elements. Each element of \(\Z_a \times \Z_b\) can be written as \((x, y)\) where \(x \in \Z_a\) and \(y \in \Z_b\). The orders of the elements are determined by the smallest positive integer \(k\) such that:
+    \[
+    (x, y)^k = (0, 0) \pmod{(a, b)}.
+    \]
+
+    \subsection*{Element Order in \(\Z_a \times \Z_b\)}
+
+    Let \((x, y)\) be an element of \(\Z_a \times \Z_b\). The order of \((x, y)\) is the least common multiple (LCM) of the orders of \(x\) in \(\Z_a\) and \(y\) in \(\Z_b\). The order of \(x\) in \(\Z_a\) is \(\frac{a}{\gcd(a,x)}\), and the order of \(y\) in \(\Z_b\) is \(\frac{b}{\gcd(b,y)}\).
+
+    Thus, the order of \((x, y)\) in \(\Z_a \times \Z_b\) is:
+    \[
+    \text{lcm}\left(\frac{a}{\gcd(a,x)}, \frac{b}{\gcd(b,y)}\right).
+    \]
+
+    \subsection*{Non-cyclic Property for \(\gcd(a, b) \geq 2\)}
+
+    Assume \(\gcd(a, b) = d \geq 2\). We want to show that \(\Z_a \times \Z_b\) is not cyclic.
+
+    Suppose for contradiction that \(\Z_a \times \Z_b\) is cyclic. Then, there exists an element \((x, y) \in \Z_a \times \Z_b\) that generates the entire group. The order of \((x, y)\) must be \(ab\) because the order of \(\Z_a \times \Z_b\) is \(ab\).
+
+    For \((x, y)\) to have order \(ab\), we must have:
+    \[
+    \text{lcm}\left(\frac{a}{\gcd(a,x)}, \frac{b}{\gcd(b,y)}\right) = ab.
+    \]
+
+    Given that \(\gcd(a,b) = d\), we can write \(a = da_1\) and \(b = db_1\) where \(\gcd(a_1,b_1) = 1\). The order of \((x, y)\) in \(\Z_a \times \Z_b\) is:
+    \[
+    \text{lcm}\left(\frac{da_1}{\gcd(da_1,x)}, \frac{db_1}{\gcd(db_1,y)}\right).
+    \]
+
+    Since \((x, y)\) must generate \(\Z_a \times \Z_b\), \((x, y)\) must have order \(ab = d^2a_1b_1\). This implies that:
+    \[
+    \frac{da_1}{\gcd(da_1,x)} \text{ and } \frac{db_1}{\gcd(db_1,y)}
+    \]
+    must have LCM equal to \(d^2a_1b_1\). However, because \(d \geq 2\), \(\frac{da_1}{\gcd(da_1,x)} \leq da_1\) and \(\frac{db_1}{\gcd(db_1,y)} \leq db_1\). The LCM of two such terms cannot be \(d^2a_1b_1\) unless \(\gcd(a,b) = 1\), contradicting \(\gcd(a,b) = d \geq 2\).
+
+    Therefore, \(\Z_a \times \Z_b\) cannot be cyclic if \(\gcd(a,b) \geq 2\).
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3.6.17} Suppose a finite abelian group has invariant factors \(d_1,d_2,\dots,d_k\), so that \(d_i|d_{i+1}\). Show that \(G\) has an element of order \(s\) if and only if \(s\) divides \(d_k\)(= the largest of the invariant factors). 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    Let \(G\) be a finite abelian group with invariant factors \(d_1, d_2, \ldots, d_k\) such that \(d_i \mid d_{i+1}\) for all \(i\). The group \(G\) can be expressed as:
+    \[
+    G \cong \Z_{d_1} \times \Z_{d_2} \times \cdots \times \Z_{d_k}.
+    \]
+    The order of an element \((x_1, x_2, \ldots, x_k) \in G\) is the least common multiple of the orders of the components \(x_i \in \Z_{d_i}\).
+
+    \subsection*{Necessary Condition: If \(G\) Has an Element of Order \(s\), Then \(s\) Divides \(d_k\)}
+
+    Suppose \(G\) has an element of order \(s\). Let \((x_1, x_2, \ldots, x_k) \in G\) be such an element. Then the order of \((x_1, x_2, \ldots, x_k)\) is:
+    \[
+    \text{lcm}(\text{ord}(x_1), \text{ord}(x_2), \ldots, \text{ord}(x_k)) = s.
+    \]
+    Since \(\text{ord}(x_i)\) divides \(d_i\) for each \(i\), and \(d_i \mid d_k\), it follows that \(\text{ord}(x_i) \mid d_k\). Therefore, \(s = \text{lcm}(\text{ord}(x_1), \text{ord}(x_2), \ldots, \text{ord}(x_k)) \mid d_k\).
+
+    \subsection*{Sufficient Condition: If \(s\) Divides \(d_k\), Then \(G\) Has an Element of Order \(s\)}
+
+    Suppose \(s \mid d_k\). We need to construct an element in \(G\) with order \(s\).
+
+    Since \(d_k\) is the largest invariant factor and \(s \mid d_k\), we can find an element \(y \in \Z_{d_k}\) with \(\text{ord}(y) = s\). Let \(y = \frac{d_k}{s}\). Then:
+    \[
+    y \times s = \left(\frac{d_k}{s}\right) \times s = d_k,
+    \]
+    which implies \(\text{ord}(y) = s\).
+
+    Construct the element \((0, 0, \ldots, y) \in G\). The order of \((0, 0, \ldots, y)\) is:
+    \[
+    \text{lcm}(\text{ord}(0), \text{ord}(0), \ldots, \text{ord}(y)) = \text{lcm}(1, 1, \ldots, s) = s.
+    \]
+
+    Therefore, if \(s\) divides \(d_k\), then \(G\) has an element of order \(s\).
+
+    \subsection*{Conclusion}
+
+    A finite abelian group \(G\) with invariant factors \(d_1, d_2, \ldots, d_k\) has an element of order \(s\) if and only if \(s\) divides the largest invariant factor \(d_k\).
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{6} Let \(G=(\Q, +)\), the group of rational numbers with addition. SHow that any finite subset \(S \subset G\) is contained in a cyclic subgroup, and conclude from this that \(G\) is not finitely generated. (Hint: clear denominators.)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    Let \(S = \{q_1, q_2, \ldots, q_n\}\) be a finite subset of \(G = (\Q, +)\), where each \(q_i \in \Q\).
+
+    \subsection*{Clearing Denominators}
+
+    Each rational number \(q_i\) can be written as \(\frac{a_i}{b_i}\), where \(a_i \in \Z\) and \(b_i \in \N\). Let \(b = \text{lcm}(b_1, b_2, \ldots, b_n)\) be the least common multiple of the denominators. Then each \(q_i\) can be expressed with a common denominator \(b\) as:
+    \[
+    q_i = \frac{a_i}{b} \quad \text{for some } a_i \in \Z.
+    \]
+
+    \subsection*{Generating a Cyclic Subgroup}
+
+    Consider the rational number \(\frac{1}{b}\). The cyclic subgroup generated by \(\frac{1}{b}\) is:
+    \[
+    \left\langle \frac{1}{b} \right\rangle = \left\{ k \cdot \frac{1}{b} \mid k \in \Z \right\}.
+    \]
+    
+    Since each \(q_i = \frac{a_i}{b}\), we have:
+    \[
+    q_i = a_i \cdot \frac{1}{b} \quad \text{for each } q_i \in S.
+    \]
+    
+    Therefore, each \(q_i \in \left\langle \frac{1}{b} \right\rangle\), and hence the finite subset \(S\) is contained in the cyclic subgroup generated by \(\frac{1}{b}\).
+
+    \subsection*{Conclusion: \(G\) is Not Finitely Generated}
+
+    Suppose for contradiction that \(G = (\Q, +)\) is finitely generated. Then there exists a finite set of generators \(\{g_1, g_2, \ldots, g_m\} \subseteq \Q\) such that every rational number can be expressed as a finite linear combination of these generators with integer coefficients.
+
+    Let \(S = \{g_1, g_2, \ldots, g_m\}\). By the previous argument, \(S\) is contained in a cyclic subgroup \(\left\langle \frac{1}{b} \right\rangle\) for some \(b \in \N\). Hence, every element of \(\Q\) would be a multiple of \(\frac{1}{b}\), which implies that \(\Q\) is cyclic. However, this is a contradiction because \(\Q\) is not cyclic; there is no single rational number whose integer multiples cover all of \(\Q\).
+
+    Therefore, \(G = (\Q, +)\) is not finitely generated.
+
+    
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{7} Let \(G = \Phi(35)\). Determine the elementary divisor and invariant factor decompositions of this group of order 24. 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    First, recall that \(\Phi(35)\) is the group of units modulo 35. The order of \(\Phi(35)\) is given by Euler's totient function:
+    \[
+    \phi(35) = \phi(5 \times 7) = \phi(5) \cdot \phi(7) = 4 \cdot 6 = 24.
+    \]
+    
+    Therefore, \(\Phi(35)\) is a group of order 24.
+
+    \subsection*{Finding the Structure of \(\Phi(35)\)}
+
+    The group \(\Phi(35)\) is isomorphic to the direct product of \(\Phi(5)\) and \(\Phi(7)\):
+    \[
+    \Phi(35) \simeq \Phi(5) \times \Phi(7).
+    \]
+    
+    Since \(\phi(5) = 4\) and \(\phi(7) = 6\), we have:
+    \[
+    \Phi(5) \simeq \Z_4 \quad \text{and} \quad \Phi(7) \simeq \Z_6.
+    \]
+    
+    Therefore:
+    \[
+    \Phi(35) \simeq \Z_4 \times \Z_6.
+    \]
+
+    \subsection*{Elementary Divisors}
+
+    To find the elementary divisor decomposition, we need to express \(\Z_4 \times \Z_6\) in terms of its elementary divisors. We start by finding the orders of the elements:
+    \[
+    \Z_4 \simeq \{0, 1, 2, 3\} \quad \text{with orders} \quad 1, 4, 2, 4.
+    \]
+    \[
+    \Z_6 \simeq \{0, 1, 2, 3, 4, 5\} \quad \text{with orders} \quad 1, 6, 3, 2, 3, 6.
+    \]
+
+    For the product group \(\Z_4 \times \Z_6\), the order of an element \((a, b)\) is \(\text{lcm}(\text{ord}(a), \text{ord}(b))\).
+
+    The elementary divisors can be found by listing the orders of all elements and taking the corresponding least common multiples:
+    \[
+    \begin{array}{ll}
+        (0,0), (0,3), (0,6), (2,0), (2,3), (2,6) & \text{order 1, 2, 3, 2, 6, 6 respectively} \\
+        (1,0), (3,0) & \text{order 4}\\
+        (1,3), (3,3) & \text{order 12} \\
+        (1,2), (3,2) & \text{order 6} \\
+        (1,4), (3,4) & \text{order 12} \\
+        (1,1), (3,1), (1,5), (3,5) & \text{order 12} \\
+    \end{array}
+    \]
+
+    From these, the elementary divisors are:
+    \[
+    1, 2, 2, 3, 3, 4, 6, 6, 12, 12.
+    \]
+
+    \subsection*{Invariant Factors}
+
+    The invariant factors are obtained by dividing the group order by the greatest common divisor of the group order and the orders of the preceding invariant factors:
+
+    The first invariant factor \(d_1\) is the smallest prime dividing 24, which is 2.
+
+    The second invariant factor \(d_2\) is the smallest factor of the remaining group order after dividing by \(d_1\), giving us \(d_2 = \frac{24}{2} = 12\).
+
+    Therefore, the invariant factor decomposition is:
+    \[
+    \Phi(35) \simeq \Z_2 \times \Z_{12}.
+    \]
+
+    Combining the orders of the individual groups:
+    \[
+    \Phi(35) \simeq \Z_2 \times \Z_2 \times \Z_2 \times \Z_3.
+    \]
+
+    \subsection*{Conclusion}
+
+    The elementary divisors of \(\Phi(35)\) are:
+    \[
+    1, 2, 2, 3, 3, 4, 6, 6, 12, 12.
+    \]
+
+    The invariant factor decomposition of \(\Phi(35)\) is:
+    \[
+    \Z_2 \times \Z_{12}.
+    \]
+    
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{8} Find the structure (elementary divisor and invariant factor) of the group \(\Phi(n)\) for all \(n \leq 20\). 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    To find the structure of \(\Phi(n)\) for all \(n \leq 20\), we first compute the group \(\Phi(n)\), which is the group of units modulo \(n\), and then determine the elementary divisor and invariant factor decompositions.
+
+    \subsection*{Structure of \(\Phi(n)\) for \(n = 1\) to \(20\)}
+    
+    \begin{itemize}
+        \item \(n = 1\): \(\Phi(1)\) is trivial.
+        \[
+        \Phi(1) = \{1\}
+        \]
+        Invariant factors: \(\{1\}\).
+
+        \item \(n = 2\): \(\Phi(2) \simeq \{1\}\).
+        \[
+        \Phi(2) = \{1\}
+        \]
+        Invariant factors: \(\{1\}\).
+
+        \item \(n = 3\): \(\Phi(3) \simeq \Z_2\).
+        \[
+        \Phi(3) = \{1, 2\}
+        \]
+        Invariant factors: \(\{2\}\).
+
+        \item \(n = 4\): \(\Phi(4) \simeq \Z_2\).
+        \[
+        \Phi(4) = \{1, 3\}
+        \]
+        Invariant factors: \(\{2\}\).
+
+        \item \(n = 5\): \(\Phi(5) \simeq \Z_4\).
+        \[
+        \Phi(5) = \{1, 2, 3, 4\}
+        \]
+        Invariant factors: \(\{4\}\).
+
+        \item \(n = 6\): \(\Phi(6) \simeq \Z_2 \times \Z_2\).
+        \[
+        \Phi(6) = \{1, 5\}
+        \]
+        Invariant factors: \(\{2, 2\}\).
+
+        \item \(n = 7\): \(\Phi(7) \simeq \Z_6\).
+        \[
+        \Phi(7) = \{1, 2, 3, 4, 5, 6\}
+        \]
+        Invariant factors: \(\{6\}\).
+
+        \item \(n = 8\): \(\Phi(8) \simeq \Z_2 \times \Z_2\).
+        \[
+        \Phi(8) = \{1, 3, 5, 7\}
+        \]
+        Invariant factors: \(\{2, 2\}\).
+
+        \item \(n = 9\): \(\Phi(9) \simeq \Z_6\).
+        \[
+        \Phi(9) = \{1, 2, 4, 5, 7, 8\}
+        \]
+        Invariant factors: \(\{6\}\).
+
+        \item \(n = 10\): \(\Phi(10) \simeq \Z_4\).
+        \[
+        \Phi(10) = \{1, 3, 7, 9\}
+        \]
+        Invariant factors: \(\{4\}\).
+
+        \item \(n = 11\): \(\Phi(11) \simeq \Z_{10}\).
+        \[
+        \Phi(11) = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}
+        \]
+        Invariant factors: \(\{10\}\).
+
+        \item \(n = 12\): \(\Phi(12) \simeq \Z_2 \times \Z_4\).
+        \[
+        \Phi(12) = \{1, 5, 7, 11\}
+        \]
+        Invariant factors: \(\{2, 4\}\).
+
+        \item \(n = 13\): \(\Phi(13) \simeq \Z_{12}\).
+        \[
+        \Phi(13) = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}
+        \]
+        Invariant factors: \(\{12\}\).
+
+        \item \(n = 14\): \(\Phi(14) \simeq \Z_6\).
+        \[
+        \Phi(14) = \{1, 3, 5, 9, 11, 13\}
+        \]
+        Invariant factors: \(\{6\}\).
+
+        \item \(n = 15\): \(\Phi(15) \simeq \Z_4 \times \Z_2\).
+        \[
+        \Phi(15) = \{1, 2, 4, 7, 8, 11, 13, 14\}
+        \]
+        Invariant factors: \(\{4, 2\}\).
+
+        \item \(n = 16\): \(\Phi(16) \simeq \Z_4 \times \Z_2\).
+        \[
+        \Phi(16) = \{1, 3, 5, 7, 9, 11, 13, 15\}
+        \]
+        Invariant factors: \(\{4, 2\}\).
+
+        \item \(n = 17\): \(\Phi(17) \simeq \Z_{16}\).
+        \[
+        \Phi(17) = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16\}
+        \]
+        Invariant factors: \(\{16\}\).
+
+        \item \(n = 18\): \(\Phi(18) \simeq \Z_6 \times \Z_2\).
+        \[
+        \Phi(18) = \{1, 5, 7, 11, 13, 17\}
+        \]
+        Invariant factors: \(\{6, 2\}\).
+
+        \item \(n = 19\): \(\Phi(19) \simeq \Z_{18}\).
+        \[
+        \Phi(19) = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18\}
+        \]
+        Invariant factors: \(\{18\}\).
+
+        \item \(n = 20\): \(\Phi(20) \simeq \Z_4 \times \Z_2\).
+        \[
+        \Phi(20) = \{1, 3, 7, 9, 11, 13, 17, 19\}
+        \]
+        Invariant factors: \(\{4, 2\}\).
+    \end{itemize}
+    
+    \subsection*{Summary}
+
+    \[
+    \begin{array}{c|c|c|c}
+    n & \Phi(n) & \text{Elementary Divisors} & \text{Invariant Factors} \\
+    \hline
+    1 & \{1\} & \{1\} & \{1\} \\
+    2 & \Z_1 & \{1\} & \{1\} \\
+    3 & \Z_2 & \{2\} & \{2\} \\
+    4 & \Z_2 & \{2\} & \{2\} \\
+    5 & \Z_4 & \{4\} & \{4\} \\
+    6 & \Z_2 \times \Z_2 & \{2, 2\} & \{2, 2\} \\
+    7 & \Z_6 & \{6\} & \{6\} \\
+    8 & \Z_2 \times \Z_2 & \{2, 2\} & \{2, 2\} \\
+    9 & \Z_6 & \{6\} & \{6\} \\
+    10 & \Z_4 & \{4\} & \{4\} \\
+    11 & \Z_{10} & \{10\} & \{10\} \\
+    12 & \Z_2 \times \Z_4 & \{2, 4\} & \{2, 4\} \\
+    13 & \Z_{12} & \{12\} & \{12\} \\
+    14 & \Z_6 & \{6\} & \{6\} \\
+    15 & \Z_4 \times \Z_2 & \{4, 2\} & \{4, 2\} \\
+    16 & \Z_4 \times \Z_2 & \{4, 2\} & \{4, 2\} \\
+    17 & \Z_{16} & \{16\} & \{16\} \\
+    18 & \Z_6 \times \Z_2 & \{6, 2\} & \{6, 2\} \\
+    19 & \Z_{18} & \{18\} & \{18\} \\
+    20 & \Z_4 \times \Z_2 & \{4, 2\} & \{4, 2\} \\
+    \end{array}
+    \]
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{9} Given a commutative ring \(A\) with identity, let \(C(A)\) be the group defined in PS 5, with underlying set \(C(A)= \{(x,y) \in A^2 \ | \ x^2 + y^2 = 1\} \). Determine the elementary divisor and invariant factor decompositions of the following groups: \(C(\Z_2), C(\Z_4), C(\Z_8), C(\Z_3), C(\Z_5), C(\Z_7), C(\Z_{11}), C(\Z_{13})\). (Hint: these are groups of orders 2, 8, 16, 4, 4, 8, 12, 12 respectively. To figure out what the elements of \(C(\Z_n)\) are, first determine which elements of \(Z_n\) can be squares of elements of \(Z_n\).)
+    
+    \textbf{Revised:} I had the orders wrong for \(C(\Z_4), \quad C(\Z_8), \quad C(\Z_{16})\). I fixed the first two, and removed the third one entirely. Make a conjecture about the structure of \(C(\Z_p)\) when \(p\) is an arbitrary odd prime. 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    \subsection*{Order of the Elements in \(C(A)\)}
+
+    \subsubsection*{1. \(C(\Z_2)\)}
+    The set of elements is \((x, y) \in \Z_2^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_2) = \{(1, 0), (0, 1)\}.
+    \]
+    This group has order 2, and it is isomorphic to \(\Z_2\).
+
+    \subsubsection*{2. \(C(\Z_4)\)}
+    The set of elements is \((x, y) \in \Z_4^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_4) = \{(1, 0), (3, 0), (0, 1), (0, 3), (2, 2)\}.
+    \]
+    This group has order 4, and it is isomorphic to \(\Z_4\).
+
+    \subsubsection*{3. \(C(\Z_8)\)}
+    The set of elements is \((x, y) \in \Z_8^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_8) = \{(1, 0), (7, 0), (0, 1), (0, 7), (3, 3), (5, 5)\}.
+    \]
+    This group has order 8, and it is isomorphic to \(\Z_8\).
+
+    \subsubsection*{4. \(C(\Z_3)\)}
+    The set of elements is \((x, y) \in \Z_3^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_3) = \{(1, 0), (2, 0), (0, 1), (0, 2)\}.
+    \]
+    This group has order 4, and it is isomorphic to \(\Z_2 \times \Z_2\).
+
+    \subsubsection*{5. \(C(\Z_5)\)}
+    The set of elements is \((x, y) \in \Z_5^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_5) = \{(1, 0), (4, 0), (0, 1), (0, 4), (2, 3), (3, 2)\}.
+    \]
+    This group has order 6, and it is isomorphic to \(\Z_6\).
+
+    \subsubsection*{6. \(C(\Z_7)\)}
+    The set of elements is \((x, y) \in \Z_7^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_7) = \{(1, 0), (6, 0), (0, 1), (0, 6), (3, 4), (4, 3), (2, 5), (5, 2)\}.
+    \]
+    This group has order 8, and it is isomorphic to \(\Z_8\).
+
+    \subsubsection*{7. \(C(\Z_{11})\)}
+    The set of elements is \((x, y) \in \Z_{11}^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_{11}) = \{(1, 0), (10, 0), (0, 1), (0, 10), (3, 4), (4, 3), (5, 9), (9, 5), (2, 6), (6, 2)\}.
+    \]
+    This group has order 10, and it is isomorphic to \(\Z_{10}\).
+
+    \subsubsection*{8. \(C(\Z_{13})\)}
+    The set of elements is \((x, y) \in \Z_{13}^2\) such that \(x^2 + y^2 = 1\):
+    \[
+    C(\Z_{13}) = \{(1, 0), (12, 0), (0, 1), (0, 12), (5, 6), (6, 5), (4, 9), (9, 4), (3, 10), (10, 3)\}.
+    \]
+    This group has order 12, and it is isomorphic to \(\Z_{12}\).
+
+    \subsection*{Conjecture for \(C(\Z_p)\) When \(p\) is an Odd Prime}
+
+    Based on the patterns observed, we can conjecture that for an odd prime \(p\), the group \(C(\Z_p)\) is isomorphic to \(\Z_{p-1}\). This is because the elements \((x, y) \in \Z_p^2\) that satisfy \(x^2 + y^2 = 1\) form a cyclic group of order \(p-1\).
+
+\end{exercise}
+\newpage
+
+\end{document}

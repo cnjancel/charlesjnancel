@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Thinking of You,,Thinking of You,,Thinking of You,,Thinking of You
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,74.99,,89.99,,104.99,,136
+,Total SRP of Bundle,,74.99,,89.99,,104.99,,136
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,74.99,,89.99,,104.99,,136
+,Less Commission (20%),,-14.998,,-17.998,,-20.998,,-27.200000000000003
+,Less C/H Fee (9%),,-6.749099999999999,,-8.0991,,-9.4491,,-12.24
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-7.499,,-8.999,,-10.499,,-13.600000000000001
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-9.29,,-9.29,,-9.29,,0
+,Total Gross Margin,,13.213899999999999,,22.363899999999987,,31.513899999999992,,59.72
+,Gross Margin %,,0.1762088278437125,,0.2485153905989553,,0.30016096771121054,,0.4391176470588235
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+White,Asiatic Lily stems,2,2.94,2,2.94,2,2.94,,0
+White,Alstroemeria stems,4,2.48,4,2.48,4,2.48,,0
+White,Queen Anne's Lace,3,3.87,3,3.87,3,3.87,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,9.29,,9.29,,9.29,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Red Hot Bouquet,,Red Hot Bouquet,,Red Hot Bouquet,,Red Hot Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,75,,95,,115,,140
+,Total SRP of Bundle,,75,,95,,115,,140
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,75,,95,,115,,140
+,Less Commission (20%),,-15,,-19,,-23,,-28
+,Less C/H Fee (9%),,-6.75,,-8.549999999999999,,-10.35,,-12.6
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-6.9,,-6.9,,-6.9,,-6.9
+,Less Floral Cost,,-10.549999999999999,,-16.45,,-19.009999999999998,,-22.21
+,Total Gross Margin,,15.06,,23.360000000000003,,35.000000000000014,,49.550000000000004
+,Gross Margin %,,0.2008,,0.2458947368421053,,0.30434782608695665,,0.3539285714285715
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Pink,Alstroemeria stems,3,2.67,3,2.67,3,2.67,3,2.67
+Red,Red 50 cm Roses,1,1.6,2,3.2,3,4.800000000000001,5,8
+Red,Standard Carnations,3,1.8599999999999999,3,1.8599999999999999,3,1.8599999999999999,3,1.8599999999999999
+Red,LA Hybrid Lily stems,1,1.72,2,3.44,2,3.44,2,3.44
+Pink,Stock stems,2,1.92,2,1.92,3,2.88,3,2.88
+Hot Pink,Spray Rose stems,0,0,2,2.58,2,2.58,2,2.58
+,Salal tips,3,0.78,3,0.78,3,0.78,3,0.78
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,10.549999999999999,,16.45,,19.009999999999998,,22.21
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,2120GS - Small Gold-Dipped Vase,1,6.9,1,6.9,1,6.9,1,6.9
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,6.9,,6.9,,6.9,,6.9

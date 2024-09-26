@@ -1,0 +1,632 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+
+\title{Math 417, Homework 3}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\section*{Chapter II.10}
+\begin{exercise}{10} Repeat the preceding exercise, but find the right cosets this time. Are they the same as the left coset?
+
+    Find all right cosets of the subgroup $\{\rho_0,\rho_2\}$ of the group $D_4$ given by Table 8.12.
+    \begin{table}[ht]
+        \centering
+        \caption{Table 8.12}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        & \(\rho_0\) & \(\rho_1\) & \(\rho_2\) & \(\rho_3\) & \(\mu_1\) & \(\mu_2\) & \(\delta_1\) & \(\delta_2\) \\
+        \hline
+        \(\rho_0\) &\(\rho_0\) & \(\rho_1\) & \(\rho_2\) & \(\rho_3\) & \(\mu_1\) & \(\mu_2\) & \(\delta_1\) & \(\delta_2\)\\
+        \hline
+        \(\rho_1\) & \(\rho_1\) & \(\rho_2\) & \(\rho_3\) & \(\rho_0\) & \(\delta_1\) & \(\delta_2\) & \(\mu_2\) & \(\mu_1\) \\
+        \hline
+        \(\rho_2\) & \(\rho_2\) & \(\rho_3\) & \(\rho_0\) & \(\rho_1\) & \(\mu_2\) & \(\mu_1\) & \(\delta_2\) & \(\delta_1\) \\
+        \hline
+        \(\rho_3\) & \(\rho_3\) & \(\rho_0\) & \(\rho_1\) & \(\rho_2\) & \(\delta_2\) & \(\delta_1\) & \(\mu_1\) & \(\mu_2\) \\
+        \hline
+        \(\mu_1\) & \(\mu_1\) & \(\delta_2\) & \(\mu_2\) & \(\delta_1\) & \(\rho_0\) & \(\rho_2\) & \(\rho_3\) & \(\rho_1\) \\
+        \hline
+        \(\mu_2\) & \(\mu_2\) & \(\delta_1\) & \(\mu_1\) & \(\delta_2\) & \(\rho_2\) & \(\rho_0\) & \(\rho_1\) & \(\rho_3\) \\
+        \hline
+        \(\delta_1\) & \(\delta_1\) & \(\mu_1\) & \(\delta_2\) & \(\mu_2\) & \(\rho_1\) & \(\rho_3\) & \(\rho_0\) & \(\rho_2\) \\
+        \hline
+        \(\delta_2\) & \(\delta_2\) & \(\mu_2\) & \(\delta_1\) & \(\mu_1\) & \(\rho_3\) & \(\rho_1\) & \(\rho_2\) & \(\rho_0\) \\
+        \hline
+        \end{tabular}
+        \end{table}        
+    
+    \begin{proof}
+Using the multiplication table for \( D_4 \), we compute the right cosets of \( H = \{\rho_0, \rho_2\} \) as:
+
+For the right cosets:
+\begin{itemize}
+    \item For \( \rho_0 \):
+    \[
+    H\rho_0 = \{\rho_0\rho_0, \rho_2\rho_0\} = \{\rho_0, \rho_2\} = H
+    \]
+    
+    \item For \( \rho_1 \):
+    \[
+    H\rho_1 = \{\rho_0\rho_1, \rho_2\rho_1\} = \{\rho_1, \rho_3\}
+    \]
+    
+    \item For \( \mu_1 \):
+    \[
+    H\mu_1 = \{\rho_0\mu_1, \rho_2\mu_1\} = \{\mu_1, \mu_2\}
+    \]
+    
+    \item For \( \delta_1 \):
+    \[
+    H\delta_1 = \{\rho_0\delta_1, \rho_2\delta_1\} = \{\delta_1, \delta_2\}
+    \]
+\end{itemize}
+
+For the left cosets:
+\begin{itemize}
+    \item For \( \rho_0 \):
+    \[
+    \rho_0H = \{\rho_0\rho_0, \rho_0\rho_2\} = \{\rho_0, \rho_2\} = H
+    \]
+    
+    \item For \( \rho_1 \):
+    \[
+    \rho_1H = \{\rho_1\rho_0, \rho_1\rho_2\} = \{\rho_1, \rho_3\}
+    \]
+    
+    \item For \( \mu_1 \):
+    \[
+    \mu_1H = \{\mu_1\rho_0, \mu_1\rho_2\} = \{\mu_1, \mu_2\}
+    \]
+    
+    \item For \( \delta_1 \):
+    \[
+    \delta_1H = \{\delta_1\rho_0, \delta_1\rho_2\} = \{\delta_1, \delta_2\}
+    \]
+\end{itemize}
+
+Observing the cosets, we see:
+\[
+H \cup H\rho_1 \cup H\mu_1 \cup H\delta_1 = D_4
+\]
+and thus, \( H, H\rho_1, H\mu_1 \), and \( H\delta_1 \) are both the right and left cosets of \( H \) in \( D_4 \).
+    \end{proof}
+    
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{19b} Mark each of the following true or false.
+
+    \textbf{b.} The number of left cosets of a subgroup of a finite group divides the order of the group.
+        
+    \begin{proof} $ $ \\
+\textbf{True.} This statement can be justified by Lagrange's Theorem. 
+If \( G \) is a finite group and \( H \) is a subgroup of \( G \), then the order of \( H \) divides the order of \( G \). 
+The number of distinct left cosets of \( H \) in \( G \) is the index of \( H \) in \( G \), denoted as \( [G : H] \). 
+By definition, the size of each left coset is equal to the order of \( H \). 
+Therefore, the order of \( G \) can be expressed as the product of the order of \( H \) and the index \( [G : H] \), which implies that the number of left cosets of \( H \) divides the order of \( G \).
+        \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{19c} Mark each of the following true or false.
+
+    \textbf{c.} Every group of prime order is abelian.
+
+    \begin{proof} $ $ \\
+        \textbf{True.} Let \( G \) be a group of prime order \( p \). 
+        If \( a \) is any non-identity element of \( G \), then the order of \( \langle a \rangle \) (the cyclic subgroup generated by \( a \)) must be a divisor of \( p \). 
+        Since \( p \) is prime, this implies that the order of \( \langle a \rangle \) is either 1 or \( p \). 
+        The only element of order 1 is the identity, so \( \langle a \rangle \) must have order \( p \), meaning \( G \) is cyclic. 
+        And every cyclic group is abelian, so \( G \) is abelian.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{28} Let $H$ be a subgroup of a group $G$ such that $g^{-1}hg \in H$ for all $g \in G$ and all $h \in H$. 
+    Show that every left coset $gH$ is the same as the right coset $Hg$.
+    
+    \begin{proof}
+        To prove this, we'll demonstrate that for each \( g \in G \), every element of the left coset \( gH \) is also in \( Hg \) and vice versa.
+
+Let \( g \in G \) and \( h \in H \). We want to show that \( gh \) (an element of the left coset \( gH \)) is also in \( Hg \).
+
+Given that \( g^{-1}hg \in H \) for all \( g \in G \) and \( h \in H \), there exists some \( h' \in H \) such that:
+\[ g^{-1}hg = h' \]
+Multiplying each side by \( g \) on the right, we get:
+\[ g^{-1}h = h'g \]
+Now, multiplying each side by \( g \) on the left, we obtain:
+\[ h = g h'g \]
+Rearranging terms:
+\[ gh = h'g \]
+Thus, \( gh \) is indeed in the right coset \( Hg \).
+
+This shows that every element of \( gH \) is in \( Hg \).
+
+Similarly, for the reverse direction, for every element \( hg \) in \( Hg \), we can deduce that there's an element \( h'' \) in \( H \) such that:
+\[ gh'' = hg \]
+Thus, every element of \( Hg \) is in \( gH \).
+
+Therefore, every left coset \( gH \) is the same as the right coset \( Hg \) for all \( g \in G \).
+
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{39} Show that if $H$ is a subgroup of index 2 in a finite group $G$, then every left coset of $H$ is also a right coset of $H$.
+
+\begin{proof}
+    Let \( H \) be a subgroup of index 2 in a finite group \( G \). This means that \( H \) has exactly two distinct left cosets in \( G \), namely \( H \) and some other left coset \( gH \) where \( g \) is not in \( H \).
+    
+    Similarly, \( H \) has exactly two distinct right cosets in \( G \): \( H \) and \( Hg \).
+    
+    Now, the union of the left cosets is equal to \( G \), and the union of the right cosets is also equal to \( G \). This gives:
+    
+    1. \( G = H \cup gH \)
+
+    2. \( G = H \cup Hg \)
+    
+    Since \( H \cap gH = \emptyset \) and \( H \cap Hg = \emptyset \) (because \( g \) is not in \( H \) and distinct cosets are disjoint), it follows that \( gH \) and \( Hg \) must be the same set. Otherwise, we wouldn't be able to cover the entire group \( G \) with just two cosets.
+    
+    Therefore, every left coset of \( H \) is also a right coset of \( H \) in \( G \).
+\end{proof}
+\end{exercise}
+\vspace*{50pt}
+\begin{exercise}{45} Show that a finite cyclic group of order $n$ has exactly one subgroup of each order $d$ dividing $n$, and that these are all the subgroups it has.
+\begin{proof}
+    
+    Let \( G \) be a finite cyclic group of order \( n \) generated by an element \( a \), i.e., \( G = \langle a \rangle \).
+    
+    \textbf{1. Existence of a subgroup of order \( d \) dividing \( n \)}
+    
+    Let \( d \) be a divisor of \( n \). Then, by the properties of cyclic groups, the element \( a^{n/d} \) generates a cyclic subgroup of order \( d \). This is because the order of \( a^{n/d} \) is \( d \) and hence \( \langle a^{n/d} \rangle \) is a subgroup of \( G \) of order \( d \).
+    
+    \textbf{2. Uniqueness of the subgroup of order \( d \)}
+    
+    Suppose \( H \) is any subgroup of \( G \) of order \( d \). Then \( H \) must be generated by some power of \( a \), say \( a^k \). The order of \( a^k \) is \( n/\text{gcd}(n,k) \). For \( H \) to have order \( d \), we must have \( n/\text{gcd}(n,k) = d \) which means \( k \) must be a multiple of \( n/d \). Since \( a^{n/d} \) already generates a subgroup of order \( d \), it follows that \( H = \langle a^{n/d} \rangle \). This proves that there's exactly one subgroup of order \( d \).
+    
+    \textbf{3. These are all the subgroups of \( G \)}
+    
+    Any subgroup \( H \) of \( G \) will be cyclic (since \( G \) itself is cyclic) and generated by some power of \( a \). As explained above, the order of \( H \) determines the power of \( a \) that generates it. There are no other subgroups of \( G \) because any set of elements in \( G \) will either form a cyclic subgroup (and thus be one of the subgroups described above) or not be closed under the group operation, and thus not be a subgroup.
+    
+    In conclusion, a finite cyclic group of order \( n \) has exactly one subgroup of each order \( d \) dividing \( n \), and these are all the subgroups it has.
+\end{proof}
+\end{exercise}
+
+\section*{Chapter III.13}
+\begin{exercise}{2} Let $\phi : \R \rightarrow \Z$ under addition be given by $\phi(x) =$ the greatest integer $\leq x$.
+
+    Given the map \( \phi : \mathbb{R} \rightarrow \mathbb{Z} \) under addition, where \( \phi(x) \) is the greatest integer less than or equal to \( x \), we need to determine if \( \phi \) is a homomorphism.
+
+To do this, we will test if \( \phi \) preserves the group operation, i.e., if for all \( a, b \in \mathbb{R} \), 
+\[
+\phi(a + b) = \phi(a) + \phi(b)
+\]
+    \begin{proof}
+Take two real numbers \( a \) and \( b \). Let \( a = m + \alpha \) where \( m \) is the greatest integer less than or equal to \( a \) and \( 0 \leq \alpha < 1 \). Similarly, let \( b = n + \beta \) where \( n \) is the greatest integer less than or equal to \( b \) and \( 0 \leq \beta < 1 \).
+
+Then, \( a+b = m+n + (\alpha+\beta) \).
+
+Now, 
+
+1. If \( \alpha+\beta < 1 \), then \( \phi(a+b) = m+n \).
+
+2. If \( \alpha+\beta \geq 1 \), then \( \phi(a+b) = m+n+1 \).
+
+Case 1: If \( \alpha+\beta < 1 \)
+\[
+\phi(a + b) = m+n = \phi(a) + \phi(b)
+\]
+
+Case 2: If \( \alpha+\beta \geq 1 \)
+\[
+\phi(a + b) = m+n+1 \neq m+n = \phi(a) + \phi(b)
+\]
+
+From the second case, we can see that \( \phi \) does not always preserve the operation. Hence, \( \phi \) is not a homomorphism.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{4} Let $\phi : Z_6 \rightarrow Z_2$ be given by $\phi(x) =$ the remainder of $x$ when divided by 2, as in the division algorithm.
+
+    Given the map \( \phi : \mathbb{Z}_6 \rightarrow \mathbb{Z}_2 \), where \( \phi(x) \) is the remainder of \( x \) when divided by 2 (i.e., the parity of \( x \)), we need to determine if \( \phi \) is a homomorphism.
+    
+    To verify this, we'll test if \( \phi \) preserves the group operation. Specifically, we need to check if 
+    \[
+        \phi(a + b) \equiv \phi(a) + \phi(b) \pmod{2}
+        \]
+        for all \( a, b \in \mathbb{Z}_6 \).
+        
+    \begin{proof}
+Consider any \( a, b \in \mathbb{Z}_6 \). The possible values of \( a \) and \( b \) are \( \{0, 1, 2, 3, 4, 5\} \).
+
+Now, 
+\[
+\phi(a) = 
+\begin{cases} 
+0 & \text{if } a \text{ is even} \\
+1 & \text{if } a \text{ is odd}
+\end{cases}
+\]
+
+Similarly, 
+\[
+\phi(b) = 
+\begin{cases} 
+0 & \text{if } b \text{ is even} \\
+1 & \text{if } b \text{ is odd}
+\end{cases}
+\]
+
+The sum \( a+b \) in \( \mathbb{Z}_6 \) will be in the range \( \{0, 1, 2, 3, 4, 5\} \). 
+
+Now, for all combinations of \( a \) and \( b \), we need to verify if \( \phi(a+b) \equiv \phi(a) + \phi(b) \pmod{2} \).
+
+For example:
+- If \( a = 1 \) and \( b = 4 \), \( \phi(a+b) = \phi(5) = 1 \) and \( \phi(a) + \phi(b) = 1 + 0 = 1 \).
+- If \( a = 3 \) and \( b = 5 \), \( \phi(a+b) = \phi(2) = 0 \) and \( \phi(a) + \phi(b) = 1 + 1 = 2 \equiv 0 \pmod{2} \).
+
+Following similar calculations for all combinations of \( a \) and \( b \), we observe that \( \phi(a+b) \equiv \phi(a) + \phi(b) \pmod{2} \) holds for all \( a, b \in \mathbb{Z}_6 \).
+
+Therefore, \( \phi \) preserves the group operation and is a homomorphism.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{8} Let $G$ be any group and let $\phi : G \rightarrow G$ be given by $\phi(g) = g^{-1}$ for $g \in G$.
+    
+    To determine if \( \phi : G \rightarrow G \) given by \( \phi(g) = g^{-1} \) is a homomorphism, we must check if \( \phi \) preserves the group operation. This means verifying:
+    \[
+        \phi(ab) = \phi(a) \phi(b)
+    \]
+        
+    for all \( a, b \in G \).
+        
+        \begin{proof}
+Given \( a, b \in G \), let's compute the image of their product under \( \phi \):
+
+\[
+\phi(ab) = (ab)^{-1} = b^{-1}a^{-1}
+\]
+
+Now, let's compute the product of the images of \( a \) and \( b \) under \( \phi \):
+
+\[
+\phi(a) \phi(b) = a^{-1} b^{-1}
+\]
+
+Comparing the two expressions, we find:
+
+\[
+b^{-1}a^{-1} \neq a^{-1} b^{-1}
+\]
+
+unless \( G \) is abelian (in which case the two are equal). However, the statement does not specify that \( G \) is abelian, so in the general case:
+
+\[
+\phi(ab) \neq \phi(a) \phi(b)
+\]
+
+Thus, \( \phi \) does not preserve the group operation, and therefore is not a homomorphism.
+
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{10} Let $F$ be the additive group of all continuous functions mapping $\R$ into $\R$. Let $\R$ be the additive group of real
+    numbers, and let $\phi : F \rightarrow \R$ be given by
+    \[\phi(f) = \int_{0}^{4}f(x)dx\]
+
+
+    To determine if \( \phi : F \rightarrow \mathbb{R} \) given by \( \phi(f) = \int_{0}^{4}f(x)dx \) is a homomorphism, we must check if \( \phi \) preserves the group operation. Specifically, we need to verify:
+    \[
+        \phi(f + g) = \phi(f) + \phi(g)
+        \]
+        
+        for all \( f, g \in F \).
+        
+        \begin{proof}
+Given two functions \( f, g \in F \), let's evaluate \( \phi \) on their sum:
+\[
+\phi(f + g) = \int_{0}^{4}(f(x) + g(x))dx
+\]
+
+Splitting the integral, we have:
+\[
+\phi(f + g) = \int_{0}^{4}f(x)dx + \int_{0}^{4}g(x)dx
+\]
+
+Now, by definition of \( \phi \), we have:
+\[
+\phi(f) = \int_{0}^{4}f(x)dx
+\]
+and
+\[
+\phi(g) = \int_{0}^{4}g(x)dx
+\]
+
+Adding the two results, we get:
+\[
+\phi(f) + \phi(g) = \int_{0}^{4}f(x)dx + \int_{0}^{4}g(x)dx
+\]
+
+From our previous computation, this is exactly \( \phi(f + g) \).
+
+Therefore, \( \phi \) preserves the group operation and is a homomorphism.
+
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{14} Let $GL(n,\R)$ be the multiplicative group of invertible $n \times n$ matrices, and let $\R$ be the additive group of real
+    numbers. Let $\phi : GL(n,\R) \rightarrow \R$ be given by $\phi(A) =$ tr($A$), where tr($A$) is defined in Exercise 13.
+    
+    To determine if \( \phi : GL(n,\mathbb{R}) \rightarrow \mathbb{R} \) given by \( \phi(A) = \text{tr}(A) \) is a homomorphism, we must check if \( \phi \) preserves the group operation. Specifically, we need to verify:    
+    \[
+        \phi(AB) = \phi(A) \cdot \phi(B)
+        \]
+        
+        for all matrices \( A, B \in GL(n,\mathbb{R}) \). 
+
+        \begin{proof}
+Given two matrices \( A, B \in GL(n,\mathbb{R}) \), let's evaluate \( \phi \) on their product:
+\[
+\phi(AB) = \text{tr}(AB)
+\]
+
+Recall that the trace of a matrix product is the sum of the products of its diagonal entries. Now, the trace operation has the property:
+\[
+\text{tr}(AB) = \text{tr}(BA)
+\]
+
+However, this does not imply:
+\[
+\text{tr}(AB) = \text{tr}(A) + \text{tr}(B)
+\]
+
+Thus, in general, \( \phi(AB) \) is not equal to \( \phi(A) + \phi(B) \).
+
+Therefore, \( \phi \) does not preserve the group operation and is not a homomorphism.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{17} Compute the indicated quantities for the given homomorphism $\phi$.
+
+    Ker($\phi$) and $\phi(25)$ for $\phi : Z \rightarrow Z_7$ such that $\phi(1) = 4$
+
+    Given the homomorphism \( \phi : \mathbb{Z} \rightarrow \mathbb{Z}_7 \) such that \( \phi(1) = 4 \), we want to determine:
+    
+    1. The kernel of \( \phi \), \( \text{Ker}(\phi) \).
+
+    2. \( \phi(25) \).
+    
+    \begin{proof} $ $ \\
+
+\textbf{1. Ker(\( \phi \))}
+
+The kernel of \( \phi \) is defined as:
+\[
+\text{Ker}(\phi) = \{ x \in \mathbb{Z} \,|\, \phi(x) = 0 \}
+\]
+
+Given that \( \phi(1) = 4 \), we can determine \( \phi \) for any integer \( n \):
+\[
+\phi(n) = 4n \mod 7
+\]
+
+For \( \phi(x) = 0 \), we have:
+\[
+4x \equiv 0 \mod 7
+\]
+
+This is true for \( x \) that is a multiple of 7, since \( 4 \times 7 = 28 \equiv 0 \mod 7 \). Thus:
+\[
+\text{Ker}(\phi) = \{ 7k \,|\, k \in \mathbb{Z} \}
+\]
+
+\textbf{2. \( \phi(25) \)}
+
+Using our formula for \( \phi(n) \):
+\[
+\phi(25) = 4 \times 25 \mod 7 = 100 \mod 7 = 2
+\]
+
+So, \( \phi(25) = 2 \).
+
+In conclusion:
+
+1. \( \text{Ker}(\phi) = \{ 7k \,|\, k \in \mathbb{Z} \} \).
+
+2. \( \phi(25) = 2 \).
+
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{28} Let $G$ be a group, and let $g \in G$. Let $\phi_g : G \rightarrow G$ be defined by $\phi_g(x) = gx$ for $x \in G$. For which $g \in G$ is
+    $\phi_g$ a homomorphism?
+
+    To determine for which \( g \in G \) the function \( \phi_g : G \rightarrow G \) given by \( \phi_g(x) = gx \) is a homomorphism, we need to check if \( \phi_g \) preserves the group operation:
+    \[
+        \phi_g(xy) = \phi_g(x) \cdot \phi_g(y)
+        \]
+        
+        for all \( x, y \in G \).
+        
+        \begin{proof}
+Given \( x, y \in G \), let's evaluate \( \phi_g \) on their product:
+\[
+\phi_g(xy) = g(xy)
+\]
+
+Now, computing the product of the images of \( x \) and \( y \) under \( \phi_g \):
+\[
+\phi_g(x) \cdot \phi_g(y) = gx \cdot gy = g(xy) \cdot e = g(xy)
+\]
+
+where \( e \) is the identity element in \( G \).
+
+Clearly, for all \( x, y \in G \) and for any \( g \in G \), we have:
+\[
+\phi_g(xy) = \phi_g(x) \cdot \phi_g(y)
+\]
+
+Therefore, \( \phi_g \) preserves the group operation for any \( g \in G \) and is a homomorphism.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{44} Let $\phi  : G \rightarrow G'$ be a group homomorphism. Show that if $|G|$ is finite, then $|\phi[G]|$ is finite and is a divisor
+    of $|G|$.
+    
+    Given a group homomorphism \( \phi : G \rightarrow G' \), we want to show that if \( |G| \) (the order of \( G \)) is finite, then \( |\phi[G]| \) (the order of the image of \( G \) under \( \phi \)) is also finite and divides \( |G| \).
+    
+    \begin{proof}
+\textbf{1. \( |\phi[G]| \) is finite:}  
+Since \( \phi \) maps each element of \( G \) to an element of \( G' \), and \( G \) is finite, the image \( \phi[G] \) must also be finite. This is because each element of \( G \) gets mapped to some element in \( G' \), thus the number of elements in \( \phi[G] \) can't be more than the number of elements in \( G \).
+
+\textbf{2. \( |\phi[G]| \) divides \( |G| \):}  
+Let \( \text{Ker}(\phi) \) be the kernel of \( \phi \). By the First Isomorphism Theorem, \( G/\text{Ker}(\phi) \) is isomorphic to \( \phi[G] \). This implies that the order of the factor group \( G/\text{Ker}(\phi) \) is equal to the order of \( \phi[G] \).
+
+Given that the order of a factor group \( G/H \) is \( |G|/|H| \), the order of \( G/\text{Ker}(\phi) \) is \( |G|/|\text{Ker}(\phi)| \).
+
+Now, since both \( |G| \) and \( |\text{Ker}(\phi)| \) are integers (because \( G \) is finite), it's clear that the order of \( \phi[G] \), which is \( |G|/|\text{Ker}(\phi)| \), divides \( |G| \).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{48} The \textbf{sign of an even permutation} is $+1$ and the \textbf{sign of an odd permutation} is $-1$. 
+    Observe that the map sgn$_n : S_n \rightarrow \{1,-1\}$ defined by \[\text{sgn}_n(\sigma) =\text{sign of }\sigma\] is a homomorphism of Sn onto the multiplicative group $\{1, -1\}$. 
+    What is the kernel? Compare with Example 13.3.
+
+
+    To show that the map \( \text{sgn}_n : S_n \rightarrow \{1,-1\} \) defined by \( \text{sgn}_n(\sigma) = \text{sign of } \sigma \) is a homomorphism, we need to demonstrate that it preserves the group operation. In \( S_n \), the operation is composition of permutations, and in \( \{1,-1\} \), the operation is multiplication.
+    
+    Given two permutations \( \sigma, \mu \) in \( S_n \), let's explore the sign of their composition.
+    
+    \begin{proof}
+    
+1. If \( \sigma \) and \( \mu \) are both even, then their composition \( \sigma\mu \) is even.\\  
+   \( \text{sgn}_n(\sigma\mu) = 1 \)\\  
+   \( \text{sgn}_n(\sigma) \times \text{sgn}_n(\mu) = 1 \times 1 = 1 \)
+
+2. If \( \sigma \) is even and \( \mu \) is odd, then \( \sigma\mu \) is odd.\\
+   \( \text{sgn}_n(\sigma\mu) = -1 \)  \\
+   \( \text{sgn}_n(\sigma) \times \text{sgn}_n(\mu) = 1 \times (-1) = -1 \)
+
+3. If \( \sigma \) is odd and \( \mu \) is even, then \( \sigma\mu \) is odd.\\
+   \( \text{sgn}_n(\sigma\mu) = -1 \)  \\
+   \( \text{sgn}_n(\sigma) \times \text{sgn}_n(\mu) = (-1) \times 1 = -1 \)
+
+4. If \( \sigma \) and \( \mu \) are both odd, then \( \sigma\mu \) is even.\\  
+   \( \text{sgn}_n(\sigma\mu) = 1 \)\\
+   \( \text{sgn}_n(\sigma) \times \text{sgn}_n(\mu) = (-1) \times (-1) = 1 \)
+
+For all cases, we see that:
+\[ \text{sgn}_n(\sigma\mu) = \text{sgn}_n(\sigma) \times \text{sgn}_n(\mu) \]
+
+Thus, \( \text{sgn}_n \) preserves the group operation and is a homomorphism.
+
+The kernel of \( \text{sgn}_n \) is the set of all elements in \( S_n \) that map to the identity in \( \{1,-1\} \). Since \( 1 \) is the identity in \( \{1,-1\} \) under multiplication, the kernel is:
+\[ \text{Ker}(\text{sgn}_n) = \{ \sigma \in S_n \,|\, \text{sgn}_n(\sigma) = 1 \} \]
+This is precisely the set of all even permutations in \( S_n \).
+
+Comparing with Example 13.3, we see that the map \( \phi \) in the example and the \( \text{sgn}_n \) map here essentially capture the same idea but map to different codomains (additive vs. multiplicative groups).
+
+\noindent\rule{\textwidth}{1pt}
+
+This concludes the proof for Exercise 48, demonstrating that \( \text{sgn}_n \) is a homomorphism and that its kernel consists of all even permutations.
+    \end{proof}
+\end{exercise}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

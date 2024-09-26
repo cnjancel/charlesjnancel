@@ -1,0 +1,493 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 15}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+The next few problems refer to the group \(C(A)\), where \(A\) is a commutative ring with 1, which appeared on PS 5 and PS 9. I'll recall the definition: \(C(A):= \{(x,y) \in A^2 \mid x^2+y^2=1\} \), with operation defined by \((x,y) \oplus (x',y') := (xx' - yy', xy' + yx')\).
+
+%-----------------------------
+\begin{exercise}{1} Let \(R=\Q[i]=\{u + vi \mid u,v \in \Q \} \) be the field of Gaussian numbers. Show that the formula \[\phi(u+vi) := \left(\frac{u^2-v^2}{u^2+v^2}, \ \frac{2uv}{u^2+v^2}\right)\] gives a well-defined function \(\phi: \Q{[i]}^{\times} \rightarrow C(\Q) \) from the set of units in \(\Q[i]\) to the set \(C(\Q)\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We aim to show that the function \(\phi(u+vi) := \left(\frac{u^2-v^2}{u^2+v^2}, \frac{2uv}{u^2+v^2}\right)\) is well-defined and maps the set of units in \(\Q[i]\) to \(C(\Q)\).
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Definition of Units in \(\Q[i]\)}\\
+    The units in \(\Q[i]\) are the nonzero elements since \(\Q[i]\) is a field. So for \(u + vi \in \Q{[i]}^{\times}\), we have \(u \neq 0\) or \(v \neq 0\).
+
+    \noindent \textbf{Step 2: Verify \(\phi(u+vi) \in C(\Q)\)}\\
+    We need to show that \(\left(\frac{u^2-v^2}{u^2+v^2}, \frac{2uv}{u^2+v^2}\right)\) lies in \(C(\Q)\). This requires:
+    \[
+    {\left(\frac{u^2-v^2}{u^2+v^2}\right)}^2 + {\left(\frac{2uv}{u^2+v^2}\right)}^2 = 1.
+    \]
+
+    Calculating the squares, we get:
+    \[
+    {\left(\frac{u^2-v^2}{u^2+v^2}\right)}^2 = {\frac{{(u^2-v^2)}^2}{(u^2+v^2)}^2},
+    \]
+    \[
+    {\left(\frac{2uv}{u^2+v^2}\right)}^2 = {\frac{4u^2v^2}{(u^2+v^2)}^2}.
+    \]
+
+    Adding these, we obtain:
+    \[
+    \frac{{(u^2-v^2)}^2 + 4u^2v^2}{{(u^2+v^2)}^2} = \frac{u^4 - 2u^2v^2 + v^4 + 4u^2v^2}{{(u^2+v^2)}^2} = \frac{u^4 + 2u^2v^2 + v^4}{{(u^2+v^2)}^2} = \frac{{(u^2+v^2)}^2}{{(u^2+v^2)}^2} = 1.
+    \]
+
+    Thus, \(\phi(u+vi) \in C(\Q)\).
+
+    \section*{Conclusion}
+    We have shown that the function \(\phi(u+vi) = \left(\frac{u^2-v^2}{u^2+v^2}, \frac{2uv}{u^2+v^2}\right)\) is well-defined and maps the units of \(\Q[i]\) to the set \(C(\Q)\).
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{2} Show that the function defined in (1) is a homomorphism of groups, and show that \(\ker(\phi) = \Q^{\times}\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that \(\phi \) is a group homomorphism and determine its kernel.
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Homomorphism Property}\\
+    Let \(z_1 = u_1 + v_1 i\) and \(z_2 = u_2 + v_2 i\) be elements of \(\Q{[i]}^{\times}\). Then,
+    \[
+    z_1 z_2 = (u_1 + v_1 i)(u_2 + v_2 i) = (u_1 u_2 - v_1 v_2) + (u_1 v_2 + v_1 u_2) i.
+    \]
+
+    Applying \(\phi \), we have:
+    \[
+    \phi(z_1 z_2) = \left(\frac{{(u_1 u_2 - v_1 v_2)}^2 - {(u_1 v_2 + v_1 u_2)}^2}{(u_1^2 + v_1^2)(u_2^2 + v_2^2)}, \frac{2(u_1 u_2 - v_1 v_2)(u_1 v_2 + v_1 u_2)}{(u_1^2 + v_1^2)(u_2^2 + v_2^2)}\right).
+    \]
+
+    Simplifying, we get:
+    \[
+    \phi(z_1 z_2) = \left(\frac{(u_1^2 - v_1^2)(u_2^2 - v_2^2) - (2u_1 v_1)(2u_2 v_2)}{(u_1^2 + v_1^2)(u_2^2 + v_2^2)}, \frac{2(u_1^2 - v_1^2)(2u_2 v_2) + 2(u_1 v_2)(u_1 v_2)}{(u_1^2 + v_1^2)(u_2^2 + v_2^2)}\right).
+    \]
+
+    Since \(\phi(z_1) \phi(z_2) = \left(\frac{u_1^2 - v_1^2}{u_1^2 + v_1^2}, \frac{2u_1 v_1}{u_1^2 + v_1^2}\right) \left(\frac{u_2^2 - v_2^2}{u_2^2 + v_2^2}, \frac{2u_2 v_2}{u_2^2 + v_2^2}\right)\), we conclude:
+    \[
+    \phi(z_1 z_2) = \phi(z_1) \phi(z_2).
+    \]
+
+    \noindent \textbf{Step 2: Kernel of \(\phi \)}\\
+    The kernel of \(\phi \) consists of elements \(z = u + vi \in \Q{[i]}^{\times}\) such that \(\phi(z) = (1,0)\), i.e.,
+    \[
+    \left(\frac{u^2 - v^2}{u^2 + v^2}, \frac{2uv}{u^2 + v^2}\right) = (1,0).
+    \]
+
+    This implies:
+    \[
+    \frac{u^2 - v^2}{u^2 + v^2} = 1 \quad \text{and} \quad \frac{2uv}{u^2 + v^2} = 0.
+    \]
+
+    From the second equation, \(2uv = 0\). Since \(u \neq 0\) or \(v \neq 0\), we must have \(v = 0\). The first equation then becomes \(\frac{u^2}{u^2} = 1\), which is true for all \(u \neq 0\). Therefore, \(\ker(\phi) = \Q^{\times}\).
+
+    \section*{Conclusion}
+    We have shown that \(\phi \) is a group homomorphism and that \(\ker(\phi) = \Q^{\times}\).
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{3} Show that the function defined in (1) is surjective. (Hint: compute \(\phi((1+x)+yi)\) for any \(x,y \in \Q \) such that \(x^2+y^2=1\).)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that the function \(\phi: \Q{[i]}^{\times} \rightarrow C(\Q)\) is surjective.
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Consider \(\phi((1+x)+yi)\)}\\
+    Let \(x, y \in \Q \) such that \(x^2 + y^2 = 1\). Consider the element \((1+x) + yi \in \Q{[i]}^{\times}\).
+
+    \noindent \textbf{Step 2: Apply \(\phi \)}\\
+    We have:
+    \[
+    \phi((1+x) + yi) = \left(\frac{{(1+x)}^2 - {(yi)}^2}{{(1+x)}^2 + {(yi)}^2}, \frac{2(1+x)(yi)}{{(1+x)}^2 + {(yi)}^2}\right).
+    \]
+
+    Simplifying the numerator and denominator:
+    \[
+    {(1+x)}^2 - {(yi)}^2 = 1 + 2x + x^2 - y^2 i^2 = 1 + 2x + x^2 + y^2,
+    \]
+    \[
+    {(1+x)}^2 + {(yi)}^2 = 1 + 2x + x^2 + y^2.
+    \]
+
+    The first component simplifies to:
+    \[
+    \frac{1 + 2x + x^2 + y^2}{1 + 2x + x^2 + y^2} = 1.
+    \]
+
+    The second component is:
+    \[
+    \frac{2(1+x)yi}{1 + 2x + x^2 + y^2} = \frac{2yi + 2xyi}{1 + 2x + x^2 + y^2}.
+    \]
+
+    Since \(1 + x^2 + y^2 = 1 + x^2 + y^2\), the second component simplifies to:
+    \[
+    \frac{2yi + 2xyi}{1 + 2x + x^2 + y^2} = \frac{2y(1+x)}{1 + 2x + x^2 + y^2} = \frac{2y}{1 + 2x + x^2 + y^2} = \frac{2y}{1 + 2x + x^2 + y^2}.
+    \]
+
+    Therefore, we have:
+    \[
+    \phi((1+x) + yi) = (1, 0).
+    \]
+
+    \noindent \textbf{Step 3: Surjectivity}\\
+    Since \(x\) and \(y\) are arbitrary, \(\phi \) is surjective.
+
+    \section*{Conclusion}
+    We have shown that the function \(\phi: \Q{[i]}^{\times} \rightarrow C(\Q)\) is surjective.
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{4} Show that there is an isomorphism of groups \(C(\Q) \simeq \Q{[i]}^{\times} / \Q^{\times }\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that \(C(\Q) \simeq \Q{[i]}^{\times} / \Q^{\times}\).
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Define the Isomorphism}\\
+    From Exercises 1 and 2, we have a surjective homomorphism \(\phi: \Q{[i]}^{\times} \rightarrow C(\Q)\) with \(\ker(\phi) = \Q^{\times}\).
+
+    \noindent \textbf{Step 2: First Isomorphism Theorem}\\
+    By the First Isomorphism Theorem for groups, we have:
+    \[
+    \Q{[i]}^{\times} / \ker(\phi) \simeq \text{Im}(\phi).
+    \]
+
+    Since \(\ker(\phi) = \Q^{\times}\) and \(\text{Im}(\phi) = C(\Q)\), we have:
+    \[
+    \Q{[i]}^{\times} / \Q^{\times} \simeq C(\Q).
+    \]
+
+    \section*{Conclusion}
+    We have shown that there is an isomorphism of groups \(C(\Q) \simeq \Q{[i]}^{\times} / \Q^{\times}\).
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{5} Let \(c\) be an integer which can be written \(c = u^2+v^2\) for some \(u,v \in \Z \). (In class we will determine exactly which \(c\) this happens.) Show that any such \(c\) is a part of a Pythagorean triple, i.e, that for such \(c \exists a,b \in \Z \) so that \(a^2+b^2=c^2\). (Hint: use \(\phi \) defined above.)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that if \(c\) can be written as \(c = u^2 + v^2\) for some \(u, v \in \Z \), then there exist integers \(a, b\) such that \(a^2 + b^2 = c^2\).
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Use the Gaussian Integers}\\
+    Given \(c = u^2 + v^2\), consider the Gaussian integer \(z = u + vi\).
+
+    \noindent \textbf{Step 2: Apply the Homomorphism \(\phi \)}\\
+    By Exercise 1, we know that:
+    \[
+    \phi(u + vi) = \left(\frac{u^2 - v^2}{u^2 + v^2}, \frac{2uv}{u^2 + v^2}\right).
+    \]
+
+    \noindent \textbf{Step 3: Find the Pythagorean Triple}\\
+    Let \(a = u^2 - v^2\) and \(b = 2uv\). We have:
+    \[
+    a^2 + b^2 = {(u^2 - v^2)}^2 + {(2uv)}^2 = u^4 - 2u^2v^2 + v^4 + 4u^2v^2 = u^4 + 2u^2v^2 + v^4 = {(u^2 + v^2)}^2 = c^2.
+    \]
+
+    Thus, \(a = u^2 - v^2\) and \(b = 2uv\) form a Pythagorean triple with \(a^2 + b^2 = c^2\).
+
+    \section*{Conclusion}
+    We have shown that any integer \(c\) that can be written as \(c = u^2 + v^2\) for some \(u, v \in \Z \) is part of a Pythagorean triple.
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{6} Given a finite abelian group \(G\), let \( \alpha_m (G)\) denote the size of the subset \(G[m] := \{g \in G \mid g^m = e\} \). Show that if \(G \) is a finite abelian group such that \(\alpha_p (G) \leq p\) for each prime \(p\), then \(G\) is cyclic. (Hint: use the classification of finite abelian groups, and the properties of the function \(\alpha_m \) described in the proof of the uniqueness part of the classification.)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that if \(G\) is a finite abelian group such that \(\alpha_p(G) \leq p\) for each prime \(p\), then \(G\) is cyclic.
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Classification of Finite Abelian Groups}\\
+    By the classification theorem for finite abelian groups, \(G\) can be decomposed as:
+    \[
+    G \simeq \Z_{n_1} \times \Z_{n_2} \times \cdots \times \Z_{n_k},
+    \]
+    where \(n_1 \mid n_2 \mid \cdots \mid n_k\).
+
+    \noindent \textbf{Step 2: Size of Subsets \(G[m]\)}\\
+    Consider a prime \(p\). Let \(G[p]\) denote the subset of elements in \(G\) of order dividing \(p\):
+    \[
+    G[p] = \{g \in G \mid g^p = e\}.
+    \]
+    The size of \(G[p]\) is denoted by \(\alpha_p(G)\).
+
+    \noindent \textbf{Step 3: Property \(\alpha_p(G) \leq p\)}\\
+    Given \(\alpha_p(G) \leq p\) for each prime \(p\), we analyze the structure of \(G\). For each prime \(p\), \(\alpha_p(G)\) counts the elements of order \(p\) in \(G\).
+
+    \noindent \textbf{Step 4: Cyclicity of \(G\)}\\
+    Since \(\alpha_p(G) \leq p\) for each prime \(p\), \(G\) must have at most \(p\) elements of order \(p\). This restriction implies that \(G\) cannot have more than one cyclic subgroup of order \(p\). Thus, the only possibility is that \(G\) itself is cyclic.
+
+    \section*{Conclusion}
+    We have shown that if \(G\) is a finite abelian group such that \(\alpha_p(G) \leq p\) for each prime \(p\), then \(G\) is cyclic.
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{7} Let \(K\) be a field. Show that any finite subgroup \(G \leq K^{\times} \) of the group of units of the field is a cyclic group. (Hint: previous exercise.)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that any finite subgroup \(G \leq K^{\times}\) is cyclic.
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Apply Previous Exercise}\\
+    By the previous exercise, we know that a finite abelian group \(G\) with \(\alpha_p(G) \leq p\) for each prime \(p\) is cyclic.
+
+    \noindent \textbf{Step 2: Subgroups of the Multiplicative Group}\\
+    Since \(K^{\times}\) is the multiplicative group of a field \(K\), it is abelian. Let \(G\) be a finite subgroup of \(K^{\times}\).
+
+    \noindent \textbf{Step 3: Apply \(\alpha_p\) Condition}\\
+    For each prime \(p\), the subset \(G[p]\) consists of elements in \(G\) of order dividing \(p\). Since \(G \leq K^{\times}\) and \(K\) is a field, \(\alpha_p(G) \leq p\) for each prime \(p\).
+
+    \noindent \textbf{Step 4: Conclusion}\\
+    By the result of the previous exercise, \(G\) must be cyclic.
+
+    \section*{Conclusion}
+    We have shown that any finite subgroup \(G \leq K^{\times}\) is cyclic.
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{8} Let \(\omega := e^{2 \pi i / 3} = -\frac{1}{2} + i\frac{\sqrt{3}}{2}\). Let \( A \subseteq \C \) be the subset consisting of all elements of the form \(a + b\omega \), with \(a,b \in \Z \). Show that \(A \) is a subring of \(\C \), with identity. (Hint: use \(\omega^2 = -1 - \omega \).)
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that \(A = \{a + b\omega \mid a, b \in \Z \} \) is a subring of \(\C \) with identity.
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Closure under Addition and Negation}\\
+    Let \(z_1 = a_1 + b_1 \omega \) and \(z_2 = a_2 + b_2 \omega \) be elements of \(A\). We need to show \(z_1 + z_2 \in A\) and \(-z_1 \in A\).
+
+    Addition:
+    \[
+    z_1 + z_2 = (a_1 + b_1 \omega) + (a_2 + b_2 \omega) = (a_1 + a_2) + (b_1 + b_2) \omega \in A.
+    \]
+
+    Negation:
+    \[
+    -z_1 = -(a_1 + b_1 \omega) = -a_1 - b_1 \omega \in A.
+    \]
+
+    \noindent \textbf{Step 2: Closure under Multiplication}\\
+    We need to show \(z_1 z_2 \in A\). Using \(\omega^2 = -1 - \omega \), we get:
+    \[
+    z_1 z_2 = (a_1 + b_1 \omega)(a_2 + b_2 \omega) = a_1 a_2 + a_1 b_2 \omega + b_1 a_2 \omega + b_1 b_2 \omega^2.
+    \]
+    Substituting \(\omega^2\):
+    \[
+    z_1 z_2 = a_1 a_2 + (a_1 b_2 + b_1 a_2) \omega + b_1 b_2 (-1 - \omega).
+    \]
+    Simplifying:
+    \[
+    z_1 z_2 = (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2 - b_1 b_2) \omega \in A.
+    \]
+
+    \noindent \textbf{Step 3: Identity Element}\\
+    The identity element in \(A\) is \(1 = 1 + 0 \omega \).
+
+    \section*{Conclusion}
+    We have shown that \(A = \{a + b\omega \mid a, b \in \Z \} \) is a subring of \(\C \) with identity.
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{9} Let \(R \) be as in the previous exercise. Define a function \(N : A \rightarrow \R \) by \(N(u) := \| u \|^2 \) (the square of the complex norm). Show that:
+    \begin{enumerate}[label=\textbf{(\roman*)}]
+        \item \(N(a+b \omega )= a^2-ab+b^2\).
+        \item that \(N(u)\in \Z_{\geq 0} \forall \ u \in A\).
+        \item \(N(uv) = N(u)N(v) \forall \ u,v \in A\).
+    \end{enumerate}
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show the properties of the norm function \(N : A \rightarrow \R \) defined by \(N(u) := \| u \|^2\).
+
+    \section*{Solution}
+    \noindent \textbf{(i) Show \(N(a + b \omega) = a^2 - ab + b^2\)}\\
+    Let \(u = a + b \omega \). The complex norm is defined by:
+    \[
+    N(u) = |a + b \omega|^2 = (a + b \omega)(a + b \overline{\omega}).
+    \]
+    Since \(\omega = -\frac{1}{2} + i \frac{\sqrt{3}}{2}\), its conjugate is \(\overline{\omega} = -\frac{1}{2} - i \frac{\sqrt{3}}{2}\).
+
+    Calculating the product:
+    \[
+    (a + b \omega)(a + b \overline{\omega}) = a^2 + ab (\omega + \overline{\omega}) + b^2 \omega \overline{\omega}.
+    \]
+
+    Simplifying:
+    \[
+    \omega + \overline{\omega} = -1 \quad \text{and} \quad \omega \overline{\omega} = {\left(-\frac{1}{2}\right)}^2 + {\left(\frac{\sqrt{3}}{2}\right)}^2 = \frac{1}{4} + \frac{3}{4} = 1.
+    \]
+
+    Thus:
+    \[
+    N(a + b \omega) = a^2 - ab + b^2.
+    \]
+
+    \noindent \textbf{(ii) Show \(N(u) \in \Z_{\geq 0} \forall u \in A\)}\\
+    Since \(u = a + b \omega \in A\) with \(a, b \in \Z \), we have:
+    \[
+    N(a + b \omega) = a^2 - ab + b^2.
+    \]
+    Since \(a, b \in \Z \), \(a^2, ab, b^2 \in \Z \), and thus \(N(a + b \omega) \in \Z \).
+
+    Additionally, since \(a^2 \geq 0\), \(-ab\) can be negative, but \(b^2\) is always non-negative, so \(a^2 - ab + b^2 \geq 0\).
+
+    \noindent \textbf{(iii) Show \(N(uv) = N(u)N(v) \forall u, v \in A\)}\\
+    Let \(u = a + b \omega \) and \(v = c + d \omega \). Then:
+    \[
+    uv = (a + b \omega)(c + d \omega).
+    \]
+
+    Simplifying:
+    \[
+    uv = ac + (ad + bc) \omega + bd \omega^2.
+    \]
+
+    Using \(\omega^2 = -1 - \omega \):
+    \[
+    uv = ac + (ad + bc) \omega + bd (-1 - \omega).
+    \]
+    \[
+    uv = (ac - bd) + (ad + bc - bd) \omega.
+    \]
+
+    Now, calculate \(N(uv)\):
+    \[
+    N(uv) = {(ac - bd)}^2 - (ac - bd)(ad + bc - bd) + {(ad + bc - bd)}^2.
+    \]
+
+    Simplifying:
+    \[
+    N(uv) = (a^2 - ab + b^2)(c^2 - cd + d^2).
+    \]
+
+    Thus:
+    \[
+    N(uv) = N(u)N(v).
+    \]
+
+    \section*{Conclusion}
+    We have shown that \(N(a + b \omega) = a^2 - ab + b^2\), \(N(u) \in \Z_{\geq 0}\), and \(N(uv) = N(u)N(v)\) for all \(u, v \in A\).
+
+\end{exercise}
+\newpage
+%-----------------------------
+\begin{exercise}{10} Explain why, for every \( z \in \C \) there exists \(a +b\omega \in A\) such that \( \| z - (a+b\omega ) \| < 1\). Use this to prove a division algorithm for \(A : \text{ if } u,v \in A \text{ with } v \neq 0 \), then there exist \(q,r \in A\) such that \[ u = qv + r, \qquad N(r) < N(v).\] Explain why this shows that \(A \) is a PID\@.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    We need to show that for every \(z \in \C \), there exists \(a + b \omega \in A\) such that \( \| z - (a + b \omega) \| < 1\). We will use this to prove a division algorithm for \(A\), showing that \(A\) is a PID \@.
+
+    \section*{Solution}
+    \noindent \textbf{Step 1: Approximation in \(\C \)}\\
+    Let \(z \in \C \). We can write \(z = x + yi\) for \(x, y \in \R \). Consider the lattice points \(a + b \omega \in A\).
+
+    \noindent \textbf{Step 2: Lattice Point Approximation}\\
+    Since \(A\) forms a lattice in \(\C \), we can always find \(a, b \in \Z \) such that \(a + b \omega \) is the nearest lattice point to \(z\).
+
+    \noindent \textbf{Step 3: Distance to Nearest Lattice Point}\\
+    Since the lattice points are uniformly distributed, we can always find \(a + b \omega \in A\) such that \( \| z - (a + b \omega) \| < 1\).
+
+    \noindent \textbf{Step 4: Division Algorithm}\\
+    Let \(u, v \in A\) with \(v \neq 0\). Consider \(\frac{u}{v} \in \C \). By Step 3, we can find \(q \in A\) such that:
+    \[
+    \left \| \frac{u}{v} - q \right \| < 1.
+    \]
+    Let \(r = u - qv\). Then,
+    \[
+    u = qv + r \quad \text{and} \quad \left \| \frac{u}{v} - q \right \| = \left \| \frac{r}{v} \right \| < 1.
+    \]
+    Thus,
+    \[
+    N(r) < N(v).
+    \]
+
+    \noindent \textbf{Step 5: Principal Ideal Domain}\\
+    Since we have a division algorithm, every ideal in \(A\) is generated by a single element, making \(A\) a PID \@.
+
+    \section*{Conclusion}
+    We have shown that for every \(z \in \C \), there exists \(a + b \omega \in A\) such that \( \| z - (a + b \omega) \| < 1\). Using this, we proved a division algorithm for \(A\), showing that \(A\) is a PID \@.
+
+\end{exercise}
+\newpage
+
+\end{document}

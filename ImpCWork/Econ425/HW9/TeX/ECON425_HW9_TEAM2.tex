@@ -1,0 +1,242 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{placeins} % For \FloatBarrier
+
+\title{Homework Number: Nine\\ \large Fiscal Policy}
+\author{Team Two}
+\date{July 22nd, 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Government Budget}
+
+\subsection{Two Ways the Government Finances Itself}
+Broadly speaking, a government finances itself through:
+\begin{itemize}
+    \item \textbf{Taxation}: This involves collecting taxes from individuals, businesses, and other entities. Taxes can take many forms, such as income tax, corporate tax, sales tax, property tax, and excise duties. The revenue from taxes is used to fund public services and infrastructure.
+    \item \textbf{Borrowing}: This involves issuing debt instruments such as bonds. Governments borrow money from domestic and international investors, which must be repaid with interest over time. This allows the government to finance deficits and invest in long-term projects without immediately raising taxes.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Government Financing Instruments}
+From official government websites, such as the U.S. Treasury, the following instruments are used to finance itself:
+\begin{itemize}
+    \item \textbf{Treasury Bonds}: Long-term debt securities with maturities of 20 to 30 years, offering periodic interest payments and returning the face value at maturity.
+    \item \textbf{Treasury Notes}: Medium-term debt securities with maturities of 2 to 10 years, offering semi-annual interest payments and returning the face value at maturity.
+    \item \textbf{Treasury Bills}: Short-term debt securities with maturities of one year or less, sold at a discount to the face value and do not offer periodic interest payments.
+    \item \textbf{Treasury Inflation-Protected Securities (TIPS)}: Bonds indexed to inflation, with principal value adjusted based on the Consumer Price Index (CPI), offering protection against inflation.
+    \item \textbf{Savings Bonds}: Non-marketable securities offered to individuals, providing a fixed rate of interest over a specific period.
+    \item \textbf{Federal Agency Debt}: Debt issued by government-sponsored enterprises (GSEs) such as Fannie Mae and Freddie Mac, used to support housing finance and other public purposes.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Intertemporal Budget Constraint of the Government}
+The Intertemporal Budget Constraint of the Government is given by:
+\[
+\sum_{k=0}^{\infty} \frac{T_{tot,t+k}}{\prod_{m=0}^{k-1} (1 + r_{t+m})} + \lim_{n \to \infty} \frac{B_{t+n}}{\prod_{m=0}^{n-1} (1 + r_{t+m})} = B_{t-1} (1 + r_{t-1}) + \sum_{k=0}^{\infty} \frac{G_{t+k}}{\prod_{m=0}^{k-1} (1 + r_{t+m})}
+\]
+
+\begin{itemize}
+    \item \(\sum_{k=0}^{\infty} \frac{T_{tot,t+k}}{\prod_{m=0}^{k-1} (1 + r_{t+m})}\): The present value of all future tax revenues.
+    \item \(\lim_{n \to \infty} \frac{B_{t+n}}{\prod_{m=0}^{n-1} (1 + r_{t+m})}\): The present value of debt in the infinite future (usually assumed to be zero under the No-Ponzi condition).
+    \item \(B_{t-1} (1 + r_{t-1})\): The value of existing debt including interest.
+    \item \(\sum_{k=0}^{\infty} \frac{G_{t+k}}{\prod_{m=0}^{k-1} (1 + r_{t+m})}\): The present value of all future government expenditures.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Comparison with Financing Instruments}
+The elements of the Budget Constraint involve future tax revenues and expenditures, along with the current and future value of debt. These correspond to financing instruments such as:
+\begin{itemize}
+    \item \textbf{Taxes}: Represented by \(T_{tot}\) in the budget constraint.
+    \item \textbf{Borrowing (Debt)}: Represented by \(B_t\), which is financed through instruments like Treasury bonds, notes, bills, and TIPS\@.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Ponzi Scheme}
+A Ponzi Scheme is an investment scam where returns to earlier investors are paid using the capital from newer investors, rather than profit earned by the operation. For example, in a Ponzi scheme, an organizer promises high returns to initial investors. Instead of generating profits, they pay returns to early investors using funds obtained from newer investors. This unsustainable structure eventually collapses when there are not enough new investments to pay earlier investors.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Non-Ponzi Condition}
+To avoid a Ponzi Scheme, the government must satisfy the Non-Ponzi Condition:
+\[
+\lim_{n \to \infty} \frac{B_{t+n}}{\prod_{m=0}^{n-1} (1 + r_{t+m})} = 0
+\]
+This ensures that the government cannot roll over its debt indefinitely without ever repaying the principal. Without this condition, the government could perpetually increase its debt, leading to insolvency and economic collapse. Rolling over debt indefinitely is unsustainable because it implies that the government would continuously issue new debt to pay off old debt, increasing the total debt burden over time without any real plan for repayment.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Ricardian Equivalence (Without Math)}
+Ricardian Equivalence is the idea that it doesn't matter whether a government finances its spending with debt or taxes. Rational consumers anticipate future taxes to repay the debt and thus save any tax cuts, leading to no change in overall demand. Essentially, consumers view government debt as future taxes and adjust their savings accordingly, which neutralizes the effect of fiscal policy on overall economic activity.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Ricardian Equivalence (With Math)}
+\[
+C_t = Y_t - T_t
+\]
+Assume the government's budget constraint:
+\[
+G_t + (1+r)B_{t-1} = T_t + B_t
+\]
+By substitution and solving the consumer's intertemporal budget constraint, we derive that consumption depends on the present value of lifetime income, not on the timing of taxes. Breaking down the steps further:
+\begin{enumerate}
+    \item Substitute the government budget constraint into the consumer's budget constraint.
+    \item Rearrange to show how lifetime income is affected by government spending and debt.
+    \item Demonstrate that changes in the timing of taxes do not affect lifetime consumption, as rational consumers adjust their savings to offset these changes.
+\end{enumerate}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Assumptions of Ricardian Equivalence}
+\begin{itemize}
+    \item \textbf{Perfect Capital Markets}: Consumers can borrow and lend at the same interest rate as the government.
+    \item \textbf{Rational Expectations}: Consumers are forward-looking and fully understand the government's budget constraint.
+    \item \textbf{Lump-Sum Taxes}: Taxes are non-distortionary and do not affect economic decisions.
+\end{itemize}
+In reality, these assumptions often do not hold due to market imperfections, myopia, and distortionary taxes. Studying Ricardian Equivalence helps in understanding the impact of fiscal policy under idealized conditions. The most unrealistic assumption in real-world contexts is often the existence of perfect capital markets, as many consumers face borrowing constraints.
+
+\noindent\rule{\linewidth}{1pt}
+
+\FloatBarrier{}
+
+\section{General Equilibrium}
+
+\subsection{Dynamic General Equilibrium Framework}
+To study the effects of fiscal policy, a Dynamic General Equilibrium (DGE) framework is used because it considers how agents' decisions over time affect the economy's evolution, accounting for intertemporal choices and the interaction between various markets.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Conditions for General Equilibrium}
+For general equilibrium, the following conditions are needed:
+\begin{itemize}
+    \item \textbf{Optimality Conditions}:
+        \begin{itemize}
+            \item Consumers maximize utility given their budget constraints.
+            \item Firms maximize profits given their production functions and input costs.
+        \end{itemize}
+    \item \textbf{Market Clearing Conditions}:
+        \begin{itemize}
+            \item Goods market: Supply equals demand.
+            \item Labor market: Supply of labor equals demand for labor.
+        \end{itemize}
+    \item \textbf{Government Budget Constraint}: The present value of government expenditures equals the present value of tax revenues and initial debt.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Natural Level of Output}
+Given the conditions:
+\[
+cK_t = w_t - p_t - \tau^l_t - \tau^C_t
+\]
+\[
+cR_t = cR_\infty + \tau C_\infty - \tau C_t
+\]
+\[
+lR_t = \frac{\xi}{1-\xi} (w_t - p_t - \tau C_t - \tau^l_t - cR_t)
+\]
+\[
+\xi \mu^* + (1 - v)lR_t = vcK_t + (1 - v)cR_t + g_t
+\]
+We derive the natural level of output as:
+\[
+y_{nt} = \xi (g_t - \tau C_t - \tau^l_t)
+\]
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{AS Curve with Nominal Rigidities}
+In the presence of nominal rigidities:
+\[
+\pi_t = \pi_{t-1} + \kappa (y_t - y_{nt})
+\]
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{AD Curve with Nominal Rigidities}
+The AD curve is given by:
+\[
+y_t = \xi \left( (1 - v) (g_t - \tau C_t) + (1 - \xi)\tau C_\infty - \xi\tau^l_\infty \right)
+\]
+This equation shows that aggregate demand is influenced by government spending, taxes, and permanent changes in consumption taxes. Inflation does not appear directly in this AD equation as it captures equilibrium conditions without short-term price adjustments.
+
+\noindent\rule{\linewidth}{1pt}
+
+\FloatBarrier{}
+
+\section{Fiscal Multipliers}
+
+\subsection{Transitory Increase in \( g_t \)}
+\begin{itemize}
+    \item \textbf{Formal Result}: An increase in \( g_t \) shifts the AD curve rightward.
+    \item \textbf{Economic Intuition}: Higher government spending increases aggregate demand, leading to higher output and potential inflation.
+    \item \textbf{Graph}: AS-AD graph showing a rightward shift in the AD curve, increasing output (y) and potentially inflation (\(\pi \)).
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Transitory Increase in Labor Income Tax}
+\begin{itemize}
+    \item \textbf{Formal Result}: A higher labor income tax shifts the AD curve leftward.
+    \item \textbf{Economic Intuition}: Increased taxes reduce disposable income, decreasing consumption and aggregate demand, lowering output and inflation.
+    \item \textbf{Graph}: AS-AD graph showing a leftward shift in the AD curve, decreasing output (y) and potentially deflation (\(\pi \)).
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Permanent Increase in Labor Income Tax}
+\begin{itemize}
+    \item \textbf{Formal Result}: A permanent tax increase has a more pronounced and lasting leftward shift in the AD curve.
+    \item \textbf{Economic Intuition}: Long-term decrease in disposable income leads to sustained lower consumption and aggregate demand, reducing output and inflation.
+    \item \textbf{Graph}: AS-AD graph showing a significant leftward shift in the AD curve, decreasing output (y) and inflation (\(\pi \)).
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Transitory Increase in Value-Added Tax}
+\begin{itemize}
+    \item \textbf{Formal Result}: An increase in VAT reduces consumption, shifting the AD curve leftward.
+    \item \textbf{Economic Intuition}: Higher VAT decreases disposable income, reducing consumption and aggregate demand, lowering output and inflation. More Keynesian households amplify this effect.
+    \item \textbf{Graph}: AS-AD graph showing a leftward shift in the AD curve, decreasing output (y) and inflation (\(\pi \)).
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Permanent Increase in Value-Added Tax}
+\begin{itemize}
+    \item \textbf{Formal Result}: A permanent increase in VAT results in a sustained leftward shift in the AD curve.
+    \item \textbf{Economic Intuition}: Long-term decrease in disposable income leads to sustained lower consumption and aggregate demand, reducing output and inflation.
+    \item \textbf{Graph}: AS-AD graph showing a significant leftward shift in the AD curve, decreasing output (y) and inflation (\(\pi \)).
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsection{Strongest Policy Effect}
+\begin{itemize}
+    \item \textbf{Explanation}: Policies increasing disposable income or government spending (like reducing taxes or increasing \( g_t \)) have the strongest positive effect on output and inflation. Conversely, permanent tax increases have the strongest negative effect due to their lasting impact on consumption and aggregate demand.
+    \item \textbf{Real-World Example}: For instance, the fiscal stimulus packages during the 2008 financial crisis and the COVID-19 pandemic, which included tax cuts and increased government spending, had significant positive impacts on aggregate demand and economic recovery.
+\end{itemize}
+
+\FloatBarrier{}
+\noindent\rule{\linewidth}{1pt}
+\newpage
+\section*{References}
+\begin{enumerate}
+    \item Romer, D. (2018).\ \textit{Advanced Macroeconomics}. McGraw-Hill Education.
+    \item Challe, E. (2019).\ \textit{Macroeconomic Fluctuations and Policies}. MIT Press.
+    \item Blanchard, O. (2021).\ \textit{Macroeconomics}. Pearson.
+    \item Mankiw, N. G. (2019).\ \textit{Principles of Economics}. Cengage Learning.
+    \item Woodford, M. (2003).\ \textit{Interest and Prices: Foundations of a Theory of Monetary Policy}. Princeton University Press.
+    \item U.S. Department of the Treasury.\ (n.d.). ``Treasury Securities \& Programs''. Retrieved from \url{https://home.treasury.gov/policy-issues/financing-the-government/treasury-securities}.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,691 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+
+\title{Math 417, Homework 2}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\section*{Chapter II.8}
+\begin{exercise}{5} 
+    In Exercises 1 through 5, compute the indicated product involving the following permutations in \(S_6\):
+    
+    \[\sigma =
+    \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 & 6 \\
+    3 & 1 & 4 & 5 & 6 & 2
+    \end{pmatrix} , 
+    \tau=
+    \begin{pmatrix} 
+        1 & 2 & 3 & 4 & 5 & 6 \\
+        2 &4 &1& 3& 6& 5
+    \end{pmatrix} , 
+    \mu=
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 \\
+        5 &2 &4 &3 &1 &6
+    \end{pmatrix}\]
+    
+    \(\text{5. }\sigma^{-1}\tau\sigma\)
+    
+    \begin{proof}
+    To find the product \(\sigma^{-1}\tau\sigma\), we will compute the action of the composition on each integer from \(1\) to \(6\):
+    
+    1. Starting with \(1\):
+    \(\sigma(1) = 3\), 
+    \(\tau(3) = 1\),
+    \(\sigma^{-1}(1) = 2\).
+    Thus, \(\sigma^{-1}\tau\sigma(1) = 2\).
+    
+    2. For \(2\):
+    \(\sigma(2) = 1\), 
+    \(\tau(1) = 2\),
+    \(\sigma^{-1}(2) = 6\).
+    Thus, \(\sigma^{-1}\tau\sigma(2) = 6\).
+    
+    3. For \(3\):
+    \(\sigma(3) = 4\), 
+    \(\tau(4) = 3\),
+    \(\sigma^{-1}(3) = 1\).
+    Thus, \(\sigma^{-1}\tau\sigma(3) = 1\).
+    
+    4. For \(4\):
+    \(\sigma(4) = 5\), 
+    \(\tau(5) = 6\),
+    \(\sigma^{-1}(6) = 2\).
+    Thus, \(\sigma^{-1}\tau\sigma(4) = 5\).
+    
+    5. For \(5\):
+    \(\sigma(5) = 6\), 
+    \(\tau(6) = 5\),
+    \(\sigma^{-1}(5) = 4\).
+    Thus, \(\sigma^{-1}\tau\sigma(5) = 4\).
+    
+    6. For \(6\):
+    \(\sigma(6) = 2\), 
+    \(\tau(2) = 4\),
+    \(\sigma^{-1}(4) = 3\).
+    Thus, \(\sigma^{-1}\tau\sigma(6) = 3\).
+    
+    Grouping all these results together:
+    
+    \[\sigma^{-1}\tau\sigma =
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 \\
+        2 & 6 & 1 & 5 & 4 & 3
+    \end{pmatrix}\].
+    
+    \end{proof}
+    \end{exercise}
+\vspace*{20pt}
+\begin{exercise}{8} In Exercises 6 through 9, compute the expressions shown for the permutations $\sigma$, $\tau$ and $\mu$ defined prior to Exercise 1.
+
+\(\text{8. Compute }\sigma^{100}\)
+\[
+\sigma = 
+\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+3 & 1 & 4 & 5 & 6 & 2
+\end{pmatrix}
+\]
+
+\begin{proof}
+
+We start by determining the cycle decomposition of \(\sigma\):
+\(\sigma = (1, 3, 4, 5, 6, 2)\).
+
+This 6-cycle implies that after applying \(\sigma\) six times, we achieve the identity permutation, \(\sigma_0\) for \(S_6\):
+\(\sigma^6 = \sigma_0\).
+
+Given this, for any integer \(k\), the permutation \(\sigma^{6k}\) is equivalent to the identity permutation. 
+
+We are also provided with the value of \(\sigma^4\):
+\[
+\sigma^4 = 
+\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+6 & 5 & 2 & 1 & 3 & 4
+\end{pmatrix}
+\]
+
+To compute \(\sigma^{100}\), we decompose 100 as:
+\[100 = 6 \times 16 + 4.\]
+
+This means that \(\sigma^{100}\) is equivalent to applying \(\sigma^4\) after applying \(\sigma\) 96 times (which returns the identity 16 times).
+
+Using the properties of permutations, this is articulated as:
+\[
+\sigma^{100} = \sigma^{6(16) + 4} = \sigma^{6(16)}\sigma^4 = (\sigma^6)^{16}\sigma^4 = \sigma_0^{16}\sigma^4 = \sigma_0\sigma^4 = \sigma^4.
+\]
+
+Thus, 
+\[
+\sigma^{100} = 
+\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 & 6 \\
+6 & 5 & 2 & 1 & 3 & 4
+\end{pmatrix}.
+\]
+
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{12} Let $A$ be a set and let $\sigma \in S_A$. For a fixed $a \in A$, the set
+    \[\mathcal{O}_{a,\sigma} = \{\sigma^n(a) | n \in \Z\}\]
+    is the orbit of $a$ under $\sigma$. In Exercises 11 through 13, find the orbit of 1 under the permutation defined prior to
+    Exercise 1.
+
+    \(\text{12. }\tau.\)
+    \begin{proof}
+    Consider the permutation
+    \[\tau = 
+    \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 & 6 \\
+    2 & 4 & 1 & 3 & 6 & 5
+    \end{pmatrix} 
+    \]
+    in \(S_6\).
+
+    Direct computation gives:
+    
+   - \(\tau(1) = 2\)
+
+   - \(\tau^2(1) = 4\)
+
+   - \(\tau^3(1) = 3\)
+
+   - \(\tau^4(1) = 1\)
+
+    Now, using induction, assume that \(\tau^{4n}(1) = 1\) for some positive integer \(n\). Then:
+   - \(\tau^{4(n+1)}(1) = \tau^{4n}(\tau^4(1)) = \tau^{4n}(1) = 1\)
+    
+    Extending this result to negative integers, we have:
+   - \(\tau^0(1) = 1\)
+   - Given any positive integer \(n\), \(\tau^{4n}(1) = 1\) and hence, \(\tau^{-4n}(1) = 1\)
+
+    Finally, the orbit for all integer powers is then deduced as:
+   - \(\tau^{4n+1}(1) = 2\)
+   - \(\tau^{4n+2}(1) = 4\)
+   - \(\tau^{4n+3}(1) = 3\)
+
+    Thus, the orbit of \(1\) under \(\tau\), denoted as \(\mathcal{O}_{1,\tau}\), is \(\{1, 2, 3, 4\}\).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{16} Find the number of elements in the set \(\{\sigma \in S_4 | \sigma(3) = 3\}\).
+    \begin{proof}
+        If \(\sigma(3) = 3\), then the number 3 remains fixed. This means we're only considering the permutations of the numbers 1, 2, and 4.
+        
+        Let's list them out:
+        \begin{enumerate}
+            \item 1, 2, 3, 4
+            \item 1, 4, 3, 2
+            \item 2, 1, 3, 4
+            \item 2, 4, 3, 1
+            \item 4, 1, 3, 2
+            \item 4, 2, 3, 1
+        \end{enumerate}
+        
+        Thus, there are 6 permutations in \(S_4\) where \(\sigma(3) = 3\).
+        \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{21} \textbf{a.} Verify that the six matrices
+    \[\begin{bmatrix}
+        1&0&0\\
+        0&1&0\\
+        0&0&1\\
+    \end{bmatrix},\begin{bmatrix}
+        0&1&0\\
+        0&0&1\\
+        1&0&0\\
+    \end{bmatrix},\begin{bmatrix}
+        0&0&1\\
+        1&0&0\\
+        0&1&0\\
+    \end{bmatrix},\begin{bmatrix}
+        1&0&0\\
+        0&0&1\\
+        0&1&0\\
+    \end{bmatrix},\begin{bmatrix}
+        0&0&1\\
+        0&1&0\\
+        1&0&0\\
+    \end{bmatrix},\begin{bmatrix}
+        0&1&0\\
+        1&0&0\\
+        0&0&1\\
+    \end{bmatrix}\]
+
+    form a group under matrix multiplication. [\textit{Hint:} Don't try to compute all products of these matrices. Instead,
+think how the column vector \(\begin{bmatrix} 1\\2\\3\\ \end{bmatrix}\) is transformed by multiplying it on the left by each of the matrices.]
+
+\textbf{b.} What group discussed in this section is isomorphic to this group of six matrices?
+
+\begin{proof}
+\textbf{a.}
+The matrices provided are permutation matrices of order 3. Let's verify the properties of the group for these matrices:
+\begin{enumerate}
+    \item \textbf{Closure:} Multiplying any two of the provided matrices will result in another matrix from the set. This is because multiplying two permutation matrices results in another permutation matrix, given that they permute the elements of a column vector.
+    
+    \item \textbf{Associativity:} Matrix multiplication is always associative. That is, for any matrices \(A\), \(B\), and \(C\), \(A(BC) = (AB)C\).
+    
+    \textbf{Existence of the Identity:} The identity matrix, \( \begin{bmatrix} 1&0&0\\ 0&1&0\\ 0&0&1\\ \end{bmatrix} \), is present in the set. When any matrix from the set is multiplied by this matrix, it remains unchanged.
+    
+    \textbf{Existence of the Inverse:} The inverse of a permutation matrix is the matrix representing the inverse permutation. Since every permutation in \(S_3\) has an inverse in \(S_3\), every matrix in our set has an inverse in our set.
+    
+\end{enumerate}
+Given that all the properties of a group are satisfied, the matrices form a group under matrix multiplication.
+
+\textbf{b.} 
+The group of matrices is isomorphic to \( S_3 \), the symmetric group on 3 elements. Each matrix corresponds to a permutation of the set \{1,2,3\}. The multiplication of the matrices reflects the composition of these permutations, and hence it is isomorphic to \( S_3 \).
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{32} In Exercises 30 through 34, determine whether the given function is a permutation of $\R$.
+
+    \(\textbf{32. }f_3 : \R \rightarrow \R \text{ defined by } f_3(x) = -x^3\)
+
+
+    To determine whether \( f_3 : \R \rightarrow \R \) defined by \( f_3(x) = -x^3 \) is a permutation of \( \R \), we must check two properties:
+
+    \begin{enumerate}
+        \item \textbf{Injectivity (One-to-One)}: A function is injective if every element of the domain maps to a unique element in the codomain. 
+        
+        \item \textbf{Surjectivity (Onto)}: A function is surjective if every element of the codomain has a pre-image in the domain.
+    \end{enumerate}
+        
+    \begin{proof} $ $ \\
+    
+    \begin{enumerate}
+        \item \textbf{Injectivity}: 
+        Let \( x_1, x_2 \in \R \) such that \( f_3(x_1) = f_3(x_2) \). 
+        This implies that \( -x_1^3 = -x_2^3 \). 
+        Dividing both sides by -1, we get \( x_1^3 = x_2^3 \). 
+        Now, the cube function is injective over \( \R \). Therefore, \( x_1 = x_2 \).
+        So, \( f_3 \) is injective.
+        
+        \item \textbf{Surjectivity}: 
+        Let \( y \in \R \). Consider \( x = \sqrt[3]{-y} \). Then, \( f_3(x) = -x^3 = -(\sqrt[3]{-y})^3 = y \).
+        Hence, every real number \( y \) has a pre-image in \( \R \) under \( f_3 \). Thus, \( f_3 \) is surjective.
+    \end{enumerate}
+    
+    Since \( f_3 \) is both injective and surjective, \( f_3 \) is a permutation of \( \R \).
+    
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{47} Strengthening Exercise 46, show that if $n \geq 3$, then the only element of $\sigma$ of $S_n$ satisfying $\sigma\gamma = \gamma\sigma$ for all
+    $\gamma \in S_n$ is $\sigma = \iota$, the identity permutation.
+
+    \begin{proof}
+\textbf{Case 1:} \( a = c \)
+
+This means that \( \sigma(a) = b \) and \( \sigma(b) = a \). We can choose \( \gamma \) to be the transposition \( (a \ b) \). 
+
+Then, 
+\[ \sigma \circ \gamma(a) = \sigma(b) = a \]
+\[ \gamma \circ \sigma(a) = \gamma(b) = a \]
+
+And,
+\[ \sigma \circ \gamma(b) = \sigma(a) = b \]
+\[ \gamma \circ \sigma(b) = \gamma(a) = b \]
+
+Thus, for this \( \gamma \), \( \sigma \circ \gamma = \gamma \circ \sigma \).
+
+\textbf{Case 2:} \( a \neq c \)
+
+For this case, we can choose \( \gamma \) to be the transposition \( (a \ c) \).
+
+Then,
+\[ \sigma \circ \gamma(a) = \sigma(c) \]
+\[ \gamma \circ \sigma(a) = \gamma(b) = b \]
+
+Since \( b \neq c \) (because if \( b = c \) then \( a = c \) from our assumption which is not the case here), we have \( \sigma \circ \gamma(a) \neq \gamma \circ \sigma(a) \). Thus, \( \sigma \circ \gamma \neq \gamma \circ \sigma \).
+
+From the two cases, we see that for the second case where \( a \neq c \), we can find a permutation \( \gamma \) such that \( \sigma \circ \gamma \neq \gamma \circ \sigma \). Therefore, if \( \sigma \) is not an identity permutation in \( S_n \), there exists \( \gamma \) in \( S_n \) such that \( \sigma \circ \gamma \neq \gamma \circ \sigma \).
+
+Let \( \sigma \) be an element in \( S_n \) not equal to the identity. If there exists some \( a \) such that \( \sigma(a) \neq a \), let \( \sigma(a) \) be \( b \) and \( \sigma(b) \) be \( c \). If \( a = c \), choosing \( \gamma \) as the transposition \( (a \ b) \) satisfies \( \sigma \circ \gamma = \gamma \circ \sigma \). If \( a \neq c \), choosing \( \gamma \) as the transposition \( (a \ c) \) ensures \( \sigma \circ \gamma \neq \gamma \circ \sigma \). Hence, for any non-identity permutation \( \sigma \), there exists a permutation \( \gamma \) such that \( \sigma \circ \gamma \neq \gamma \circ \sigma \).
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{52} Let $G$ be a group. Prove that the permutations $\rho a : G \rightarrow G$, where $\rho a(x) = xa$ for $a \in G$ and $x \in G$, do form
+    a group isomorphic to $G$.
+
+
+    Before solving, let's first show that the set of all such permutations forms a group and then that this group is isomorphic to \( G \).
+
+    \textbf{Closure:}
+    
+    Consider two such permutations: \( \rho a \) and \( \rho b \) where \( \rho a(x) = xa \) and \( \rho b(x) = xb \). The composition \( \rho a \circ \rho b \) is given by:
+    
+    \[ \rho a \circ \rho b (x) = \rho a(xb) = xba \]
+    
+    This is of the same form as the original permutations, \( xa \), for some element \( a \) in \( G \). Hence, the set of permutations is closed under composition.
+    
+    \textbf{Existence of an Identity:}
+    
+    We need to find an element \( a \) in \( G \) such that \( xa = x \) for all \( x \) in \( G \). This is true if \( a \) is the identity element, \( e \), of \( G \). Thus, \( \rho e \) acts as the identity in the set of permutations.
+    
+    \textbf{Existence of Inverses:}
+    
+    For each permutation \( \rho a \), we need to find a permutation \( \rho b \) such that \( \rho a \circ \rho b (x) = x \) for all \( x \) in \( G \). Since \( \rho a \circ \rho b (x) = xba \), this is satisfied if \( ba = e \) or \( b = a^{-1} \), the inverse of \( a \) in \( G \). Thus, \( \rho a^{-1} \) is the inverse of \( \rho a \) in the set of permutations.
+    
+    \textbf{Associativity:}
+    
+    This property is inherited from the group \( G \), since the operations are essentially the same.
+    
+    Now, to show that the group of permutations is isomorphic to \( G \), consider the map:
+    
+    \[ \phi: G \rightarrow \text{Group of Permutations} \]
+    \[ a \mapsto \rho a \]
+    
+    This map is clearly bijective. It is also a homomorphism since:
+    
+    \[ \phi(ab) = \rho ab \]
+    \[ \phi(a) \circ \phi(b) = \rho a \circ \rho b \]
+    \[ \rho a \circ \rho b (x) = xba = \rho ab(x) \]
+    \[ \phi(ab) = \phi(a) \circ \phi(b) \]
+    
+    Thus, \( G \) is isomorphic to the group of permutations by the map \( \phi \).
+    
+    \begin{proof}
+    Consider the set of permutations \( \rho a: G \rightarrow G \) defined by \( \rho a(x) = xa \) for each \( a \in G \). These permutations are closed under composition, have an identity permutation \( \rho e \) where \( e \) is the identity of \( G \), and every permutation \( \rho a \) has an inverse \( \rho a^{-1} \). Thus, they form a group. 
+    
+    Further, the mapping \( \phi: G \rightarrow \text{Group of Permutations} \) defined by \( a \mapsto \rho a \) is a bijective homomorphism. Hence, \( G \) is isomorphic to the group of permutations.
+    
+\end{proof}
+\end{exercise}
+\vspace*{60pt}
+\section*{Chapter II.9}
+\begin{exercise}{3} In Exercises 1 through 6, find all orbits of the given permutation.
+
+    \(\textbf{3. } \begin{pmatrix}
+        1&2&3&4&5&6&7&8\\
+        2&3&5&1&4&6&8&7
+    \end{pmatrix}\)
+
+    \begin{proof}
+    To find the orbits of the given permutation, we'll see where each number gets mapped to under successive applications of the permutation until the sequence begins to repeat itself. 
+
+    The permutation is given by:
+    
+    \(\sigma = \begin{pmatrix} 1&2&3&4&5&6&7&8\\ 2&3&5&1&4&6&8&7 \end{pmatrix}\)
+    
+    \begin{enumerate}
+        \item Start with \(1\):
+        
+        \( \sigma(1) = 2, \sigma^2(1) = \sigma(2) = 3, \sigma^3(1) = \sigma(3) = 5, \sigma^4(1) = \sigma(5) = 4, \sigma^5(1) = \sigma(4) = 1\).
+        
+        So the orbit of \(1\) is \(\{1, 2, 3, 5, 4\}\).
+        
+        \item Since \(2, 3, 5\), and \(4\) are in the same orbit as \(1\), we don't need to calculate their orbits separately.
+        
+        \item For \(6\):
+        
+        \( \sigma(6) = 6\)
+        
+        So the orbit of \(6\) is \(\{6\}\).
+        
+        \item For \(7\):
+        
+        \( \sigma(7) = 8, \sigma^2(7) = \sigma(8) = 7\)
+        
+        So the orbit of \(7\) is \(\{7, 8\}\).
+        
+        \item We have already covered \(8\) since it's in the orbit of \(7\).
+    \end{enumerate}
+    
+    So, the orbits are:
+    \[ \{1, 2, 3, 5, 4\}, \{6\}, \{7, 8\} \]
+
+    Given the permutation \(\sigma = \begin{pmatrix} 1&2&3&4&5&6&7&8\\ 2&3&5&1&4&6&8&7 \end{pmatrix}\), we have the following orbits:
+
+\begin{enumerate}
+    \item The orbit of 1 is \(\{1, 2, 3, 5, 4\}\).
+    \item The orbit of 6 is \(\{6\}\).
+    \item The orbit of 7 is \(\{7, 8\}\).
+\end{enumerate}
+    
+    Hence, the orbits of the permutation are \(\{1, 2, 3, 5, 4\}, \{6\},\) and \(\{7, 8\}\).
+    \end{proof}    
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{10} In Exercises 10 through 12, express the permutation of \{1, 2, 3, 4, 5, 6, 7, 8\} as a product of disjoint cycles, and
+    then as a product of transpositions.
+
+    \(\textbf{10. }\begin{pmatrix}
+        1&2&3&4&5&6&7&8\\
+        8&2&6&3&7&4&5&1
+    \end{pmatrix}\)
+
+\vspace*{35pt}
+    To express the permutation as a product of disjoint cycles, we follow the mapping until we return to the starting number.
+
+    The permutation is given by:
+    
+    \(\sigma = \begin{pmatrix} 1&2&3&4&5&6&7&8\\ 8&2&6&3&7&4&5&1 \end{pmatrix}\)
+    
+    \begin{enumerate}
+        \item Starting with \(1\):
+        
+        \( \sigma(1) = 8, \sigma^2(1) = \sigma(8) = 1\).
+        
+        This gives us the cycle \( (1, 8) \).
+        
+        \item For \(2\):
+        
+        \( \sigma(2) = 2\).
+        
+        Since \(2\) is mapped to itself, it doesn't form a cycle other than the trivial cycle.
+        
+        \item For \(3\):
+        
+        \( \sigma(3) = 6, \sigma^2(3) = \sigma(6) = 4, \sigma^3(3) = \sigma(4) = 3 \).
+        
+        This gives us the cycle \( (3, 6, 4) \).
+        
+        \item \(4\) and \(6\) are part of the cycle we've already identified.
+        
+        \item For \(5\):
+        
+        \( \sigma(5) = 7, \sigma^2(5) = \sigma(7) = 5 \).
+        
+        This gives us the cycle \( (5, 7) \).
+        
+        \item \(7\) is part of the cycle we've already identified.
+        
+        \item \(8\) is part of the cycle we've already identified.
+    \end{enumerate}
+    
+    So, the permutation can be expressed as the product of disjoint cycles:
+    
+    \[ \sigma = (1, 8)(3, 6, 4)(5, 7) \].
+    
+    To express the permutation as a product of transpositions (2-cycles):
+    
+    \begin{enumerate}
+        \item The cycle \( (1, 8) \) is already a transposition.
+        \item The cycle \( (3, 6, 4) \) can be expressed as \( (3, 4)(3, 6) \).
+        \item The cycle \( (5, 7) \) is already a transposition.
+    \end{enumerate}
+    
+    So, the permutation as a product of transpositions is:
+    
+    \[ \sigma = (1, 8)(3, 4)(3, 6)(5, 7) \].
+    
+    \begin{proof}
+    Given the permutation \(\sigma = \begin{pmatrix} 1&2&3&4&5&6&7&8\\ 8&2&6&3&7&4&5&1 \end{pmatrix}\), we can express it as the product of disjoint cycles: \[ \sigma = (1, 8)(3, 6, 4)(5, 7) \]. This permutation can further be expressed as a product of transpositions: \[ \sigma = (1, 8)(3, 4)(3, 6)(5, 7) \].
+    \end{proof}
+\end{exercise}
+
+\vspace*{20pt}
+\begin{exercise}{13a} Recall that element $a$ of a group $G$ with identity element $e$ has order $r > 0$ if $a^r = e$ and no smaller positive power of $a$ is the identity. Consider the group $S_8$.
+    
+    \textbf{a.} What is the order of the cycle (1, 4, 5, 7)?
+
+    Given the cycle \( (1, 4, 5, 7) \), it will have the following mappings after repeated applications:
+    
+    1. The first application:
+    \[ 1 \to 4, 4 \to 5, 5 \to 7, \text{ and } 7 \to 1 \]
+    
+    2. The second application:
+    \[ 1 \to 5, 4 \to 7, 5 \to 1, \text{ and } 7 \to 4 \]
+    
+    3. The third application:
+    \[ 1 \to 7, 4 \to 1, 5 \to 4, \text{ and } 7 \to 5 \]
+    
+    4. The fourth application:
+    \[ 1 \to 1, 4 \to 4, 5 \to 5, \text{ and } 7 \to 7 \]
+    
+    Here, after the fourth application, all elements return to their initial positions. Thus, the order of the cycle \( (1, 4, 5, 7) \) is \( 4 \).
+    
+    \begin{proof}
+    The order of a cycle in a permutation group is the length of the cycle since an element returns to its original position after the length of the cycle has been applied. Thus, for the cycle \( (1, 4, 5, 7) \) in \( S_8 \), the order is \( 4 \).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{23g} Mark each of the following true or false.
+
+    \(\textbf{g. } A_3 \text{ is a commutative group.}\)
+
+        To determine whether \( A_3 \) (the alternating group on 3 elements) is commutative, we'll need to first identify its elements and then check if the group operation (in this case, function composition or permutation multiplication) is commutative.
+
+\( A_3 \) is a subgroup of \( S_3 \) (the symmetric group on 3 elements) and is composed of all even permutations in \( S_3 \). An even permutation is one that can be expressed as a product of an even number of 2-cycles (transpositions).
+
+The elements of \( S_3 \) are:
+\begin{enumerate}
+    \item \( e = (1)(2)(3) \)
+    \item \( (12) \)
+    \item \( (13) \)
+    \item \( (23) \)
+    \item \( (123) \)
+    \item \( (132) \)
+\end{enumerate}
+
+Of these, \( e \), \( (123) \), and \( (132) \) are even permutations. Therefore, \( A_3 \) consists of the elements \( e \), \( (123) \), and \( (132) \).
+
+Now, let's check if the group operation is commutative:
+
+For \( e \), since it's the identity, it commutes with all elements in the group. So:
+\[ e \circ (123) = (123) \circ e = (123) \]
+\[ e \circ (132) = (132) \circ e = (132) \]
+
+For \( (123) \):
+\[ (123) \circ (123) = (132) \]
+\[ (123) \circ (132) = e \]
+
+For \( (132) \):
+\[ (132) \circ (123) = e \]
+\[ (132) \circ (132) = (123) \]
+
+As we can see, for every pair of elements in \( A_3 \), the operation (in this case permutation composition) is commutative. 
+
+\begin{proof}
+The group \( A_3 \), consisting of the even permutations of \( S_3 \), is commutative, as demonstrated by the fact that for all pairs of elements in \( A_3 \), their product (composition) is the same regardless of the order in which they are multiplied. \textbf{Thus, \( A_3 \) is a commutative group.}
+\end{proof}
+    
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{23h} Mark each of the following true or false.
+
+    \(\textbf{h. } S_7 \text{ is isomorphic to the subgroup of all those elements of $S_8$ that leave the number $8$ fixed.}\)
+
+Any permutation in \( S_8 \) that leaves 8 fixed can be thought of as a permutation of the numbers \( \{1, 2, 3, 4, 5, 6, 7\} \). This is because the 8th position remains unchanged. Such permutations in \( S_8 \) can be identified with the permutations in \( S_7 \) since \( S_7 \) is the group of permutations of 7 elements.
+
+Given a permutation in \( S_7 \), we can map it to a permutation in \( S_8 \) that fixes 8, simply by adding 8 in the last position of the permutation in \( S_7 \). This gives us an isomorphism between \( S_7 \) and the subgroup of \( S_8 \) that fixes 8.
+
+For instance, consider the permutation \( (1 2 3) \) in \( S_7 \). This maps to the permutation \( (1 2 3)(8) \) in \( S_8 \), which is a permutation that fixes 8.
+
+This mapping is bijective and respects the group operation, establishing an isomorphism.
+
+\begin{proof}
+The statement is \textbf{true}.
+
+The subgroup of \( S_8 \) that leaves the number 8 fixed can be seen as the group of all permutations of the numbers \( \{1, 2, 3, 4, 5, 6, 7\} \). This subgroup is isomorphic to \( S_7 \) as every permutation in \( S_7 \) can be identified with a permutation in this subgroup of \( S_8 \) that keeps 8 fixed. Therefore, \( S_7 \) is isomorphic to the subgroup of all those elements of \( S_8 \) that leave the number 8 fixed.
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{23j} Mark each of the following true or false.
+
+    \(\textbf{j. } \text{ The odd permutations in $S_8$ form a subgroup of $S_8$.}\)
+
+    \begin{proof}
+        The statement is \textbf{false}.
+        
+        To see why, we need to recall a few things about odd permutations and the definition of a subgroup.
+        
+        An odd permutation is one that can be expressed as a product of an odd number of transpositions. A transposition is a permutation that swaps two numbers and leaves all others in their original positions.
+        
+        For a set to form a subgroup, it needs to satisfy three criteria:
+        \begin{enumerate}
+            \item The identity element of the main group should be present in the subset.
+            \item If an element is present in the subset, its inverse should also be there.
+            \item The subset should be closed under the group operation.
+        \end{enumerate}
+        
+        Now, let's analyze the set of odd permutations in \( S_8 \):
+        \begin{enumerate}
+            \item The identity permutation is even, as it can be seen as the result of 0 transpositions (and 0 is even).
+            \item The inverse of an odd permutation is odd.
+            \item The product of two odd permutations is even. (Because an odd number of swaps combined with another odd number of swaps results in an even number of total swaps.)
+        \end{enumerate}
+        
+        From the third property, we see that the set of odd permutations in \( S_8 \) is not closed under the group operation. Therefore, the odd permutations in \( S_8 \) do not form a subgroup of \( S_8 \).
+        \end{proof}
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{29} Show that for every subgroup $H$ of $S_n$ for $n \geq 2$, either all the permutations in $H$ are even or exactly half of them are even.
+        
+    \begin{proof}
+        Let's consider any subgroup \( H \) of \( S_n \) for \( n \geq 2 \).
+        
+        \begin{enumerate}
+            \item \textbf{All permutations in \( H \) are even:}
+            If the identity is in \( H \) (which it must be since \( H \) is a subgroup), and if all the products of elements in \( H \) are even (i.e., \( H \) is closed under the operation with respect to even permutations), then all elements in \( H \) must be even. This is because the identity is even and the product of two even permutations is even.
+            
+            \item \textbf{Exactly half of the permutations in \( H \) are even:}
+            Let's assume there is at least one odd permutation in \( H \). We'll denote this permutation by \( \sigma \). 
+        \end{enumerate}
+        
+        Now, for any even permutation \( \tau \) in \( H \), the product \( \sigma\tau \) is odd since the product of an even and an odd permutation is odd. Also, since \( H \) is a subgroup and is closed under the group operation, \( \sigma\tau \) must be in \( H \).
+        
+        Now, consider the mapping \( f: H \rightarrow H \) where \( f(\tau) = \sigma\tau \) for every \( \tau \) in \( H \). Since \( \sigma \) is odd, \( f \) maps even permutations to odd permutations and vice versa. Moreover, \( f \) is a bijection: its inverse is \( f^{-1}(\tau) = \sigma\tau \), so every element in \( H \) has a unique image under \( f \) and vice versa.
+        
+        From the properties of \( f \), we can deduce that the number of even and odd permutations in \( H \) are the same. 
+        
+        In conclusion, for any subgroup \( H \) of \( S_n \), either all its permutations are even or exactly half of them are.
+        \end{proof}
+\end{exercise}
+\end{document}

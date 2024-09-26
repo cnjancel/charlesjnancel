@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{advdate}
+\usepackage{hyperref}
+
+\title{Expanded Executive Summary: College Football Performance Dynamics}
+\author{Charles Ancel}
+\date{\AdvanceDate[-1]\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+This report delves deeply into a dataset that covers twenty years of college football games, a period marked by significant changes and advancements in the sport. Through our analysis, we utilize this data to explore factors influencing team performance and the excitement level of the games. The dataset provides information on teams, scores, game dates, and features like the 'excitement index', offering a perspective on the sport's evolution and competitive landscape.
+
+\section*{Results}
+Our analytical process uncovers intricate patterns in college football dynamics. The model emphasizes the role of home and away team ELO ratings, indicating a strong connection with game outcomes. Additionally, the 'excitement index' plays a pivotal role, showing a correlation with audience engagement and game dynamics. Throughout our modeling process, we rigorously tested combinations of variables, gaining a nuanced understanding of how different factors interact to impact game results. Our iterative approach ensures not only statistical validity but also contextual relevance.
+
+\section*{Discussion}
+The implications of our findings extend beyond statistical significance. For instance, recognizing the role ELO ratings play in predicting game outcomes can guide teams in enhancing their performance strategies, especially in high-stakes matches. Furthermore, the correlation between the excitement index and game outcomes offers insights into fan engagement, suggesting that more thrilling games have the potential to attract larger audiences. These insights are invaluable for stakeholders in the college football industry, providing a data-driven foundation for decision-making, from team management to marketing strategies. The model serves as a valuable tool for optimizing both on-field performance and audience engagement strategies.
+
+\section*{Statistical Test Results}
+In our analysis, we performed a t-test to compare mean total wins between conference and non-conference games. Our null hypothesis stated no difference in means (\(H_0: \mu_{\text{conference}} = \mu_{\text{non-conference}}\)), while the alternative hypothesis suggested a significant difference (\(H_A: \mu_{\text{conference}} \neq \mu_{\text{non-conference}}\)). The t-test results showed a t-value of -5.7939 with a p-value of 7.14e-09, leading us to reject the null hypothesis. We conclude that there is a statistically significant difference in mean total wins, with conference games having a lower mean than non-conference games. This finding implies that the type of game significantly affects total wins, an important consideration for team strategies and league structure.
+
+\section*{Practical Considerations}
+Despite the dataset's comprehensive nature, there are limitations, such as the potential exclusion of factors like weather conditions or player injuries that can impact game outcomes. Future analyses could explore these additional variables or employ advanced statistical methods to enhance understanding. Stakeholders should be cautious in applying these insights, keeping in mind the potential biases and limitations of the dataset.
+
+\section*{References}
+Data for this analysis was sourced from cfbfastR, a comprehensive resource for college football data, providing detailed game information for in-depth sports analytics. The resource is accessible at \url{https://github.com/sportsdataverse/cfbfastR-data}.
+\end{document}

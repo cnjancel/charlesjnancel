@@ -1,0 +1,435 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+
+\title{Math 417, Homework 4}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\section*{Chapter III.14}
+
+\begin{exercise}{5} Find the order of the given factor group:
+    \[\frac{(\Z_2 \times \Z_4)}{\langle(1,1)\rangle}\]
+    
+    \begin{proof}
+    Let's begin with the group \( \Z_2 \times Z_4 \). This is a direct product of two groups: \( \Z_2 \), which has 2 elements, and \( \Z_4 \), which has 4 elements. Consequently, the total number of elements in \( \Z_2 \times \Z_4 \) is \( 2 \times 4 = 8 \).
+    
+    Now, consider the cyclic subgroup \( \langle(1,1)\rangle \). By taking successive sums of the element \( (1,1) \), we find that this subgroup consists of the elements \( \{(1,1), (0,2), (1,3), (0,0)\} \). Hence, the order of this subgroup is 4.
+    
+    The order of the factor group, denoted by \( \frac{\Z_2 \times \Z_4}{\langle(1,1)\rangle} \), is then given by the quotient:
+    
+    \[
+    \frac{\text{order of } \Z_2 \times \Z_4}{\text{order of } \langle(1,1)\rangle} = \frac{8}{4} = 2.
+    \]
+    
+    Therefore, the order of the factor group is 2.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{12} Give the order of the element in the factor group.
+\[(3,1) + \langle(1,1)\rangle \text{ in } \frac{(\Z_4 \times \Z_4)}{\langle(1,1)\rangle}\]
+        
+    \begin{proof}
+To find the order of an element in a factor group, we need to determine how many times we can add the element to itself before we get the identity element of the factor group.
+
+In this case, the element in question is \( (3,1) + \langle(1,1)\rangle \) in the factor group 
+
+\[
+\frac{\Z_4 \times \Z_4}{\langle(1,1)\rangle}
+\]
+
+Here, \( \Z_4 \times \Z_4 \) is the direct product of the group of integers modulo 4. The identity element is \( (0,0) \). 
+
+To find the order of \( (3,1) + \langle(1,1)\rangle \), we'll compute:
+
+\begin{enumerate}
+    \item \( (3,1) + (3,1) \)
+    \item \( (3,1) + (3,1) + (3,1) \)
+    \item \( (3,1) + (3,1) + (3,1) + (3,1) \)
+\end{enumerate}
+... and so on, until we get an element of the subgroup \( \langle(1,1)\rangle \), which represents the identity of the factor group.
+
+The element \( (3,1) + \langle(1,1)\rangle \) has order 2 in the factor group \(\frac{\Z_4 \times \Z_4}{\langle(1,1)\rangle}\).
+
+In the group \( \Z_4 \times \Z_4 \):
+1. \( (3,1) + (3,1) = (2,2) \)
+
+Since \( (2,2) \) is an element of the subgroup \( \langle(1,1)\rangle \), and the subgroup represents the identity in the factor group, we conclude that the element \( (3,1) + \langle(1,1)\rangle \) has order 2 in the factor group.
+        \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{24} Show that $A_n$ is a normal subgroup of $S_n$ and compute $\frac{S_n}{A_n}$; that is, find a known group to which $\frac{S_n}{A_n}$ is isomorphic.
+    
+    \begin{proof} $ $ \\
+    1. \textbf{Showing \(A_n\) is a normal subgroup of \(S_n\)}:
+       
+       Recall that \(A_n\) is the group of even permutations in \(S_n\), and it consists of all permutations that can be expressed as a product of an even number of transpositions. The order of \(A_n\) is half the order of \(S_n\), i.e., \( |A_n| = \frac{n!}{2} \).
+       
+       Let \( \sigma \) be an element in \(S_n\) and \( \tau \) be an element in \(A_n\). If we conjugate \( \tau \) by \( \sigma \), we get \( \sigma \tau \sigma^{-1} \). The number of transpositions in \( \sigma \tau \sigma^{-1} \) is even since both \( \sigma \) and \( \sigma^{-1} \) either add an even number of transpositions or do not change the number of transpositions in \( \tau \). Thus, \( \sigma \tau \sigma^{-1} \) is an even permutation, which means it lies in \(A_n\). 
+    
+       Since this is true for any \( \sigma \) in \(S_n\) and any \( \tau \) in \(A_n\), \(A_n\) is invariant under conjugation by elements of \(S_n\). Hence, \(A_n\) is a normal subgroup of \(S_n\).
+    
+    2. \textbf{Computing \( \frac{S_n}{A_n} \)}:
+    
+       Since \( |S_n| = n! \) and \( |A_n| = \frac{n!}{2} \), the factor group \( \frac{S_n}{A_n} \) has order 2. Any group of order 2 is isomorphic to \( \Z_2 \) (the group of integers modulo 2). 
+    
+       Specifically, the factor group \( \frac{S_n}{A_n} \) consists of two cosets: \(A_n\) itself and the set of all odd permutations. These two cosets can be identified with the elements 0 and 1 in \( \Z_2 \), respectively.
+    
+       Therefore, \( \frac{S_n}{A_n} \) is isomorphic to \( \Z_2 \).
+    
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{32} Given any subset $S$ of a group $G$, show that it makes sense to speak of the smallest normal subgroup that contains $S$.
+    
+    \begin{proof}
+    Let's consider the collection of all normal subgroups of \( G \) that contain \( S \). We know that \( G \) itself is a normal subgroup that contains \( S \), so this collection is nonempty.
+    
+    Given any family of normal subgroups, their intersection is also a normal subgroup. To see this, let \( \{ N_i \} \) be a family of normal subgroups of \( G \). For any \( g \in G \) and \( n \) in the intersection of all \( N_i \), \( gn^{-1}g^{-1} \) is in each \( N_i \) since each \( N_i \) is normal. Therefore, \( gn^{-1}g^{-1} \) is in their intersection, and thus their intersection is a normal subgroup.
+    
+    Now, take the intersection \( N \) of all normal subgroups of \( G \) that contain \( S \). By the property above, \( N \) is also a normal subgroup of \( G \), and \( S \subseteq N \) by definition.
+    
+    For any normal subgroup \( N' \) of \( G \) that contains \( S \), \( N' \) is one of the subgroups we intersected to get \( N \). Hence, \( N \subseteq N' \). This means that \( N \) is contained in every normal subgroup that contains \( S \), making \( N \) the "smallest" such subgroup.
+    
+    Therefore, it makes sense to speak of the smallest normal subgroup of \( G \) that contains \( S \).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{34} Show that if a finite group $G$ has exactly one subgroup $H$ of a given order, then $H$ is a normal subgroup of $G$.
+
+    \begin{proof}
+    Let \( G \) be a finite group, and let \( H \) be the unique subgroup of \( G \) of a given order. Let \( a \) be an element of \( G \).
+    
+    We need to show that for every element \( a \) in \( G \), the left coset \( aH \) is equal to the right coset \( Ha \), which would imply that \( H \) is a normal subgroup of \( G \).
+    
+    Consider the left coset \( aH \). Since the operation in the group is associative, the set \( aH \) is also a subgroup of \( G \). Furthermore, since \( H \) is the only subgroup of \( G \) of its order and \( |aH| = |H| \), it follows that \( aH = H \).
+    
+    Similarly, considering the right coset \( Ha \), we can conclude that \( Ha = H \) since \( |Ha| = |H| \) and \( H \) is the unique subgroup of its order.
+    
+    Thus, \( aH = H = Ha \) for every element \( a \) in \( G \), which implies that \( H \) is a normal subgroup of \( G \).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{35} Show that if $H$ and $N$ are subgroups of a group $G$, and $N$ is normal in $G$, then $H \cap N$ is normal in $H$.
+    \begin{proof}
+    Let \( h \) be an element of \( H \) and \( x \) be an element of \( H \cap N \).
+    
+    We want to show that \( hx \) and \( xh \) are in the same set, which would mean \( h(H \cap N) = (H \cap N)h \).
+    
+    Since \( x \) is in \( N \) and \( N \) is normal in \( G \), \( hx \) and \( xh \) are both in \( N \).
+    
+    Furthermore, since \( h \) and \( x \) are both in \( H \), both \( hx \) and \( xh \) are in \( H \).
+    
+    Therefore, \( hx \) and \( xh \) are both in \( H \cap N \).
+    
+    This shows that for every element \( h \) in \( H \), the left coset \( h(H \cap N) \) is equal to the right coset \( (H \cap N)h \) in \( H \). Hence, \( H \cap N \) is a normal subgroup of \( H \).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{38} Show that the set of all $g\in G$ such that $i_g: G \rightarrow G$ is the identity inner automorphism $i_e$ is a normal subgroup of a group $G$.
+    Let's denote this set by \( N \), i.e., 
+    \[ N = \{ g \in G \mid i_g(x) = x \, \text{for all} \, x \in G \} \]
+    
+    To prove that \( N \) is a normal subgroup of \( G \), we'll demonstrate:
+    1. \( N \) is a subgroup of \( G \).
+    2. \( N \) is normal in \( G \).
+    
+    \begin{proof} $ $ \\
+    
+    1. \textbf{\( N \) is a subgroup of \( G \)}:
+       
+      \begin{itemize}
+        \item \textbf{Identity}: The inner automorphism corresponding to the identity element \( e \) of \( G \) is the identity map, i.e., \( i_e(x) = exe^{-1} = x \) for all \( x \in G \). Hence, \( e \in N \).
+         
+        \item \textbf{Closure}: Let \( g, h \in N \). For any \( x \in G \), we have
+           \[ i_{gh}(x) = ghx(gh)^{-1} = ghxh^{-1}g^{-1} \]
+           Since \( h \in N \), \( hxh^{-1} = x \). So, \( i_{gh}(x) = gxg^{-1} \). And as \( g \in N \), \( gxg^{-1} = x \). Hence, \( gh \in N \).
+         
+        \item \textbf{Inverse}: Let \( g \in N \). For any \( x \in G \), we have \( gxg^{-1} = x \). Multiplying on the right by \( g \) and on the left by \( g^{-1} \), we get \( x = g^{-1}xg \), which means \( i_{g^{-1}}(x) = x \) for all \( x \in G \). So, \( g^{-1} \in N \).
+      
+      \end{itemize}
+    2. \textbf{\( N \) is normal in \( G \)}:
+    
+       Let \( g \in N \) and \( a \in G \). We need to show that \( a^{-1}ga \in N \). For any \( x \in G \), 
+       \[ i_{a^{-1}ga}(x) = a^{-1}gax(a^{-1}ga)^{-1} = a^{-1}gaxg^{-1}a^{-1} \]
+       Since \( g \in N \), \( gaxg^{-1} = ax \), and thus \( i_{a^{-1}ga}(x) = a^{-1}ax = x \). This means \( a^{-1}ga \in N \).
+    
+    Hence, combining the above results, \( N \) is a normal subgroup of \( G \).
+    
+    \end{proof}
+    
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{40} Use the properties of $\det(AB) = \det(A)*\det(B)$ and $\det(I_n)=1$ for all $n\times n$ matrices to show the following:
+
+    \begin{enumerate}[label=(\alph*.)]
+        \item The $n \times n$ matrices with $1$ form a normal subgroup of $GL(n,\R)$.
+        \item The $n \times n$ matrices with $\pm 1$ form a normal subgroup of $GL(n,\R)$.
+    \end{enumerate}
+    \textbf{\((a)\)} First, we want to show that the \( n \times n \) matrices with determinant 1 form a normal subgroup of \( GL(n,\R) \). \( GL(n,\R) \) is the group of \( n \times n \) invertible matrices under matrix multiplication.
+    
+    Let's denote the set of all \( n \times n \) matrices with determinant 1 as \( H \).
+    
+    \begin{proof}[\((a)\) Proof]
+    
+    1. \textbf{\( H \) is a subgroup of \( GL(n,\R) \)}:
+    
+       \begin{itemize}
+        \item \textbf{Identity}: The identity matrix \( I_n \) has \( \det(I_n) = 1 \). Hence, \( I_n \in H \).
+        \item \textbf{Closure}: Let \( A, B \in H \). Then, \( \det(AB) = \det(A) \times \det(B) = 1 \times 1 = 1 \). Thus, \( AB \in H \).
+        \item \textbf{Inverse}: If \( A \in H \), then \( \det(A^{-1}) = \frac{1}{\det(A)} = 1 \). Hence, \( A^{-1} \in H \).
+       \end{itemize}
+    
+    2. \textbf{\( H \) is normal in \( GL(n,\R) \)}:
+    
+       Let \( A \in H \) and \( B \in GL(n,\R) \). We need to show that \( B^{-1}AB \in H \). Using properties of the determinant, we have:
+       \[
+       \det(B^{-1}AB) = \det(B^{-1}) \times \det(A) \times \det(B) = \frac{1}{\det(B)} \times 1 \times \det(B) = 1
+       \]
+       Thus, \( B^{-1}AB \in H \).
+    
+    Hence, the \( n \times n \) matrices with determinant 1 form a normal subgroup of \( GL(n,\R) \).
+    
+    \end{proof}
+    
+    \textbf{\((b)\)} Next, we want to show that the \( n \times n \) matrices with determinant \( \pm 1 \) form a normal subgroup of \( GL(n,\R) \).
+    
+    Let's denote the set of all \( n \times n \) matrices with determinant \( \pm 1 \) as \( K \).
+    
+    \begin{proof}[\((b)\) Proof]
+    
+    1. \textbf{\( K \) is a subgroup of \( GL(n,\R) \)}:
+    
+       \begin{itemize}
+        \item \textbf{Identity}: \( \det(I_n) = 1 \), so \( I_n \in K \).
+        \item \textbf{Closure}: If \( A, B \in K \), then \( \det(AB) \) can be \( 1, -1, -1, \) or \( 1 \) respectively based on the determinants of \( A \) and \( B \). In all cases, \( \det(AB) \) is \( \pm 1 \). Thus, \( AB \in K \).
+        \item \textbf{Inverse}: For \( A \in K \), \( \det(A^{-1}) \) is either \( 1 \) or \( -1 \) based on \( \det(A) \). Hence, \( A^{-1} \in K \).
+       \end{itemize}
+    
+    2. \textbf{\( K \) is normal in \( GL(n,\R) \)}:
+    
+       Let \( A \in K \) and \( B \in GL(n,\R) \). We need to show that \( B^{-1}AB \in K \). From properties of the determinant:
+       \[
+       \det(B^{-1}AB) = \det(B^{-1}) \times \det(A) \times \det(B)
+       \]
+       The result will be \( \pm 1 \) since all factors have determinants of \( \pm 1 \). Thus, \( B^{-1}AB \in K \).
+    
+    Hence, the \( n \times n \) matrices with determinant \( \pm 1 \) form a normal subgroup of \( GL(n,\R) \).
+    
+    \end{proof}
+\end{exercise}
+\vspace*{60pt}
+\section*{Chapter III.15}
+\begin{exercise}{17} The \textit{center} of a group $G$ contains all elements of $G$ that commute with every element of $G$.
+    
+
+    To verify the definition of the center of a group \( G \), consider:
+    
+    \[ Z(G) = \{ x \in G \mid \forall g \in G, \, xg = gx \} \]
+    
+    \begin{proof} $ $ \\
+    \begin{enumerate}
+        \item \textbf{\( Z(G) \) is a subgroup of \( G \)}:
+           
+           \begin{itemize}
+            \item \textbf{Identity}: For any \( g \in G \), \( eg = ge \), so \( e \in Z(G) \).
+            \item \textbf{Closure}: For \( a, b \in Z(G) \) and any \( g \in G \), \( (ab)g = a(bg) = a(gb) = (ga)b = g(ab) \). Thus, \( ab \in Z(G) \).
+            \item \textbf{Inverse}: If \( a \in Z(G) \) and any \( g \in G \), \( a^{-1}g = g(a^{-1}) \). Hence, \( a^{-1} \in Z(G) \).
+           \end{itemize}
+        
+        \item \textbf{\( Z(G) \) is Abelian}: By definition, every element in \( Z(G) \) commutes with every element in \( G \), making \( Z(G) \) Abelian.
+    \end{enumerate}
+        
+        Given that \( Z(G) \) is a subgroup of \( G \) and is Abelian, the definition provided for the center of a group is accurate.
+    \end{proof}
+    
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{28} Give an example of a group $G$ having no elements of finite order $> 1$ but having a factor group $G/H$, all of whose elements are of finite order.
+
+    Let's consider the group \( G = \R/\) under addition and the subgroup \( H = \Z\). 
+    
+    \begin{enumerate}
+        \item Every non-zero element of \( \R/\) has infinite order.
+        \item The factor group \( G/H = \R/\Z\) can be thought of as the set of equivalence classes of real numbers modulo 1 (i.e., fractions in the interval [0,1)). 
+    \end{enumerate}
+    
+    Now, let's prove that all elements of \( \R/\Z\) have finite order.
+    
+    \begin{proof}
+    Consider an element \( [x] \) in \( \R/\Z\), where \( [x] \) denotes the equivalence class of \( x \) modulo 1. 
+    
+    For any integer \( n \), the sum of \( n \) copies of \( [x] \) in \( \R/\Z\) is \( [nx] \). If \( nx \) is an integer, then \( [nx] \) is the identity element of \( \R/\Z\), which is \( [0] \). 
+    
+    Choose \( n \) to be the smallest positive integer such that \( nx \) is an integer. Such an \( n \) exists because \( x \) is a fraction and can be expressed in the form \( \frac{p}{q} \), where \( p \) and \( q \) are coprime integers. In this case, \( q \times \frac{p}{q} = p \) is an integer.
+    
+    Thus, the order of \( [x] \) in \( \R/\Z\) is finite, and specifically, it is \( n \).
+    
+    Since \( [x] \) was an arbitrary element of \( \R/\Z\), it follows that all elements of \( \R/\Z\) have finite order.
+    \end{proof}
+    \end{exercise}
+\vspace*{20pt}
+\begin{exercise}{29} Let $H$ and $K$ be normal subgroups of a group $G$. Give an example showing that we may have $H \equiv K$ while $G/H$ is not isomorphic to $G/K$.
+    
+    To construct an example, consider the group \( G = \Z_4 \times \Z_2 \) (direct product of cyclic groups). Let \( H \) be the subgroup generated by \( (2,1) \) and \( K \) be the subgroup generated by \( (0,1) \). 
+
+    Both \( H \) and \( K \) are isomorphic to \( \Z_2 \), and hence \( H \equiv K \). 
+    
+    However, \( G/H \) and \( G/K \) are not isomorphic. Let's see why:
+    
+    \begin{proof} $ $\\
+    
+    \begin{enumerate}
+        \item \textbf{Structure of \( G/H \)}:
+           The cosets of \( H \) in \( G \) are:
+           \[ H, (1,0) + H, (2,0) + H, (3,0) + H \]
+           Thus, \( G/H \) is isomorphic to \( \Z_4 \).
+        
+        \item \textbf{Structure of \( G/K \)}:
+           The cosets of \( K \) in \( G \) are:
+           \[ K, (1,0) + K, (2,0) + K, (3,0) + K \]
+           However, since \( (1,0) + K \) and \( (3,0) + K \) each have an element of order 4, \( G/K \) is not isomorphic to \( \Z_4 \). In fact, \( G/K \) is isomorphic to \( \Z_2 \times \Z_2 \).
+    \end{enumerate}
+    
+    From the above observations, \( G/H \) (isomorphic to \( \Z_4 \)) is not isomorphic to \( G/K \) (isomorphic to \( \Z_2 \times \Z_2 \)), even though \( H \equiv K \).
+    
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{35} Let $\phi : G \rightarrow G'$ be a group homomorphism, and let $N$ be a normal subgroup of G. Show that $\phi[N]$ is a normal subgroup of $\phi[G]$.
+    
+    To prove this, let's recall some properties of group homomorphisms:
+
+    Given a group homomorphism \( \phi: G \rightarrow G' \):
+    \begin{enumerate}
+        \item If \( H \) is a subgroup of \( G \), then \( \phi[H] \) is a subgroup of \( G' \).
+        \item \( \phi(e) = e' \), where \( e \) is the identity of \( G \) and \( e' \) is the identity of \( G' \).
+    \end{enumerate}
+    
+    Given these properties, let's prove that \( \phi[N] \) is a normal subgroup of \( \phi[G] \).
+    
+    \begin{proof} $ $ \\
+    
+    \begin{enumerate}
+        \item \textbf{\( \phi[N] \) is a subgroup of \( \phi[G] \)}:
+        
+        Since \( N \) is a subgroup of \( G \), \( \phi[N] \) is a subgroup of \( \phi[G] \) (from property 1).
+        
+        \item \textbf{\( \phi[N] \) is normal in \( \phi[G] \)}:
+        
+        Let's take any element \( a' \) in \( \phi[G] \) and any element \( n' \) in \( \phi[N] \). By the definition of \( \phi[G] \) and \( \phi[N] \), there exist elements \( a \) in \( G \) and \( n \) in \( N \) such that \( \phi(a) = a' \) and \( \phi(n) = n' \).
+        
+        Now, consider the conjugation in \( G' \):
+        \[ a'n'a'^{-1} = \phi(a)\phi(n)\phi(a)^{-1} \]
+        
+        Since \( \phi \) is a homomorphism, this is equal to:
+        \[ \phi(ana^{-1}) \]
+    \end{enumerate}
+    
+    Now, because \( N \) is normal in \( G \), the element \( ana^{-1} \) is in \( N \). Hence, \( \phi(ana^{-1}) \) is in \( \phi[N] \). 
+    
+    This means that the conjugation of any element in \( \phi[N] \) by any element in \( \phi[G] \) is still in \( \phi[N] \), which implies that \( \phi[N] \) is normal in \( \phi[G] \).
+    
+    \end{proof}
+\end{exercise}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+---
+title: "ECON_203_HW5_Ancel_Charles"
+author: "Charles Ancel"
+date: "2024-03-02"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
+```
+
+```{r install}
+library(readxl)
+
+```
+
+```{r load}
+# Load the dataset
+data <- read_excel("housing.xls")
+```
+
+**(a) Compute the average price for colonial and non-colonial houses:**
+```{r part-1a}
+average_price_colonial <- mean(data$price[data$colonial == 1])
+average_price_non_colonial <- mean(data$price[data$colonial == 0])
+
+average_price_colonial 
+average_price_non_colonial
+```
+
+
+**(b) Estimate a linear model relating house prices to the style of the house (colonial or non-colonial):**
+```{r part-1b}
+# Manual calculation
+n <- length(data$price)
+b1 <- (sum((data$price - mean(data$price)) * (data$colonial - mean(data$colonial)))) / (sum((data$colonial - mean(data$colonial))^2))
+b0 <- mean(data$price) - b1 * mean(data$colonial)
+
+# Using lm
+linear_model <- lm(data$price ~ data$colonial)
+
+b0
+b1
+n
+```
+
+**(c) Easier way to estimate a linear model in R:**
+```{r part-1c}
+linear_model <- lm(price ~ colonial, data = data)
+coefficients(linear_model)
+```
+
+(d) Replace Colonial by sqrft and draw a scatter plot with the best-fitting line:
+```{r part-1d}
+linear_model_sqrft <- lm(price ~ sqrft, data = data)
+plot(data$sqrft, data$price, main = "Price vs. sqrft", xlab = "Square Footage", ylab = "Price")
+abline(linear_model_sqrft)
+```
+
+(e) Replace sqrft by lotsize and draw the corresponding scatter plot:
+```{r part-1e}
+linear_model_lotsize <- lm(price ~ lotsize, data = data)
+plot(data$lotsize, data$price, main = "Price vs. Lotsize", xlab = "Lot Size", ylab = "Price")
+abline(linear_model_lotsize)
+```
+Part (a): Average price for colonial houses
+```{r part-2a}
+average_price_colonial <- mean(data$price[data$colonial == 1])
+cat("The average price for colonial houses is", round(average_price_colonial, 2), "\n")
+```
+
+Part (b): Average price for non-colonial houses
+```{r part-2b}
+average_price_non_colonial <- mean(data$price[data$colonial == 0])
+cat("The average price for non-colonial houses is", round(average_price_non_colonial, 2), "\n")
+```
+
+Part (c): Estimated b0 and b1 for the model with the colonial variable
+```{r part-2c}
+linear_model_colonial <- lm(price ~ colonial, data = data)
+coefficients_colonial <- coefficients(linear_model_colonial)
+b0_colonial <- round(coefficients_colonial["(Intercept)"], 2)
+b1_colonial <- round(coefficients_colonial["colonial"], 2)
+cat("The estimated b0 and b1 for the colonial model are", b0_colonial, "and", b1_colonial, "\n")
+```
+
+Part (d): Is b0 the average price of non-colonial houses?
+Since b0_colonial is the intercept and represents the price when colonial is 0, it should be the average price of non-colonial houses
+```{r part-2d}
+average_non_colonial_check <- round(b0_colonial, 2) == round(average_price_non_colonial, 2)
+cat("The statement that b0 is the average price of non-colonial houses is", average_non_colonial_check, "\n")
+```
+
+Part (e): Is b1 the average price of colonial houses?
+b1 represents the difference in price due to the house being colonial. It is not the average price of colonial houses.
+```{r part-2e}
+average_colonial_check <- round(b1_colonial, 2) == round(average_price_colonial, 2)
+cat("The statement that b1 is the average price of colonial houses is", average_colonial_check, "\n")
+```
+
+Part (f): Model with sqrft
+```{r part-2f}
+linear_model_sqrft <- lm(price ~ sqrft, data = data)
+coefficients_sqrft <- coefficients(linear_model_sqrft)
+b0_sqrft <- round(coefficients_sqrft[1], 2)
+b1_sqrft <- round(coefficients_sqrft[2], 2)
+```
+
+Part (g): Model with lotsize
+```{r part-2g}
+linear_model_lotsize <- lm(price ~ lotsize, data = data)
+coefficients_lotsize <- coefficients(linear_model_lotsize)
+b0_lotsize <- round(coefficients_lotsize[1], 2)
+b1_lotsize <- round(coefficients_lotsize[2], 2)
+
+# Output the coefficients for sqrft and lotsize models
+cat("For sqrft model, b0 (intercept) is", b0_sqrft, "and b1 (slope) is", b1_sqrft, "\n")
+cat("For lotsize model, b0 (intercept) is", b0_lotsize, "and b1 (slope) is", b1_lotsize, "\n")
+
+summary(data$lotsize)
+plot(data$lotsize, data$price)
+b1_lotsize <- coefficients_lotsize[2]  # Slope for lotsize model without rounding
+cat("The unrounded slope for lotsize model is", b1_lotsize, "\n")
+
+```
+```{r}
+# Check the structure of the data to ensure 'lotsize' is numeric
+str(data)
+
+# Calculate coefficients without rounding
+linear_model_lotsize <- lm(price ~ lotsize, data = data)
+coefficients_lotsize <- coefficients(linear_model_lotsize)
+b0_lotsize <- coefficients_lotsize[1]  # Intercept for lotsize model
+b1_lotsize <- coefficients_lotsize[2]  # Slope for lotsize model
+
+# Output the coefficients for the lotsize model without rounding
+cat("For lotsize model, b0 (intercept) is", b0_lotsize, "and b1 (slope) is", b1_lotsize, "\n")
+
+plot(data$lotsize, data$price, main = "Price vs. Lotsize", xlab = "Lot Size", ylab = "Price")
+abline(a = b0_lotsize, b = b1_lotsize)  # Use the precise coefficients here
+
+```
+Part (h): Comparison of R-squared values
+```{r part-2h}
+r_squared_sqrft <- summary(linear_model_sqrft)$r.squared
+r_squared_lotsize <- summary(linear_model_lotsize)$r.squared
+
+# Output the R-squared values for sqrft and lotsize models
+cat("R-squared for sqrft model is", r_squared_sqrft, "\n")
+cat("R-squared for lotsize model is", r_squared_lotsize, "\n")
+
+# Determine which model explains more variance
+if (r_squared_sqrft > r_squared_lotsize) {
+  cat("The variable sqrft explains more of the difference in Prices than the variable lotsize.\n")
+} else {
+  cat("The variable lotsize explains more of the difference in Prices than the variable sqrft.\n")
+}
+```

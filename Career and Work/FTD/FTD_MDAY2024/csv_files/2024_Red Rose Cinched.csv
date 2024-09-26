@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,95,,155,,,,
+,Total SRP of Bundle,,95,,155,,0,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,95,,155,,0,,0
+,Less Commission (20%),,-19,,-31,,0,,0
+,Less C/H Fee (9%),,-8.549999999999999,,-13.95,,0,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,0,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-5.12,,-5.94,,0,,0
+,Less Floral Cost,,-20.500000000000004,,-39.7,,0,,0
+,Total Gross Margin,,21.09,,43.67,,-20.740000000000002,,-20.740000000000002
+,Gross Margin %,,0.222,,0.281741935483871,,,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Red,Red 50 cm Roses,12,19.200000000000003,24,38.400000000000006,,0,,0
+,Salal tips,5,1.3,5,1.3,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,20.500000000000004,,39.7,,0,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,2120S - Small Cinched Glass Vase,1,5.12,,0,,0,,0
+,2120L - Large Cinched Glass Vase,,0,1,5.94,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,5.12,,5.94,,0,,0

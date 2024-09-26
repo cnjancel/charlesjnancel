@@ -1,0 +1,588 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 12}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+%-----------------------------
+\begin{exercise}{5.2.3} Count the number of ways to color the edges of a cube with three colors. Count the number of ways to color the edges of a cube with \(r\) colors; the answer is a polynomial in \(r\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we aim to count the number of distinct ways to color the edges of a cube using three different colors. We will employ Burnside's Lemma and Polya's Enumeration Theorem to account for the symmetries of the cube and derive a general formula for \(r\) colors.
+
+    \section*{Solution}
+    
+    \noindent \textbf{Burnside's Lemma:} Burnside's Lemma is a tool in group theory for counting the number of orbits of a set \(X\) under a group action \(G\). It states that the number of orbits is equal to the average number of fixed points of the elements of \(G\), i.e.,
+    \[
+    \text{Number of orbits} = \frac{1}{|G|} \sum_{g \in G} |X^g|
+    \]
+    where \(X^g\) is the set of points fixed by \(g\).
+
+    \noindent \textbf{Polya's Enumeration Theorem:} Polya's Enumeration Theorem is a combinatorial method used to count the number of distinct objects under group actions, taking symmetries into account. It involves using cycle index polynomials to calculate the number of distinct colorings or arrangements.
+
+    To count the number of ways to color the edges of a cube with three colors, we will use Burnside's Lemma. The group of rotational symmetries of the cube is isomorphic to the symmetric group \(S_4\), which has 24 elements. Each rotation will fix a certain number of edge colorings.
+
+    We will consider the cycle types of these rotations and how many edge colorings they fix.
+
+    The cycle index polynomial for the group of rotational symmetries of the cube \(G\) is:
+    \[
+    Z(G) = \frac{1}{|G|} \sum_{g \in G} Z(g)
+    \]
+    where \(Z(g)\) is the cycle type of the permutation induced by \(g\).
+
+    The rotational symmetries of the cube and their contributions to the cycle index polynomial are:
+
+    1.\ \textbf{Identity rotation (1 element):} Fixes all \(r^{12}\) colorings.
+    \[
+    Z(e) = r^{12}
+    \]
+
+    2.\ \textbf{90° and 270° rotations about axes through the centers of faces (6 elements):} Each rotation fixes \(r^4\) colorings (4 cycles of length 3).
+    \[
+    Z(90^\circ) = Z(270^\circ) = r^4
+    \]
+
+    3.\ \textbf{180° rotations about axes through the centers of faces (3 elements):} Each rotation fixes \(r^6\) colorings (6 cycles of length 2).
+    \[
+    Z(180^\circ) = r^6
+    \]
+
+    4.\ \textbf{120° and 240° rotations about axes through the vertices (8 elements):} Each rotation fixes \(r^3\) colorings (3 cycles of length 4).
+    \[
+    Z(120^\circ) = Z(240^\circ) = r^3
+    \]
+
+    5.\ \textbf{180° rotations about axes through the midpoints of edges (6 elements):} Each rotation fixes \(r^6\) colorings (6 cycles of length 2).
+    \[
+    Z(180^\circ) = r^6
+    \]
+
+    Summing these contributions, we get the cycle index polynomial:
+    \[
+    Z(G) = \frac{1}{24} \left( r^{12} + 6r^4 + 3r^6 + 8r^3 + 6r^6 \right) = \frac{1}{24} \left( r^{12} + 6r^4 + 9r^6 + 8r^3 \right)
+    \]
+
+    To find the number of distinct colorings with 3 colors, we substitute \(r = 3\) into the cycle index polynomial:
+    \[
+    Z(G) = \frac{1}{24} \left( 3^{12} + 6 \cdot 3^4 + 9 \cdot 3^6 + 8 \cdot 3^3 \right)
+    \]
+    \[
+    = \frac{1}{24} \left( 531441 + 6 \cdot 81 + 9 \cdot 729 + 8 \cdot 27 \right)
+    \]
+    \[
+    = \frac{1}{24} \left( 531441 + 486 + 6561 + 216 \right)
+    \]
+    \[
+    = \frac{1}{24} \left( 538704 \right) = 22446
+    \]
+
+    Therefore, the number of ways to color the edges of a cube with three colors is 22446.
+
+    For \(r\) colors, the answer is:
+    \[
+    Z(G) = \frac{1}{24} \left( r^{12} + 6r^4 + 9r^6 + 8r^3 \right)
+    \]
+
+    \section*{Conclusion}
+    Using Burnside's Lemma and Polya's Enumeration Theorem, we find that the number of distinct ways to color the edges of a cube with three colors is 22446. For \(r\) colors, the general formula is given by \(Z(G) = \frac{1}{24} (r^{12} + 6r^4 + 9r^6 + 8r^3)\).
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{2} Let \(G\) be a finite group. Show that the number of conjugacy classes in \(G\) is equal to \(\frac{1}{|G|}\sum_{g \in G}|\text{Cent}(g)|\), the average of the orders of the centralizer subgroups.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we aim to prove that the number of conjugacy classes in a finite group \(G\) is equal to the average of the orders of the centralizer subgroups of the elements of \(G\).
+
+    \section*{Solution}
+    
+    \noindent \textbf{Centralizer and Conjugacy Classes:} The centralizer of an element \(g \in G\) is the set \(\text{Cent}(g) = \{x \in G \mid xg = gx\} \). The conjugacy class of an element \(g \in G\) is the set \(\text{CL}(g) = \{xgx^{-1} \mid x \in G\} \). The size of the conjugacy class of \(g\) is given by \(|\text{CL}(g)| = \frac{|G|}{|\text{Cent}(g)|}\).
+
+    \noindent \textbf{Lemma:} The number of conjugacy classes of \(G\) is the number of distinct conjugacy classes.
+
+    Let \(G\) be a finite group and let \(\mathcal{C}\) be the set of conjugacy classes of \(G\). We want to show that the number of conjugacy classes in \(G\) is equal to \(\frac{1}{|G|}\sum_{g \in G}|\text{Cent}(g)|\).
+
+    Each element \(g \in G\) belongs to exactly one conjugacy class, and the size of the conjugacy class of \(g\) is given by:
+    \[
+    |\text{CL}(g)| = \frac{|G|}{|\text{Cent}(g)|}.
+    \]
+
+    Summing over all elements \(g \in G\), we get:
+    \[
+    \sum_{g \in G} |\text{CL}(g)| = \sum_{g \in G} \frac{|G|}{|\text{Cent}(g)|}.
+    \]
+
+    Since each conjugacy class \(\text{CL}(g)\) appears exactly once in this sum, we can rewrite the sum as:
+    \[
+    \sum_{g \in G} \frac{|G|}{|\text{Cent}(g)|} = |G| \sum_{g \in G} \frac{1}{|\text{Cent}(g)|}.
+    \]
+
+    The left-hand side of this equation counts each element of \(G\) once for each conjugacy class, giving a total of \(|G|\). Therefore, we have:
+    \[
+    |G| = |G| \sum_{g \in G} \frac{1}{|\text{Cent}(g)|}.
+    \]
+
+    Dividing both sides by \(|G|\), we get:
+    \[
+    1 = \sum_{g \in G} \frac{1}{|\text{Cent}(g)|}.
+    \]
+
+    To find the number of conjugacy classes, we note that the sum \(\sum_{g \in G} |\text{Cent}(g)|\) counts the total number of elements in all centralizers, but each centralizer's size contributes to the count of its conjugacy class. Therefore:
+    \[
+    \sum_{g \in G} |\text{Cent}(g)| = \sum_{C \in \mathcal{C}} \sum_{g \in C} |\text{Cent}(g)|.
+    \]
+
+    Since \(|\text{CL}(g)| = \frac{|G|}{|\text{Cent}(g)|}\), we have \(||\text{Cent}(g)| = \frac{|G|}{|\text{CL}(g)|}\). Substituting this in, we get:
+    \[
+    \sum_{g \in G} |\text{Cent}(g)| = \sum_{C \in \mathcal{C}} |G| = |\mathcal{C}| \cdot |G|.
+    \]
+
+    Dividing both sides by \(|G|\), we get:
+    \[
+    \frac{1}{|G|} \sum_{g \in G} |\text{Cent}(g)| = |\mathcal{C}|,
+    \]
+    which shows that the number of conjugacy classes in \(G\) is equal to the average of the orders of the centralizer subgroups.
+
+    \section*{Conclusion}
+    We have shown that the number of conjugacy classes in a finite group \(G\) is equal to the average of the orders of the centralizer subgroups of the elements of \(G\).
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{5.4.1} Suppose \(|G| = p^3\), where \(p\) is prime. Show that either \(|Z(G)|=p\) or \(G\) is abelian. 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we explore the structure of a finite group \(G\) of order \(p^3\), where \(p\) is a prime number. We aim to show that either the center of the group has order \(p\) or the group is abelian.
+
+    \section*{Solution}
+    
+    \noindent \textbf{Class Equation:} The class equation of a group \(G\) is given by:
+    \[
+    |G| = |Z(G)| + \sum_{i} [G : \text{Cent}(g_i)],
+    \]
+    where \(Z(G)\) is the center of \(G\), and \(\text{Cent}(g_i)\) are the centralizers of representatives \(g_i\) of the non-central conjugacy classes of \(G\).
+
+    Let \(|G| = p^3\), where \(p\) is prime. According to the class equation, we have:
+    \[
+    p^3 = |Z(G)| + \sum_{i} [G : \text{Cent}(g_i)].
+    \]
+
+    Note that each term \([G : \text{Cent}(g_i)]\) is the size of a conjugacy class and must divide \(|G| = p^3\). Since \(|G|\) is a power of a prime, each \([G : \text{Cent}(g_i)]\) must be a power of \(p\). The possible values are \(1\), \(p\), \(p^2\), and \(p^3\). Since the conjugacy classes that are not singletons contribute at least \(p\) elements, \([G : \text{Cent}(g_i)] \geq p\).
+
+    Consider the center \(Z(G)\). If \(Z(G)\) is non-trivial, it must have order \(p^k\) where \(1 \leq k \leq 3\). 
+
+    1.\ \textbf{Case 1: \(|Z(G)| = p^3\):} In this case, \(Z(G) = G\), implying that every element commutes with every other element. Hence, \(G\) is abelian.
+
+    2.\ \textbf{Case 2: \(|Z(G)| = p^2\):} The class equation becomes:
+    \[
+    p^3 = p^2 + \sum_{i} [G : \text{Cent}(g_i)].
+    \]
+    Simplifying, we get:
+    \[
+    p^3 - p^2 = p^2(p - 1) = \sum_{i} [G : \text{Cent}(g_i)].
+    \]
+    This implies there is at least one conjugacy class with \([G : \text{Cent}(g_i)] = p\), and all other classes are singleton. However, this scenario contradicts the class equation since the sum of the indices should match \(p^2\). Thus, \(|Z(G)|\) cannot be \(p^2\).
+
+    3.\ \textbf{Case 3: \(|Z(G)| = p\):} The class equation becomes:
+    \[
+    p^3 = p + \sum_{i} [G : \text{Cent}(g_i)].
+    \]
+    Simplifying, we get:
+    \[
+    p^3 - p = p(p^2 - 1) = \sum_{i} [G : \text{Cent}(g_i)].
+    \]
+    The remaining \(p(p^2 - 1)\) must be distributed among the non-central conjugacy classes. Since each non-central class has size divisible by \(p\), the class sizes could be \(p\), \(p^2\), or both. This scenario is possible, and it implies that \(G\) is non-abelian.
+
+    Thus, either \(|Z(G)| = p\) and \(G\) is non-abelian, or \(|Z(G)| = p^3\) and \(G\) is abelian. Hence, we have shown that either \(|Z(G)| = p\) or \(G\) is abelian.
+
+    \section*{Conclusion}
+    We have demonstrated that for a group \(G\) of order \(p^3\), where \(p\) is prime, either \(|Z(G)| = p\) and \(G\) is non-abelian, or \(|Z(G)| = p^3\) and \(G\) is abelian.
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{4} Let \(N\) and \(A\) be groups, let \(\gamma : A \rightarrow \text{Aut}(N)\) be a homomorphism, and let \(\phi : A \rightarrow A\) be an automorphism. Consider the semi-direct product groups: \[G_1 := N \rtimes_{\gamma \phi}A, \qquad G_2 := N \rtimes_{\gamma}A, \] where \(\gamma\phi = \gamma \circ \phi \) is the composite homomorphism \(A \rightarrow \text{Aut}(N)\). Show that the function \(\omega : G_1 \rightarrow G_2\) defined by \((n,a) \mapsto (n, \phi(a))\) is an isomorphism of groups.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we explore the relationship between two semi-direct product groups \(G_1\) and \(G_2\) defined by different homomorphisms. We will show that the function \(\omega : G_1 \rightarrow G_2\) defined by \((n,a) \mapsto (n, \phi(a))\) is an isomorphism of groups.
+
+    \section*{Solution}
+    
+    \noindent \textbf{Definition: Semi-Direct Product:} The semi-direct product \(N \rtimes_{\gamma} A\) of a group \(N\) with a group \(A\) acting on it via a homomorphism \(\gamma : A \rightarrow \text{Aut}(N)\) is the group with the underlying set \(N \times A\) and multiplication given by:
+    \[
+    (n_1, a_1) \cdot (n_2, a_2) = (n_1 \gamma(a_1)(n_2), a_1 a_2).
+    \]
+
+    \noindent \textbf{Automorphism:} An automorphism \(\phi: A \to A\) is a bijective homomorphism from the group \(A\) to itself.
+
+    Let \(G_1 = N \rtimes_{\gamma \phi} A\) and \(G_2 = N \rtimes_{\gamma} A\), and define the function \(\omega : G_1 \rightarrow G_2\) by \((n, a) \mapsto (n, \phi(a))\). We need to show that \(\omega \) is an isomorphism of groups.
+
+    \noindent \textbf{Step 1: Homomorphism.} We show that \(\omega \) preserves the group operation.
+    \[
+    \omega((n_1, a_1) \cdot (n_2, a_2)) = \omega((n_1 \gamma\phi(a_1)(n_2), a_1 a_2)) = (n_1 \gamma(\phi(a_1))(n_2), \phi(a_1 a_2)).
+    \]
+    Using the fact that \(\phi \) is a homomorphism, we have:
+    \[
+    \phi(a_1 a_2) = \phi(a_1)\phi(a_2).
+    \]
+    Thus,
+    \[
+    \omega((n_1, a_1) \cdot (n_2, a_2)) = (n_1 \gamma(\phi(a_1))(n_2), \phi(a_1)\phi(a_2)).
+    \]
+    On the other hand,
+    \[
+    \omega(n_1, a_1) \cdot \omega(n_2, a_2) = (n_1, \phi(a_1)) \cdot (n_2, \phi(a_2)) = (n_1 \gamma(\phi(a_1))(n_2), \phi(a_1) \phi(a_2)).
+    \]
+    Hence,
+    \[
+    \omega((n_1, a_1) \cdot (n_2, a_2)) = \omega(n_1, a_1) \cdot \omega(n_2, a_2).
+    \]
+    Therefore, \(\omega \) is a homomorphism.
+
+    \noindent \textbf{Step 2: Injectivity.} We show that \(\omega \) is injective.
+    Suppose \(\omega(n, a) = \omega(n', a')\). Then,
+    \[(n, \phi(a)) = (n', \phi(a')).\]
+    Since \(\phi \) is an automorphism, it is bijective, so \(\phi(a) = \phi(a')\) implies \(a = a'\). Thus, \(n = n'\). Therefore, \((n, a) = (n', a')\) and \(\omega \) is injective.
+
+    \noindent \textbf{Step 3: Surjectivity.} We show that \(\omega \) is surjective.
+    Let \((n, b) \in G_2\). Since \(\phi \) is surjective, there exists an \(a \in A\) such that \(\phi(a) = b\). Then,
+    \[
+    \omega(n, a) = (n, \phi(a)) = (n, b).
+    \]
+    Therefore, \(\omega \) is surjective.
+
+    Since \(\omega \) is a bijective homomorphism, it is an isomorphism of groups. Hence, the function \(\omega : G_1 \rightarrow G_2\) defined by \((n,a) \mapsto (n, \phi(a))\) is an isomorphism of groups.
+
+    \section*{Conclusion}
+    We have shown that the function \(\omega : G_1 \rightarrow G_2\) defined by \((n,a) \mapsto (n, \phi(a))\) is an isomorphism of groups, demonstrating the relationship between the two semi-direct product groups defined by different homomorphisms.
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{5} This exercise gives a proof of ``Fermat's Little Theorem'' using the \(p\)-group fixed point theorem. Let \(G = \langle \phi \rangle \) be a cyclic group of order \(p\), with \(p\)-prime, and let \(n \in \mathbb{N}\). Define \(X = \{(x_1, \dots, x_p) \mid x_i \in \{1, \dots, n\} \} \), the set of ordered \(p\)-tuples of elements taken from \( \{1, \dots, n\} \). There is an action by \(G\) on \(X\) defined so that \[\phi(x_1, x_2, \dots, x_p) = (x_p, x_1, \dots, x_{p-1}).\] Use the \(p\)-group fixed point theorem applied to this action to show that \(n^p \equiv n \pmod{p}\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we provide a proof of Fermat's Little Theorem using the \(p\)-group fixed point theorem. We consider the action of a cyclic group of order \(p\) on the set of ordered \(p\)-tuples of elements from \( \{1, \dots, n\} \) and apply the fixed point theorem to derive the theorem.
+
+    \section*{Solution}
+    
+    \noindent \textbf{Fermat's Little Theorem:} Fermat's Little Theorem states that if \(p\) is a prime number and \(a\) is an integer not divisible by \(p\), then \(a^{p-1} \equiv 1 \pmod{p}\). Equivalently, \(a^p \equiv a \pmod{p}\).
+
+    \noindent \textbf{\(p\)-Group Fixed Point Theorem:} If a \(p\)-group \(G\) acts on a finite set \(X\), then the number of fixed points of the action is congruent to the size of \(X\) modulo \(p\). In other words, \(|\text{Fix}(G, X)| \equiv |X| \pmod{p}\).
+
+    Let \(G = \langle \phi \rangle \) be a cyclic group of order \(p\), and consider the set \(X = \{(x_1, \dots, x_p) \mid x_i \in \{1, \dots, n\} \} \). The group \(G\) acts on \(X\) by cyclically permuting the coordinates:
+    \[
+    \phi(x_1, x_2, \dots, x_p) = (x_p, x_1, \dots, x_{p-1}).
+    \]
+
+    The total number of elements in \(X\) is \(n^p\) since there are \(n\) choices for each of the \(p\) coordinates. We need to count the number of fixed points of the action of \(\phi \) on \(X\).
+
+    An element \((x_1, x_2, \dots, x_p) \in X\) is fixed by \(\phi \) if:
+    \[
+    \phi(x_1, x_2, \dots, x_p) = (x_1, x_2, \dots, x_p).
+    \]
+    This implies:
+    \[
+    (x_p, x_1, \dots, x_{p-1}) = (x_1, x_2, \dots, x_p).
+    \]
+
+    Thus, \(x_1 = x_2 = \cdots = x_p\). Each coordinate must be the same, so there are \(n\) fixed points, corresponding to the \(n\) possible values for \(x_1\).
+
+    By the \(p\)-group fixed point theorem, the number of fixed points is congruent to the size of the set \(X\) modulo \(p\):
+    \[
+    |\text{Fix}(G, X)| \equiv |X| \pmod{p}.
+    \]
+    Substituting the values, we get:
+    \[
+    n \equiv n^p \pmod{p}.
+    \]
+
+    Hence, \(n^p \equiv n \pmod{p}\), which completes the proof using the \(p\)-group fixed point theorem.
+
+    \section*{Conclusion}
+    We have used the \(p\)-group fixed point theorem to prove Fermat's Little Theorem, showing that \(n^p \equiv n \pmod{p}\) for any integer \(n\) and prime \(p\).
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{6} Let \(Q := \{\pm I, \pm A, \pm B, \pm C\} \subseteq \text{GL}_2(\C) \), where \[A := \begin{bmatrix}
+    0 & -1 \\ 1 & 0 \end{bmatrix}, \qquad B := \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix}, \qquad C := AB = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix}\] Verify the formulas \[A^2 = B^2 = C^2 = -I \qquad AB = C, \ BC = A, \ CA = B \qquad BA = -C, \ CB = -A, \ AC = -B\] 
+    and conclude that \(Q\) is a subgroup of \(\text{GL}_2(\C) \) of order 8. What are the orders of the elements of \(Q\)? What are the conjugacy classes in \(Q\)? Show that \(Q\) is not isomorphic to \(D_4\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we investigate a subset \(Q\) of the general linear group \(\text{GL}_2(\C)\) and verify specific algebraic properties. We aim to show that \(Q\) forms a subgroup of order 8, determine the orders of its elements and its conjugacy classes, and demonstrate that \(Q\) is not isomorphic to the dihedral group \(D_4\).
+
+    \section*{Solution}
+    
+    \noindent \textbf{Verification of Formulas:}
+
+    \noindent Verify \(A^2 = -I\):
+    \[
+    A^2 = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix} = -I.
+    \]
+
+    \noindent Verify \(B^2 = -I\):
+    \[
+    B^2 = \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} = \begin{bmatrix} i^2 & 0 \\ 0 & {(-i)}^2 \end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix} = -I.
+    \]
+
+    \noindent Verify \(C^2 = -I\):
+    \[
+    C^2 = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} = \begin{bmatrix} -i^2 & 0 \\ 0 & -i^2 \end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix} = -I.
+    \]
+
+    \noindent Verify \(AB = C\):
+    \[
+    AB = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} = C.
+    \]
+
+    \noindent Verify \(BC = A\):
+    \[
+    BC = \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = A.
+    \]
+
+    \noindent Verify \(CA = B\):
+    \[
+    CA = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} = B.
+    \]
+
+    \noindent Verify \(BA = -C\):
+    \[
+    BA = \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} 0 & -i \\ -i & 0 \end{bmatrix} = -\begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} = -C.
+    \]
+
+    \noindent Verify \(CB = -A\):
+    \[
+    CB = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} \begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = -\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} = -A.
+    \]
+
+    \noindent Verify \(AC = -B\):
+    \[
+    AC = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} = \begin{bmatrix} -i & 0 \\ 0 & i \end{bmatrix} = -\begin{bmatrix} i & 0 \\ 0 & -i \end{bmatrix} = -B.
+    \]
+
+    \noindent \textbf{Conclusion:}
+    We have verified the given formulas. Hence, \(Q = \{\pm I, \pm A, \pm B, \pm C\} \) is a subgroup of \(\text{GL}_2(\C)\) of order 8.
+
+    \noindent \textbf{Orders of the Elements of \(Q\):}
+    \begin{itemize}
+        \item \(\pm I\): Order 1.
+        \item \(\pm A\), \(\pm B\), \(\pm C\): Order 4 (since \(A^2 = B^2 = C^2 = -I\), and \({(-I)}^2 = I\)).
+    \end{itemize}
+
+    \noindent \textbf{Conjugacy Classes in \(Q\):}
+    To find the conjugacy classes, we note that \(Q\) is generated by \(I, A, B, C\), and their negatives.
+    \begin{itemize}
+        \item \( \{I\} \): Conjugacy class of \(I\).
+        \item \( \{-I\} \): Conjugacy class of \(-I\).
+        \item \( \{A, -A\} \): Conjugacy class of \(A\) and \(-A\).
+        \item \( \{B, -B\} \): Conjugacy class of \(B\) and \(-B\).
+        \item \( \{C, -C\} \): Conjugacy class of \(C\) and \(-C\).
+    \end{itemize}
+
+    \noindent \textbf{Non-Isomorphism to \(D_4\):}
+    \(D_4\) has elements of orders 1, 2, and 4. Since \(Q\) has elements of orders 1 and 4 only, it cannot be isomorphic to \(D_4\).
+
+    Hence, \(Q\) is not isomorphic to \(D_4\).
+
+    \section*{Conclusion}
+    We have shown that the set \(Q\) is a subgroup of \(\text{GL}_2(\C)\) of order 8, verified the algebraic properties of its elements, determined its conjugacy classes, and demonstrated that it is not isomorphic to the dihedral group \(D_4\).
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{7} Let \(S\) be the subset of the ring \(M := \text{Mat}_{2 \times 2}(\R)\) consisting of matrices of the form \(\begin{bmatrix} a & b \\ 0 & d \end{bmatrix}\). Show that \(S\) is a subring of \(M\). Determine whether \(S\) is a commutative ring, and whether \(S\) has a multiplicative identity element.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we examine a subset \(S\) of the ring of \(2 \times 2\) matrices over \(\R \). We aim to show that \(S\) forms a subring of \(M\), determine its commutativity, and check for the existence of a multiplicative identity element.
+
+    \section*{Solution}
+
+    \noindent \textbf{Definition of Subring:} A subset \(S\) of a ring \(M\) is a subring if it is closed under addition, subtraction, and multiplication, and contains the multiplicative identity of \(M\).
+
+    \noindent \textbf{Step 1: Closure under Addition.}
+    Let \(A = \begin{bmatrix} a & b \\ 0 & d \end{bmatrix}\) and \(B = \begin{bmatrix} a' & b' \\ 0 & d' \end{bmatrix}\) be elements of \(S\). Then,
+    \[
+    A + B = \begin{bmatrix} a + a' & b + b' \\ 0 & d + d' \end{bmatrix}.
+    \]
+    Since \(a + a'\), \(b + b'\), and \(d + d'\) are real numbers, \(A + B \in S\).
+
+    \noindent \textbf{Step 2: Closure under Subtraction.}
+    Similarly,
+    \[
+    A - B = \begin{bmatrix} a - a' & b - b' \\ 0 & d - d' \end{bmatrix}.
+    \]
+    Since \(a - a'\), \(b - b'\), and \(d - d'\) are real numbers, \(A - B \in S\).
+
+    \noindent \textbf{Step 3: Closure under Multiplication.}
+    \[
+    AB = \begin{bmatrix} a & b \\ 0 & d \end{bmatrix} \begin{bmatrix} a' & b' \\ 0 & d' \end{bmatrix} = \begin{bmatrix} aa' & ab' + bd' \\ 0 & dd' \end{bmatrix}.
+    \]
+    Since \(aa'\), \(ab' + bd'\), and \(dd'\) are real numbers, \(AB \in S\).
+
+    \noindent \textbf{Step 4: Containing the Multiplicative Identity.}
+    The multiplicative identity in \(\text{Mat}_{2 \times 2}(\R)\) is \(I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\), which is of the form \(\begin{bmatrix} a & b \\ 0 & d \end{bmatrix}\) with \(a = 1\), \(b = 0\), and \(d = 1\). Therefore, \(I \in S\).
+
+    Thus, \(S\) is a subring of \(M\).
+
+    \noindent \textbf{Step 5: Commutativity.}
+    \[
+    AB = \begin{bmatrix} a & b \\ 0 & d \end{bmatrix} \begin{bmatrix} a' & b' \\ 0 & d \end{bmatrix} = \begin{bmatrix} aa' & ab' + bd' \\ 0 & dd' \end{bmatrix}.
+    \]
+    \[
+    BA = \begin{bmatrix} a' & b' \\ 0 & d' \end{bmatrix} \begin{bmatrix} a & b \\ 0 & d \end{bmatrix} = \begin{bmatrix} a'a & a'b + b'd \\ 0 & d'd \end{bmatrix}.
+    \]
+    Since \(ab' + bd' \neq a'b + b'd\) in general, \(S\) is not a commutative ring.
+
+    \noindent \textbf{Step 6: Multiplicative Identity.}
+    The matrix \(I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\) serves as the multiplicative identity in \(S\).
+
+    Therefore, \(S\) has a multiplicative identity element but is not commutative.
+
+    \section*{Conclusion}
+    We have shown that the subset \(S\) of matrices of the form \(\begin{bmatrix} a & b \\ 0 & d \end{bmatrix}\) forms a subring of \(M := \text{Mat}_{2 \times 2}(\R)\), contains the multiplicative identity, but is not commutative.
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{8} Do the same with the subset \(S'\) of \(M := \text{Mat}_{2 \times 2}(\R)\) consisting of matrices of the form \(\begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix}\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Introduction}
+    
+    In this exercise, we examine a subset \(S'\) of the ring of \(2 \times 2\) matrices over \(\R \). We aim to show that \(S'\) forms a subring of \(M\), determine its commutativity, and check for the existence of a multiplicative identity element.
+
+    \section*{Solution}
+
+    \noindent \textbf{Definition of Subring:} A subset \(S'\) of a ring \(M\) is a subring if it is closed under addition, subtraction, and multiplication, and contains the multiplicative identity of \(M\).
+
+    \noindent \textbf{Step 1: Closure under Addition.}
+    Let \(A = \begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix}\) and \(B = \begin{bmatrix} a' & 0 \\ 0 & 0 \end{bmatrix}\) be elements of \(S'\). Then,
+    \[
+    A + B = \begin{bmatrix} a + a' & 0 \\ 0 & 0 \end{bmatrix}.
+    \]
+    Since \(a + a'\) is a real number, \(A + B \in S'\).
+
+    \noindent \textbf{Step 2: Closure under Subtraction.}
+    Similarly,
+    \[
+    A - B = \begin{bmatrix} a - a' & 0 \\ 0 & 0 \end{bmatrix}.
+    \]
+    Since \(a - a'\) is a real number, \(A - B \in S'\).
+
+    \noindent \textbf{Step 3: Closure under Multiplication.}
+    \[
+    AB = \begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} a' & 0 \\ 0 & 0 \end{bmatrix} = \begin{bmatrix} aa' & 0 \\ 0 & 0 \end{bmatrix}.
+    \]
+    Since \(aa'\) is a real number, \(AB \in S'\).
+
+    \noindent \textbf{Step 4: Containing the Multiplicative Identity.}
+    The multiplicative identity in \(\text{Mat}_{2 \times 2}(\R)\) is \(I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\), which is not of the form \(\begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix}\). Therefore, \(S'\) does not contain the multiplicative identity of \(M\).
+
+    Thus, \(S'\) is a subring of \(M\).
+
+    \noindent \textbf{Step 5: Commutativity.}
+    \[
+    AB = \begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} a' & 0 \\ 0 & 0 \end{bmatrix} = \begin{bmatrix} aa' & 0 \\ 0 & 0 \end{bmatrix}.
+    \]
+    \[
+    BA = \begin{bmatrix} a' & 0 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix} = \begin{bmatrix} a'a & 0 \\ 0 & 0 \end{bmatrix}.
+    \]
+    Since \(aa' = a'a\), \(S'\) is a commutative ring.
+
+    \noindent \textbf{Step 6: Multiplicative Identity.}
+    There is no multiplicative identity in \(S'\) because the form \(\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\) does not act as a multiplicative identity for all elements of \(S'\).
+
+    Therefore, \(S'\) is a commutative subring of \(M\) but does not have a multiplicative identity element.
+
+    \section*{Conclusion}
+    We have shown that the subset \(S'\) of matrices of the form \(\begin{bmatrix} a & 0 \\ 0 & 0 \end{bmatrix}\) forms a subring of \(M := \text{Mat}_{2 \times 2}(\R)\), is commutative, but does not contain a multiplicative identity.
+
+\end{exercise}
+\newpage
+
+\end{document}

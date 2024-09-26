@@ -1,0 +1,140 @@
+---
+title: "ECON_HW7_CAncel"
+author: "Charles Ancel"
+date: "2024-07-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Intro}
+# Load necessary libraries
+library(tidyverse)
+library(quantmod)
+library(fredr)
+
+# Set FRED API key
+fredr_set_key("89e09406a6b0e5d39d06d3b19fec5156")
+```
+
+```{r Data+Convert}
+# Retrieve data from FRED
+unemployment_rate <- fredr(series_id = "UNRATE")
+cpi <- fredr(series_id = "CPILFESL")
+hourly_earnings <- fredr(series_id = "CES0500000003")
+
+# Convert the data to time series objects
+unemployment_ts <- xts(unemployment_rate$value, order.by = as.Date(unemployment_rate$date))
+cpi_ts <- xts(cpi$value, order.by = as.Date(cpi$date))
+earnings_ts <- xts(hourly_earnings$value, order.by = as.Date(hourly_earnings$date))
+```
+
+```{r Calculations}
+# Calculate year-over-year inflation rate from CPI
+inflation_rate <- diff(log(cpi_ts), lag = 12) * 100
+
+# Calculate year-over-year wage inflation rate from hourly earnings
+wage_inflation_rate <- diff(log(earnings_ts), lag = 12) * 100
+```
+
+```{r DataFrame}
+# Merge the data into a single data frame
+data <- merge(unemployment_ts, inflation_rate, wage_inflation_rate, all = FALSE)
+colnames(data) <- c("Unemployment_Rate", "Inflation_Rate", "Wage_Inflation_Rate")
+
+# Convert to a tidy data frame
+data_df <- data.frame(date = index(data), coredata(data))
+```
+
+```{r Inflation-vs-Unemployment-Plot}
+# Plot Inflation vs. Unemployment Rate
+inflation_vs_unemployment_plot <- ggplot(data_df, aes(x = Unemployment_Rate, y = Inflation_Rate)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Inflation vs. Unemployment Rate",
+       x = "Unemployment Rate (%)",
+       y = "Inflation Rate (%)")
+
+ggsave("Inflation_vs_Unemployment.png", plot = inflation_vs_unemployment_plot)
+```
+
+```{r WageInflation-vs-Unemployment}
+# Plot Wage Inflation vs. Unemployment Rate
+wage_inflation_vs_unemployment_plot <- ggplot(data_df, aes(x = Unemployment_Rate, y = Wage_Inflation_Rate)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Wage Inflation vs. Unemployment Rate",
+       x = "Unemployment Rate (%)",
+       y = "Wage Inflation Rate (%)")
+
+ggsave("Wage_Inflation_vs_Unemployment.png", plot = wage_inflation_vs_unemployment_plot)
+```
+
+```{r Analysis}
+# Analyze the relationship between variables
+model1 <- lm(Inflation_Rate ~ Unemployment_Rate, data = data_df)
+summary(model1)
+
+model2 <- lm(Wage_Inflation_Rate ~ Unemployment_Rate, data = data_df)
+summary(model2)
+```
+
+```{r Yield-Curve}
+# Retrieve yield curve data from FRED
+series_ids <- c("DGS1MO", "DGS3MO", "DGS6MO", "DGS1", "DGS2", "DGS3", "DGS5", "DGS7", "DGS10", "DGS20", "DGS30")
+yield_curve_data <- do.call(rbind, lapply(series_ids, function(id) {
+  data <- fredr(series_id = id)
+  data$series_id <- id
+  return(data)
+}))
+
+# Filter for the most recent date available for each series
+yield_curve_data <- yield_curve_data %>%
+  group_by(series_id) %>%
+  filter(date == max(date)) %>%
+  ungroup() %>%
+  mutate(Maturity = case_when(
+    series_id == "DGS1MO" ~ 1/12,
+    series_id == "DGS3MO" ~ 3/12,
+    series_id == "DGS6MO" ~ 6/12,
+    series_id == "DGS1" ~ 1,
+    series_id == "DGS2" ~ 2,
+    series_id == "DGS3" ~ 3,
+    series_id == "DGS5" ~ 5,
+    series_id == "DGS7" ~ 7,
+    series_id == "DGS10" ~ 10,
+    series_id == "DGS20" ~ 20,
+    series_id == "DGS30" ~ 30
+  ))
+
+yield_curve_plot <- ggplot(yield_curve_data, aes(x = Maturity, y = value)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Term Structure of Interest Rates",
+       x = "Maturity (Years)",
+       y = "Yield (%)")
+
+ggsave("YieldCurve.png", plot = yield_curve_plot)
+```
+
+```{r Inflation-Dynamics}
+# For real data, we can simulate inflation dynamics based on certain assumptions or use historical data
+# Here, we simulate based on hypothetical scenarios for illustration purposes
+time <- 1:10
+inflation_with_taylor <- exp(-0.3 * time)
+inflation_without_taylor <- exp(0.3 * time)
+inflation_dynamics_data <- data.frame(Time = rep(time, 2), 
+                                      Inflation = c(inflation_with_taylor, inflation_without_taylor), 
+                                      Scenario = rep(c("With Taylor Principle", "Without Taylor Principle"), each = 10))
+
+inflation_dynamics_plot <- ggplot(inflation_dynamics_data, aes(x = Time, y = Inflation, color = Scenario)) +
+  geom_line() +
+  labs(title = "Dynamics of Inflation with and without the Taylor Principle",
+       x = "Time",
+       y = "Inflation Rate")
+
+ggsave("InflationDynamics.png", plot = inflation_dynamics_plot)
+
+```

@@ -1,0 +1,96 @@
+J-6022,The FTD® Regal Jewel Bouquet - Florist Original,Unnamed: 2,Standard,Unnamed: 4,Deluxe,Unnamed: 6,Premium,Unnamed: 8,Exquisite,Unnamed: 10
+,,ea.,J-6022s,,J-6022d,,J-6022p,,J-6022e,
+,retail (w/o delivery),,,60,,75,,95,,125
+,FTD.com Retail,,,70,,85,,105,,135
+Lavender,50 cm Roses,1.18,2,2.36,3,3.54,0,0,8,9.44
+Purple,Stock stems,0.88,2,0,4,0,0,0,6,5.28
+Pink,Standard Carnations,0.61,2,0,3,0,4,0,4,0
+Hot Pink,Alstroemeria stems,0.86,2,1.72,3,2.58,0,0,0,0
+Hot Pink,50 cm Roses,1.18,0,0,0,0,5,5.8999999999999995,5,5.8999999999999995
+Hot Pink,Stock stems,0.88,0,0,0,0,5,4.4,0,0
+Purple,Daisy Pompon stems,0.7,0,0,0,0,4,2.8,0,0
+Pink,Hydrangea blooms,2.14,0,0,0,0,2,4.28,0,0
+Purple,Alstroemeria stems,0.86,0,0,0,0,0,0,5,4.3
+Pink,LA Hybrid Lily stems,1.67,0,0,0,0,0,0,2,3.34
+2120S,Small Cinched Vase,5.12,1,5.12,1,5.12,0,0,0,0
+2120L,Large Cinched Vase,5.94,0,0,0,0,1,5.94,1,5.94
+,TOTAL,,,9.2,,11.24,,23.320000000000004,,34.199999999999996
+,retail     (w/o delivery),,,60,,75,,95,,125
+,executing value         (retail * .71),0.71,,42.599999999999994,,53.25,,67.45,,88.75
+,COGS     (EV * .50),0.5,,21.299999999999997,,26.625,,33.725,,44.375
+,Gross Margin     (EV * .50),0.5,,21.299999999999997,,26.625,,33.725,,44.375
+,ACTUAL GROSS MARGIN    (EV-TOTAL),,,33.39999999999999,,42.01,,44.129999999999995,,54.550000000000004
+,Labor Cost    (retail x -10%),-0.1,,-6,,-7.5,,-9.5,,-12.5
+,FTO,-2.75,,-2.75,,-2.75,,-2.75,,-2.75
+,UCP Fee,-4.99,,-4.99,,-4.99,,-4.99,,-4.99
+,Other Fees,-3,,-3,,-3,,-3,,-3
+,TOTAL  (bottom line that florist makes),,,16.65999999999999,,23.769999999999996,,23.889999999999993,,31.310000000000002
+,Net Margin    (TOTAL abv/RETAIL),,,0.2776666666666665,,0.3169333333333333,,0.25147368421052624,,0.25048000000000004
+,,,,,,,,,,
+,Actual COGS Percentage of Retail w/o delivery,,,0.15333333333333332,,0.14986666666666668,,0.24547368421052634,,0.27359999999999995
+,,,,,,,,,,
+,,,inches,cm,inches,cm,inches,cm,inches,cm
+,,H,,0,,0,,0,,0
+,,W,,0,,0,,0,,0
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,0.4,,0.4,,0.2,,0.2
+,,,,,,,,,,
+,,,,,,,,,,
+EDAY 2023 PRICING,,,,,,,,,,
+,,NEW 2023,,CDAY 2023,,,,,,
+,Alstroemeria stems,0.62,-0.29000000000000004,0.91,,,,,,
+,Asiatic Lily stems,1.47,-0.07000000000000006,1.54,,,,,,
+,Button Pompon stems,0.63,-0.12,0.75,,,,,,
+,Cushion Pompon stems,0.63,-0.12,0.75,,,,,,
+,Daisy Pompon stems,0.63,-0.12,0.75,,,,,,
+,Double Lisianthus stems,1.28,-0.32000000000000006,1.6,,,,,,
+,"Delphinium stems, Belladonna",1.06,-0.43999999999999995,1.5,,,,,,
+,"Delphinium stems, hybrid",1.26,-0.9200000000000002,2.18,,,,,,
+,Disbud Stem,0.84,-0.13,0.97,,,,,,
+,Gerbera Daisies,1.14,-0.3600000000000001,1.5,,,,,,
+Blue,Hydrangea blooms,2.3,0.020000000000000018,2.28,,,,,,
+Green,Mini Hydrangea blooms,1.69,0.050000000000000044,1.64,,,,,,
+White,Hydrangea blooms,2.14,0,2.14,,,,,,
+,Hypericum Berry stems,0.77,-0.13,0.9,,,,,,
+,Iris stems,1.13,-0.07000000000000006,1.2,,,,,,
+,LA Hybrid Lily stems,1.47,-0.16999999999999993,1.64,,,,,,
+,Limonium Blue stream,0.84,-0.30999999999999994,1.15,,,,,,
+,Limonium Misty Blue,0.84,,1.41,,,,,,
+,Matsumoto Aster stems,0.79,-0.04999999999999993,0.84,,,,,,
+,Mini Calla Lilies,1.65,-0.77,2.42,,,,,,
+,Mini Carnation stems,0.51,-0.17999999999999994,0.69,,,,,,
+,Monte Casino stems,0.66,0,0.66,,,,,,
+White,Queen Anne's Lace,1.29,,1.25,,,,,,
+,Ranunculus,1.64,,2.85,,,,,,
+Orange,50 cm Roses,0.96,-0.08000000000000007,1.04,,,,,,
+Yellow,50 cm Roses,0.96,-0.1200000000000001,1.08,,,,,,
+Peach,50 cm Roses,0.96,-0.1200000000000001,1.08,,,,,,
+Pink,50 cm Roses,0.96,-0.18999999999999995,1.15,,,,,,
+Lavender,50 cm Roses,0.96,-0.1200000000000001,1.08,,,,,,
+White,50 cm Roses,0.96,-0.32000000000000006,1.28,,,,,,
+Red,50 cm Roses,0.87,-0.30999999999999994,1.18,,,,,,
+,Snapdragon stems,0.92,-0.2799999999999999,1.2,,,,,,
+,Solidago stems,0.63,0.06000000000000005,0.57,,,,,,
+,Spider Mums,0.84,0,0.84,,,,,,
+,Spray Rose stems,0.9,-0.5199999999999999,1.42,,,,,,
+,Standard Carnations,0.53,-0.17999999999999994,0.71,,,,,,
+,Star of Bethlehem stems,0.85,,1.18,,,,,,
+,Statice stems,0.59,-0.15000000000000002,0.74,,,,,,
+,Stock stems,0.85,-0.13,0.98,,,,,,
+,Sweet William,0.77,-0.25,1.02,,,,,,
+,Eryngium thistle stems,1.4,-0.30000000000000004,1.7,,,,,,
+Green,Trick Dianthus stems,0.94,-0.16000000000000014,1.1,,,,,,
+,Waxflower stems,1.41,-0.19000000000000017,1.6,,,,,,
+,,,,,,,,,,
+,Baby Blue Eucalyptus stems,0.99,-0.010000000000000009,1,,,,,,
+,Dusty Miller Stems,0.98,,1.05,,,,,,
+,Gunni Eucalyptus stems,1.09,-0.18999999999999995,1.28,,,,,,
+,Silver dollar Eucalyptus stems,2.1,0,2.1,,,,,,
+,Green Pittosporum stems,0.67,-0.039999999999999925,0.71,,,,,,
+,Israeli Ruscus stems,0.35,-0.050000000000000044,0.4,,,,,,
+,Italian Variegated Pittosporum stems,0.82,-0.08000000000000007,0.9,,,,,,
+,Salal tips,0.26,-0.020000000000000018,0.28,,,,,,
+,Seeded Eucalyptus stems,2.1,-0.029999999999999805,2.13,,,,,,
+,Variegated Pittosporum stems,0.69,-0.050000000000000044,0.74,,,,,,

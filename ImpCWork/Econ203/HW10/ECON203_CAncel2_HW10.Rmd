@@ -1,0 +1,111 @@
+---
+title: "Econ203_Cancel2_HW10"
+author: "Charles Ancel"
+date: "2024-04-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setup2}
+library(readxl)
+library(dplyr)
+
+# Load the data from the Excel file
+housing_data <- read_excel("/Users/cancel/Personal/Coursework/Econ203/HW10/housing.xlsx")
+```
+
+```{r q2}
+relevant_data <- dplyr::select(housing_data, sqrft, assess, lotsize, bdrms, colonial)
+
+# Calculate the correlation matrix
+correlation_matrix <- cor(relevant_data)
+print(correlation_matrix)
+
+# Flatten the matrix to a vector (excluding self-correlations) and sort by absolute value
+correlations <- as.data.frame(as.table(correlation_matrix))
+correlations <- correlations[correlations$Var1 != correlations$Var2, ]
+correlations$abs_cor <- abs(correlations$Freq)
+
+sorted_correlations <- dplyr::arrange(correlations, desc(abs_cor))
+
+# Find the top two variables with the most extreme correlation
+top_correlation <- head(sorted_correlations, 1)
+print(top_correlation)
+
+```
+
+
+```{r q3}
+# Create dummy variables based on assessed value conditions assuming values are already in thousands
+housing_data$low_assess <- as.integer(housing_data$assess <= 250)
+housing_data$med_assess <- as.integer(housing_data$assess > 250 & housing_data$assess <= 350)
+housing_data$high_assess <- as.integer(housing_data$assess > 350)
+
+# Calculate the mean of each dummy variable and round to 3 decimal places
+mean_low_assess <- round(mean(housing_data$low_assess), 3)
+mean_med_assess <- round(mean(housing_data$med_assess), 3)
+mean_high_assess <- round(mean(housing_data$high_assess), 3)
+
+# Print the means
+print(paste("Mean of low_assess: ", mean_low_assess))
+print(paste("Mean of med_assess: ", mean_med_assess))
+print(paste("Mean of high_assess: ", mean_high_assess))
+```
+
+```{r q4}
+# Simple linear regression model predicting price from assess
+model <- lm(price ~ assess, data = housing_data)
+
+# Summary of the model to get detailed statistics
+summary_model <- summary(model)
+
+# Output the coefficient for 'assess'
+assess_coefficient <- summary_model$coefficients['assess', 'Estimate']
+r_squared <- summary_model$r.squared
+
+# Print the coefficient rounded to 4 decimal places
+print(round(assess_coefficient, 4))
+print(paste("R^2 value:", round(r_squared, 4)))
+```
+
+```{r q5}
+# Multiple linear regression model using med_assess and high_assess to predict price
+model_multi <- lm(price ~ med_assess + high_assess, data = housing_data)
+
+# Summary of the model to get detailed statistics
+summary_model_multi <- summary(model_multi)
+
+# Output the coefficients for med_assess and high_assess
+coef_med <- summary_model_multi$coefficients['med_assess', 'Estimate']
+coef_high <- summary_model_multi$coefficients['high_assess', 'Estimate']
+r_squared <- summary_model_multi$r.squared  # Extract R^2 value
+
+# Print the coefficients and R^2 value rounded to 4 decimal places
+print(paste("Coefficient for medium assessed value (med_assess):", round(coef_med, 4)))
+print(paste("Coefficient for high assessed value (high_assess):", round(coef_high, 4)))
+print(paste("R^2 value:", round(r_squared, 4)))
+```
+
+```{r q5_check}
+# Ensure all previous steps have been correctly followed in the R environment
+model_multi <- lm(price ~ med_assess + high_assess, data = housing_data)
+summary_model_multi <- summary(model_multi)
+print(summary_model_multi$coefficients)  # Should print all coefficients
+print(summary_model_multi$r.squared)  # Print R^2 value
+```
+
+```{r q6_complex_model}
+# Comprehensive Multiple Linear Regression Model
+model_full <- lm(price ~ med_assess + high_assess + bdrms + sqrft + colonial, data = housing_data)
+summary_model_full <- summary(model_full)
+
+# Output detailed summary statistics and the coefficients
+print(summary_model_full)
+
+# Calculate and print the difference in expected selling prices between high and medium assessed houses
+diff_price <- coef(summary_model_full)["high_assess", "Estimate"] - coef(summary_model_full)["med_assess", "Estimate"]
+print(paste("Difference in Expected Selling Price (High - Medium):", round(diff_price*1000, 4), "dollars"))
+```

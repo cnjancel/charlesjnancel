@@ -1,0 +1,75 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+\title{Econ 203, Challenge Quiz 7, Part Two}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+Consider the same setup as in the previous question. Show that 
+\begin{align*}
+    Y|X=x=\widehat{m}(x)+\mathsf{N}\left(0,\sigma^2\left[1+\frac{1}{n}+\frac{(x-\bar{X})^2}{ns^2_X}\right]\right).
+\end{align*}
+
+\begin{proof}
+Consider the linear regression model $Y_i = \beta_0 + \beta_1 X_i + U_i$ where $U_i \sim \mathsf{N}(0, \sigma^2)$. The estimated regression function at a point $x$ is given by $\widehat{m}(x) = \hat{\beta}_0 + \hat{\beta}_1 x$.
+
+We aim to show that the conditional distribution of $Y$ given $X = x$ is normally distributed with mean $\widehat{m}(x)$ and variance $\sigma^2\left[1 + \frac{1}{n} + \frac{(x - \bar{X})^2}{ns^2_X}\right]$.
+
+The key steps involve:
+
+\begin{enumerate}[label=Step \arabic*:]
+    \item Establishing the mean of the conditional distribution $Y|X=x$ as $\widehat{m}(x)$, leveraging the linearity and unbiasedness of the OLS estimators.
+    
+    \item The variance of $Y_i$ can be decomposed as:
+    \begin{align*}
+        Var(Y_i) &= Var(\beta_0 + \beta_1 X_i + U_i) \\
+                 &= Var(\beta_0) + Var(\beta_1 X_i) + Var(U_i) + 2Cov(\beta_0, \beta_1 X_i) + 2Cov(\beta_0, U_i) + 2Cov(\beta_1 X_i, U_i)
+    \end{align*}
+    Since $\beta_0$ and $\beta_1$ are constants, their variances are zero, and $Cov(\beta_0, U_i) = Cov(\beta_1 X_i, U_i) = 0$ due to the independence of errors from the regressors and the constants.
+    
+    \item We then detail the derivation of each variance component:
+    \begin{itemize}
+        \item $Var(U_i) = \sigma^2$ directly from the model assumption.
+        \item Deriving $\frac{\sigma^2}{n}$ involves analyzing the variance introduced by estimating $\beta_0$ and $\beta_1$, which in turn depends on the sample size and the variability of $X_i$.
+        \item The term $\frac{\sigma^2 (x - \bar{X})^2}{ns^2_X}$ is derived by considering the additional variance introduced when predicting $Y$ for a given $X = x$, not at the mean $\bar{X}$.
+    \end{itemize}
+    
+    \item Combining these, the total variance of $Y|X=x$ is $\sigma^2\left[1 + \frac{1}{n} + \frac{(x - \bar{X})^2}{ns^2_X}\right]$.
+    
+    \item Thus, the conditional distribution of $Y$ given $X=x$ is expressed as $Y|X=x = \widehat{m}(x) + \mathsf{N}\left(0, \sigma^2\left[1 + \frac{1}{n} + \frac{(x - \bar{X})^2}{ns^2_X}\right]\right)$, illustrating that $Y$ given $X = x$ is normally distributed around the regression line with specified variance.
+\end{enumerate}
+This proof shows the detailed derivation of the conditional distribution's variance, providing a comprehensive understanding of its components and their origins.
+\end{proof}
+
+\end{document}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Results</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data Description</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="summary.html">Executive Summary</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Statistical Test Results</h2>
+            <p>In our analysis, we performed a t-test to compare mean total wins between conference and non-conference games. Our null hypothesis stated no difference in means (H0 : µconference = µnon-conference), while the alternative hypothesis suggested a significant difference (HA : µconference ≠ µnon-conference). The t-test results showed a t-value of -5.7939 with a p-value of 7.14e-09, leading us to reject the null hypothesis. We conclude that there is a statistically significant difference in mean total wins, with conference games having a lower mean than non-conference games.</p>
+            <h3>Modeling and Predictions</h3>
+            <p>We used linear regression to model the relationship between total wins and various predictors such as home and away ELO ratings, conference game status, and attendance. Our model achieved an R-squared value of 0.4136, indicating that around 41% of the variability in total wins is explained by the model.</p>
+            <pre><code>lm_model <- lm(total_wins ~ home_pregame_elo + away_pregame_elo + as.factor(conference_game) + attendance + I(week^2), data = merged_df)
+summary(lm_model)
+</code></pre>
+            <h3>Graphs</h3>
+            <p>Model performance and residual plots:</p>
+            <img src="images/unnamed-chunk-11-1.png" alt="Residuals vs Fitted">
+            <img src="images/unnamed-chunk-13-1.png" alt="Cook's Distance Plot">
+            <img src="images/unnamed-chunk-16-1.png" alt="Box-Cox Transformation">
+            <img src="images/unnamed-chunk-19-1.png" alt="Residuals vs Leverage">
+            <img src="images/unnamed-chunk-26-1.png" alt="Pairwise Relationships">
+            <img src="images/unnamed-chunk-26-2.png" alt="Histogram of Total Wins">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Charles Ancel</p>
+    </footer>
+</body>
+</html>

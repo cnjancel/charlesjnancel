@@ -1,0 +1,991 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Homework 4},
+  pdfauthor={Charles Ancel},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Homework 4}
+\author{Charles Ancel}
+\date{9/21/2023}
+
+\begin{document}
+\maketitle
+
+\section{Homework Instructions}\label{homework-instructions}
+
+\textbf{Make sure to add your name to the header of the document. When
+submitting the assignment on Gradescope, be sure to assign the
+appropriate pages of your submission to each Exercise.}
+
+For questions that require code, please create or use the code chunk
+directly below the question and type your code there. Your knitted pdf
+will then show both the code and the output, so that we can assess your
+understanding and award any partial credit.
+
+For written questions, please provide your answer after the indicated
+\emph{Answer} prompt.
+
+You are encouraged to knit your file as you work, to check that your
+coding and formatting are done so appropriately. This will also help you
+identify and locate any errors more easily.
+
+\section{Homework Setup}\label{homework-setup}
+
+We'll use the following packages for this homework assignment.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Exercise 1: Formatting {[}5
+points{]}}\label{exercise-1-formatting-5-points}
+
+The first five points of the assignment will be earned for properly
+formatting your final document. Check that you have:
+
+\begin{itemize}
+\tightlist
+\item
+  included your name on the document
+\item
+  properly assigned pages to exercises on Gradescope
+\item
+  select \textbf{page 1 (with your name)} and this page for this
+  exercise (Exercise 1)
+\item
+  all code is printed and readable for each question
+\item
+  generated a pdf file
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Exercise 2: Mammalian Sleep Model {[}23
+points{]}}\label{exercise-2-mammalian-sleep-model-23-points}
+
+We'll use the \texttt{msleep} dataset from the \texttt{ggplot2} package
+for this assignment. At first glance of the \texttt{msleep} data, you
+may notice some missing values encoded as NAs. For this question, we
+will use the sleep (\texttt{sleep\_total}) and bodyweight of an animal,
+which have no missing values.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?msleep}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{part a}\label{part-a}
+
+I wonder about how the amount of sleep required by an animal changes
+based on the bodyweight of an animal. For example, do animals who weigh
+more require more sleep. What would be the primary purpose of fitting a
+model like this? \textbf{Bold your answer} below by surrounding your
+selection with two asterisks ``**``.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  predicting an observation \textbf{(b) explaining a structure/system}
+\end{enumerate}
+
+\subsection{part b}\label{part-b}
+
+Fit a linear model to estimate the sleep required based on the
+bodyweight. Print the summary of this linear model. Then, write the
+fitted model based on this output. Be sure to use proper notation.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sleep\_model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(sleep\_total }\SpecialCharTok{\textasciitilde{}}\NormalTok{ bodywt, }\AttributeTok{data=}\NormalTok{msleep)}
+
+\FunctionTok{summary}\NormalTok{(sleep\_model)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = sleep_total ~ bodywt, data = msleep)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -7.7008 -2.3787 -0.4268  3.2732  9.1731 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) 10.7269205  0.4773797  22.470  < 2e-16 ***
+## bodywt      -0.0017647  0.0005971  -2.956  0.00409 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 4.254 on 81 degrees of freedom
+## Multiple R-squared:  0.09735,    Adjusted R-squared:  0.08621 
+## F-statistic: 8.736 on 1 and 81 DF,  p-value: 0.004085
+\end{verbatim}
+
+\textbf{Answer:} - The fitted linear model is: \[
+  \text{{sleep\_total}} = 10.7269 - 0.0017647 \times \text{{bodywt}}
+  \]
+
+\begin{itemize}
+\item
+  \(\beta_0\) (Intercept): 10.7269205
+\item
+  \(\beta_1\) (Coefficient of bodywt): -0.0017647
+\item
+  The t-value for the intercept is 22.470 and is highly significant
+  (p-value \textless{} 2e-16).
+\item
+  The t-value for the body weight is -2.956 and is also significant
+  (p-value = 0.00409).
+\item
+  The coefficient of determination (\(R^2\)) is 0.09735. This means that
+  approximately 9.735\% of the variability in total sleep can be
+  explained by the body weight of the animals.
+\end{itemize}
+
+\subsection{part c}\label{part-c}
+
+Interpret the intercept for this model.
+
+\textbf{Answer:}
+
+Intercept (\(\beta_0\)) is 10.7269. It means for an animal with a body
+weight of 0, the predicted total sleep is about 10.7269 hours. However,
+an animal with a weight of 0 isn't realistic.
+
+\subsection{part d}\label{part-d}
+
+Is the intercept for this model meaningful? Is it reliable? Explain.
+
+\textbf{Answer:} Given the intercept is 10.7269, it represents the
+predicted sleep for an animal with a body weight of 0.
+
+\textbf{Meaningfulness}: The intercept isn't meaningful in a biological
+context, as animals can't have a weight of 0.
+
+\textbf{Reliability}: While statistically significant, the intercept's
+real-world applicability is limited due to the aforementioned reason.
+
+\subsection{part e}\label{part-e}
+
+Interpret the slope for this model.
+
+\textbf{Answer:}
+
+\textbf{part e}: Interpret the slope for the model.
+
+The slope (coefficient of \texttt{bodywt}) is \(-0.0017647\).
+
+\textbf{Interpretation}: For every 1 unit increase in body weight, the
+predicted total sleep decreases by approximately 0.0017647 hours.
+
+\subsection{part f}\label{part-f}
+
+Report and interpret the coefficient of determination for this
+relationship.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{r\_squared }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(sleep\_model)}\SpecialCharTok{$}\NormalTok{r.squared}
+\NormalTok{r\_squared}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.09735061
+\end{verbatim}
+
+\textbf{Answer:} Multiple \(R^2\) is 0.09735.
+
+\textbf{Interpretation}: Approximately 9.735\% of the variability in
+total sleep can be explained by the body weight of the animals.
+
+\subsection{part g}\label{part-g}
+
+Based on part f, calculate the correlation.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{r }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(r\_squared)}
+
+\ControlFlowTok{if}\NormalTok{ (}\FunctionTok{coef}\NormalTok{(sleep\_model)[}\StringTok{"bodywt"}\NormalTok{] }\SpecialCharTok{\textless{}} \DecValTok{0}\NormalTok{) \{}
+\NormalTok{  r }\OtherTok{\textless{}{-}} \SpecialCharTok{{-}}\NormalTok{r}
+\NormalTok{\}}
+\NormalTok{r}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -0.3120106
+\end{verbatim}
+
+\textbf{Answer:} The value \(-0.3120106\) indicates a weak negative
+linear relationship between \texttt{bodywt} and \texttt{sleep\_total}.
+This means that as body weight increases, the total sleep tends to
+decrease slightly, consistent with the negative slope we observed in the
+regression model.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Exercise 3: Hand Calculations {[}30
+points{]}}\label{exercise-3-hand-calculations-30-points}
+
+We've used \texttt{R} to generate the summary statistics for the
+\texttt{msleep} dataset so far. Now let's take a moment and confirm some
+of these calculations ``by hand'' (still using \texttt{R} to perform the
+calculations).
+
+\subsection{part a}\label{part-a-1}
+
+Calculate \(\bar{x}\), \(\bar{y}\), \(S_{xx}\), and \(S_{xy}\) for the
+msleep dataset. Clearly label and print your results.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x\_bar }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(msleep}\SpecialCharTok{$}\NormalTok{bodywt, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{y\_bar }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(msleep}\SpecialCharTok{$}\NormalTok{sleep\_total, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{S\_xx }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{((msleep}\SpecialCharTok{$}\NormalTok{bodywt }\SpecialCharTok{{-}}\NormalTok{ x\_bar)}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{S\_xy }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{((msleep}\SpecialCharTok{$}\NormalTok{bodywt }\SpecialCharTok{{-}}\NormalTok{ x\_bar) }\SpecialCharTok{*}\NormalTok{ (msleep}\SpecialCharTok{$}\NormalTok{sleep\_total }\SpecialCharTok{{-}}\NormalTok{ y\_bar), }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{x\_bar}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 166.1363
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y\_bar}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10.43373
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{S\_xx}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 50767575
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{S\_xy}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -89590.99
+\end{verbatim}
+
+\subsection{part b}\label{part-b-1}
+
+Calculate the estimates for \(\beta_0\) and \(\beta_1\), using the
+values calculated in part a. Clearly label and print your results.
+Compare these estimates to what you found in Exercise 2b.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{beta\_1 }\OtherTok{\textless{}{-}}\NormalTok{ S\_xy }\SpecialCharTok{/}\NormalTok{ S\_xx}
+\NormalTok{beta\_0 }\OtherTok{\textless{}{-}}\NormalTok{ y\_bar }\SpecialCharTok{{-}}\NormalTok{ beta\_1 }\SpecialCharTok{*}\NormalTok{ x\_bar}
+
+\NormalTok{beta\_0}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10.72692
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{beta\_1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -0.001764729
+\end{verbatim}
+
+\textbf{Comparison:}
+
+From the manual calculations (part b of Exercise 3): 1. \(\beta_0\)
+(Intercept): 10.72692 2. \(\beta_1\) (Coefficient of \texttt{bodywt}):
+-0.001764729
+
+From the linear model in Exercise 2b: 1. \(\beta_0\) (Intercept):
+10.7269205 2. \(\beta_1\) (Coefficient of \texttt{bodywt}): -0.0017647
+
+Comparison: The values of \(\beta_0\) and \(\beta_1\) from the manual
+calculations match very closely with the values from the linear
+regression model in Exercise 2b. This is expected, as both methods aim
+to estimate the same linear relationship between \texttt{bodywt} and
+\texttt{sleep\_total}.
+
+In summary, the manually calculated estimates for the intercept and
+slope are consistent with the results obtained from the linear
+regression model.
+
+\subsection{part c}\label{part-c-1}
+
+Calculate the residuals for the dataset. You can use any built-in
+\texttt{R} function to generate the fitted values of the dataset, but
+you should not use a built-in function to calculate the residuals. No
+need to print all of the residuals, but please do print the first few
+residuals.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y\_hat }\OtherTok{\textless{}{-}}\NormalTok{ beta\_0 }\SpecialCharTok{+}\NormalTok{ beta\_1 }\SpecialCharTok{*}\NormalTok{ msleep}\SpecialCharTok{$}\NormalTok{bodywt}
+
+\NormalTok{residuals }\OtherTok{\textless{}{-}}\NormalTok{ msleep}\SpecialCharTok{$}\NormalTok{sleep\_total }\SpecialCharTok{{-}}\NormalTok{ y\_hat}
+
+\FunctionTok{head}\NormalTok{(residuals)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1.461316  6.273927  3.675462  4.173113 -5.668083  3.679874
+\end{verbatim}
+
+\subsection{part d}\label{part-d-1}
+
+Calculate the SSR, SSE, and SST for the model. You may use anything that
+you have calculated in the earlier parts of this question. Clearly label
+and print these three values.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SSR }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{((y\_hat }\SpecialCharTok{{-}}\NormalTok{ y\_bar)}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}
+\NormalTok{SSE }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(residuals}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}
+\NormalTok{SST }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{((msleep}\SpecialCharTok{$}\NormalTok{sleep\_total }\SpecialCharTok{{-}}\NormalTok{ y\_bar)}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}
+
+\NormalTok{SSR}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 158.1038
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SSE}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1465.962
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SST}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1624.066
+\end{verbatim}
+
+\subsection{part e}\label{part-e-1}
+
+Given the formulas for these quantities: - \(SST\) represents the total
+variability in the response variable (\texttt{sleep\_total}). - \(SSR\)
+represents the variability in the response variable that is explained by
+the predictor (\texttt{bodywt}). - \(SSE\) represents the variability in
+the response that is not explained by the predictor; it's the error or
+the unexplained variability.
+
+The relationship between them is: \[ SST = SSR + SSE \]
+
+This is evident from the results provided: 1624.066 (SST) ≈ 158.1038
+(SSR) + 1465.962 (SSE)
+
+The relationship indicates that the total variability in the response
+can be partitioned into the variability that's explained by the model
+(SSR) and the variability that's unexplained (SSE). \#\# part f
+
+Calculate the coefficient of determination from the values calculated in
+part d.~How does this compare to what you found in Exercise 2d (based on
+Exercise 2b)?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{R\_squared\_calculated }\OtherTok{\textless{}{-}}\NormalTok{ SSR }\SpecialCharTok{/}\NormalTok{ SST}
+
+\NormalTok{R\_squared\_calculated}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.09735061
+\end{verbatim}
+
+\textbf{Comparison:}
+
+The calculated \(R^2\) from \textbf{part f} is \(0.09735061\).
+
+From Exercise 2f, the \(R^2\) value was \(0.09735\).
+
+The two values match, which is expected since both methods aim to
+estimate the proportion of the total variation in the response variable
+(\texttt{sleep\_total}) that is explained by the predictor
+(\texttt{bodywt}).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Exercise 4: Inference for the Mammal Sleep Model {[}21
+points{]}}\label{exercise-4-inference-for-the-mammal-sleep-model-21-points}
+
+\subsection{part a}\label{part-a-2}
+
+For the Chinchilla (bodyweight of 0.420), calculate the predicted total
+amount of sleep and the corresponding residual.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{chinchilla\_bodywt }\OtherTok{\textless{}{-}} \FloatTok{0.420}
+\NormalTok{predicted\_sleep }\OtherTok{\textless{}{-}}\NormalTok{ beta\_0 }\SpecialCharTok{+}\NormalTok{ beta\_1 }\SpecialCharTok{*}\NormalTok{ chinchilla\_bodywt}
+
+\NormalTok{predicted\_sleep}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10.72618
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{chinchilla\_observed\_sleep }\OtherTok{\textless{}{-}}\NormalTok{ msleep}\SpecialCharTok{$}\NormalTok{sleep\_total[msleep}\SpecialCharTok{$}\NormalTok{name }\SpecialCharTok{==} \StringTok{"Chinchilla"}\NormalTok{]}
+
+\NormalTok{chinchilla\_residual }\OtherTok{\textless{}{-}}\NormalTok{ chinchilla\_observed\_sleep }\SpecialCharTok{{-}}\NormalTok{ predicted\_sleep}
+
+\NormalTok{chinchilla\_residual}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.773821
+\end{verbatim}
+
+\textbf{Answer:}
+
+\subsection{part b}\label{part-b-2}
+
+Calculate the 80\% confidence interval for the slope of this model.
+\emph{Note: the multiplier (\(t^{*}\)) is 1.292 for this situation.}
+Make sure to show your setup for the calculation. Report the 80\%
+confidence interval below. Based on this confidence interval, is -0.002
+a plausible value for the slope predicting sleep from body weight for
+all mammals?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{std\_error\_slope }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(sleep\_model)}\SpecialCharTok{$}\NormalTok{coefficients[}\StringTok{"bodywt"}\NormalTok{, }\StringTok{"Std. Error"}\NormalTok{]}
+
+\NormalTok{alpha }\OtherTok{\textless{}{-}} \FloatTok{0.2}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{nrow}\NormalTok{(msleep) }\SpecialCharTok{{-}} \DecValTok{2}
+\NormalTok{t\_critical }\OtherTok{\textless{}{-}} \FunctionTok{qt}\NormalTok{(}\DecValTok{1} \SpecialCharTok{{-}}\NormalTok{ alpha}\SpecialCharTok{/}\DecValTok{2}\NormalTok{, df)}
+
+\NormalTok{margin\_error }\OtherTok{\textless{}{-}}\NormalTok{ t\_critical }\SpecialCharTok{*}\NormalTok{ std\_error\_slope}
+
+\NormalTok{lower\_bound }\OtherTok{\textless{}{-}}\NormalTok{ beta\_1 }\SpecialCharTok{{-}}\NormalTok{ margin\_error}
+\NormalTok{upper\_bound }\OtherTok{\textless{}{-}}\NormalTok{ beta\_1 }\SpecialCharTok{+}\NormalTok{ margin\_error}
+
+\FunctionTok{c}\NormalTok{(lower\_bound, upper\_bound)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -0.0025361978 -0.0009932593
+\end{verbatim}
+
+\textbf{Answer:} The interval is:
+\[ -0.0025361978 \leq \beta_1 \leq -0.0009932593 \]
+
+Given this interval, the value -0.002 falls within the range. This means
+that -0.002 is a plausible value for the slope when predicting sleep
+from body weight for all mammals, based on the 80\% confidence interval.
+
+\subsection{part c}\label{part-c-2}
+
+Suppose that a previous study had found that for each increase in the
+body weight by 1 kg, the estimated average sleep time decreased by
+-0.01, on average.
+
+Might this same relationship be true for all mammals, including those in
+our data? Or is there evidence that this relationship for mammals is
+different from the one for reptiles?
+
+In other words, use a t-test to test:
+
+\begin{itemize}
+\tightlist
+\item
+  \(H_0: \beta_1 = -0.01\)
+\item
+  \(H_1: \beta_1 \neq -0.01\)
+\end{itemize}
+
+Calculate and report the value of your test statistic. Then, based on
+the size of your test statistic, anticipate what the decision for the
+statistical test would be with a significance level of
+\(\alpha = 0.05\).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{t\_statistic }\OtherTok{\textless{}{-}}\NormalTok{ (beta\_1 }\SpecialCharTok{{-}}\NormalTok{ (}\SpecialCharTok{{-}}\FloatTok{0.01}\NormalTok{)) }\SpecialCharTok{/}\NormalTok{ std\_error\_slope}
+
+\NormalTok{p\_value }\OtherTok{\textless{}{-}} \DecValTok{2} \SpecialCharTok{*}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{{-}} \FunctionTok{pt}\NormalTok{(}\FunctionTok{abs}\NormalTok{(t\_statistic), df))}
+
+\FunctionTok{c}\NormalTok{(t\_statistic, p\_value)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 13.7928  0.0000
+\end{verbatim}
+
+\textbf{Answer:} Here's the interpretation:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(t\)-statistic: 13.7928
+\item
+  \(p\)-value: 0.0000 (rounded, so it's very close to 0)
+\end{enumerate}
+
+The results indicate that the relationship between body weight and sleep
+duration for mammals is statistically different from the hypothesized
+value for reptiles. The p-value is very close to 0, so we reject the
+null hypothesis.
+
+\subsection{part d}\label{part-d-2}
+
+If a news article used this data to make the claim ``Gaining weight will
+make you sleep less!'' would you agree with that conclusion? Why or why
+not?
+
+\emph{There is not an objectively right answer for this question.}
+Consider all of the information that we've compiled and calculations
+that we've performed to help guide your response.
+
+\textbf{Answer:} The data indicates a negative association between body
+weight and sleep duration for mammals. However, the relationship is
+weak, and correlation doesn't imply causation. While weight might
+influence sleep to some extent, it's not the sole factor. Claiming
+``Gaining weight will make you sleep less!'' oversimplifies the findings
+and doesn't account for other potential influencing factors.
+
+\subsection{part e}\label{part-e-2}
+
+For the default hypothesis test for the intercept, report the following:
+
+\begin{itemize}
+\tightlist
+\item
+  The null and alternative hypotheses (in symbols)
+\item
+  The value of the test statistic
+\item
+  The \emph{p}-value of the test
+\end{itemize}
+
+Be sure to report this information in text below. No need to calculate
+any values directly for this part; observing and identifying appropriate
+information from R output is sufficient.
+
+\textbf{Answer:} For the default hypothesis test for the intercept, the
+information you need can be extracted from the output of the
+\texttt{lm()} function, specifically from the summary of the linear
+model.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{The null and alternative hypotheses (in symbols) for the
+  intercept}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(H_0: \beta_0 = 0\)
+  \item
+    \(H_1: \beta_0 \neq 0\)
+  \end{itemize}
+
+  This means that the null hypothesis assumes there's no effect
+  (intercept is zero), while the alternative hypothesis posits that
+  there is an effect (intercept is different from zero).
+\item
+  \textbf{The value of the test statistic}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    You'll find this value in the summary output of the linear model
+    under the ``Coefficients'' section, specifically in the row for
+    ``(Intercept)'' and the column ``t value.''
+  \end{itemize}
+\item
+  \textbf{The p-value of the test}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Similarly, this value can be found in the summary output of the
+    linear model under the ``Coefficients'' section, in the row for
+    ``(Intercept)'' and the column
+    ``Pr(\textgreater\textbar t\textbar).''
+  \end{itemize}
+\end{enumerate}
+
+From the output you provided for Exercise 2b:
+
+\begin{itemize}
+\tightlist
+\item
+  Test statistic value for the intercept: 22.470
+\item
+  \(p\)-value for the intercept: \textless{} 2e-16 (which is essentially
+  0)
+\end{itemize}
+
+Now looking at our hypothesis and responding to the question: - Null
+Hypothesis \(H_0\): \(\beta_0 = 0\) - Alternative Hypothesis \(H_1\):
+\(\beta_0 \neq 0\) - Test statistic value for the intercept: 22.470 -
+\(p\)-value for the intercept: \textless{} 2e-16 (essentially 0)
+
+Given the extremely low p-value, there's strong evidence against the
+null hypothesis, suggesting the intercept is different from zero.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Exercise 5: Assumptions for the Mammal Sleep Model {[}21
+points{]}}\label{exercise-5-assumptions-for-the-mammal-sleep-model-21-points}
+
+\subsection{part a}\label{part-a-3}
+
+For the fitted model to be appropriate and for the inference procedures
+from Exercise 4 to be valid, certain assumptions must be met. First,
+write out the four assumptions.
+
+\textbf{Answer:} For the fitted linear regression model to be
+appropriate and for the inference procedures to be valid, the four
+primary assumptions are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Linearity}: The relationship between the independent
+  variable(s) and the dependent variable is linear.
+\item
+  \textbf{Independence}: The residuals are independent. In other words,
+  the residuals from one prediction have no effect on the residuals from
+  another prediction.
+\item
+  \textbf{Homoscedasticity (Constant Variance)}: The residuals have
+  constant variance at every level of the independent variable(s).
+\item
+  \textbf{Normality}: The residuals are approximately normally
+  distributed.
+\item
+  Linearity: The relationship between the predictor(s) and the response
+  is linear.
+\item
+  Independence: Observations are independent of each other.
+\item
+  Homoscedasticity: The variance of the residuals is constant across all
+  levels of the independent variable(s).
+\item
+  Normality: The residuals are approximately normally distributed.
+\end{enumerate}
+
+\subsection{part b}\label{part-b-3}
+
+Which of these four assumptions cannot be checked with a plot?
+
+\textbf{Answer:} Out of the four assumptions, the \textbf{Independence}
+assumption is the one that cannot be directly checked with a plot. While
+scatter plots and residual plots can provide insights into linearity,
+homoscedasticity, and normality (e.g., through Q-Q plots), the
+independence of observations is often based on the study design and
+domain knowledge.
+
+The assumption of Independence cannot be directly checked with a plot.
+
+\subsection{part c}\label{part-c-3}
+
+Create the two plots (it's ok if you end up with 4 plots) that we can
+use to check our assumptions for the mammal sleep data. Interpret these
+two plots. Be sure to specify if the assumptions seem reasonable and
+describe what you see that supports your conclusions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow=}\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+
+\FunctionTok{plot}\NormalTok{(sleep\_model}\SpecialCharTok{$}\NormalTok{fitted.values, }\FunctionTok{residuals}\NormalTok{(sleep\_model), }
+     \AttributeTok{main=}\StringTok{"Residuals vs. Fitted"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"Fitted values"}\NormalTok{, }\AttributeTok{ylab=}\StringTok{"Residuals"}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{h=}\DecValTok{0}\NormalTok{, }\AttributeTok{col=}\StringTok{"red"}\NormalTok{)}
+
+\FunctionTok{qqnorm}\NormalTok{(}\FunctionTok{residuals}\NormalTok{(sleep\_model), }\AttributeTok{main=}\StringTok{"Normal Q{-}Q Plot"}\NormalTok{)}
+\FunctionTok{qqline}\NormalTok{(}\FunctionTok{residuals}\NormalTok{(sleep\_model))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Homework4_files/figure-latex/exercise5c-1.pdf}
+
+\textbf{Answer:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Residuals vs.~Fitted Values}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The residuals are scattered without a clear pattern around zero,
+    suggesting a linear relationship between predictors and response.
+  \item
+    The consistent spread across the fitted values indicates
+    homoscedasticity, meaning the variance remains constant.
+  \end{itemize}
+\item
+  \textbf{Normal Q-Q Plot}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Most data points align with the diagonal, implying residuals are
+    approximately normally distributed.
+  \item
+    Some deviations at the tails hint at slight non-normality, but these
+    are minor.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the plots suggest the linear regression assumptions are
+predominantly satisfied for the mammal sleep data, with minor concerns
+about perfect normality.
+
+\subsection{part d}\label{part-d-3}
+
+There are two additional statistical tests that can be used to help
+assess our assumptions for the linear model. Perform these two tests
+here. Then, based just on these two tests, assess the corresponding
+assumptions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lmtest)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: zoo
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'zoo'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     as.Date, as.Date.numeric
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(stats)}
+
+\NormalTok{bp\_test }\OtherTok{\textless{}{-}} \FunctionTok{bptest}\NormalTok{(sleep\_model)}
+
+\NormalTok{shapiro\_test }\OtherTok{\textless{}{-}} \FunctionTok{shapiro.test}\NormalTok{(}\FunctionTok{residuals}\NormalTok{(sleep\_model))}
+
+\FunctionTok{list}\NormalTok{(}\AttributeTok{Breusch\_Pagan\_Test =}\NormalTok{ bp\_test, }\AttributeTok{Shapiro\_Wilk\_Test =}\NormalTok{ shapiro\_test)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $Breusch_Pagan_Test
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  sleep_model
+## BP = 0.20069, df = 1, p-value = 0.6542
+## 
+## 
+## $Shapiro_Wilk_Test
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  residuals(sleep_model)
+## W = 0.97894, p-value = 0.1908
+\end{verbatim}
+
+\textbf{Answer:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Breusch-Pagan Test} (Homoscedasticity):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Test Statistic (BP): \(0.20069\)
+  \item
+    \(p\)-value: \(0.6542\)
+  \end{itemize}
+
+  The Breusch-Pagan test suggests that the residuals have constant
+  variance across levels of the independent variable, as the \(p\)-value
+  of \(0.6542\) is greater than \(0.05\). This means the assumption of
+  homoscedasticity is met.
+\item
+  \textbf{Shapiro-Wilk Test} (Normality of Residuals):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Test Statistic (W): \(0.97894\)
+  \item
+    \(p\)-value: \(0.1908\)
+  \end{itemize}
+
+  The Shapiro-Wilk test indicates that the residuals are approximately
+  normally distributed. The \(p\)-value of \(0.1908\) (greater than
+  \(0.05\)) suggests no significant deviation from normality.
+\end{enumerate}
+
+In conclusion, based on these two tests, the assumptions of
+homoscedasticity and normality for the mammal sleep data linear
+regression model appear to be satisfied.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\end{document}

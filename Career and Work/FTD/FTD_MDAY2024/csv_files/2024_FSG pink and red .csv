@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,69,,89,,109,,130
+,Total SRP of Bundle,,69,,89,,109,,130
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,69,,89,,109,,130
+,Less Commission (20%),,-13.8,,-17.8,,-21.8,,-26
+,Less C/H Fee (9%),,-6.21,,-8.01,,-9.81,,-11.7
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-6.01,,-9.379999999999999,,-10.879999999999997,,-11.499999999999998
+,Total Gross Margin,,19.740000000000002,,30.570000000000004,,43.27000000000001,,57.56
+,Gross Margin %,,0.28608695652173916,,0.34348314606741576,,0.3969724770642203,,0.4427692307692308
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Red,Red 50 cm Roses,1,1.6,2,3.2,2,3.2,2,3.2
+Light Pink,Standard Carnations,2,1.24,3,1.8599999999999999,4,2.48,4,2.48
+Red,Standard Carnations,2,1.24,2,1.24,3,1.8599999999999999,4,2.48
+Red,Alstroemeria stems,1,0.89,2,1.78,2,1.78,2,1.78
+Pink,Salal tips,1,0.26,2,0.52,3,0.78,3,0.78
+,Salal tips,3,0.78,3,0.78,3,0.78,3,0.78
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,6.01,,9.379999999999999,,10.879999999999997,,11.499999999999998
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

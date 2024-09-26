@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,89.99,,99.99,,109.99,,
+,Total SRP of Bundle,,89.99,,99.99,,109.99,,
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,89.99,,99.99,,109.99,,0
+,Less Commission (20%),,-17.998,,-19.998,,-21.998,,0
+,Less C/H Fee (9%),,-8.0991,,-8.999099999999999,,-9.899099999999999,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-8.999,,-9.999,,-10.999,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.91,,-2.91,,-2.91,,-2.91
+,Less Floral Cost,,-13.969999999999999,,-14.93,,-17.54,,0
+,Total Gross Margin,,17.273899999999987,,22.41389999999999,,25.903899999999986,,-23.650000000000002
+,Gross Margin %,,0.19195355039448814,,0.22416141614161408,,0.23551141012819335,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Pink,Asiatic Lily stems,3,4.41,3,4.41,3,4.41,,0
+Red,50 cm Roses,1,0.96,2,1.92,3,2.88,,0
+Pink,50 cm Roses,2,1.92,2,1.92,3,2.88,,0
+Pink,Alstroemeria stems,4,2.48,4,2.48,4,2.48,,0
+Purple,Waxflower stems,2,2.82,2,2.82,2,2.82,,0
+,Variegated Pittosporum stems,2,1.38,2,1.38,3,2.07,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,13.969999999999999,,14.93,,17.54,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,Ribbon,0.41,0.41,0.41,0.41,0.41,0.41,0.41,0.41
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.91,,2.91,,2.91,,2.91

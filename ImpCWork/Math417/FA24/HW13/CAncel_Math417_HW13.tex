@@ -1,0 +1,251 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+
+\title{Math 417, Homework 13}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\section*{Chapter V.27}
+\begin{exercise}{2} Find all prime ideals and all maximal ideals of $\Z_12$.
+    \begin{proof}
+    We will examine the proper ideals of \(\mathbb{Z}_{12}\) and determine which are prime and which are maximal. The proper ideals are \(\langle 0 \rangle\), \(\langle 2 \rangle\), \(\langle 3 \rangle\), \(\langle 4 \rangle\), and \(\langle 6 \rangle\).
+    
+    \begin{itemize}
+        \item \(\langle 0 \rangle\): The quotient ring \(\mathbb{Z}_{12}/\langle 0 \rangle\) is isomorphic to \(\mathbb{Z}_{12}\), which is not an integral domain. Thus, \(\langle 0 \rangle\) is not prime.
+    
+        \item \(\langle 2 \rangle\): The quotient ring \(\mathbb{Z}_{12}/\langle 2 \rangle\) is isomorphic to \(\mathbb{Z}_2\), which is a field. Therefore, \(\langle 2 \rangle\) is a maximal ideal, and hence prime.
+    
+        \item \(\langle 3 \rangle\): The quotient ring \(\mathbb{Z}_{12}/\langle 3 \rangle\) is isomorphic to \(\mathbb{Z}_3\), which is a field. Therefore, \(\langle 3 \rangle\) is a maximal ideal, and hence prime.
+    
+        \item \(\langle 4 \rangle\): The quotient ring \(\mathbb{Z}_{12}/\langle 4 \rangle\) is isomorphic to \(\mathbb{Z}_4\), which is not an integral domain. Thus, \(\langle 4 \rangle\) is not prime.
+    
+        \item \(\langle 6 \rangle\): The quotient ring \(\mathbb{Z}_{12}/\langle 6 \rangle\) is isomorphic to \(\mathbb{Z}_6\), which is not an integral domain. Thus, \(\langle 6 \rangle\) is not prime.
+    \end{itemize}
+    In conclusion, the only prime ideals of \(\mathbb{Z}_{12}\) are \(\langle 2 \rangle\) and \(\langle 3 \rangle\), and they are also maximal. There are no other prime or maximal ideals in \(\mathbb{Z}_{12}\).
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{8} Find all $c \in Z_5$ such that $\Z_5[x]/\langle x2 + x + c\rangle$ is a field.
+\begin{proof}
+We want to find all \( c \in \mathbb{Z}_5 \) such that the quotient ring \( \mathbb{Z}_5[x]/\langle x^2 + x + c \rangle \) is a field. This occurs if and only if the polynomial \( x^2 + x + c \) is irreducible over \( \mathbb{Z}_5 \). A polynomial of degree 2 is irreducible over a field if it does not have any roots in that field.
+
+We check for zeros of \( x^2 + x + c \) in \( \mathbb{Z}_5 \) for each \( c \in \mathbb{Z}_5 \). 
+
+\begin{itemize}
+    \item For \( c = 0 \), the polynomial \( x^2 + x \) has zeros at \( x = 0 \) and \( x = 4 \).
+    \item For \( c = 1 \), the polynomial \( x^2 + x + 1 \) does not have any zeros in \( \mathbb{Z}_5 \).
+    \item For \( c = 2 \), the polynomial \( x^2 + x + 2 \) does not have any zeros in \( \mathbb{Z}_5 \).
+    \item For \( c = 3 \), the polynomial \( x^2 + x + 3 \) has zeros at \( x = 1 \) and \( x = 3 \).
+    \item For \( c = 4 \), the polynomial \( x^2 + x + 4 \) has a zero at \( x = 2 \).
+\end{itemize}
+
+Therefore, \( \mathbb{Z}_5[x]/\langle x^2 + x + c \rangle \) is a field if and only if \( c = 1 \) or \( c = 2 \). These are the values for which the polynomial \( x^2 + x + c \) is irreducible over \( \mathbb{Z}_5 \).
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{14} Mark each of the following true or false.
+    \begin{enumerate}[label=\alph*.]
+\item Every prime ideal of every commutative ring with unity is a maximal ideal.
+\item Every maximal ideal of every commutative ring with unity is a prime ideal.
+\item $\Q$ is its own prime subfield.
+\item The prime subfield of $\C$ is $\R$.
+\item Every field contains a subfield isomorphic to a prime field.
+\item A ring with zero divisors may contain one of the prime fields as a subring.
+\item Every field of characteristic zero contains a subfield isomorphic to $\Q$.
+\item Let $F$ be a field. Since F[x] has no divisors of 0, every ideal of F[x] is a prime ideal.
+\item Let $F$ be a field. Every ideal of F[x] is a principal ideal.
+\item Let $F$ be a field. Every principal ideal of F[x] is a maximal ideal.
+    \end{enumerate}
+    
+\begin{proof} Analyzing each statement for truthfulness:
+
+\begin{enumerate}[label=\alph*.]
+    \item \textbf{Every prime ideal of every commutative ring with unity is a maximal ideal.} \\
+    False. Prime ideals are not necessarily maximal in general.
+
+    \item \textbf{Every maximal ideal of every commutative ring with unity is a prime ideal.} \\
+    True. In commutative rings, maximal ideals are always prime.
+
+    \item \textbf{\(\mathbb{Q}\) is its own prime subfield.} \\
+    True. \(\mathbb{Q}\) is a prime field as it has no proper subfields.
+
+    \item \textbf{The prime subfield of \(\mathbb{C}\) is \(\mathbb{R}\).} \\
+    False. The prime subfield of \(\mathbb{C}\) is \(\mathbb{Q}\).
+
+    \item \textbf{Every field contains a subfield isomorphic to a prime field.} \\
+    True. Every field contains a smallest subfield, which is the prime field.
+
+    \item \textbf{A ring with zero divisors may contain one of the prime fields as a subring.} \\
+    True. For example, matrix rings over \(\mathbb{Q}\) contain \(\mathbb{Q}\) and have zero divisors.
+
+    \item \textbf{Every field of characteristic zero contains a subfield isomorphic to \(\mathbb{Q}\).} \\
+    True. Fields of characteristic zero have \(\mathbb{Q}\) as their prime subfield.
+
+    \item \textbf{Let \(F\) be a field. Since \(F[x]\) has no divisors of 0, every ideal of \(F[x]\) is a prime ideal.} \\
+    False. The absence of zero divisors does not imply that every ideal in \(F[x]\) is prime.
+
+    \item \textbf{Let \(F\) be a field. Every ideal of \(F[x]\) is a principal ideal.} \\
+    True. \(F[x]\) is a principal ideal domain.
+
+    \item \textbf{Let \(F\) be a field. Every principal ideal of \(F[x]\) is a maximal ideal.} \\
+    False. Not all principal ideals in \(F[x]\) are maximal.
+\end{enumerate}
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{15} Find a maximal ideal of $\Z \times \Z$.
+\begin{proof}
+Let \( p \in \mathbb{Z}_+ \) be a prime number. We consider the ideal \( \langle(1, p)\rangle \) in \( \mathbb{Z} \times \mathbb{Z} \). This ideal consists of all pairs \( (a, bp) \) where \( a, b \in \mathbb{Z} \).
+
+We show that \( \langle(1, p)\rangle \) is a maximal ideal by demonstrating that the quotient ring \( \mathbb{Z} \times \mathbb{Z}/\langle(1, p)\rangle \) is a field.
+
+\begin{itemize}
+    \item The quotient ring \( \mathbb{Z} \times \mathbb{Z}/\langle(1, p)\rangle \) is isomorphic to \( \mathbb{Z}_p \), which is a field. This is because the elements of the quotient ring can be represented as \( (a, b) + \langle(1, p)\rangle \), where \( (a, b) \) are reduced modulo the ideal \( \langle(1, p)\rangle \). In this reduction, the second component becomes \( b \mod p \), while the first component can be any integer, thus collapsing the structure to \( \mathbb{Z}_p \).
+    
+    \item Since \( \mathbb{Z}_p \) is a field (being the integers modulo a prime), the quotient ring \( \mathbb{Z} \times \mathbb{Z}/\langle(1, p)\rangle \) is also a field.
+    
+    \item By definition, if the quotient of a ring by an ideal is a field, then that ideal is maximal.
+\end{itemize}
+
+Therefore, the ideal \( \langle(1, p)\rangle \) in \( \mathbb{Z} \times \mathbb{Z} \) is maximal for any prime \( p \in \mathbb{Z}_+ \).
+\end{proof}
+\end{exercise}
+\vspace*{20pt} 
+\begin{exercise}{16} Find a prime ideal of $\Z \times \Z$ that is not maximal.
+\begin{proof}
+Consider the ideal \(\langle(1,0)\rangle\) in \(\mathbb{Z} \times \mathbb{Z}\). This ideal consists of all pairs \((a, 0)\) where \(a \in \mathbb{Z}\).
+
+We show that \(\langle(1,0)\rangle\) is a prime ideal but not maximal:
+
+\begin{enumerate}
+    \item \textbf{Prime Ideal:} The quotient ring \(\mathbb{Z} \times \mathbb{Z}/\langle(1,0)\rangle\) is isomorphic to \(\mathbb{Z}\). This is because the elements of the quotient ring can be represented as \((a, b) + \langle(1,0)\rangle\), where \((a, b)\) are reduced modulo the ideal \(\langle(1,0)\rangle\). In this reduction, the first component becomes irrelevant, effectively collapsing the structure to \(\mathbb{Z}\). Since \(\mathbb{Z}\) is an integral domain (but not a field), the quotient ring is an integral domain, implying that \(\langle(1,0)\rangle\) is a prime ideal.
+
+    \item \textbf{Not Maximal:} However, \(\langle(1,0)\rangle\) is not maximal in \(\mathbb{Z} \times \mathbb{Z}\) because it is properly contained in larger ideals. For instance, the ideal \(\langle(1,0), (0,1)\rangle\) contains \(\langle(1,0)\rangle\) but is not the entire ring \(\mathbb{Z} \times \mathbb{Z}\). The existence of such an intermediate ideal shows that \(\langle(1,0)\rangle\) is not maximal.
+\end{enumerate}
+
+Therefore, the ideal \(\langle(1,0)\rangle\) in \(\mathbb{Z} \times \mathbb{Z}\) is an example of a prime ideal that is not maximal.
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{24} Let $R$ be a finite commutative ring with unity. Show that every prime ideal in $R$ is a maximal ideal.
+
+Let \( P \) be a prime ideal in the finite commutative ring \( R \) with unity. We need to show that \( P \) is also a maximal ideal.
+
+1. \textbf{Quotient Ring is a Field Implies Maximal Ideal:} An ideal \( I \) in a ring \( R \) is maximal if and only if the quotient ring \( R/I \) is a field.
+
+2. \textbf{Quotient Ring is an Integral Domain Implies Prime Ideal:} An ideal \( I \) in a commutative ring \( R \) is prime if and only if the quotient ring \( R/I \) is an integral domain.
+
+3. \textbf{Finite Integral Domain is a Field:} A key property in algebra is that every finite integral domain is a field. This is because in a finite integral domain, every non-zero element must have a multiplicative inverse (else the ring would have zero divisors due to finiteness, contradicting the integral domain property).
+
+4. \textbf{Applying to \( R/P \):} Since \( P \) is a prime ideal, \( R/P \) is an integral domain. Because \( R \) is finite, \( R/P \) is also finite. Therefore, \( R/P \), being a finite integral domain, must be a field.
+
+5. \textbf{Conclusion:} Since \( R/P \) is a field, \( P \) is a maximal ideal in \( R \).
+
+Therefore, every prime ideal in a finite commutative ring with unity is a maximal ideal.
+
+\begin{proof}
+Let \( P \) be a prime ideal in a finite commutative ring \( R \) with unity. Since \( P \) is prime, the quotient ring \( R/P \) is an integral domain. As \( R \) is finite, so is \( R/P \). By the property that every finite integral domain is a field, \( R/P \) is a field. Therefore, \( P \) is a maximal ideal in \( R \).
+\end{proof}
+\end{exercise}
+    \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

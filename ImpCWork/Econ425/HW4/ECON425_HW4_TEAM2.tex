@@ -1,0 +1,178 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\begin{document}
+
+\title{ECON 425: Macroeconomic Policy\large \\Homework Four\\Topic: Aggregate Demand}
+\author{Charles Ancel}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+
+This homework focuses on understanding aggregate demand, the behavior of Keynesian households, and the implications of these behaviors on macroeconomic policy.
+
+\noindent\rule{\linewidth}{1pt}
+
+\section{Questions and Solutions}
+
+\subsection*{Q1. Keynesian Consumption}
+
+\textbf{Context:} Understanding why the consumption behavior is termed "Keynesian" is crucial to grasping the underlying economic theories. Keynesian consumption models assume that households primarily base their consumption decisions on current income rather than future income expectations. This contrasts with other models, such as the Permanent Income Hypothesis, which consider the present value of future income.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{1.1 Why is that consumption called "Keynesian" by Challe?}
+
+\textbf{Answer:} 
+Consumption is termed "Keynesian" because it is primarily influenced by current disposable income rather than the present value of all future income. This reflects John Maynard Keynes' view that immediate income constraints significantly affect household consumption decisions. Keynesian households react to changes in current income, which can lead to more volatile consumption patterns in response to economic fluctuations.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{1.2 Why does \( C_{K,j}^t \) not depend on the present value of all future income?}
+
+\textbf{Context:} The distinction between Keynesian and other consumption theories, such as the Permanent Income Hypothesis, lies in their respective dependencies on future income. Keynesian models focus on current income, whereas other models consider long-term income expectations.
+
+\textbf{Answer:} 
+\( C_{K,j}^t \) does not depend on the present value of all future income because Keynesian households are assumed to consume based on their current disposable income. This results in a marginal propensity to consume (MPC) out of permanent income of zero for Keynesian households, emphasizing short-term income over long-term financial planning. This assumption implies that households do not smooth consumption over time but rather adjust their spending according to current income levels.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{1.3 State the four implications of "Keynesian behavior" on the economy according to Challe.}
+
+\textbf{Context:} Recognizing the macroeconomic implications of Keynesian consumption is essential for understanding its impact on aggregate demand and economic stability. Keynesian behavior influences how the economy responds to various fiscal and monetary policies.
+
+\textbf{Answer:} 
+Keynesian behavior implies:
+\begin{enumerate}
+    \item \textbf{Consumption closely follows changes in current income:} Since households base their consumption on current income, any fluctuation in income directly impacts their spending patterns, leading to greater sensitivity to economic cycles.
+    \item \textbf{Higher sensitivity to fiscal policy changes:} Fiscal policy measures, such as tax cuts or increased government spending, immediately affect disposable income and hence consumption, making fiscal policy a potent tool for managing economic activity.
+    \item \textbf{Reduced effectiveness of monetary policy aimed at influencing future expectations:} Because Keynesian households do not consider future income, monetary policies that affect expectations of future interest rates and income have less impact on their current consumption decisions.
+    \item \textbf{Potential for larger multipliers from government spending and taxation policies:} Immediate changes in disposable income due to fiscal policy can lead to significant shifts in aggregate demand, amplifying the effects of government interventions on economic output.
+\end{enumerate}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{1.4 Reflect on the inclusion of two types of households (Ricardian and Keynesian) in the model.}
+
+\textbf{Context:} Considering the benefits and drawbacks of modeling both Ricardian and Keynesian households can provide insights into the complexity and realism of macroeconomic models. Each type of household represents different behavioral assumptions that can influence policy effectiveness and economic dynamics.
+
+\textbf{Answer:} 
+Including both Ricardian and Keynesian households in a model allows for a more comprehensive analysis of economic dynamics. Ricardian households smooth consumption based on lifetime income, reflecting forward-looking behavior and intertemporal optimization. In contrast, Keynesian households react to current income, leading to more immediate responses to economic changes. This dual approach captures a broader range of real-world behaviors, enhancing the model's accuracy in predicting responses to economic policies. It allows for the examination of how different households respond to fiscal and monetary policies, providing a more nuanced understanding of policy impacts on aggregate demand and economic stability.
+
+\noindent\rule{\linewidth}{1pt}
+
+\subsection*{Q2. Total Differential and Aggregate Demand}
+
+\textbf{Context:} Understanding the total differential is crucial for analyzing how changes in various economic variables affect aggregate demand. The total differential helps in understanding the sensitivity of aggregate demand to changes in interest rates, income, and other factors.
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{2.1 Total Differentials of \( C_t \), \( XM_t \), and \( I_t \)}
+
+\textbf{Answer:}
+The total differentials of consumption (\( C_t \)), net exports (\( XM_t \)), and investment (\( I_t \)) are given by:
+\begin{align}
+    dC_t &= \frac{\partial C_t}{\partial r_t} dr_t + \frac{\partial C_t}{\partial \bar{D}_t} d\bar{D}_t + \frac{\partial C_t}{\partial \rho} d\rho + \frac{\partial C_t}{\partial Y_t} dY_t + \frac{\partial C_t}{\partial T_t} dT_t \tag{2.12} \\
+    dXM_t &= \frac{\partial XM_t}{\partial r_t} dr_t + \frac{\partial XM_t}{\partial Y_t} dY_t + \frac{\partial XM_t}{\partial YW_t} dYW_t + \frac{\partial XM_t}{\partial rW_t} drW_t + \frac{\partial XM_t}{\partial Q_{t+1}} dQ_{t+1} \tag{2.19} \\
+    dI_t &= \frac{\partial I_t}{\partial r_t} dr_t + \frac{\partial I_t}{\partial Z_{t+1}} dZ_{t+1} \tag{2.16}
+\end{align}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{2.2 Total Differential of \( Y_t \)}
+
+\textbf{Answer:}
+The total differential of \( Y_t \), the aggregate demand, is given by:
+\begin{align*}
+    dY_t &= \frac{\partial C_t}{\partial r_t} dr_t + \frac{\partial C_t}{\partial \bar{D}_t} d\bar{D}_t + \frac{\partial C_t}{\partial \rho} d\rho + \frac{\partial C_t}{\partial Y_t} dY_t \notag \\
+    &\quad + \frac{\partial C_t}{\partial T_t} dT_t + \frac{\partial I_t}{\partial r_t} dr_t + \frac{\partial I_t}{\partial Z_{t+1}} dZ_{t+1} \notag \\
+    &\quad + \frac{\partial XM_t}{\partial r_t} dr_t + \frac{\partial XM_t}{\partial Y_t} dY_t + \frac{\partial XM_t}{\partial YW_t} dYW_t \notag \\
+    &\quad + \frac{\partial XM_t}{\partial rW_t} drW_t + \frac{\partial XM_t}{\partial Q_{t+1}} dQ_{t+1} + dG_t
+\end{align*}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{2.3 Substitute the differentials into the differential of \( Y_t \)}
+
+\textbf{Answer:}
+Substituting the differentials of \( C_t \), \( XM_t \), and \( I_t \) into \( dY_t \), we get:
+\begin{align*}
+    dY_t &= \left( \frac{\partial C_t}{\partial r_t} + \frac{\partial I_t}{\partial r_t} + \frac{\partial XM_t}{\partial r_t} \right) dr_t \notag \\
+    &\quad + \left( 1 - \frac{\partial C_t}{\partial Y_t} - \frac{\partial XM_t}{\partial Y_t} \right) dY_t \notag \\
+    &\quad + \text{other terms}
+\end{align*}
+
+\noindent\rule{\linewidth}{0.5pt}
+
+\subsubsection*{2.4 Organize the terms}
+
+\textbf{Answer:}
+Rearranging and solving for \( dY_t \):
+\begin{align}
+    \left( 1 - \frac{\partial C_t}{\partial Y_t} - \frac{\partial XM_t}{\partial Y_t} \right) dY_t &= \left( \frac{\partial C_t}{\partial r_t} + \frac{\partial I_t}{\partial r_t} + \frac{\partial XM_t}{\partial r_t} \right) dr_t \notag \\
+    &\quad + \text{other terms}
+\end{align}
+This equation shows how aggregate demand responds to changes in the real interest rate (\( r_t \)) and other factors.
+
+\noindent\rule{\linewidth}{1pt}
+
+\subsection*{Q3. Departures from the Basic IS-LM Model}
+
+\textbf{Context:} Edouard Challe's model introduces modifications to the basic IS-LM framework to better capture real-world economic dynamics. Understanding these departures is crucial for analyzing more realistic economic models.
+
+\textbf{Answer:}
+According to Challe, the three main departures from the basic IS-LM model are:
+\begin{enumerate}
+    \item \textbf{Inclusion of credit constraints:} The model acknowledges the impact of financial frictions on aggregate demand, where credit constraints limit the ability of households and firms to borrow and spend, thereby affecting economic activity.
+    \item \textbf{Explicit role of expectations:} The model considers how forward-looking behavior influences economic outcomes. Expectations about future economic conditions, such as inflation and interest rates, play a crucial role in shaping current spending and investment decisions.
+    \item \textbf{Integration of non-Ricardian households:} The model accounts for differences in consumption behavior due to liquidity constraints and myopia. Non-Ricardian households do not smooth consumption over time and are more responsive to changes in current income and fiscal policies.
+\end{enumerate}
+These modifications make the model more general and realistic, capturing a broader range of economic behaviors and policy effects.
+
+\noindent\rule{\linewidth}{1pt}
+
+\subsection*{Q4. Exercise 2.7.1 from the Textbook}
+
+\textbf{Context:} This exercise involves applying the definition of a total differential to a macroeconomic equation, a fundamental skill in economic analysis. The IS curve (Equation 2.24) and its generalization from the IS-LM model are key components of this analysis.
+
+\textbf{Answer:}
+The IS curve is given by:
+\begin{equation}
+    Y_t = \theta_t - \sigma (r_t - \bar{r}), \quad \sigma > 0
+\end{equation}
+where \( Y_t \) is the log of output, \( r_t \) is the real interest rate, \( \bar{r} \) is the average real interest rate, and \( \theta_t \) is the aggregate demand parameter. 
+
+The total differential of the output equation can be written as:
+\begin{equation}
+    dY_t = -\sigma dr_t
+\end{equation}
+
+To analyze the impact of a money-supply shock (\( dms \)) and an exogenous aggregate demand shock (\( d\theta \)), we consider how these shocks affect the IS curve and the equilibrium in the IS-LM framework.
+
+For a money-supply shock (\( dms \)):
+\begin{enumerate}
+    \item \textbf{Graphical Analysis:} A money-supply shock affects the LM curve, shifting it to the right or left depending on the direction of the shock.
+    \item \textbf{Analytical Explanation:} An increase in the money supply (positive \( dms \)) reduces the nominal interest rate, leading to a lower real interest rate (assuming inflation expectations are unchanged). This shift in the LM curve results in higher output (\( Y_t \)) as the IS curve remains unchanged.
+\end{enumerate}
+
+For an exogenous aggregate demand shock (\( d\theta \)):
+\begin{enumerate}
+    \item \textbf{Graphical Analysis:} An aggregate demand shock shifts the IS curve directly.
+    \item \textbf{Analytical Explanation:} A positive aggregate demand shock (\( d\theta \)) increases \( \theta_t \), shifting the IS curve to the right. This results in higher output (\( Y_t \)) for a given real interest rate (\( r_t \)).
+\end{enumerate}
+
+These analyses show how different shocks affect the macroeconomic equilibrium through shifts in the IS and LM curves.
+
+\noindent\rule{\linewidth}{1pt}
+
+\section{References}
+\begin{enumerate}
+    \item Romer, D. (2018). \textit{Advanced Macroeconomics}. McGraw-Hill Education.
+    \item Ljungqvist, L., \& Sargent, T. J. (2018). \textit{Recursive Macroeconomic Theory}. MIT Press.
+    \item Carlin, W., \& Soskice, D. (2014). \textit{Macroeconomics: Imperfections, Institutions, and Policies}. Oxford University Press.
+    \item Challe, E. (2019). \textit{Macroeconomic Fluctuations and Policies}. MIT Press.
+\end{enumerate}
+
+\end{document}

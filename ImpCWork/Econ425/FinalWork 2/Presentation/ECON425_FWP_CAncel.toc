@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Contextual Information}{3}{0}{2}
+\beamer@sectionintoc {3}{Contextual Data}{4}{0}{3}
+\beamer@sectionintoc {4}{Theory and Decision}{8}{0}{4}
+\beamer@sectionintoc {5}{Statement}{9}{0}{5}
+\beamer@sectionintoc {6}{Comparison with Fed’s Decision}{10}{0}{6}
+\beamer@sectionintoc {7}{Conclusions}{11}{0}{7}
+\beamer@sectionintoc {8}{Q\&A}{12}{0}{8}

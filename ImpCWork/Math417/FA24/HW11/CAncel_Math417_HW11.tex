@@ -1,0 +1,634 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+
+\title{Math 417, Homework 11}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\section*{Chapter IV.23}
+\begin{exercise}{17} Demonstrate that $x^4 - 22x^2 + 1$ is irreducible over $\Q$.
+
+\begin{proof}
+\textbf{Step 1: Rule Out Rational Roots}
+
+We first apply the Rational Root Theorem. If \( f(x) \) has a rational root, then that root must be a divisor of the constant term, \( 1 \). Therefore, the only possible rational roots are \( \pm1 \). Testing these, we find:
+
+\[
+f(1) = 1^4 - 22 \cdot 1^2 + 1 = 1 - 22 + 1 = -20 \neq 0
+\]
+\[
+f(-1) = (-1)^4 - 22 \cdot (-1)^2 + 1 = 1 - 22 + 1 = -20 \neq 0
+\]
+
+Since neither \( 1 \) nor \( -1 \) is a root, \( f(x) \) does not have rational roots and thus cannot have linear factors over \( \mathbb{Q} \).
+
+\textbf{Step 2: Rule Out Factoring into Quadratics}
+
+If \( f(x) \) were reducible over \( \mathbb{Q} \), it could be factored into two quadratic polynomials with integer coefficients. Suppose:
+
+\[
+f(x) = (x^2 + ax + b)(x^2 + cx + d)
+\]
+
+Then the product must expand to:
+
+\[
+x^4 + (a+c)x^3 + (ac + b + d)x^2 + (ad + bc)x + bd
+\]
+
+For \( f(x) \), we have:
+
+\[
+x^4 - 22x^2 + 1 = x^4 + 0x^3 - 22x^2 + 0x + 1
+\]
+
+Matching coefficients, we get a system of equations:
+
+\begin{align*}
+bd &= 1, \\
+ad + bc &= 0, \\
+ac + b + d &= -22, \\
+a + c &= 0.
+\end{align*}
+
+Given \( bd = 1 \), \( b \) and \( d \) must be \( \pm1 \). Without loss of generality, let's say \( b = d = 1 \). Then:
+
+\[
+ad + bc = a + c = 0
+\]
+
+implies \( a = -c \). But this gives us:
+
+\[
+ac + 2 = -a^2 + 2 = -22
+\]
+
+which means \( a^2 = 24 \), which is not possible for any integer \( a \). Therefore, there are no such integers \( a \), \( b \), \( c \), and \( d \) that satisfy these equations, and \( f(x) \) cannot be factored into quadratic polynomials with integer (and hence rational) coefficients.
+
+\textbf{Conclusion}
+
+Since \( f(x) \) cannot be factored into linear or quadratic polynomials over \( \mathbb{Q} \), it must be irreducible over \( \mathbb{Q} \).
+\end{proof}
+\end{exercise}
+
+\begin{exercise}{20} Determine whether the polynomial in $\Z[x]$ satisfies an Eisenstein criterion for irreducibility over $\Q$.
+    \[4x^{10} - 9x^3 + 24x - 18\]
+    \begin{proof}
+        To determine whether the polynomial \( f(x) = 4x^{10} - 9x^3 + 24x - 18 \) satisfies an Eisenstein criterion for irreducibility over \( \mathbb{Q} \), we need to find a prime number \( p \) such that:
+
+\begin{enumerate}
+    \item \( p \) divides each coefficient of \( f(x) \) except the leading coefficient.
+    \item \( p \) does not divide the leading coefficient (which is \( 4 \) in this case).
+    \item \( p^2 \) does not divide the constant term.
+\end{enumerate}
+
+Let's examine the coefficients of \( f(x) \):
+
+\begin{itemize}
+    \item The leading coefficient is \( 4 \).
+    \item The other coefficients are \( -9 \), \( 24 \), and \( -18 \).
+\end{itemize}
+
+Since the leading coefficient is \( 4 \), which is \( 2^2 \), we cannot use \( 2 \) as our prime \( p \) for Eisenstein's Criterion because \( p \) must not divide the leading coefficient. 
+
+However, the number \( 3 \) divides \( -9 \), \( 24 \), and \( -18 \) but does not divide \( 4 \). Furthermore, \( 3^2 = 9 \) does not divide the constant term \( -18 \). 
+
+So, we can use \( p = 3 \) to apply Eisenstein's Criterion:
+
+\begin{enumerate}
+    \item \( 3 \) divides \( -9 \), \( 24 \), and \( -18 \).
+    \item \( 3 \) does not divide \( 4 \).
+    \item \( 9 \) (which is \( 3^2 \)) does not divide \( -18 \).
+\end{enumerate}
+
+Since all three conditions are satisfied, the polynomial \( f(x) = 4x^{10} - 9x^3 + 24x - 18 \) satisfies Eisenstein's Criterion with \( p = 3 \) and is irreducible over \( \mathbb{Q} \). 
+
+\[
+\boxed{\text{The polynomial is irreducible over } \mathbb{Q}.}
+\]
+    \end{proof}
+\end{exercise}
+
+\begin{exercise}{25} Mark each of the following true or false.
+\begin{enumerate}[label=\alph*.]
+    \item $x - 2$ is irreducible over $\Q$.
+    \item $3x - 6$ is irreducible over $\Q$.
+    \item $x^2 - 3$ is irreducible over $\Q$.
+    \item $x^2 + 3$ is irreducible over $\Z_7$.
+    \item If $F$ is a field, the units of $F[x]$ are precisely the nonzero elements of $F$.
+    \item If $F$ is a field, the units of $F(x)$ are precisely the nonzero elements of $F$.
+    \item A polynomial $f (x)$ of degree n with coefficients in a field $F$ can have at most n zeros in $F$.
+    \item A polynomial $f (x)$ of degree n with coefficients in a field $F$ can have at most n zeros in any given
+    field $E$ such that $F \leq E$.
+    \item Every polynomial of degree $1$ in $F[x]$ has at least one zero in the field $F$.
+    \item Each polynomial in $F[x]$ can have at most a finite number of zeros in the field $F$.
+\end{enumerate}
+Your proof is nearly correct, but we should make one small adjustment to the explanation for item (e). Here's the corrected version:
+
+\begin{proof}
+Here are the truths of each statement:
+
+\begin{enumerate}[label=(\alph*.)]
+    \item True. The polynomial \( x - 2 \) is irreducible over \( \mathbb{Q} \) because it is of degree 1, and any non-constant polynomial of degree 1 is irreducible.
+    
+    \item True. The polynomial \( 3x - 6 \) can be simplified to \( x - 2 \) after dividing by the leading coefficient (which is allowed over fields), and like in (a), it is irreducible over \( \mathbb{Q} \).
+    
+    \item True. The polynomial \( x^2 - 3 \) is irreducible over \( \mathbb{Q} \) because \( 3 \) is not a perfect square in \( \mathbb{Q} \), and thus the polynomial does not have rational roots.
+    
+    \item False. Over \( \mathbb{Z}_7 \), the polynomial \( x^2 + 3 \) becomes \( x^2 - 4 \) (since \( 3 \equiv -4 \mod 7 \)), which can be factored as \( (x - 2)(x + 2) \) in \( \mathbb{Z}_7 \).
+    
+    \item True. In a field \( F \), the units of the polynomial ring \( F[x] \) are precisely the nonzero constants from \( F \), which are the polynomials of degree 0. This is because a unit must have a multiplicative inverse, and in \( F[x] \), only the constant polynomials (non-zero elements of \( F \)) have multiplicative inverses that are also polynomials.
+    
+    \item False. In the field of fractions \( F(x) \), the units are not just the nonzero elements of \( F \) but also include fractions where both the numerator and the denominator are polynomials with coefficients in \( F \), as long as the denominator is not zero.
+    
+    \item True. A polynomial of degree \( n \) with coefficients in a field \( F \) cannot have more than \( n \) zeros in \( F \), according to the Fundamental Theorem of Algebra.
+    
+    \item True. This is an extension of (g); no matter what field \( E \) that contains \( F \) you are in, a polynomial of degree \( n \) cannot have more than \( n \) zeros in \( E \).
+    
+    \item True. Every polynomial of degree 1 has the form \( ax + b \) with \( a \neq 0 \), and it always has exactly one zero in the field \( F \), which can be found by solving \( ax + b = 0 \).
+    
+    \item True. By the Fundamental Theorem of Algebra, a polynomial of degree \( n \) can have at most \( n \) zeros, so it can only have a finite number of zeros in any field.
+\end{enumerate}
+
+So, the answers are:
+
+
+\begin{align*}
+\text{(a)} & \text{ True} \\
+\text{(b)} & \text{ True} \\
+\text{(c)} & \text{ True} \\
+\text{(d)} & \text{ False} \\
+\text{(e)} & \text{ True} \\
+\text{(f)} & \text{ False} \\
+\text{(g)} & \text{ True} \\
+\text{(h)} & \text{ True} \\
+\text{(i)} & \text{ True} \\
+\text{(j)} & \text{ True}
+\end{align*}
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{35} If $F$ is a field and $a \neq 0$ is a zero of $f(x) = a_0 + a_1x + \cdots +a_nx^n$ in $F[x]$, show that $1/a$ is a zero of
+    $a_n + a_{n-1}x + \cdots + a_0x^n$.
+
+    
+    To show that if \( a \neq 0 \) is a zero of \( f(x) \) in \( F[x] \), then \( 1/a \) is a zero of \( g(x) = a_n + a_{n-1}x + \cdots + a_0x^n \), we will use the fact that \( f(a) = 0 \) for \( f(x) \).
+
+Given that \( f(x) = a_0 + a_1x + \cdots + a_nx^n \), if \( f(a) = 0 \), it implies that:
+
+\[
+a_0 + a_1a + \cdots + a_na^n = 0
+\]
+
+Now, we consider \( g(x) = a_n + a_{n-1}x + \cdots + a_0x^n \) and evaluate \( g(1/a) \):
+
+\[
+g\left(\frac{1}{a}\right) = a_n + a_{n-1}\frac{1}{a} + \cdots + a_0\left(\frac{1}{a}\right)^n
+\]
+
+We multiply each term by \( a^n \) (which is possible since \( a \neq 0 \)) to clear the denominators:
+
+\[
+a^n g\left(\frac{1}{a}\right) = a_n a^n + a_{n-1}a^{n-1} + \cdots + a_0
+\]
+
+This is the same as the equation we have from \( f(a) = 0 \), but in reverse order. Therefore:
+
+\[
+a^n g\left(\frac{1}{a}\right) = a_0 + a_1a + \cdots + a_na^n = 0
+\]
+
+Since \( a^n \neq 0 \), we can divide by \( a^n \) to get:
+
+\[
+g\left(\frac{1}{a}\right) = 0
+\]
+
+Thus, \( 1/a \) is indeed a zero of \( g(x) \). 
+
+Here is the formal proof:
+
+\begin{proof}
+Let \( F \) be a field and \( a \) be a non-zero element of \( F \) such that \( a \) is a zero of the polynomial \( f(x) = a_0 + a_1x + \cdots + a_nx^n \) in \( F[x] \), i.e., \( f(a) = 0 \).
+
+Consider the polynomial \( g(x) = a_n + a_{n-1}x + \cdots + a_0x^n \) in \( F[x] \). We want to show that \( g(1/a) = 0 \).
+
+Evaluating \( g(x) \) at \( x = 1/a \) gives:
+
+\[
+g\left(\frac{1}{a}\right) = a_n + a_{n-1}\left(\frac{1}{a}\right) + \cdots + a_0\left(\frac{1}{a}\right)^n
+\]
+
+Multiplying through by \( a^n \), we have:
+
+\[
+a^n g\left(\frac{1}{a}\right) = a_n a^n + a_{n-1}a^{n-1} + \cdots + a_0 = 0
+\]
+
+The last equality follows from the fact that \( a_0 + a_1a + \cdots + a_na^n = 0 \), since \( a \) is a zero of \( f(x) \).
+
+Therefore, we have shown that:
+
+\[
+g\left(\frac{1}{a}\right) = 0
+\]
+
+Hence, \( 1/a \) is a zero of \( g(x) \) in \( F[x] \).
+\end{proof}
+\end{exercise}
+\vspace*{60pt}
+
+\section*{Chapter V.26}
+\begin{exercise}{1} Describe all ring homomorphisms of $\Z \times \Z$ into $\Z \times \Z$. [Hint: Note that if $\phi$ is such a homomorphism, then
+    To describe all ring homomorphisms \(\phi\) from \(\mathbb{Z} \times \mathbb{Z}\) into \(\mathbb{Z} \times \mathbb{Z}\), we can use the properties of ring homomorphisms and the hints provided.
+
+A ring homomorphism \(\phi\) must satisfy the following conditions:
+
+\begin{enumerate}
+    \item \(\phi((a, b) + (c, d)) = \phi((a, b)) + \phi((c, d))\) for all \((a, b), (c, d) \in \mathbb{Z} \times \mathbb{Z}\).
+    \item \(\phi((a, b) \cdot (c, d)) = \phi((a, b)) \cdot \phi((c, d))\) for all \((a, b), (c, d) \in \mathbb{Z} \times \mathbb{Z}\).
+    \item \(\phi(1_{\mathbb{Z} \times \mathbb{Z}}) = 1_{\mathbb{Z} \times \mathbb{Z}}\), where \(1_{\mathbb{Z} \times \mathbb{Z}}\) is the multiplicative identity \((1, 1)\).
+\end{enumerate}
+
+Given the hints, we look at the images of the elements \((1, 0)\) and \((0, 1)\) under \(\phi\), which generate the ring \(\mathbb{Z} \times \mathbb{Z}\):
+
+\[
+\phi((1, 0)) = \phi((1, 0)(1, 0)) = \phi((1, 0))\cdot\phi((1, 0))
+\]
+
+This implies that \(\phi((1, 0))\) must be idempotent. The only idempotent elements in \(\mathbb{Z} \times \mathbb{Z}\) are \((1, 0)\), \((0, 1)\), and \((0, 0)\). The same argument applies to \(\phi((0, 1))\).
+
+Also, since \((1, 0)\) and \((0, 1)\) multiply to \((0, 0)\) in \(\mathbb{Z} \times \mathbb{Z}\), we have:
+
+\[
+\phi((1, 0)(0, 1)) = \phi((0, 0)) = (0, 0)
+\]
+
+This means that the images of \((1, 0)\) and \((0, 1)\) under \(\phi\) must also multiply to \((0, 0)\). This restricts the images of \((1, 0)\) and \((0, 1)\) to be \((0, 0)\), \((1, 0)\), or \((0, 1)\), but not both non-zero, since \((1, 0) \cdot (0, 1) = (0, 0)\).
+
+Finally, we must have that \(\phi(1_{\mathbb{Z} \times \mathbb{Z}}) = \phi((1, 1)) = (1, 1)\), which gives us a condition that \(\phi((1, 0)) + \phi((0, 1)) = (1, 1)\).
+
+Combining these observations, we get the following possibilities for \(\phi\):
+
+\begin{enumerate}
+    \item \(\phi((1, 0)) = (1, 0)\) and \(\phi((0, 1)) = (0, 1)\), giving the identity homomorphism.
+    \item \(\phi((1, 0)) = (0, 1)\) and \(\phi((0, 1)) = (1, 0)\), giving a homomorphism that swaps the components.
+    \item \(\phi((1, 0)) = (0, 0)\) and \(\phi((0, 1)) = (1, 0)\) or \(\phi((0, 1)) = (0, 1)\), giving homomorphisms that map one component to zero.
+    \item \(\phi((1, 0)) = (1, 0)\) or \(\phi((1, 0)) = (0, 1)\) and \(\phi((0, 1)) = (0, 0)\), similar to the previous case.
+\end{enumerate}
+
+We can't have both \(\phi((1, 0))\) and \(\phi((0, 1))\) mapping to \((0, 0)\), as this would violate the condition that 
+\(\phi(1_{\mathbb{Z} \times \mathbb{Z}}) = (1, 1)\).
+
+\begin{proof}
+Consider a ring homomorphism \(\phi : \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} \times \mathbb{Z}\). Using the properties of ring homomorphisms and the hints provided:
+
+\begin{enumerate}
+    \item Since \(\phi((1, 0))\) and \(\phi((0, 1))\) must be idempotent and their product must be \((0, 0)\), the possibilities for \(\phi((1, 0))\) are \((1, 0)\), \((0, 1)\), or \((0, 0)\). The same goes for \(\phi((0, 1))\).
+    
+    \item Since \(\phi\) must preserve the multiplicative identity, \(\phi((1, 1)) = (1, 1)\), this limits the choices of images for \((1, 0)\) and \((0, 1)\) such that their sum is \((1, 1)\).
+\end{enumerate}
+
+Considering these constraints, we have the following types of homomorphisms:
+
+\begin{itemize}
+    \item The identity homomorphism, where \(\phi((1, 0)) = (1, 0)\) and \(\phi((0, 1)) = (0, 1)\).
+    \item A component-swapping homomorphism, where \(\phi((1, 0)) = (0, 1)\) and \(\phi((0, 1)) = (1, 0)\).
+    \item Homomorphisms that map one component to zero and preserve the other, with four variations depending on which component is preserved or mapped to zero.
+\end{itemize}
+
+These are all the possible ring homomorphisms from \(\mathbb{Z} \times \mathbb{Z}\) to itself.
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{12} Give an example to show that a factor ring of an integral domain may be a field.
+
+    \begin{proof}
+        An integral domain is a commutative ring with unity (1) and no zero divisors. A factor ring (also known as a quotient ring) of an integral domain is a field if the ideal by which we are taking the quotient is a maximal ideal.
+    
+    Let's consider the ring of integers \(\mathbb{Z}\), which is an integral domain. We will take a factor ring of \(\mathbb{Z}\) by a maximal ideal.
+    
+    The ideal generated by a prime number \(p\), denoted by \( (p) \), is a maximal ideal in \(\mathbb{Z}\). This is because there are no other ideals containing \( (p) \) except for the whole ring \(\mathbb{Z}\) and the ideal \( (p) \) itself. According to the definition of a maximal ideal, this makes \( (p) \) maximal.
+    
+    The factor ring \(\mathbb{Z}/(p)\) is then a field. This field contains equivalence classes of integers modulo \(p\), and every non-zero element has a multiplicative inverse.
+    
+    For a concrete example, let's take \(p = 2\). The factor ring \(\mathbb{Z}/(2)\), which is denoted by \(\mathbb{Z}_2\), is a field consisting of two elements: the equivalence class of 0 (which contains all even numbers) and the equivalence class of 1 (which contains all odd numbers). In this field, every non-zero element (which in this case is just the equivalence class of 1) has a multiplicative inverse (which is itself in this case).
+    
+    So, \(\mathbb{Z}_2 = \mathbb{Z}/(2)\) is an example of a factor ring of an integral domain that is a field.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+
+\begin{exercise}{17} Let $R = \{a +b\sqrt{2}| a,b \in \Z\}$ and let $R'$ consist of all $2\times 2$ matrices of the form 
+    $\begin{bmatrix}
+    a & 2b \\
+    b & a
+\end{bmatrix}$ 
+for $a,\space b \in \Z$. Show that $R$ is a subring of $\R$ and that $R'$ is a subring of $M_2(\Z)$. Then show that $\phi : R \rightarrow R'$, where $\phi(a+b\sqrt{2}) = \begin{bmatrix}
+    a & 2b \\
+    b & a
+\end{bmatrix}$ is an isomorphism.
+
+\begin{proof}
+    To show that \( R \) and \( R' \) are subrings and that \( \phi \) is an isomorphism, we must establish several properties:
+    
+    \textbf{\( R \) as a Subring of \( \R \)}
+    
+    \begin{enumerate}
+        \item \textbf{Closure under Addition and Multiplication:} For any \( a + b\sqrt{2}, c + d\sqrt{2} \in R \),
+           \[
+           (a + b\sqrt{2}) + (c + d\sqrt{2}) = (a+c) + (b+d)\sqrt{2} \in R
+           \]
+           \[
+           (a + b\sqrt{2})(c + d\sqrt{2}) = (ac + 2bd) + (ad+bc)\sqrt{2} \in R
+           \]
+        
+        \item \textbf{Existence of Additive Identity:} The element \( 0 + 0\sqrt{2} \) acts as the additive identity in \( R \).
+        
+        \item \textbf{Existence of Additive Inverses:} For any \( a + b\sqrt{2} \in R \), the element \( -a - b\sqrt{2} \) is its additive inverse in \( R \).
+        
+        \item \textbf{Associativity and Commutativity:} Follow directly from the properties of \( \R \).
+        
+        \item \textbf{Multiplicative Identity:} The element \( 1 + 0\sqrt{2} \) acts as the multiplicative identity in \( R \).
+    \end{enumerate}
+    
+    \textbf{\( R' \) as a Subring of \( M_2(\Z) \)}
+    
+    \begin{enumerate}
+        \item \textbf{Closure under Matrix Addition and Multiplication:} For any matrices of the given form in \( R' \), their sum and product will also be of the same form with integer entries.
+        
+        \item \textbf{Existence of Additive Identity:} The zero matrix serves as the additive identity in \( R' \).
+        
+        \item \textbf{Existence of Additive Inverses:} For any matrix in \( R' \), its negative is also in \( R' \).
+        
+        \item \textbf{Associativity and Commutativity of Addition:} Follow from matrix operations.
+        
+        \item \textbf{Multiplicative Identity:} The identity matrix is in \( R' \).
+    \end{enumerate}
+    
+    \textbf{Isomorphism \( \phi : R \rightarrow R' \)}
+    
+    \begin{enumerate}
+        \item \textbf{Preservation of Addition:}
+           \[
+           \phi((a + b\sqrt{2}) + (c + d\sqrt{2})) = \phi((a+c) + (b+d)\sqrt{2}) = 
+           \begin{bmatrix}
+            a+c & 2(b+d) \\
+            b+d & a+c
+           \end{bmatrix}
+           \]
+           \[
+           \phi(a + b\sqrt{2}) + \phi(c + d\sqrt{2}) =
+           \begin{bmatrix}
+            a & 2b \\
+            b & a
+           \end{bmatrix} +
+           \begin{bmatrix}
+            c & 2d \\
+            d & c
+           \end{bmatrix} =
+           \begin{bmatrix}
+            a+c & 2(b+d) \\
+            b+d & a+c
+           \end{bmatrix}
+           \]
+        
+        \item \textbf{Preservation of Multiplication:}
+           \[
+           \phi((a + b\sqrt{2})(c + d\sqrt{2})) = \phi((ac + 2bd) + (ad+bc)\sqrt{2}) = 
+           \begin{bmatrix}
+            ac + 2bd & 2(ad+bc) \\
+            ad+bc & ac + 2bd
+           \end{bmatrix}
+           \]
+           \[
+           \phi(a + b\sqrt{2}) \cdot \phi(c + d\sqrt{2}) =
+           \begin{bmatrix}
+            a & 2b \\
+            b & a
+           \end{bmatrix} \cdot
+           \begin{bmatrix}
+            c & 2d \\
+            d & c
+           \end{bmatrix} =
+           \begin{bmatrix}
+            ac + 2bd & 2(ad+bc) \\
+            ad+bc & ac + 2bd
+           \end{bmatrix}
+           \]
+        
+        \item \textbf{Bijectivity:}
+           - \textbf{Injective:} If \( \phi(a + b\sqrt{2}) = \phi(c + d\sqrt{2}) \), then their corresponding matrices are equal, which implies \( a = c \) and \( b = d \).
+           - \textbf{Surjective:} Any matrix in \( R' \) has a pre-image in \( R \) by the construction of \( \phi \).
+        
+        \item \textbf{Preservation of Identity:}
+           \[
+           \phi(1 + 0\sqrt{2}) = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+           \]
+    \end{enumerate}
+    
+    Since \( \phi \) preserves addition and multiplication and is bijective, it is an isomorphism. Thus, \( R \) and \( R' \) are isomorphic rings.
+\end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{20} Let $R$ be a commutative ring with unity of prime characteristic $p$. Show that the map $\phi_p : R \rightarrow R$ given by
+    $\phi_p(a) = a^p$ is a homomorphism (the Frobenius homomorphism).
+    \begin{proof}
+        To show that the map \(\phi_p : R \rightarrow R\) defined by \(\phi_p(a) = a^p\) is a ring homomorphism, we need to verify that it preserves addition and multiplication, and that it maps the identity element of \( R \) to itself. The ring \( R \) is said to have prime characteristic \( p \) if \( p \) is the smallest positive integer such that \( p \cdot 1_R = 0 \), where \( 1_R \) is the multiplicative identity in \( R \).
+
+\textbf{Preservation of Addition}
+
+We need to show that for all \( a, b \in R \), \(\phi_p(a + b) = \phi_p(a) + \phi_p(b)\). Due to the binomial theorem and the fact that \( R \) has characteristic \( p \), we have
+
+\[
+(a + b)^p = a^p + \binom{p}{1} a^{p-1}b + \binom{p}{2} a^{p-2}b^2 + \ldots + \binom{p}{p-1} ab^{p-1} + b^p
+\]
+
+However, since \( p \) is prime, each binomial coefficient \( \binom{p}{k} \) for \( 1 \leq k \leq p-1 \) is divisible by \( p \) and thus is equal to zero in \( R \). This simplifies to
+
+\[
+(a + b)^p = a^p + b^p
+\]
+
+Therefore, \(\phi_p(a + b) = (a + b)^p = a^p + b^p = \phi_p(a) + \phi_p(b)\).
+
+\textbf{Preservation of Multiplication}
+
+We must show that for all \( a, b \in R \), \(\phi_p(ab) = \phi_p(a) \phi_p(b)\). This follows directly from the properties of exponents:
+
+\[
+\phi_p(ab) = (ab)^p = a^p b^p = \phi_p(a) \phi_p(b)
+\]
+
+\textbf{Identity Element}
+
+Lastly, we need to confirm that \(\phi_p\) maps the identity element to itself. Since \( R \) is of characteristic \( p \), we have
+
+\[
+\phi_p(1_R) = (1_R)^p = 1_R
+\]
+
+Thus, the Frobenius homomorphism \( \phi_p \) preserves addition and multiplication and the identity element, hence it is a ring homomorphism.
+    \end{proof}
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{22} Let $\phi : R \rightarrow R'$ be a ring homomorphism and let $N$ be an ideal of $R$.\\
+    a. Show that $\phi[N]$ is an ideal of $\phi[R]$.\\
+    c. Let $N'$ be an ideal either of $\phi[R]$ or of $R'$. Show that $\phi^{-1}[N']$ is an ideal of $R$.
+    
+
+    \textbf{Part (a): Show that \(\phi[N]\) is an ideal of \(\phi[R]\).}
+    
+\begin{proof}
+    Let \( N \) be an ideal of \( R \). To show that \( \phi[N] \) is an ideal of \( \phi[R] \), we must show that for any \( a', b' \in \phi[N] \) and any \( r' \in \phi[R] \), the following conditions hold:
+    
+    1. \( a' - b' \in \phi[N] \) (closed under subtraction),
+    2. \( r' \cdot a' \in \phi[N] \) (closed under multiplication by elements of \( \phi[R] \)).
+    
+    Let \( a', b' \in \phi[N] \). Then there exist \( a, b \in N \) such that \( \phi(a) = a' \) and \( \phi(b) = b' \). Since \( N \) is an ideal of \( R \), \( a - b \in N \). Applying \( \phi \), we have \( \phi(a - b) = \phi(a) - \phi(b) = a' - b' \in \phi[N] \), satisfying condition 1.
+    
+    For any \( r' \in \phi[R] \), there exists \( r \in R \) such that \( \phi(r) = r' \). Since \( N \) is an ideal and \( a \in N \), \( r \cdot a \in N \). Applying \( \phi \), we get \( \phi(r \cdot a) = \phi(r) \cdot \phi(a) = r' \cdot a' \in \phi[N] \), satisfying condition 2.
+    
+    Thus, \( \phi[N] \) is an ideal of \( \phi[R] \).
+    
+\end{proof}
+\textbf{Part (c): Let \( N' \) be an ideal either of \( \phi[R] \) or of \( R' \). Show that \( \phi^{-1}[N'] \) is an ideal of \( R \).}    
+\begin{proof}
+    
+    Let \( N' \) be an ideal of \( R' \) or \( \phi[R] \). To show that \( \phi^{-1}[N'] \) is an ideal of \( R \), we need to show that for any \( a, b \in \phi^{-1}[N'] \) and any \( r \in R \), the following conditions hold:
+    
+    1. \( a - b \in \phi^{-1}[N'] \) (closed under subtraction),
+    2. \( r \cdot a \in \phi^{-1}[N'] \) (closed under multiplication by elements of \( R \)).
+    
+    Let \( a, b \in \phi^{-1}[N'] \). This means \( \phi(a), \phi(b) \in N' \). Since \( N' \) is an ideal, \( \phi(a) - \phi(b) \in N' \). Thus, \( a - b \in \phi^{-1}[N'] \), satisfying condition 1.
+    
+    For any \( r \in R \), since \( a \in \phi^{-1}[N'] \), \( \phi(a) \in N' \). Because \( N' \) is an ideal, \( \phi(r) \cdot \phi(a) \in N' \) if \( \phi(r) \) is in \( \phi[R] \) or \( \phi(r) \cdot \phi(a) \in N' \) because \( R' \) is a ring and closed under multiplication. Hence, \( r \cdot a \in \phi^{-1}[N'] \), satisfying condition 2.
+    
+    Therefore, \( \phi^{-1}[N'] \) is an ideal of \( R \).
+\end{proof}    
+\end{exercise}
+\vspace*{20pt}
+\begin{exercise}{24} Show that a factor ring of a field is either the trivial (zero) ring of one element or is isomorphic to the field.
+ 
+    To show that a factor ring of a field is either the trivial ring or isomorphic to the field, we'll consider what ideals a field can have and then apply the definition of a factor ring.
+
+\begin{proof}
+    
+    Let \( F \) be a field and let \( I \) be an ideal of \( F \). We'll consider two cases based on the possible ideals \( I \) that \( F \) can have:
+    
+    \textbf{Case 1}: \( I = \{0\} \), the trivial ideal.
+    
+    If \( I \) is the trivial ideal consisting of only the zero element, then the factor ring \( F/I \) is isomorphic to \( F \) itself because each element \( a + I \) in the factor ring corresponds uniquely to the element \( a \) in \( F \), and the ring operations in \( F/I \) correspond exactly to the ring operations in \( F \).
+    
+    \textbf{Case 2}: \( I = F \), the field itself.
+    
+    If \( I \) is the whole field \( F \), then the factor ring \( F/I \) consists of a single element which is the zero element. In this case, \( F/I \) is the trivial ring, because every element in \( F \) is equivalent to the zero element modulo the ideal \( F \).
+    
+    Now, to argue why there are no other cases, we'll use the property that fields have no non-trivial ideals. In a field, the only ideals are \( \{0\} \) and \( F \) itself. This is because if an ideal \( I \) of \( F \) contains a non-zero element \( a \), then since \( F \) is a field, \( a \) has a multiplicative inverse \( a^{-1} \) in \( F \). Thus, \( a \cdot a^{-1} = 1 \in I \), and because ideals are closed under multiplication with any element of the ring, this means that every element of \( F \) is in \( I \), so \( I = F \).
+    
+    In summary, the factor ring \( F/I \) is either \( F \) itself when \( I \) is the trivial ideal or the trivial ring when \( I = F \). There are no other possibilities for ideals in a field, and hence no other possibilities for the structure of the factor ring \( F/I \).
+\end{proof}
+\end{exercise}
+    \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

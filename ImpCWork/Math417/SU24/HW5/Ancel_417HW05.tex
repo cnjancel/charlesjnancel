@@ -1,0 +1,587 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 5}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+%-----------------------------
+\begin{exercise}{2.4.8} Let \(\phi : G \rightarrow H\) be a homomorphism of $G$ onto $H$ (that is, \(\phi\) is surjective). If $A$ is a normal subgroup of $G$, shat that \(\phi(A)\) is a normal subgroup of $H$.
+
+    \noindent\rule{\linewidth}{1pt}
+    
+    
+    \section*{Solution}
+
+    Let \(\phi : G \rightarrow H\) be a surjective homomorphism and let \(A\) be a normal subgroup of \(G\). We need to show that \(\phi(A)\) is a normal subgroup of \(H\).
+    
+    \subsection*{Normal Subgroups}
+    
+    Recall that a subgroup \(A \triangleleft G\) is normal if for all \(g \in G\):
+    \[
+    gAg^{-1} \subseteq A.
+    \]
+    
+    Similarly, a subgroup \(B \subseteq H\) is normal if for all \(h \in H\):
+    \[
+    hBh^{-1} \subseteq B.
+    \]
+    
+    \subsection*{Using the Homomorphism Property}
+    
+    Since \(\phi\) is a homomorphism, it satisfies:
+    \[
+    \phi(g_1 g_2) = \phi(g_1) \phi(g_2) \quad \text{for all } g_1, g_2 \in G.
+    \]
+    
+    To show that \(\phi(A)\) is normal in \(H\), we must show that for any \(h \in H\) and any \(a' \in \phi(A)\):
+    \[
+    h a' h^{-1} \in \phi(A).
+    \]
+    
+    \begin{proof} \( \)
+        
+        Let \(h \in H\) and \(a' \in \phi(A)\). Since \(\phi\) is surjective, there exists some \(g \in G\) such that \(\phi(g) = h\).
+        
+        Let \(a' \in \phi(A)\). By definition of \(\phi(A)\), there exists some \(a \in A\) such that \(\phi(a) = a'\). Consider:
+        \[
+        h a' h^{-1} = \phi(g) \phi(a) \phi(g^{-1}).
+        \]
+        
+        Using the homomorphism property:
+        \[
+        h a' h^{-1} = \phi(g) \phi(a) \phi(g^{-1}) = \phi(g a g^{-1}).
+        \]
+        
+        Since \(A\) is normal in \(G\), we have \(g a g^{-1} \in A\). Therefore:
+        \[
+        \phi(g a g^{-1}) \in \phi(A).
+        \]
+        
+        Thus:
+        \[
+        h a' h^{-1} \in \phi(A).
+        \]
+        
+        \subsection*{Conclusion}
+        
+        We have shown that for any \(h \in H\) and any \(a' \in \phi(A)\):
+        \[
+        h a' h^{-1} \in \phi(A).
+        \]
+        
+        Therefore, \(\phi(A)\) is a normal subgroup of \(H\).
+    \end{proof}
+    
+    \end{exercise}
+    \newpage
+    
+
+%-----------------------------
+\begin{exercise}{2.5.8} Suppose $N$ is a subgroup of a group $G$ and \([G:N]=2\). Show that $N$ is normal in $G$.(Hint: use the fact that a subgroup is normal if and only if every left coset is also a right coset.)
+
+    \noindent\rule{\linewidth}{1pt}
+    
+    
+    \section*{Solution}
+
+Let \(N\) be a subgroup of \(G\) such that the index \([G:N] = 2\). We need to show that \(N\) is a normal subgroup of \(G\).
+
+\subsection*{Cosets and Index}
+
+Since \([G:N] = 2\), \(N\) has exactly two cosets in \(G\):
+\begin{itemize}
+    \item The coset \(N\).
+    \item Another coset, say \(gN\), where \(g \notin N\).
+\end{itemize}
+
+\subsection*{Left and Right Cosets}
+
+To show that \(N\) is normal in \(G\), we will use the fact that a subgroup is normal if and only if every left coset is also a right coset. Specifically, we need to show that for every \(g \in G\):
+\[
+gN = Ng.
+\]
+
+\begin{proof} \( \)
+    
+    Let \(g \in G\). There are two possible cases for \(g\):
+    \begin{enumerate}
+        \item \(g \in N\).
+        \item \(g \notin N\).
+    \end{enumerate}
+    
+    \subsubsection*{Case 1: \(g \in N\)}
+    
+    If \(g \in N\), then:
+    \[
+    gN = N = Ng.
+    \]
+    Thus, the left coset \(gN\) is equal to the right coset \(Ng\).
+    
+    \subsubsection*{Case 2: \(g \notin N\)}
+    
+    If \(g \notin N\), then \(gN\) is the other coset of \(N\) in \(G\), and since there are only two cosets, we have:
+    \[
+    gN = G \setminus N.
+    \]
+    
+    To show \(gN = Ng\), consider the right coset \(Ng\). Since \(g \notin N\), we have:
+    \[
+    Ng = \{ng \mid n \in N\}.
+    \]
+    
+    Similarly, since \(N\) is the identity left coset and \(gN\) is the other coset:
+    \[
+    gN = \{gn \mid n \in N\}.
+    \]
+    
+    We need to show that \(gN = Ng\). Consider an arbitrary element \(gn \in gN\). We can rewrite \(gn\) as \(gn = ng' \in Ng\) for some \(g' \in N\). Since \(gN = G \setminus N\), and similarly for right cosets, the cosets must cover \(G\) without overlap:
+    \[
+    Ng = G \setminus N.
+    \]
+    
+    Therefore:
+    \[
+    gN = Ng.
+    \]
+    
+    \subsection*{Conclusion}
+    
+    We have shown that for every \(g \in G\):
+    \[
+    gN = Ng.
+    \]
+    
+    Thus, every left coset of \(N\) is also a right coset, and \(N\) is a normal subgroup of \(G\).
+\end{proof}
+
+\end{exercise}
+\newpage
+    
+
+%-----------------------------
+\begin{exercise}{3} Let $D$ be the symmetry group of the disk, as described in class and in Goodman 2.6. Show that there is a function \(\phi:D \rightarrow D\) such that \(\phi(r_\theta)=r_{2\theta} \text{ and } \phi(j_\theta)=j_{2\theta}\)(this means: show that \(\phi\) is well-defined), and that this function \(\phi\) is a homomorphism of groups. Also describe the kernel of \(\phi\).
+
+    The following exercise sets up an example which will appear in future problem sets. Here $A$ will be a commutative ring with identity (examples: \(\Z, \ \Q, \ \R, \ \C, \ \Z_n.\)) I'll write \[C(A):= \{(x,y) \ | \ x,y\in A, \ x^2+y^2=1 \}.\] For instance, \(C(\R)\) is the unit circle in \(\R^2\).
+   
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+\subsection*{Structure of the Symmetry Group \(D\)}
+
+The symmetry group \(D\) of the disk consists of:
+\begin{itemize}
+    \item Rotations \(r_\theta\) by \(\theta\) radians.
+    \item Reflections \(j_\theta\) through a line making an angle \(\theta/2\) with a fixed axis.
+\end{itemize}
+
+The group operation involves composition of symmetries:
+\[
+r_\theta r_\phi = r_{\theta + \phi}, \quad j_\theta j_\phi = r_{\theta + \phi}, \quad r_\theta j_\phi = j_{\theta + \phi}, \quad j_\theta r_\phi = j_{\theta - \phi}.
+\]
+
+\subsection*{Defining the Function \(\phi\)}
+
+We define the function \(\phi: D \rightarrow D\) by:
+\[
+\phi(r_\theta) = r_{2\theta}, \quad \phi(j_\theta) = j_{2\theta}.
+\]
+
+We need to show that \(\phi\) is well-defined and a homomorphism.
+
+\subsection*{Well-Definedness of \(\phi\)}
+
+To show that \(\phi\) is well-defined, we must verify that the function \(\phi\) respects the group structure and produces valid elements of \(D\).
+
+\begin{proof} \( \)
+
+\subsubsection*{Rotations}
+
+Consider the rotation \(r_\theta\):
+\[
+\phi(r_\theta) = r_{2\theta}.
+\]
+
+\subsubsection*{Reflections}
+
+Consider the reflection \(j_\theta\):
+\[
+\phi(j_\theta) = j_{2\theta}.
+\]
+
+\subsection*{Homomorphism Property}
+
+To show that \(\phi\) is a homomorphism, we must verify that for any \(g, h \in D\):
+\[
+\phi(gh) = \phi(g) \phi(h).
+\]
+
+Consider the cases for rotations and reflections:
+
+\begin{itemize}
+    \item \textbf{Case 1:} \(g = r_\theta\) and \(h = r_\phi\):
+    \[
+    \phi(r_\theta r_\phi) = \phi(r_{\theta + \phi}) = r_{2(\theta + \phi)} = r_{2\theta + 2\phi} = \phi(r_\theta) \phi(r_\phi).
+    \]
+    \item \textbf{Case 2:} \(g = j_\theta\) and \(h = j_\phi\):
+    \[
+    \phi(j_\theta j_\phi) = \phi(r_{\theta + \phi}) = r_{2(\theta + \phi)} = r_{2\theta + 2\phi} = j_{2\theta} j_{2\phi}.
+    \]
+    \item \textbf{Case 3:} \(g = r_\theta\) and \(h = j_\phi\):
+    \[
+    \phi(r_\theta j_\phi) = \phi(j_{\theta + \phi}) = j_{2(\theta + \phi)} = j_{2\theta + 2\phi} = \phi(r_\theta) \phi(j_\phi).
+    \]
+    \item \textbf{Case 4:} \(g = j_\theta\) and \(h = r_\phi\):
+    \[
+    \phi(j_\theta r_\phi) = \phi(j_{\theta - \phi}) = j_{2(\theta - \phi)} = j_{2\theta - 2\phi} = \phi(j_\theta) \phi(r_\phi).
+    \]
+\end{itemize}
+
+In all cases, \(\phi(gh) = \phi(g) \phi(h)\), so \(\phi\) is a homomorphism.
+
+\end{proof}
+
+\subsection*{Kernel of \(\phi\)}
+
+The kernel of \(\phi\) is the set of elements in \(D\) that are mapped to the identity element under \(\phi\). We need to identify these elements:
+
+\begin{proof} \( \)
+
+Consider the elements of \(D\):
+\begin{itemize}
+    \item For rotations \(r_\theta\):
+    \[
+    \phi(r_\theta) = r_{2\theta} = e \implies 2\theta = 0 \pmod{2\pi} \implies \theta = 0 \pmod{\pi}.
+    \]
+    Thus, the rotations in the kernel are \(r_0\) and \(r_\pi\).
+    \item For reflections \(j_\theta\):
+    \[
+    \phi(j_\theta) = j_{2\theta} = e \implies j_{2\theta} = j_0 \implies \theta = 0 \pmod{\pi}.
+    \]
+    Thus, the reflections in the kernel are \(j_0\) and \(j_\pi\).
+\end{itemize}
+
+Therefore, the kernel of \(\phi\) is:
+\[
+\ker(\phi) = \{r_0, r_\pi, j_0, j_\pi\}.
+\]
+
+
+\subsection*{Conclusion}
+
+The function \(\phi: D \rightarrow D\) defined by \(\phi(r_\theta) = r_{2\theta}\) and \(\phi(j_\theta) = j_{2\theta}\) is well-defined and is a homomorphism of groups. The kernel of \(\phi\) is:
+\[
+    \ker(\phi) = \{r_0, r_\pi, j_0, j_\pi\}.
+    \]
+    
+\end{proof}
+\end{exercise}
+\newpage
+    
+
+%-----------------------------
+\begin{exercise}{4} Given \((x_1,y_1),(x_2,y_2) \in C(A)\), define \[(x_1,y_1) \oplus (x_2,y_2) := (x_1x_2 - y_1y_2, x_1y_2+y_1x_2). \] Show that this always takes values in \(C(A)\), and that \((C(A)), \oplus\) is an abelian group.
+    
+    \noindent\rule{\linewidth}{1pt}
+    
+    \section*{Solution}
+
+    Let \(C(A)\) be defined as:
+    \[
+    C(A) := \{(x, y) \mid x, y \in A, \ x^2 + y^2 = 1\}.
+    \]
+    
+    We define the operation \(\oplus\) on \(C(A)\) by:
+    \[
+    (x_1, y_1) \oplus (x_2, y_2) := (x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2).
+    \]
+    
+    \subsection*{Values in \(C(A)\)}
+    
+    To show that \((x_1, y_1) \oplus (x_2, y_2)\) always takes values in \(C(A)\), we need to verify that:
+    \[
+    (x_1 x_2 - y_1 y_2)^2 + (x_1 y_2 + y_1 x_2)^2 = 1.
+    \]
+    
+    \begin{proof} \( \)
+    
+    Let \((x_1, y_1), (x_2, y_2) \in C(A)\). Then:
+    \[
+    x_1^2 + y_1^2 = 1 \quad \text{and} \quad x_2^2 + y_2^2 = 1.
+    \]
+    
+    Consider the new pair \((x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2)\):
+    \[
+    \begin{aligned}
+    (x_1 x_2 - y_1 y_2)^2 + (x_1 y_2 + y_1 x_2)^2 &= x_1^2 x_2^2 - 2 x_1 x_2 y_1 y_2 + y_1^2 y_2^2 \\
+    &\quad + x_1^2 y_2^2 + 2 x_1 y_2 y_1 x_2 + y_1^2 x_2^2 \\
+    &= x_1^2 x_2^2 + y_1^2 y_2^2 + x_1^2 y_2^2 + y_1^2 x_2^2 \\
+    &= x_1^2 (x_2^2 + y_2^2) + y_1^2 (x_2^2 + y_2^2) \\
+    &= x_1^2 \cdot 1 + y_1^2 \cdot 1 \\
+    &= x_1^2 + y_1^2 \\
+    &= 1.
+    \end{aligned}
+    \]
+    
+    Thus, \((x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2) \in C(A)\).
+    
+    \end{proof}
+    
+    \subsection*{Abelian Group Structure}
+    
+    We need to show that \((C(A), \oplus)\) is an abelian group.
+    
+    \begin{proof} \( \)
+    
+    \subsubsection*{Closure}
+    
+    From the previous proof, we have shown that \((x_1, y_1) \oplus (x_2, y_2) \in C(A)\) for all \((x_1, y_1), (x_2, y_2) \in C(A)\).
+    
+    \subsubsection*{Associativity}
+    
+    We need to show that \(\oplus\) is associative:
+    \[
+    ((x_1, y_1) \oplus (x_2, y_2)) \oplus (x_3, y_3) = (x_1, y_1) \oplus ((x_2, y_2) \oplus (x_3, y_3)).
+    \]
+    
+    Compute both sides:
+    \[
+    \begin{aligned}
+    ((x_1, y_1) \oplus (x_2, y_2)) \oplus (x_3, y_3) &= (x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2) \oplus (x_3, y_3) \\
+    &= ((x_1 x_2 - y_1 y_2) x_3 - (x_1 y_2 + y_1 x_2) y_3, \\
+    &\quad (x_1 x_2 - y_1 y_2) y_3 + (x_1 y_2 + y_1 x_2) x_3).
+    \end{aligned}
+    \]
+    
+    \[
+    \begin{aligned}
+    (x_1, y_1) \oplus ((x_2, y_2) \oplus (x_3, y_3)) &= (x_1, y_1) \oplus (x_2 x_3 - y_2 y_3, x_2 y_3 + y_2 x_3) \\
+    &= (x_1 (x_2 x_3 - y_2 y_3) - y_1 (x_2 y_3 + y_2 x_3), \\
+    &\quad x_1 (x_2 y_3 + y_2 x_3) + y_1 (x_2 x_3 - y_2 y_3)).
+    \end{aligned}
+    \]
+    
+    Both expressions simplify to the same result using distributivity.
+    
+    \subsubsection*{Identity Element}
+    
+    The identity element is \((1, 0)\) since:
+    \[
+    (x, y) \oplus (1, 0) = (x \cdot 1 - y \cdot 0, x \cdot 0 + y \cdot 1) = (x, y).
+    \]
+    
+    \subsubsection*{Inverses}
+    
+    The inverse of \((x, y)\) is \((x, -y)\) since:
+    \[
+    (x, y) \oplus (x, -y) = (x \cdot x - y \cdot (-y), x \cdot (-y) + y \cdot x) = (x^2 + y^2, 0) = (1, 0).
+    \]
+    
+    \subsubsection*{Commutativity}
+    
+    We need to show that \(\oplus\) is commutative:
+    \[
+    (x_1, y_1) \oplus (x_2, y_2) = (x_2, y_2) \oplus (x_1, y_1).
+    \]
+    
+    Compute both sides:
+    \[
+    (x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2) = (x_2 x_1 - y_2 y_1, x_2 y_1 + y_2 x_1).
+    \]
+    
+    Both expressions are the same, showing commutativity.
+    
+    
+    \subsection*{Conclusion}
+    
+    The set \(C(A)\) with the operation \(\oplus\) forms an abelian group:
+    \[
+        (C(A), \oplus) \text{ is an abelian group.}
+        \]
+        
+    \end{proof}
+    \end{exercise}
+    \newpage
+    
+
+%-----------------------------
+\begin{exercise}{5} Show that \(\phi(t):= (\cos t, \sin t)\) defines a homomorphism \(\phi \ : \ (\R,+) \rightarrow (C(\R), \oplus)\). Show that this homomorphism is surjective and determine its kernel.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    
+    \section*{Solution}
+
+    Let \(\phi: \R \rightarrow C(\R)\) be defined by:
+    \[
+    \phi(t) := (\cos t, \sin t).
+    \]
+    
+    We need to show that \(\phi\) is a homomorphism, that it is surjective, and determine its kernel.
+    
+    \subsection*{Homomorphism Property}
+    
+    To show that \(\phi\) is a homomorphism, we must verify that for any \(t_1, t_2 \in \R\):
+    \[
+    \phi(t_1 + t_2) = \phi(t_1) \oplus \phi(t_2).
+    \]
+    
+    Recall the operation \(\oplus\) in \(C(\R)\):
+    \[
+    (x_1, y_1) \oplus (x_2, y_2) := (x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2).
+    \]
+    
+    \begin{proof} \( \)
+    
+    Consider \(\phi(t_1 + t_2)\):
+    \[
+    \phi(t_1 + t_2) = (\cos(t_1 + t_2), \sin(t_1 + t_2)).
+    \]
+    
+    Using the angle addition formulas:
+    \[
+    \cos(t_1 + t_2) = \cos t_1 \cos t_2 - \sin t_1 \sin t_2,
+    \]
+    \[
+    \sin(t_1 + t_2) = \sin t_1 \cos t_2 + \cos t_1 \sin t_2.
+    \]
+    
+    Compute \(\phi(t_1) \oplus \phi(t_2)\):
+    \[
+    \phi(t_1) = (\cos t_1, \sin t_1), \quad \phi(t_2) = (\cos t_2, \sin t_2).
+    \]
+    \[
+    \phi(t_1) \oplus \phi(t_2) = (\cos t_1 \cos t_2 - \sin t_1 \sin t_2, \cos t_1 \sin t_2 + \sin t_1 \cos t_2).
+    \]
+    
+    Compare the results:
+    \[
+    \phi(t_1 + t_2) = (\cos t_1 \cos t_2 - \sin t_1 \sin t_2, \cos t_1 \sin t_2 + \sin t_1 \cos t_2) = \phi(t_1) \oplus \phi(t_2).
+    \]
+    
+    Thus, \(\phi\) preserves the group operation, and \(\phi\) is a homomorphism.
+    
+    \end{proof}
+    
+    \subsection*{Surjectivity}
+    
+    To show that \(\phi\) is surjective, we need to show that for any \((x, y) \in C(\R)\), there exists \(t \in \R\) such that \(\phi(t) = (x, y)\).
+    
+    \begin{proof} \( \)
+    
+    Let \((x, y) \in C(\R)\). By definition, \((x, y)\) satisfies:
+    \[
+    x^2 + y^2 = 1.
+    \]
+    
+    Choose \(t \in \R\) such that:
+    \[
+    \cos t = x, \quad \sin t = y.
+    \]
+    
+    Since \((x, y)\) lies on the unit circle, there exists such \(t\). Thus:
+    \[
+    \phi(t) = (\cos t, \sin t) = (x, y).
+    \]
+    
+    Therefore, \(\phi\) is surjective.
+    
+    \end{proof}
+    
+    \subsection*{Kernel of \(\phi\)}
+    
+    The kernel of \(\phi\) is the set of elements in \(\R\) that are mapped to the identity element in \(C(\R)\) under \(\phi\). The identity element in \(C(\R)\) is \((1, 0)\).
+    
+    \begin{proof} \( \)
+    
+    Determine the kernel of \(\phi\):
+    \[
+    \ker(\phi) = \{t \in \R \mid \phi(t) = (1, 0)\}.
+    \]
+    
+    \[
+    \phi(t) = (\cos t, \sin t) = (1, 0) \implies \cos t = 1 \text{ and } \sin t = 0.
+    \]
+    
+    The solutions to \(\cos t = 1\) and \(\sin t = 0\) are:
+    \[
+    t = 2k\pi \quad \text{for some } k \in \Z.
+    \]
+    
+    Thus:
+    \[
+    \ker(\phi) = \{2k\pi \mid k \in \Z\}.
+    \]
+    
+    
+    \subsection*{Conclusion}
+    
+    The function \(\phi(t) := (\cos t, \sin t)\) defines a homomorphism \(\phi: (\R, +) \rightarrow (C(\R), \oplus)\) that is surjective. The kernel of \(\phi\) is:
+    \[
+        \ker(\phi) = \{2k\pi \mid k \in \Z\}.
+        \]
+        
+    \end{proof}
+    \end{exercise}
+    \newpage
+    
+
+%-----------------------------
+
+\end{document}

@@ -1,0 +1,91 @@
+---
+title: "ECON425_HW5"
+author: "Charles Ancel"
+date: "2024-07-01"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Check and install necessary packages if not already installed
+packages <- c("tidyverse", "quantmod", "fredr", "conflicted")
+installed_packages <- rownames(installed.packages())
+for (package in packages) {
+  if (!(package %in% installed_packages)) {
+    install.packages(package)
+  }
+}
+```
+
+```{r libraries}
+library(tidyverse)
+library(quantmod)
+library(fredr)
+```
+
+```{r FRED_key}
+fredr_set_key("89e09406a6b0e5d39d06d3b19fec5156")
+```
+
+
+```{r FRED_data}
+# Retrieve data from FRED
+unemployment_rate <- fredr(series_id = "UNRATE")
+cpi <- fredr(series_id = "CPILFESL")
+hourly_earnings <- fredr(series_id = "CES0500000003")
+```
+```{r Data_Convert}
+# Convert the data to time series objects
+unemployment_ts <- xts(unemployment_rate$value, order.by = as.Date(unemployment_rate$date))
+cpi_ts <- xts(cpi$value, order.by = as.Date(cpi$date))
+earnings_ts <- xts(hourly_earnings$value, order.by = as.Date(hourly_earnings$date))
+```
+
+```{r Calculations}
+# Calculate year-over-year inflation rate from CPI
+inflation_rate <- diff(log(cpi_ts), lag = 12) * 100
+
+# Calculate year-over-year wage inflation rate from hourly earnings
+wage_inflation_rate <- diff(log(earnings_ts), lag = 12) * 100
+```
+
+```{r Merge+DF}
+# Merge the data into a single data frame
+data <- merge(unemployment_ts, inflation_rate, wage_inflation_rate, all = FALSE)
+colnames(data) <- c("Unemployment_Rate", "Inflation_Rate", "Wage_Inflation_Rate")
+
+# Convert to a tidy data frame
+data_df <- data.frame(date = index(data), coredata(data))
+```
+
+```{r Plot-InflationvsUnemployment}
+# Plot Inflation vs. Unemployment Rate
+inflation_vs_unemployment_plot <- ggplot(data_df, aes(x = Unemployment_Rate, y = Inflation_Rate)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Inflation vs. Unemployment Rate",
+       x = "Unemployment Rate (%)",
+       y = "Inflation Rate (%)")
+
+ggsave("Inflation_vs_Unemployment.png", plot = inflation_vs_unemployment_plot)
+```
+```{r Plot-Wage_InflationvsUnemployment}
+# Plot Wage Inflation vs. Unemployment Rate
+wage_inflation_vs_unemployment_plot <- ggplot(data_df, aes(x = Unemployment_Rate, y = Wage_Inflation_Rate)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Wage Inflation vs. Unemployment Rate",
+       x = "Unemployment Rate (%)",
+       y = "Wage Inflation Rate (%)")
+
+ggsave("Wage_Inflation_vs_Unemployment.png", plot = wage_inflation_vs_unemployment_plot)
+```
+
+```{r Analysis_Comparison}
+# Analyze the relationship between variables
+model1 <- lm(Inflation_Rate ~ Unemployment_Rate, data = data_df)
+summary(model1)
+
+model2 <- lm(Wage_Inflation_Rate ~ Unemployment_Rate, data = data_df)
+summary(model2)
+```

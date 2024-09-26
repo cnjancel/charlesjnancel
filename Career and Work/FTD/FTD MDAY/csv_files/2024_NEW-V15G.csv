@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,70,,85,,100,,110
+,Total SRP of Bundle,,70,,85,,100,,110
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,70,,85,,100,,110
+,Less Commission (20%),,-14,,-17,,-20,,-22
+,Less C/H Fee (9%),,-6.3,,-7.6499999999999995,,-9,,-9.9
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-6.9,,-6.9,,-6.9,,-6.9
+,Less Floral Cost,,-8.19,,-11.629999999999999,,-13.27,,-17.380000000000003
+,Total Gross Margin,,13.870000000000003,,21.080000000000002,,30.090000000000007,,33.08
+,Gross Margin %,,0.19814285714285718,,0.24800000000000003,,0.30090000000000006,,0.30072727272727273
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Lavender,Lavender 50 cm Roses,1,1.37,2,2.74,3,4.11,6,8.22
+Light Pink,Standard Carnations,1,0.62,3,1.8599999999999999,2,1.24,2,1.24
+Pink ,Stock stems,2,1.92,2,1.92,2,1.92,2,1.92
+Pink,LA Hybrid Lily stems,1,1.72,2,3.44,2,3.44,2,3.44
+Pink,Alstroemeria stems,2,1.78,1,0.89,2,1.78,2,1.78
+,Salal tips,3,0.78,3,0.78,3,0.78,3,0.78
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,8.19,,11.629999999999999,,13.27,,17.380000000000003
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,2120GS - Small Gold-Dipped Vase,1,6.9,1,6.9,1,6.9,1,6.9
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,6.9,,6.9,,6.9,,6.9

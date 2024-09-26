@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Cherry Blossom Bouquet,,Cherry Blossom Bouquet,,Cherry Blossom Bouquet,,Cherry Blossom Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,79.99,,97.99,,117.99,,136
+,Total SRP of Bundle,,79.99,,97.99,,117.99,,136
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,79.99,,97.99,,117.99,,136
+,Less Commission (20%),,-15.998,,-19.598,,-23.598,,-27.200000000000003
+,Less C/H Fee (9%),,-7.1991,,-8.819099999999999,,-10.6191,,-12.24
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-7.999,,-9.799,,-11.799,,-13.600000000000001
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-9.459999999999999,,-12.23,,-15.05,,0
+,Total Gross Margin,,16.093899999999998,,24.30390000000001,,33.683899999999994,,59.72
+,Gross Margin %,,0.2011988998624828,,0.24802428819267283,,0.2854809729638105,,0.4391176470588235
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Pink,50 cm Roses,2,1.92,4,3.84,6,5.76,,0
+Pink,Spray Rose stems,1,0.9,1,0.9,2,1.8,,0
+Pink,Alstroemeria stems,1,0.62,1,0.62,1,0.62,,0
+Lavender,Stock stems,2,1.7,3,2.55,3,2.55,,0
+Lavender,Cushion Pompon stems,2,1.26,2,1.26,2,1.26,,0
+Pink,Statice stems,2,1.18,2,1.18,2,1.18,,0
+,Fern,2,0.5,2,0.5,2,0.5,,0
+,Huckleberry,2,1,2,1,2,1,,0
+,Leatherleaf,2,0.38,2,0.38,2,0.38,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,9.459999999999999,,12.23,,15.05,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

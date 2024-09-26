@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Daisy & Rose Delight,,Daisy & Rose Delight,,Daisy & Rose Delight,,Daisy & Rose Delight
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,69.99,,84.99,,104.99,,136
+,Total SRP of Bundle,,69.99,,84.99,,104.99,,136
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,69.99,,84.99,,104.99,,136
+,Less Commission (20%),,-13.998,,-16.998,,-20.998,,-27.200000000000003
+,Less C/H Fee (9%),,-6.299099999999999,,-7.649099999999999,,-9.4491,,-12.24
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-6.999,,-8.499,,-10.499,,-13.600000000000001
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-6.9799999999999995,,-7.739999999999999,,-9.66,,0
+,Total Gross Margin,,12.473899999999993,,20.86389999999999,,31.14389999999999,,59.72
+,Gross Margin %,,0.178224032004572,,0.24548652782680305,,0.29663682255452894,,0.4391176470588235
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Pink,50 cm Roses,0,0,3,2.88,5,4.8,,0
+Pink,Standard Carnations,7,3.71,3,1.59,3,1.59,,0
+White,Daisy Pompon stems,3,1.8900000000000001,3,1.8900000000000001,3,1.8900000000000001,,0
+,Variegated Pittosporum stems,2,1.38,2,1.38,2,1.38,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,6.9799999999999995,,7.739999999999999,,9.66,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

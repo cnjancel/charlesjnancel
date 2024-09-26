@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Sweet Devotion,,Sweet Devotion,,Sweet Devotion,,Sweet Devotion
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,72.99,,94.99,,118.99,,
+,Total SRP of Bundle,,72.99,,94.99,,118.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,72.99,,94.99,,118.99,,0
+,Less Commission (20%),,-14.597999999999999,,-18.998,,-23.798000000000002,,0
+,Less C/H Fee (9%),,-6.5691,,-8.5491,,-10.7091,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-7.2989999999999995,,-9.499,,-11.899000000000001,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-7.13,,-11.71,,-15.33,,0
+,Total Gross Margin,,14.153899999999997,,22.99389999999999,,34.01390000000001,,-23.240000000000002
+,Gross Margin %,,0.19391560487738044,,0.24206653331929667,,0.28585511387511564,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Lavender,50 cm Roses,3,2.88,6,5.76,8,7.68,,0
+Lavender,Stock stems,3,2.55,4,3.4,5,4.25,,0
+Pink,Stock stems,2,1.7,3,2.55,4,3.4,,0
+,Salal tips,0,0,0,0,0,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,7.13,,11.71,,15.33,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

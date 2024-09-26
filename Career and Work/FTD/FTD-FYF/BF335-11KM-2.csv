@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,81.99,,91.99,,101.99,,
+,Total SRP of Bundle,,81.99,,91.99,,101.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,81.99,,91.99,,101.99,,0
+,Less Commission (20%),,-16.398,,-18.398,,-20.398,,0
+,Less C/H Fee (9%),,-7.379099999999999,,-8.2791,,-9.1791,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-8.199,,-9.199,,-10.199,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-10.47,,-13.47,,-20.31,,0
+,Total Gross Margin,,16.3039,,19.4039,,18.6639,,-23.240000000000002
+,Gross Margin %,,0.19885229906086108,,0.21093488422654638,,0.18299735268163547,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Lavender,50 cm Roses,3,2.88,3,2.88,7,6.72,,0
+Pink,Spray Rose stems,3,2.7,4,3.6,5,4.5,,0
+Pink,Waxflower stems,2,2.82,3,4.2299999999999995,4,5.64,,0
+,Variegated Pittosporum stems,3,2.07,4,2.76,5,3.4499999999999997,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,10.47,,13.47,,20.31,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

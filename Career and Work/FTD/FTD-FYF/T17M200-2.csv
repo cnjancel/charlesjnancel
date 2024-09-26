@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Lush Lavender Bouquet,,Lush Lavender Bouquet,,Lush Lavender Bouquet,,Lush Lavender Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,94.99,,119.99,,144.99,,136
+,Total SRP of Bundle,,94.99,,119.99,,144.99,,136
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,94.99,,119.99,,144.99,,136
+,Less Commission (20%),,-18.998,,-23.998,,-28.998000000000005,,-27.200000000000003
+,Less C/H Fee (9%),,-8.5491,,-10.7991,,-13.049100000000001,,-12.24
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-9.499,,-11.999,,-14.499000000000002,,-13.600000000000001
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-6,,-6,,-6,,-6
+,Less Floral Cost,,-14.11,,-17.83,,-20.6,,0
+,Total Gross Margin,,17.09389999999999,,28.6239,,41.1039,,56.22
+,Gross Margin %,,0.17995473207706067,,0.23855237936494708,,0.2834947237740534,,0.4133823529411765
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Ivory,50 cm Roses,3,2.88,6,5.76,8,7.68,,0
+Lavender,Alstroemeria stems,3,1.8599999999999999,3,1.8599999999999999,3,1.8599999999999999,,0
+Purple,Stock stems,3,2.55,3,2.55,4,3.4,,0
+Green,Button Pompon stems,2,1.26,2,1.26,2,1.26,,0
+Lavender,Cushion Pompon stems,2,1.26,2,1.26,2,1.26,,0
+,Limonium Misty Blue,1,0.84,2,1.68,2,1.68,,0
+,Bupleurum Stems,3,2.46,3,2.46,3,2.46,,0
+,Huckleberry,2,1,2,1,2,1,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,14.11,,17.83,,20.6,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,Birthday Pick,1,3.5,1,3.5,1,3.5,1,3.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,6,,6,,6,,6

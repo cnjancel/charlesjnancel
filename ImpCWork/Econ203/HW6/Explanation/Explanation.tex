@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+}
+
+\title{Explanation of Predictions Based on Linear Regression Models}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+This document provides a detailed explanation of how predictions for total calories were constructed based on previously estimated linear regression models. These models aim to understand the relationship between total calories and various nutritional components, specifically Total Fat, Total Carbohydrate, Sugars, and Protein.
+
+\section*{Linear Regression Overview}
+
+Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables. The goal is to fit a linear equation to observed data to describe how changes in the independent variables affect the dependent variable. The general form of a simple linear regression equation is:
+
+\[
+y = \beta_0 + \beta_1x + \epsilon
+\]
+
+where:
+\begin{itemize}
+    \item $y$ is the dependent variable (in this case, Calories).
+    \item $\beta_0$ is the intercept.
+    \item $\beta_1$ is the coefficient of the independent variable (Total Fat, Total Carbohydrate, Sugars, or Protein).
+    \item $x$ is the independent variable.
+    \item $\epsilon$ is the error term.
+\end{itemize}
+
+\section*{Model Descriptions}
+
+\subsection*{Model 1: Calories ~ Total Fat}
+
+This model predicts calories based on Total Fat content. The regression equation is:
+
+\[
+\text{Predicted Calories} = 175.605383 + 4.361736 \times \text{Total Fat}
+\]
+
+\subsection*{Model 2: Calories ~ Total Carbohydrate}
+
+This model predicts calories based on Total Carbohydrate content. The regression equation is:
+
+\[
+\text{Predicted Calories} = 157.531318 + 4.041027 \times \text{Total Carbohydrate}
+\]
+
+\subsection*{Model 3: Calories ~ Sugars}
+
+This model predicts calories based on Sugars content. The regression equation is:
+
+\[
+\text{Predicted Calories} = 305.84865 - 8.18614 \times \text{Sugars}
+\]
+
+\subsection*{Model 4: Calories ~ Protein}
+
+This model predicts calories based on Protein content. The regression equation is:
+
+\[
+\text{Predicted Calories} = 86.67152 + 13.15175 \times \text{Protein}
+\]
+
+\section*{Conclusion}
+
+By applying these models to new data, we can calculate the predicted calorie value for each record in the dataset. These predictions allow for a deeper understanding of the impact of various nutritional components on the total caloric content.
+
+\end{document}

@@ -1,0 +1,121 @@
+CGP,The FTD® Fiesta Bouquet,Unnamed: 2,Standard,Unnamed: 4,Deluxe,Unnamed: 6,Premium,Unnamed: 8,Exquisite,Unnamed: 10
+,,ea.,CGPs,,CGPd,,CGPp,,CGPe,
+,retail (w/o delivery),,,57,,72,,92,,117
+,FTD.com Retail,,,67,,82,,102,,127
+Hot Pink,Standard Carnations,0.53,3,1.59,3,1.59,3,1.59,3,1.59
+Orange,Spray Rose stems,0.9,2,1.8,3,2.7,3,2.7,3,2.7
+Orange,Gerbera Daisies,1.14,2,2.28,2,2.28,3,3.42,3,3.42
+Hot Pink,Mini Carnation stems,0.51,2,1.02,2,1.02,2,1.02,2,1.02
+Peach,Hypericum Berry stems,0.77,1,0.77,2,1.54,3,2.31,3,2.31
+Hot Pink,50 cm Roses,0.96,0,0,2,1.92,4,3.84,10,9.6
+Pink,Stock stems,0.85,0,0,2,1.7,3,2.55,3,2.55
+,Israeli Ruscus stems,0.35,4,1.4,4,1.4,4,1.4,4,1.4
+,Salal tips,0.23,1,0.23,1,0.23,1,0.23,1,0.23
+,,,,0,,0,,0,,0
+2120S,Small Cinched Vase,5.12,1,5.12,1,5.12,,0,,0
+2120L,Large Cinched Vase,5.94,,0,,0,1,5.94,1,5.94
+,TOTAL,,,14.21,,19.5,,25,,30.76
+,retail     (w/o delivery),,,57,,72,,92,,117
+,executing value         (retail * .71),0.71,,40.47,,51.12,,65.32,,83.07
+,COGS     (EV * .50),0.5,,20.235,,25.56,,32.66,,41.535
+,Gross Margin     (EV * .50),0.5,,20.235,,25.56,,32.66,,41.535
+,ACTUAL GROSS MARGIN    (EV-TOTAL),,,26.259999999999998,,31.619999999999997,,40.31999999999999,,52.30999999999999
+,Labor Cost    (retail x -10%),-0.1,,-5.7,,-7.2,,-9.200000000000001,,-11.700000000000001
+,FTO,-2.75,,-2.75,,-2.75,,-2.75,,-2.75
+,UCP Fee,-4.99,,-4.99,,-4.99,,-4.99,,-4.99
+,Other Fees,-3,,-3,,-3,,-3,,-3
+,TOTAL  (bottom line that florist makes),,,9.819999999999999,,13.68,,20.37999999999999,,29.869999999999983
+,Net Margin    (TOTAL abv/RETAIL),,,0.17228070175438595,,0.19,,0.22152173913043466,,0.25529914529914516
+,,,,,,,,,,
+,Actual COGS Percentage of Retail w/o delivery,,,0.2492982456140351,,0.2708333333333333,,0.2717391304347826,,0.26290598290598294
+,,,,,,,,,,
+,,,inches,cm,inches,cm,inches,cm,inches,cm
+,,H,12,30.48,14,35.56,16,40.64,18,45.72
+,,W,12,30.48,14,35.56,17,43.18,19,48.26
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,0.4,,0.4,,0.2,,0.2
+,,,,,,,,,,
+EDAY 2023 PRICING,,,,,,,,,,
+,,NEW 2023,,CDAY 2023,,,,,,
+,Alstroemeria stems,0.62,-0.29000000000000004,0.91,,,,,,
+,Asiatic Lily stems,1.47,-0.07000000000000006,1.54,,,,,,
+,Button Pompon stems,0.63,-0.12,0.75,,,,,,
+,Cushion Pompon stems,0.63,-0.12,0.75,,,,,,
+,Daisy Pompon stems,0.63,-0.12,0.75,,,,,,
+,Double Lisianthus stems,1.28,-0.32000000000000006,1.6,,,,,,
+,"Delphinium stems, Belladonna",1.06,-0.43999999999999995,1.5,,,,,,
+,"Delphinium stems, hybrid",1.26,-0.9200000000000002,2.18,,,,,,
+,Disbud Stem,0.84,-0.13,0.97,,,,,,
+,Gerbera Daisies,1.14,-0.3600000000000001,1.5,,,,,,
+Blue,Hydrangea blooms,2.3,0.020000000000000018,2.28,,,,,,
+Green,Mini Hydrangea blooms,1.69,0.050000000000000044,1.64,,,,,,
+White,Hydrangea blooms,2.14,0,2.14,,,,,,
+,Hypericum Berry stems,0.77,-0.13,0.9,,,,,,
+,Iris stems,1.13,-0.07000000000000006,1.2,,,,,,
+,LA Hybrid Lily stems,1.47,-0.16999999999999993,1.64,,,,,,
+,Limonium Blue stream,0.84,-0.30999999999999994,1.15,,,,,,
+,Limonium Misty Blue,0.84,,1.41,,,,,,
+,Matsumoto Aster stems,0.79,-0.04999999999999993,0.84,,,,,,
+,Mini Calla Lilies,1.65,-0.77,2.42,,,,,,
+,Mini Carnation stems,0.51,-0.17999999999999994,0.69,,,,,,
+,Monte Casino stems,0.66,0,0.66,,,,,,
+White,Queen Anne's Lace,1.29,,1.25,,,,,,
+,Ranunculus,1.64,,2.85,,,,,,
+Orange,50 cm Roses,0.96,-0.08000000000000007,1.04,,,,,,
+Yellow,50 cm Roses,0.96,-0.1200000000000001,1.08,,,,,,
+Peach,50 cm Roses,0.96,-0.1200000000000001,1.08,,,,,,
+Pink,50 cm Roses,0.96,-0.18999999999999995,1.15,,,,,,
+Lavender,50 cm Roses,0.96,-0.1200000000000001,1.08,,,,,,
+White,50 cm Roses,0.96,-0.32000000000000006,1.28,,,,,,
+Red,50 cm Roses,0.87,-0.30999999999999994,1.18,,,,,,
+,Snapdragon stems,0.92,-0.2799999999999999,1.2,,,,,,
+,Solidago stems,0.63,0.06000000000000005,0.57,,,,,,
+,Spider Mums,0.84,0,0.84,,,,,,
+,Spray Rose stems,0.9,-0.5199999999999999,1.42,,,,,,
+,Standard Carnations,0.53,-0.17999999999999994,0.71,,,,,,
+,Star of Bethlehem stems,0.85,,1.18,,,,,,
+,Statice stems,0.59,-0.15000000000000002,0.74,,,,,,
+,Stock stems,0.85,-0.13,0.98,,,,,,
+,Sweet William,0.77,-0.25,1.02,,,,,,
+,Eryngium thistle stems,1.4,-0.30000000000000004,1.7,,,,,,
+Green,Trick Dianthus stems,0.94,-0.16000000000000014,1.1,,,,,,
+,Waxflower stems,1.41,-0.19000000000000017,1.6,,,,,,
+,,,,,,,,,,
+,Baby Blue Eucalyptus stems,0.99,-0.010000000000000009,1,,,,,,
+,Dusty Miller Stems,0.98,,1.05,,,,,,
+,Gunni Eucalyptus stems,1.09,-0.18999999999999995,1.28,,,,,,
+,Silver dollar Eucalyptus stems,2.1,0,2.1,,,,,,
+,Green Pittosporum stems,0.67,-0.039999999999999925,0.71,,,,,,
+,Israeli Ruscus stems,0.35,-0.050000000000000044,0.4,,,,,,
+,Italian Variegated Pittosporum stems,0.82,-0.08000000000000007,0.9,,,,,,
+,Salal tips,0.26,-0.020000000000000018,0.28,,,,,,
+,Seeded Eucalyptus stems,2.1,-0.029999999999999805,2.13,,,,,,
+,Variegated Pittosporum stems,0.69,-0.050000000000000044,0.74,,,,,,
+,Silver dollar Eucalyptus stems,1.8,0.020000000000000018,1.78,,,,,,
+,Green Pittosporum stems,0.65,0,0.65,,,,,,
+,Israeli Ruscus stems,0.37,-0.020000000000000018,0.39,,,,,,
+,Italian Ruscus stems,1.97,0.19999999999999996,1.77,,,,,,
+,Italian Variegated Pittosporum stems,1.03,0.13,0.9,,,,,,
+,Ivy vines,0.65,-0.07999999999999996,0.73,,,,,,
+,Leatherleaf stems,0.17,0,0.17,,,,,,
+,Lily Grass blades,0.34,0,0.34,,,,,,
+,Mini Myrtle stems,0.95,-0.020000000000000018,0.97,,,,,,
+,Myrtle stems,0.8,-0.07999999999999996,0.88,,,,,,
+,Salal stems,0.44,-0.020000000000000018,0.46,,,,,,
+,Salal tips,0.23,-0.01999999999999999,0.25,,,,,,
+,Seeded Eucalyptus stems,1.8,0.020000000000000018,1.78,,,,,,
+,Sword Fern fronds,0.55,0.040000000000000036,0.51,,,,,,
+,Ti leaves,0.46,-0.009999999999999953,0.47,,,,,,
+,Variegated Aspidistra leaves,0.74,-0.040000000000000036,0.78,,,,,,
+,Variegated Pittosporum stems,0.67,-0.22999999999999998,0.9,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Hardgoods,,,,,,,,,
+,Small Gold Dipped Vase,7.17,,,,,,,,
+,Large Gold Dipped Vase,11.75,,,,,,,,
+,Small Cinched Vase,5.12,,,,,,,,
+,Large Cinched Vase,5.94,,,,,,,,
+,White Wooded Box,6.96,,,,,,,,
+,Brown Wood Box,7,,,,,,,,

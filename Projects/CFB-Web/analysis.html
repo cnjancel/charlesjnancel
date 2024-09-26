@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Analysis</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data Description</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="summary.html">Executive Summary</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Data Loading and Preparation</h2>
+            <p>Here, we load and prepare our data for analysis.</p>
+            <pre><code>```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(arrow)
+parquet_files <- c(
+    'Data/cfb_schedules_2001.parquet',
+    'Data/cfb_schedules_2002.parquet',
+    'Data/cfb_schedules_2003.parquet',
+    'Data/cfb_schedules_2004.parquet',
+    'Data/cfb_schedules_2005.parquet',
+    'Data/cfb_schedules_2006.parquet',
+    'Data/cfb_schedules_2007.parquet',
+    'Data/cfb_schedules_2008.parquet',
+    'Data/cfb_schedules_2009.parquet',
+    'Data/cfb_schedules_2010.parquet',
+    'Data/cfb_schedules_2011.parquet',
+    'Data/cfb_schedules_2012.parquet',
+    'Data/cfb_schedules_2013.parquet',
+    'Data/cfb_schedules_2014.parquet',
+    'Data/cfb_schedules_2015.parquet',
+    'Data/cfb_schedules_2016.parquet',
+    'Data/cfb_schedules_2017.parquet',
+    'Data/cfb_schedules_2018.parquet',
+    'Data/cfb_schedules_2019.parquet',
+    'Data/cfb_schedules_2020.parquet',
+    'Data/cfb_schedules_2021.parquet',
+    'Data/cfb_schedules_2022.parquet'
+)
+# Read the first file as a reference
+merged_df <- arrow::read_parquet(parquet_files[1])
+
+# Iterate through the rest of the files and bind them row-wise
+for (file in parquet_files[-1]) {
+  temp_df <- arrow::read_parquet(file)
+  
+  # Add missing columns with NA values
+  for (col in setdiff(names(merged_df), names(temp_df))) {
+    temp_df[[col]] <- NA
+  }
+  
+  # Bind rows and retain only the columns present in the reference dataframe
+  merged_df <- rbind(merged_df, temp_df[, names(merged_df)])
+}
+<h3>Data Cleaning</h3>
+<p>We removed columns with high missingness and imputed missing values for critical variables such as attendance and excitement index. The following steps outline the data cleaning process:</p>
+<pre><code>```{r}
+library(dplyr)
+
+# Dropping columns with high missingness
+merged_df <- dplyr::select(merged_df, -c(start_time_tbd, venue_id, venue))
+# Drop 'notes' and 'highlights' columns if they exist
+if("notes" %in% colnames(merged_df)) {
+merged_df$notes <- NULL
+}
+if("highlights" %in% colnames(merged_df)) {
+merged_df$highlights <- NULL
+}
+if("season_type" %in% colnames(merged_df)) {
+merged_df$season_type <- NULL
+
+# Impute missing values for 'conference_game' with the most common value (mode)
+common_conference_game <- which.max(table(merged_df$conference_game, useNA = "no"))
+merged_df$conference_game[is.na(merged_df$conference_game)] <- common_conference_game == 2
+
+# Imputing missing values for 'home_points' and 'away_points' with their respective medians
+merged_df$home_points[is.na(merged_df$home_points)] <- median(merged_df$home_points, na.rm = TRUE)
+merged_df$away_points[is.na(merged_df$away_points)] <- median(merged_df$away_points, na.rm = TRUE)
+median_attendance <- median(merged_df$attendance, na.rm = TRUE)
+
+merged_df$attendance[is.na(merged_df$attendance)] <- median_attendance
+merged_df$excitement_index <- as.numeric(merged_df$excitement_index)
+merged_df$away_post_win_prob <- as.numeric(merged_df$away_post_win_prob)
+merged_df$home_post_win_prob <- as.numeric(merged_df$home_post_win_prob)
+# Impute missing values with median
+merged_df$excitement_index[is.na(merged_df$excitement_index)] <- median(merged_df$excitement_index, na.rm = TRUE)
+merged_df$away_post_win_prob[is.na(merged_df$away_post_win_prob)] <- median(merged_df$away_post_win_prob, na.rm = TRUE)
+merged_df$home_post_win_prob[is.na(merged_df$home_post_win_prob)] <- median(merged_df$home_post_win_prob, na.rm = TRUE)
+
+
+# Filter out rows with missing ELO ratings
+merged_df <- merged_df %>% 
+filter(!is.na(home_pregame_elo) & !is.na(away_pregame_elo))
+merged_df <- merged_df %>% 
+filter(!is.na(away_postgame_elo) & !is.na(home_postgame_elo))
+
+# Drop rows where specific columns have NA values
+merged_df <- merged_df %>% filter(!is.na(home_conference) & !is.na(away_conference))
+
+# Check the dimensions of the dataset after handling missing data
+dim(merged_df)
+# Check the structure of the modified dataframe
+str(merged_df)
+# Count NA values in each column
+na_counts <- sapply(merged_df, function(x) sum(is.na(x)))
+
+# Print the counts
+print(na_counts)
+<p><strong>Dimensions and Columns:</strong></p>
+<ol>
+    <li>Rows (15183): The number of rows (15183) represents the total number of observations or data points in your dataset; each row corresponds to a specific game.</li>
+    <li>Columns (24): The number of columns (24) represents the different variables or attributes that have been recorded for each game after it has been cleaned.</li>
+</ol>
+<p>Some of the common types of information you might find in these columns could include:</p>
+<ul>
+    <li>Game-related data such as "game_id," "season," "week," and "start_date."</li>
+    <li>Information about the home and away teams like "home_team," "away_team," "home_conference," and "away_conference."</li>
+    <li>Game statistics like "home_points," "away_points," "attendance," and "excitement_index."</li>
+    <li>Elo ratings for home and away teams such as "home_pregame_elo" and "away_pregame_elo."</li>
+    <li>Binary indicators like "conference_game" that specify whether a game is a conference game or not.</li>
+</ul>
+<p><strong>Removing Columns with High Missingness</strong></p>
+<p>Several columns in our dataset have a significant proportion of missing values, which can impact the quality of our analysis. Specifically, columns such as <code>notes</code>, <code>highlights</code>, <code>excitement_index</code>, <code>away_post_win_prob</code>, and <code>home_post_win_prob</code> have more than 60% missing data. Given this high level of missingness and the limited value these columns are likely to add to our analysis, we have decided to remove them from our dataset.</p>
+<p><strong>Imputing Missing Values in Attendance</strong></p>
+<p>The <code>attendance</code> column, which we hypothesize could be an important predictor in our analysis, has some missing values. To address this, we have imputed these missing values with the median attendance. We chose the median because it is less sensitive to outliers than the mean, ensuring a more robust imputation.</p>
+<p><strong>Handling Missing Values in Conference Information</strong></p>
+<p>We observed that the <code>home_conference</code> and <code>away_conference</code> columns contain some missing values. Given the importance of these variables in our analysis of college football games, rows with missing values in these columns have been removed. This step ensures that our analysis is based on complete cases where essential categorical information is present.</p>
+<pre><code>```{r}
+head(merged_df)
+arrow::write_parquet(merged_df, "merged_data.parquet")
+write.csv(merged_df, "merged_data.csv", row.names = FALSE)
+cat("Columns:\n")
+print(names(merged_df))
+cat("\nSample Data:\n")
+print(head(merged_df))
+<h3>Variable Descriptions</h3>
+<p>The dataset includes a mix of quantitative and categorical variables. Key variables are:</p>
+<ul>
+    <li><strong>Quantitative Variables:</strong> These include <code>season</code>, <code>week</code>, <code>attendance</code>, <code>home_points</code>, <code>away_points</code>, <code>home_pregame_elo</code>, and <code>away_pregame_elo</code>. These variables provide numerical insights into the games, such as timing, audience presence, team performance, and pre-game ratings.</li>
+    <li><strong>Categorical Variables:</strong> These encompass <code>season_type</code>, <code>conference_game</code>, <code>home_team</code>, <code>away_team</code>, <code>home_conference</code>, and <code>away_conference</code>. They offer qualitative context regarding the nature of the games, participating teams, and their affiliations.</li>
+</ul>
+</section>
+</main>
+<footer>
+<p>&copy; 2024 Charles Ancel</p>
+</footer>
+</body>
+</html>
+
+

@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,69,,89,,109,,130
+,Total SRP of Bundle,,69,,89,,109,,130
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,69,,89,,109,,130
+,Less Commission (20%),,-13.8,,-17.8,,-21.8,,-26
+,Less C/H Fee (9%),,-6.21,,-8.01,,-9.81,,-11.7
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-4.25,,-4.25,,-4.25,,-4.25
+,Less Floral Cost,,-10.36,,-15.83,,-20.01,,-21.380000000000003
+,Total Gross Margin,,13.64,,22.370000000000005,,32.39,,45.93
+,Gross Margin %,,0.19768115942028985,,0.2513483146067416,,0.2971559633027523,,0.3533076923076923
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+White,LA Hybrid Lily stems,1,1.72,2,3.44,2,3.44,2,3.44
+Hot Pink,Pink 50 cm Roses,2,2.74,3,4.11,4,5.48,4,5.48
+Light Pink,Pink 50 cm Roses,2,2.74,2,2.74,3,4.11,4,5.48
+Pink,Hypericum Berry stems,1,0.94,2,1.88,2,1.88,2,1.88
+Pink,Double Lisianthus stems,1,1.44,2,2.88,3,4.32,3,4.32
+,Salal tips,3,0.78,3,0.78,3,0.78,3,0.78
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,10.36,,15.83,,20.01,,21.380000000000003
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Pink Glass Vase,1,4.25,1,4.25,1,4.25,1,4.25
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,4.25,,4.25,,4.25,,4.25

@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,69,,85,,110,,155
+,Total SRP of Bundle,,69,,85,,110,,150
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,69,,85,,110,,155
+,Less Commission (20%),,-13.8,,-17,,-22,,-31
+,Less C/H Fee (9%),,-6.21,,-7.6499999999999995,,-9.9,,-13.95
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-4.25,,-4.25,,-4.25,,-4.25
+,Less Floral Cost,,-10.259999999999998,,-14.15,,-20.46,,-30.060000000000002
+,Total Gross Margin,,13.740000000000002,,21.21,,32.65,,55
+,Gross Margin %,,0.19913043478260872,,0.2495294117647059,,0.2968181818181818,,0.3548387096774194
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Red,Standard Carnations,3,1.8599999999999999,4,2.48,4,2.48,4,2.48
+Red,Mini Carnation stems,3,1.8599999999999999,3,1.8599999999999999,4,2.48,4,2.48
+Red,Red 50 cm Roses,2,3.2,3,4.800000000000001,6,9.600000000000001,12,19.200000000000003
+Red,Alstroemeria stems,2,1.78,3,2.67,4,3.56,4,3.56
+,Salal tips,3,0.78,3,0.78,3,0.78,3,0.78
+,Israeli Ruscus stems,2,0.78,4,1.56,4,1.56,4,1.56
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,10.259999999999998,,14.15,,20.46,,30.060000000000002
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Red Glass Vase,1,4.25,1,4.25,1,4.25,1,4.25
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,4.25,,4.25,,4.25,,4.25

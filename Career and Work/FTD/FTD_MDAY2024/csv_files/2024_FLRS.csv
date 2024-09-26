@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Red Hot Bouquet,,Red Hot Bouquet,,Red Hot Bouquet,,Red Hot Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,63,,0,,0,,0
+,Total SRP of Bundle,,63,,0,,0,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,63,,0,,0,,0
+,Less Commission (20%),,-12.600000000000001,,0,,0,,0
+,Less C/H Fee (9%),,-5.67,,0,,0,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,0,,0,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.83,,0,,0,,0
+,Less Floral Cost,,-8.42,,0,,0,,0
+,Total Gross Margin,,12.739999999999997,,-20.740000000000002,,-20.740000000000002,,-20.740000000000002
+,Gross Margin %,,0.20222222222222216,,,,,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Red,Alstroemeria stems,2,1.78,,0,,0,,0
+Red,Red 50 cm Roses,2,3.2,,0,,0,,0
+Red,Standard Carnations,2,1.24,,0,,0,,0
+Red,Gerbera Daisies,1,1.42,,0,,0,,0
+,Salal tips,3,0.78,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,8.42,,0,,0,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass 4'' Cube Vase,1,2.5,,0,,0,,0
+,Ribbon,0.33,0.33,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.83,,0,,0,,0

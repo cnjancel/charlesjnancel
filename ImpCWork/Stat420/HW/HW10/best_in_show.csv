@@ -1,0 +1,89 @@
+Breed,category,longevity,genetic.ailments,puppy.price,food.per.week
+Border Collie,herding,12.52,2,623,5.34
+Border Terrier,terrier,14,0,833,5.34
+Brittany,sporting,12.92,0,618,7.67
+Cairn Terrier,terrier,13.84,2,435,5.34
+Welsh Springer Spaniel,sporting,12.49,1,750,5.34
+English Cocker Spaniel,sporting,11.66,0,800,5.34
+Cocker Spaniel,sporting,12.5,2,465,9
+Papillon,toy,13,5,740,5.34
+Australian Cattle Dog,herding,11.67,1,530,7.67
+Shetland Sheepdog,herding,12.53,5,465,6
+Siberian Husky,working,12.58,0,650,7.67
+Lhasa Apso,non-sporting,13.92,1,350,5.34
+Affenpinscher,toy,11.42,0,510,5.34
+Dachshund,hound,12.63,2,423,5.34
+Miniature Schnauzer,terrier,11.81,2,715,6
+Chihuahua,toy,16.5,1,588,5.34
+Australian Terrier,terrier,11.05,0,640,5.34
+Whippet,hound,12.87,0,915,5.34
+English Springer Spaniel,sporting,12.54,4,615,7.67
+West Highland White Terrier,terrier,12.8,3,538,5.34
+Bedlington Terrier,terrier,13.51,2,1058,5.34
+Poodle,non-sporting,11.95,2,900,7.67
+Bichon Frise,non-sporting,12.21,0,693,5.34
+German Shorthaired Pointer,sporting,11.46,1,545,14
+Pointer,sporting,12.42,1,294,11.67
+Tibetan Spaniel,non-sporting,14.42,0,1050,7.67
+Labrador Retriever,sporting,12.04,3,810,7.67
+Maltese,toy,12.25,1,650,4
+Pomeranian,toy,9.67,1,670,5.34
+Shih Tzu,toy,13.2,1,583,5.34
+Australian Shepherd,herding,12.28,2,565,7.67
+Yorkshire Terrier,toy,12.6,4,1057,5.34
+Irish Setter,sporting,11.63,2,525,7.67
+Pharaoh Hound,hound,11.83,0,913,7.67
+Brussels Griffon,toy,12,0,833,5.34
+Golden Retriever,sporting,12.04,4,958,7.67
+Samoyed,working,12.44,1,1162,11.67
+Beagle,hound,12.3,1,288,5.34
+Chesapeake Bay Retriever,sporting,9.48,1,522,7.67
+Tibetan Terrier,non-sporting,12.31,0,1140,5.34
+Gordon Setter,sporting,11.1,1,700,7.67
+English Setter,sporting,11.57,2,615,7.67
+Pug,toy,11,1,469,6
+Briard,herding,11.17,1,650,7.67
+Norfolk Terrier,terrier,13.07,0,2083,7.67
+Flat-Coated Retriever,sporting,9.02,0,600,7.67
+Boston Terrier,non-sporting,10.92,1,690,5.34
+Doberman Pinscher,working,10.33,4,790,7.67
+English Toy Spaniel,toy,10.1,0,925,6
+Belgian Tervuren,herding,10.6,2,1070,7.67
+Cavalier King Charles Spaniel,toy,11.29,2,1017,5.34
+Dalmatian,non-sporting,11.27,2,695,7.67
+Basset Hound,hound,11.43,2,490,5.34
+Basenji,hound,13.58,3,940,5.34
+Italian Greyhound,toy,10.02,0,800,5.34
+Staffordshire Bull Terrier,terrier,12.05,1,1145,7.67
+Bouvier des Flandres,herding,10.34,1,1335,7.67
+Pembroke Welsh Corgi,herding,12.25,9,587,9
+Clumber Spaniel,sporting,10,0,1033,7.67
+Dandie Dinmont Terrier,terrier,12.17,0,925,7.67
+Saluki,hound,12,0,1525,11.67
+Giant Schnauzer,working,10,1,810,19
+Greyhound,hound,9.36,1,1175,5.34
+Scottish Terrier,terrier,10.69,1,829,5.34
+Rottweiler,working,9.11,3,1118,11.67
+Kerry Blue Terrier,terrier,9.4,1,1200,7.67
+Afghan Hound,hound,11.92,0,890,11.67
+Newfoundland,working,9.32,2,1178,11.67
+German Shepherd,herding,9.73,8,820,7.67
+Pekingese,toy,11.56,1,885,7.67
+Old English Sheepdog,herding,11.19,1,832,11.67
+Akita,working,10.16,1,1202,11.67
+Rhodesian Ridgeback,hound,9.1,2,995,7.67
+French Bulldog,non-sporting,9,0,1900,7.67
+Borzoi,hound,9.08,0,675,7.67
+Bernese Mountain Dog,working,7.56,4,1320,11.67
+Bull Terrier,terrier,10.21,2,1085,7.67
+Boxer,working,8.81,4,700,7.67
+Alaskan Malamute,working,10.67,2,1210,11.67
+Chow Chow,non-sporting,9.01,2,515,7.67
+Bloodhound,hound,6.75,2,608,11.67
+Irish Wolfhound,hound,6.94,3,1333,20.01
+Bullmastiff,working,7.57,2,980,7.67
+Mastiff,working,6.5,2,900,10
+Great Dane,working,6.96,4,1040,11.67
+Saint Bernard,working,7.78,3,875,20.01
+Bulldog,non-sporting,6.29,5,2680,7.67
+Nova Scotia Duck Tolling Retriever,sporting,6.5,1,1500,7.67

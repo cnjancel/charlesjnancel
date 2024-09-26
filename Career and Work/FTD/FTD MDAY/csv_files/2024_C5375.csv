@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Light of my Life Bouquet,,Light of my Life Bouquet,,Light of my Life Bouquet,,Light of my Life Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,63,,87,,115,,145
+,Total SRP of Bundle,,63,,87,,115,,145
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,63,,87,,115,,145
+,Less Commission (20%),,-12.600000000000001,,-17.400000000000002,,-23,,-29
+,Less C/H Fee (9%),,-5.67,,-7.83,,-10.35,,-13.049999999999999
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,-2.5
+,Less Floral Cost,,-8.83,,-16.369999999999997,,-24.29,,-28.639999999999997
+,Total Gross Margin,,12.659999999999995,,22.159999999999997,,34.12000000000001,,51.07000000000001
+,Gross Margin %,,0.20095238095238088,,0.2547126436781609,,0.29669565217391314,,0.3522068965517242
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Orange,Orange 50 cm Roses,2,2.42,4,4.84,6,7.26,9,10.89
+Lavender,Cushion Pompon stems,2,1.44,4,2.88,5,3.5999999999999996,5,3.5999999999999996
+Hot Pink,Mini Carnation stems,2,1.24,4,2.48,5,3.1,5,3.1
+Purple,Daisy Pompon stems,2,1.44,3,2.16,4,2.88,5,3.5999999999999996
+Pink,LA Hybrid Lily stems,1,1.72,2,3.44,4,6.88,4,6.88
+,Leatherleaf stems,3,0.5700000000000001,3,0.5700000000000001,3,0.5700000000000001,3,0.5700000000000001
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,8.83,,16.369999999999997,,24.29,,28.639999999999997
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass Vase,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

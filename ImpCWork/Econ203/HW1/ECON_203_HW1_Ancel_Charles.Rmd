@@ -1,0 +1,141 @@
+---
+title: "ECON203 HW1"
+author: "Charles Ancel"
+output: pdf_document
+date: "2024-01-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
+```
+
+```{r install}
+install.packages("readxl")
+
+# Load the package into R
+library(readxl)
+
+```
+
+```{r load}
+# Load the dataset
+housing_data <- read_excel("housing.xls")
+```
+
+### Question One:
+
+```{r plot-histogram-price}
+# Plotting histogram of price
+hist(housing_data$price, main="Histogram of House Prices", xlab="Price in thousands of dollars", col="blue", border="black")
+```
+
+```{r plot-price-vs-sqft}
+# Plotting price vs. square feet
+plot(housing_data$sqrft, housing_data$price, main="Price vs. Square Feet", xlab="Square Feet", ylab="Price (in $1000s)", pch=19)
+```
+```{r plot-price-vs-lotsize}
+# Plotting price vs. lot size
+plot(housing_data$lotsize, housing_data$price, main="Price vs. Lot Size", xlab="Size of the lot in square feet", ylab="Price in thousands of dollars", pch=19)
+```
+```{r plot-price-vs-bdrms}
+# Plotting price vs. number of bedrooms
+plot(housing_data$bdrms, housing_data$price, main="Price vs. Number of Bedrooms", xlab="Number of bedrooms", ylab="Price in thousands of dollars", pch=19)
+```
+
+
+```{r plot-price-vs-assess}
+# Plotting price vs. assessed price
+plot(housing_data$assess, housing_data$price, main="Price vs. Assessed Price", xlab="Assessed price in thousands of dollars", ylab="Price in thousands of dollars", pch=19)
+abline(0, 1, col="red") # Adding a 45-degree line
+```
+
+
+```{r plot-histogram-colonial}
+# Histogram for prices of colonial houses
+hist(housing_data$price[housing_data$colonial == 1], main="Prices of Colonial Houses", xlab="Price in thousands of dollars", col="green", border="black")
+
+# Histogram for prices of non-colonial houses
+hist(housing_data$price[housing_data$colonial == 0], main="Prices of Non-Colonial Houses", xlab="Price in thousands of dollars", col="orange", border="black")
+```
+
+```{r summary-all-variables}
+head(housing_data)
+
+summary(housing_data)
+```
+
+```{r sd-all-variables}
+# Standard deviation for all variables
+sapply(housing_data, sd, na.rm = TRUE)
+```
+### Question Two:
+
+```{r assess-symmetry}
+library(e1071)
+# Skewness of the price distribution
+skewness_price <- skewness(housing_data$price)
+print(paste("Skewness of Price: ", skewness_price))
+```
+
+```{r compare-mean-median}
+mean_price <- mean(housing_data$price)
+median_price <- median(housing_data$price)
+print(paste("Mean Price: ", mean_price))
+print(paste("Median Price: ", median_price))
+```
+#### (b) The price average in the dataset is 293.55 dollars.
+
+#### (c) The price average in the dataset is smaller than the median price.
+
+
+```{r price-sd}
+sd_price <- sd(housing_data$price)
+print(paste("Standard Deviation of Price: ", sd_price))
+```
+#### (d) The integer part of the price standard deviation in the dataset is 102.
+
+### Question Three:
+
+#### (a) The relation between prices and house size seems to be quadratic.
+
+#### (b) There is one outlier observation in the plot of price against lotsize.
+
+#### (c) Most houses have 3 or 4 bedrooms.
+
+```{r bedroom-distribution}
+table(housing_data$bdrms)
+barplot(table(housing_data$bdrms), main="Distribution of Bedrooms", xlab="Number of Bedrooms", ylab="Frequency")
+```
+#### (d) Assessed prices are usually smaller than the selling prices.
+
+### Question Four:
+
+#### (a) Colonial houses are, on average, more expensive than non-colonial houses.
+```{r colonial-noncolonial-price}
+mean_price_colonial <- mean(housing_data$price[housing_data$colonial == 1])
+mean_price_noncolonial <- mean(housing_data$price[housing_data$colonial == 0])
+print(paste("Mean Price - Colonial: ", mean_price_colonial))
+print(paste("Mean Price - Non-Colonial: ", mean_price_noncolonial))
+```
+
+#### (b) The price variance of colonial houses is smaller than the non-colonial ones.
+```{r colonial-noncolonial-variance}
+var_price_colonial <- var(housing_data$price[housing_data$colonial == 1])
+var_price_noncolonial <- var(housing_data$price[housing_data$colonial == 0])
+print(paste("Variance of Price - Colonial: ", var_price_colonial))
+print(paste("Variance of Price - Non-Colonial: ", var_price_noncolonial))
+```
+
+#### (c) The price distribution of colonial houses is very different from that of non-colonial ones.
+
+
+#### (d) On average, colonial houses have more bedrooms than non-colonial ones.
+```{r colonial-noncolonial-bedrooms}
+mean_bdrms_colonial <- mean(housing_data$bdrms[housing_data$colonial == 1])
+mean_bdrms_noncolonial <- mean(housing_data$bdrms[housing_data$colonial == 0])
+print(paste("Mean Bedrooms - Colonial: ", mean_bdrms_colonial))
+print(paste("Mean Bedrooms - Non-Colonial: ", mean_bdrms_noncolonial))
+```
+
+

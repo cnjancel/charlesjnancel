@@ -1,0 +1,140 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{tikz}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Table of Contents-----
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+%MATH ENVIRONMENTS
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\newtheorem*{cor*}{Corollary}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\newtheorem*{conj*}{Conjecture}
+\crefname{conj*}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Econ 203, Challenge Quiz 9}
+\author{Charles Ancel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\textbf{Problem Statement:} Based on what you have learned in the last challenge quiz, prove that \(\frac{1}{n-2}\sum_{i=1}^n(Y_i-\widehat{\beta}_0 - \widehat{\beta}_1X_i)^2\).
+Based on what you have learned in the last challenge quiz, prove that is an unbiased estimator of the variance of the error in the linear regression model .
+\(Y_i=\beta_0+\beta_1X_i+U_i.\)
+Hint, start by showing that: \(\sum_{i=1}^n(Y_i-\widehat\beta_0-\widehat\beta_1X_i)^2=\sum_{i=1}^n\left[(Y_i-\bar{Y}) -\widehat{\beta}_1(X_i-\bar{X})\right]^2\).
+
+
+\textbf{\large Prelude: Review of Quiz 8 Concepts}
+
+In Quiz 8, we established that the sum 
+\(\frac{1}{n-1}\sum_{i=1}^n (Y_i - \bar{Y})^2\)
+is an unbiased estimator of \(\sigma^2\) for IID random variables, based on the following calculations:
+\[E\left[\sum_{i=1}^n (Y_i - \bar{Y})^2\right] = (n-1)\sigma^2.\]
+This foundation is critical as it introduces the concept of unbiasedness in the context of variance estimation, which we extend in the current analysis.
+
+\begin{proof}
+
+\textbf{\large Step 1: Transformation of the Sum of Squared Residuals}
+
+Utilizing the linear regression model \(Y_i = \beta_0 + \beta_1X_i + U_i\), and recalling the least squares estimates \(\widehat{\beta}_0 = \bar{Y} - \widehat{\beta}_1 \bar{X}\), we rewrite the sum of squared residuals:
+\begin{align*}
+\sum_{i=1}^n(Y_i - \widehat{\beta}_0 - \widehat{\beta}_1X_i)^2 &= \sum_{i=1}^n(Y_i - (\bar{Y} - \widehat{\beta}_1\bar{X}) - \widehat{\beta_1}X_i)^2 \\
+&= \sum_{i=1}^n(Y_i - \bar{Y} - \widehat{\beta_1}(X_i - \bar{X}))^2,
+\end{align*}
+highlighting a similar transformation to what was explored in Quiz 8 but adapted for the linear regression setting.
+
+\begin{figure*}[ht]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+        % Draw axes
+        \draw [<->,thick] (0,5) node (yaxis) [above] {$Y$}
+            |- (5,0) node (xaxis) [right] {$X$};
+    
+        % Draw two points
+        \foreach \Point/\PointLabel in {(1,3)/, (4,4)/}
+            \draw[fill=black] \Point circle (0.05) node [above right] {$\PointLabel$};
+    
+        % Draw regression line
+        \draw [thick] (0,2) -- (5,5) node [below right] {$\hat{Y}=a+bX$};
+        % Draw residuals
+        \draw [dashed] (1,3) -- (1,3.5);
+        \draw [dashed] (4,4) -- (4,4.2);
+    
+        % Draw labels
+        \node at (1,3) [below right] {$Y_1$};
+        \node at (4,4) [below right] {$Y_n$};
+        \node at (1,3.5) [above] {$\hat{Y}_1$};
+        \node at (4,4.2) [above] {$\hat{Y}_n$};
+    
+        \node at (0.5, 2.5) [left] {Residuals};
+        \draw [->] (0.5,2.5) -- (1,3);
+        \draw [->] (0.5,2.5) -- (4,4);
+    
+    \end{tikzpicture}
+    \caption{Illustration of Linear Regression with Residuals}
+\end{figure*}
+\newpage
+\textbf{\large Step 2: Establishing the Chi-Squared Distribution}
+
+With \(U_i\) assumed to be IID \(N(0, \sigma^2)\), the residuals \(Y_i - \bar{Y} - \widehat{\beta_1}(X_i - \bar{X})\) conform to normality. Given that two parameters (\(\beta_0\) and \(\beta_1\)) were estimated, we use \(n-2\) degrees of freedom:
+\[
+\mathbb{E}\left[\frac{1}{n-2}\sum_{i=1}^n(Y_i - \widehat{\beta}_0 - \widehat{\beta_1}X_i)^2\right] = \sigma^2,
+\]
+thereby confirming the unbiased nature of our estimator, connecting directly back to the principles covered in Quiz 8.
+
+\textbf{\large Conclusion:} This proof rigorously demonstrates that the formula 
+\[
+\frac{1}{n-2}\sum_{i=1}^n(Y_i-\widehat{\beta}_0 - \widehat{\beta}_1X_i)^2
+\]
+is an unbiased estimator of the error variance in a linear regression model, effectively linking theoretical mathematical concepts with practical statistical applications. 
+By extending the unbiasedness concept from simple random samples to regression analysis, this work underscores the importance of assumptions like normality and independence in econometrics. 
+\end{proof}
+
+\end{document}

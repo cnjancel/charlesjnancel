@@ -1,0 +1,97 @@
+---
+title: "ECON425_FW_CAncel"
+author: "Charles Ancel"
+date: "2024-08-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(fredr)
+library(dplyr)
+
+# Set your FRED API key
+fredr_set_key("89e09406a6b0e5d39d06d3b19fec5156")
+```
+
+```{r GDP-Plot}
+# Fetch GDP data from FRED
+gdp_data <- fredr(series_id = "GDP", observation_start = as.Date("2003-01-01"), observation_end = as.Date("2013-12-31"))
+
+# Plotting the GDP data
+gdp_plot <- ggplot(gdp_data, aes(x = date, y = value)) +
+  geom_line(color = "blue") +
+  labs(title = "US GDP (Q4 2003 - Q4 2013)",
+       x = "Year",
+       y = "GDP (in billions USD)") +
+  theme_minimal()
+
+# Save the plot
+ggsave("gdp_graph.png", plot = gdp_plot)
+
+# Display the plot
+gdp_plot
+```
+
+```{r Inflation-Plot}
+# Fetch CPI data from FRED
+cpi_data <- fredr(series_id = "CPIAUCSL", observation_start = as.Date("2003-01-01"), observation_end = as.Date("2013-12-31"))
+
+# Calculating inflation as the annual percentage change in CPI
+cpi_data <- cpi_data %>%
+  arrange(date) %>%
+  mutate(inflation = (value - lag(value, 12)) / lag(value, 12) * 100)
+
+# Plotting the inflation data
+inflation_plot <- ggplot(cpi_data, aes(x = date, y = inflation)) +
+  geom_line(color = "red") +
+  labs(title = "US Inflation (CPI, Annual Percentage Change)",
+       x = "Year",
+       y = "Inflation (%)") +
+  theme_minimal()
+
+# Save the plot
+ggsave("inflation_graph.png", plot = inflation_plot)
+
+# Display the plot
+inflation_plot
+```
+
+```{r IR-Plot}
+# Fetch Federal Funds Effective Rate data from FRED
+interest_rate_data <- fredr(series_id = "FEDFUNDS", observation_start = as.Date("2003-01-01"), observation_end = as.Date("2013-12-31"))
+
+# Plotting the interest rate data
+interest_rate_plot <- ggplot(interest_rate_data, aes(x = date, y = value)) +
+  geom_line(color = "green") +
+  labs(title = "Federal Funds Effective Rate (2003-2013)",
+       x = "Year",
+       y = "Interest Rate (%)") +
+  theme_minimal()
+
+# Save the plot
+ggsave("interest_rate_graph.png", plot = interest_rate_plot)
+
+# Display the plot
+interest_rate_plot
+```
+
+```{r UEmploy-Plot}
+# Fetch Unemployment Rate data from FRED
+unemployment_data <- fredr(series_id = "UNRATE", observation_start = as.Date("2003-01-01"), observation_end = as.Date("2013-12-31"))
+
+# Plotting the unemployment rate data
+unemployment_plot <- ggplot(unemployment_data, aes(x = date, y = value)) +
+  geom_line(color = "purple") +
+  labs(title = "US Unemployment Rate (2003-2013)",
+       x = "Year",
+       y = "Unemployment Rate (%)") +
+  theme_minimal()
+
+# Save the plot
+ggsave("unemployment_rate_graph.png", plot = unemployment_plot)
+
+# Display the plot
+unemployment_plot
+```

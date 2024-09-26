@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet,,The FTD® COD™ Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,77.99,,87.99,,97.99,,
+,Total SRP of Bundle,,77.99,,87.99,,97.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,77.99,,87.99,,97.99,,0
+,Less Commission (20%),,-15.597999999999999,,-17.598,,-19.598,,0
+,Less C/H Fee (9%),,-7.019099999999999,,-7.919099999999999,,-8.819099999999999,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-7.7989999999999995,,-8.799,,-9.799,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-7.16,,-7.16,,-7.16,,-7.16
+,Less Floral Cost,,-4.4399999999999995,,-7.620000000000001,,-10.5,,0
+,Total Gross Margin,,15.233899999999993,,18.153899999999993,,21.37390000000001,,-27.900000000000002
+,Gross Margin %,,0.19533145275035255,,0.20631776338220245,,0.21812327788549862,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Yellow,50 cm Roses,2,1.92,4,3.84,7,6.72,,0
+Yellow,Daisy Pompon stems,2,1.26,3,1.8900000000000001,3,1.8900000000000001,,0
+White,Daisy Pompon stems,2,1.26,3,1.8900000000000001,3,1.8900000000000001,,0
+,Boxwood,2,0,2,0,2,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,4.4399999999999995,,7.620000000000001,,10.5,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Smiley Mug,1,7.16,1,7.16,1,7.16,1,7.16
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,7.16,,7.16,,7.16,,7.16

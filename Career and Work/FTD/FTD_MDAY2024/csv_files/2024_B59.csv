@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Long Stem Red Rose Bouquet,,Long Stem Red Rose Bouquet,,Long Stem Red Rose Bouquet,,Long Stem Red Rose Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,115,,150,,200,,300
+,Total SRP of Bundle,,115,,150,,200,,300
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,115,,150,,200,,300
+,Less Commission (20%),,-23,,-30,,-40,,-60
+,Less C/H Fee (9%),,-10.35,,-13.5,,-18,,-27
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,,,
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-8.31,,-8.31,,-8.31,,-11.44
+,Less Floral Cost,,-25.639999999999997,,-37.94,,-50.239999999999995,,-74.84
+,Total Gross Margin,,26.96000000000001,,39.510000000000005,,62.709999999999994,,105.97999999999999
+,Gross Margin %,,0.23443478260869574,,0.2634,,0.31355,,0.3532666666666666
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Red,Red 60 cm Roses,12,24.599999999999998,18,36.9,24,49.199999999999996,36,73.8
+,Salal tips,4,1.04,4,1.04,4,1.04,4,1.04
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,25.639999999999997,,37.94,,50.239999999999995,,74.84
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,G307 - 10'' French Vase w 25% shipping,1,8.31,1,8.31,1,8.31,,0
+,G309 - 12'' French Vase w 25% shipping,,0,,0,,0,1,11.44
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,8.31,,8.31,,8.31,,11.44

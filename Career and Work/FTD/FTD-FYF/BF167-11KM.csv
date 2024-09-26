@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,Sunflower Surprise,,Sunflower Surprise,,Sunflower Surprise,,Sunflower Surprise
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,75.99,,99.99,,119.99,,
+,Total SRP of Bundle,,75.99,,99.99,,119.99,,
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,75.99,,99.99,,119.99,,
+,Less Commission (20%),,-15.198,,-19.998,,-23.998,,
+,Less C/H Fee (9%),,-6.839099999999999,,-8.999099999999999,,-10.7991,,
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,
+,Less Delivery Fee,,-10,,-10,,-10,,
+,Less Labor (10%),,-7.599,,-9.999,,-11.999,,
+,Less Other,,-3,,-3,,-3,,
+,Less Hardgood,,-2.5,,-2.5,,-2.5,,
+,Less Floral Cost,,-9.799999999999999,,-14.03,,-15.499999999999998,,0
+,Total Gross Margin,,13.313899999999991,,23.723899999999993,,34.4539,,0
+,Gross Margin %,,0.1752059481510724,,0.2372627262726272,,0.2871397616468039,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Yellow,Sunflowers,5,5.6000000000000005,6,6.720000000000001,8,8.96,,0
+Green,Button Pompon stems,3,1.8900000000000001,4,2.52,4,2.52,,0
+Green,Hypericum Berry stems,1,0.77,3,2.31,2,1.54,,0
+Green,Trick Dianthus stems,1,0.94,2,1.88,2,1.88,,0
+,Curly Willow,1,0.6,1,0.6,1,0.6,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,9.799999999999999,,14.03,,15.499999999999998,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.5,,2.5,,2.5,,2.5

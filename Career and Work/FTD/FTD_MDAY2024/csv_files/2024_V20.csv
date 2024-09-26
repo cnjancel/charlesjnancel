@@ -1,0 +1,49 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet,,The FTD Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,150,,200,,0,,0
+,Total SRP of Bundle,,150,,200,,0,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,150,,200,,0,,0
+,Less Commission (20%),,-30,,-40,,0,,0
+,Less C/H Fee (9%),,-13.5,,-18,,0,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,,,,,0,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-5.94,,-5.94,,-5.94,,-5.94
+,Less Floral Cost,,-27.830000000000005,,-34.59,,0,,0
+,Total Gross Margin,,51.99,,80.72999999999999,,-26.680000000000003,,-26.680000000000003
+,Gross Margin %,,0.3466,,0.40364999999999995,,,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Pink,LA Hybrid Lily stems,3,5.16,3,5.16,,0,,0
+Lavender,Lavender 50 cm Roses,5,6.8500000000000005,6,8.22,,0,,0
+Lavender,Lavender 50 cm Roses,5,6.8500000000000005,6,8.22,,0,,0
+Purple,Double Lisianthus stems,3,4.32,4,5.76,,0,,0
+Hot Pink,Spray Rose stems,3,3.87,5,6.45,,0,,0
+,Salal tips,3,0.78,3,0.78,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,27.830000000000005,,34.59,,0,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,2120L - Large Cinched Glass Vase,1,5.94,1,5.94,1,5.94,1,5.94
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,5.94,,5.94,,5.94,,5.94
+,,,,,,,,,
+,,,,,,,,,
+,Test against 23-M6 for luxury,,,,,,,,
+,Only need two sizes as a luxury SKU,,,,,,,,

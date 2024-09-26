@@ -1,0 +1,561 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 8}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+%-----------------------------
+\begin{exercise}{2.7.11} Prove that if \(G/\Z(G)\) is cyclic, then $G$ is abelian. 
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+    
+    Suppose \(G\) is a group such that \(G/\Z(G)\) is cyclic. We need to show that \(G\) is abelian.
+    
+    \begin{proof} \( \)
+    
+    Let \(G/\Z(G)\) be cyclic. This means there exists an element \(g \in G\) such that every element of \(G/\Z(G)\) can be written as \(g\Z(G)^k\) for some integer \(k\). Hence, 
+    \[
+    G/\Z(G) = \langle g\Z(G) \rangle.
+    \]
+    
+    Let \(x, y \in G\). We need to show that \(xy = yx\).
+
+    Since \(G/\Z(G)\) is cyclic, there exist integers \(m\) and \(n\) such that 
+    \[
+    x\Z(G) = g^m\Z(G) \quad \text{and} \quad y\Z(G) = g^n\Z(G).
+    \]
+    
+    This implies:
+    \[
+    x = g^m z_1 \quad \text{and} \quad y = g^n z_2,
+    \]
+    for some \(z_1, z_2 \in \Z(G)\) (elements of the center of \(G\)).
+
+    Since elements of the center of a group commute with all elements of the group, we have:
+    \[
+    x y = (g^m z_1)(g^n z_2) = g^m (z_1 g^n) z_2 = g^m g^n z_1 z_2 = g^{m+n} z_1 z_2.
+    \]
+
+    Similarly, we have:
+    \[
+    y x = (g^n z_2)(g^m z_1) = g^n (z_2 g^m) z_1 = g^n g^m z_2 z_1 = g^{n+m} z_2 z_1.
+    \]
+    
+    Since multiplication in the center is commutative, we have \(z_1 z_2 = z_2 z_1\). Therefore,
+    \[
+    g^{m+n} z_1 z_2 = g^{n+m} z_2 z_1.
+    \]
+    
+    Hence,
+    \[
+    x y = y x.
+    \]
+
+    Since \(x\) and \(y\) were arbitrary elements of \(G\), we conclude that \(G\) is abelian.
+    
+    \end{proof}
+    
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{2} Recall that for \(g \in G\), we write \(c_g \in \text{Aut}(G)\) for the automorphism defined by \(c_g(x) := gxg^{-1}\). Prove that for any \(\phi \in \text{Aut}(G)\) we have \(\phi \circ c_g \circ \phi^{-1} = c_{\phi(g)}\). Use this to show that the subgroup \(\text{Inn}(G)\) of inner automorphisms is normal in \(\text{Aut}(G)\). 
+    \noindent\rule{\linewidth}{1pt}
+    
+    \section*{Solution}
+
+    \subsection*{Part 1: Showing \(\phi \circ c_g \circ \phi^{-1} = c_{\phi(g)}\)}
+
+    Let \(g \in G\) and \(\phi \in \text{Aut}(G)\). We want to show that:
+    \[
+    \phi \circ c_g \circ \phi^{-1} = c_{\phi(g)}.
+    \]
+
+    Recall that \(c_g(x) = gxg^{-1}\) for all \(x \in G\). Let's apply \(\phi \circ c_g \circ \phi^{-1}\) to an arbitrary element \(x \in G\):
+
+    \[
+    (\phi \circ c_g \circ \phi^{-1})(x) = \phi(c_g(\phi^{-1}(x))).
+    \]
+
+    By the definition of \(c_g\):
+    \[
+    c_g(\phi^{-1}(x)) = g \phi^{-1}(x) g^{-1}.
+    \]
+
+    Applying \(\phi\) to this result:
+    \[
+    \phi(g \phi^{-1}(x) g^{-1}) = \phi(g) \phi(\phi^{-1}(x)) \phi(g^{-1}).
+    \]
+
+    Since \(\phi\) is an automorphism, it is a homomorphism, and thus \(\phi(\phi^{-1}(x)) = x\) and \(\phi(g^{-1}) = \phi(g)^{-1}\). Therefore:
+    \[
+    \phi(g) \phi(\phi^{-1}(x)) \phi(g^{-1}) = \phi(g) x \phi(g)^{-1}.
+    \]
+
+    This is precisely the definition of \(c_{\phi(g)}(x)\):
+    \[
+    c_{\phi(g)}(x) = \phi(g) x \phi(g)^{-1}.
+    \]
+
+    Thus, we have shown that:
+    \[
+    \phi \circ c_g \circ \phi^{-1} = c_{\phi(g)}.
+    \]
+
+    \subsection*{Part 2: Showing \(\text{Inn}(G)\) is Normal in \(\text{Aut}(G)\)}
+
+    The set of inner automorphisms \(\text{Inn}(G)\) is defined as:
+    \[
+    \text{Inn}(G) = \{ c_g \mid g \in G \}.
+    \]
+
+    To show that \(\text{Inn}(G)\) is normal in \(\text{Aut}(G)\), we need to show that for any \(\phi \in \text{Aut}(G)\) and any \(c_g \in \text{Inn}(G)\), the conjugate \(\phi \circ c_g \circ \phi^{-1}\) is also in \(\text{Inn}(G)\).
+
+    From Part 1, we have:
+    \[
+    \phi \circ c_g \circ \phi^{-1} = c_{\phi(g)}.
+    \]
+
+    Since \(\phi(g) \in G\), it follows that \(c_{\phi(g)} \in \text{Inn}(G)\). Thus, \(\phi \circ c_g \circ \phi^{-1}\) is an inner automorphism for any \(g \in G\) and any \(\phi \in \text{Aut}(G)\).
+
+    Therefore, \(\text{Inn}(G)\) is normal in \(\text{Aut}(G)\).
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3} Show that \(\Phi(15)\) is isomorphic to a product of two of its trivial subgroups.
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    Recall that \(\Phi(15)\) represents the group of units modulo 15, i.e., \(\Z_{15}^*\). The elements of \(\Z_{15}^*\) are those integers less than 15 that are coprime to 15. We have:
+    \[
+    \Z_{15}^* = \{1, 2, 4, 7, 8, 11, 13, 14\},
+    \]
+    which has order \(\varphi(15) = 8\).
+
+    We know that \(15 = 3 \times 5\), and since 3 and 5 are coprime, by the Chinese Remainder Theorem (CRT), we have:
+    \[
+    \Z_{15}^* \cong \Z_3^* \times \Z_5^*.
+    \]
+
+    Let's explicitly find the isomorphism. The group \(\Z_3^*\) is the group of units modulo 3:
+    \[
+    \Z_3^* = \{1, 2\},
+    \]
+    which has order 2. The group \(\Z_5^*\) is the group of units modulo 5:
+    \[
+    \Z_5^* = \{1, 2, 3, 4\},
+    \]
+    which has order 4.
+
+    We can construct the isomorphism \(\Z_{15}^* \cong \Z_3^* \times \Z_5^*\) as follows. For each element \(a \in \Z_{15}^*\), we can find its corresponding elements in \(\Z_3^*\) and \(\Z_5^*\) by considering \(a \mod 3\) and \(a \mod 5\). This map is given by:
+    \[
+    a \mapsto (a \mod 3, a \mod 5).
+    \]
+
+    Let's verify this mapping for each element in \(\Z_{15}^*\):
+    \[
+    \begin{array}{c|c}
+    a & (a \mod 3, a \mod 5) \\
+    \hline
+    1 & (1, 1) \\
+    2 & (2, 2) \\
+    4 & (1, 4) \\
+    7 & (1, 2) \\
+    8 & (2, 3) \\
+    11 & (2, 1) \\
+    13 & (1, 3) \\
+    14 & (2, 4) \\
+    \end{array}
+    \]
+
+    We observe that each pair \((a \mod 3, a \mod 5)\) is unique and matches the product structure of \(\Z_3^* \times \Z_5^*\). Therefore, the mapping:
+    \[
+    \Phi: \Z_{15}^* \rightarrow \Z_3^* \times \Z_5^*, \quad a \mapsto (a \mod 3, a \mod 5)
+    \]
+    is an isomorphism.
+
+    \subsection*{Conclusion}
+
+    We have shown that \(\Phi(15) \cong \Z_{15}^*\) is isomorphic to the product \(\Z_3^* \times \Z_5^*\), each of which can be considered trivial subgroups of their respective cyclic groups. Therefore, \(\Phi(15)\) is isomorphic to a product of two of its trivial subgroups.
+
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{3.2.4} Show that the permutation group \(S_n(n \geq 2)\) is isomorphic to a semi-direct product of \(\Z_2\) and the subgroup \(A_n\) of even permutations. 
+
+    \noindent\rule{\linewidth}{1pt}
+    
+    \section*{Solution}
+
+    To show that the symmetric group \(S_n\) is isomorphic to a semidirect product of \(\Z_2\) and \(A_n\), the alternating group, we need to establish the following:
+    \begin{enumerate}
+        \item Identify a subgroup \(H\) of \(S_n\) isomorphic to \(A_n\).
+        \item Identify a normal subgroup \(N\) of \(S_n\) isomorphic to \(\Z_2\).
+        \item Show that \(S_n\) can be written as a semidirect product \(H \rtimes N\).
+    \end{enumerate}
+
+    \subsection*{Subgroup \(H \cong A_n\)}
+
+    The alternating group \(A_n\) is the subgroup of \(S_n\) consisting of all even permutations. This subgroup \(A_n\) has order \(n!/2\).
+
+    \subsection*{Subgroup \(N \cong \Z_2\)}
+
+    Consider the subgroup \(N = \langle \tau \rangle\), where \(\tau\) is a transposition (a 2-cycle). For example, \(\tau = (1 \ 2)\). This subgroup \(N\) is isomorphic to \(\Z_2\) because:
+    \[
+    \tau^2 = e,
+    \]
+    where \(e\) is the identity permutation. Thus, \(N = \{e, \tau\}\) and \(\tau\) has order 2.
+
+    \subsection*{Semidirect Product Structure}
+
+    We need to show that \(S_n = A_n \rtimes \Z_2\). This means:
+    \begin{enumerate}
+        \item \(S_n = A_n \cdot \Z_2\).
+        \item \(A_n \cap \Z_2 = \{e\}\).
+        \item The action of \(\Z_2\) on \(A_n\) is by conjugation.
+    \end{enumerate}
+
+    \begin{proof} \( \)
+
+    \subsubsection*{Direct Product}
+
+    First, we show that every element \(\sigma \in S_n\) can be written as a product of an even permutation and an element of \(\Z_2\). Consider any permutation \(\sigma \in S_n\). If \(\sigma\) is even, then \(\sigma \in A_n\). If \(\sigma\) is odd, then \(\sigma\) can be written as \(\sigma = \tau \pi\), where \(\tau\) is a transposition and \(\pi\) is an even permutation. Therefore, \(S_n = A_n \cdot \Z_2\).
+
+    \subsubsection*{Intersection}
+
+    Next, we show that \(A_n \cap \Z_2 = \{e\}\). Since \(A_n\) consists of even permutations and \(\Z_2\) is generated by a single transposition (which is odd), their intersection can only be the identity permutation. Therefore, \(A_n \cap \Z_2 = \{e\}\).
+
+    \subsubsection*{Action by Conjugation}
+
+    Finally, we show that the action of \(\Z_2\) on \(A_n\) is by conjugation. For any \(\sigma \in A_n\) and \(\tau \in \Z_2\), we have:
+    \[
+    \tau \sigma \tau^{-1} = \sigma' \quad \text{for some } \sigma' \in A_n.
+    \]
+    Since conjugation by a transposition changes the parity of a permutation, \(\sigma'\) will be an even permutation if \(\sigma\) is even. Therefore, the conjugation action of \(\Z_2\) on \(A_n\) is well-defined.
+
+    \end{proof}
+
+    \subsection*{Conclusion}
+
+    We have shown that \(S_n\) can be expressed as a semidirect product of \(\Z_2\) and \(A_n\). Thus, we conclude that the permutation group \(S_n\) (\(n \geq 2\)) is isomorphic to a semidirect product of \(\Z_2\) and \(A_n\):
+    \[
+    S_n \cong A_n \rtimes \Z_2.
+    \]
+    
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{5} Consider the semidirect product \(G = N \rtimes_\gamma A\), where \(N = \langle r \rangle\) is cyclic of order 8, \(A = \langle a \rangle\) is cyclic of order 2, and \(\gamma: A \rightarrow \text{Aut}(N)\) is defined by \(\gamma_a(r^k)=r^{3k}\). Determine the orders of each of the elements of $G$, and show that $G$ is not isomorphic to \(D_8\).
+
+    \noindent\rule{\linewidth}{1pt}
+
+    \section*{Solution}
+
+    \subsection*{Element Orders in \(G\)}
+
+    The group \(N\) is cyclic of order 8, so \(N = \langle r \rangle\) with:
+    \[
+    r^8 = e_N.
+    \]
+
+    The group \(A\) is cyclic of order 2, so \(A = \langle a \rangle\) with:
+    \[
+    a^2 = e_A.
+    \]
+
+    The semidirect product \(G = N \rtimes_\gamma A\) consists of elements \((r^k, e_A)\) and \((r^k, a)\) for \(k = 0, 1, \ldots, 7\).
+
+    \subsubsection*{Orders of \((r^k, e_A)\)}
+
+    For \((r^k, e_A)\), we have:
+    \[
+    (r^k, e_A)^n = (r^k, e_A) \cdot (r^k, e_A) \cdots (r^k, e_A) = (r^{kn}, e_A).
+    \]
+    Since \(r^8 = e_N\), the order of \((r^k, e_A)\) is the smallest \(n\) such that \(r^{kn} = e_N\). This is:
+    \[
+    \text{order}((r^k, e_A)) = \frac{8}{\gcd(k, 8)}.
+    \]
+    Specifically:
+    \begin{itemize}
+        \item \((r^0, e_A)\): order 1.
+        \item \((r^1, e_A)\): order 8.
+        \item \((r^2, e_A)\): order 4.
+        \item \((r^3, e_A)\): order 8.
+        \item \((r^4, e_A)\): order 2.
+        \item \((r^5, e_A)\): order 8.
+        \item \((r^6, e_A)\): order 4.
+        \item \((r^7, e_A)\): order 8.
+    \end{itemize}
+
+    \subsubsection*{Orders of \((r^k, a)\)}
+
+    For \((r^k, a)\), we have:
+    \[
+    (r^k, a)^2 = (r^k, a) \cdot (r^k, a) = (r^k \gamma_a(r^k), a^2) = (r^k r^{3k}, e_A) = (r^{4k}, e_A).
+    \]
+    Therefore:
+    \[
+    (r^k, a)^4 = ((r^{4k}, e_A))^2 = (r^{8k}, e_A) = (e_N, e_A).
+    \]
+    So the order of \((r^k, a)\) is 4 if \(k\) is odd, and 2 if \(k\) is even:
+    \begin{itemize}
+        \item \((r^0, a)\): order 2.
+        \item \((r^1, a)\): order 4.
+        \item \((r^2, a)\): order 2.
+        \item \((r^3, a)\): order 4.
+        \item \((r^4, a)\): order 2.
+        \item \((r^5, a)\): order 4.
+        \item \((r^6, a)\): order 2.
+        \item \((r^7, a)\): order 4.
+    \end{itemize}
+
+    \subsection*{\(G\) is not isomorphic to \(D_8\)}
+
+    The dihedral group \(D_8\) consists of 8 rotations and 8 reflections, where:
+    \[
+    D_8 = \{e, r, r^2, r^3, r^4, r^5, r^6, r^7, s, sr, sr^2, sr^3, sr^4, sr^5, sr^6, sr^7\},
+    \]
+    with the relations:
+    \[
+    r^8 = e, \quad s^2 = e, \quad srs = r^{-1}.
+    \]
+
+    \subsubsection*{Element Orders in \(D_8\)}
+
+    The orders of elements in \(D_8\) are:
+    \begin{itemize}
+        \item Rotations \(r^k\): order \(\frac{8}{\gcd(k, 8)}\).
+        \item Reflections \(sr^k\): order 2.
+    \end{itemize}
+
+    \subsubsection*{Comparing Orders}
+
+    We observe that in \(G\), the elements \((r^k, a)\) for odd \(k\) have order 4, while in \(D_8\), the reflections \(sr^k\) have order 2. Specifically, \(D_8\) does not have elements of order 4 among the reflections. 
+
+    This difference in element orders implies that \(G\) cannot be isomorphic to \(D_8\).
+
+    \subsection*{Conclusion}
+
+    The group \(G = N \rtimes_\gamma A\) has elements with orders that do not match those of \(D_8\), specifically the elements \((r^k, a)\) for odd \(k\) have order 4 in \(G\), whereas no such elements exist in \(D_8\). Therefore, \(G\) is not isomorphic to \(D_8\).
+    
+    
+\end{exercise}
+\newpage
+
+%-----------------------------
+\begin{exercise}{6} Let $G$ be the set of bijections \(T_{a,b}: \R \rightarrow \R\) of the form \[T_{a,b}(x) := ax+b, \qquad a \in \{\pm 1\}, \qquad b \in \Z\]
+
+
+    \begin{enumerate}[label=\textbf{(\roman*)}]
+        \item Show that $G$ is a group under composition, and that it is generated by the pair of elements \[r := T_{1,1}, \qquad j:=T_{-1,0}\] which satisfy identities: \(j^2=\text{id}, \quad jr=r^{-1}j\).
+        \item Show that every element of $G$ can be written uniquely in the form: \[r^a, j^b, \qquad a\in \Z, \ b \in \{0,1\}.\]
+        \item Show that $G$ is isomorphic to a semi-direct product of the form \(\Z \rtimes_\gamma \Z_2\), and determine the homomorphism \(\gamma : \Z_2 \rightarrow \text{Aut}(\Z)\)
+    \end{enumerate}
+
+    \noindent\rule{\linewidth}{1pt}
+    
+\section*{Solution}
+
+    \subsection*{(i) Group Structure of \(G\)}
+
+    To show that \(G\) is a group under composition, we need to verify the group axioms: closure, associativity, identity element, and inverses.
+
+    \subsubsection*{Closure}
+    Let \(T_{a,b}, T_{c,d} \in G\), where \(a, c \in \{\pm 1\}\) and \(b, d \in \Z\). The composition \(T_{a,b} \circ T_{c,d}\) is given by:
+    \[
+    (T_{a,b} \circ T_{c,d})(x) = T_{a,b}(T_{c,d}(x)) = T_{a,b}(cx + d) = a(cx + d) + b = acx + ad + b.
+    \]
+    Since \(a, c \in \{\pm 1\}\), we have \(ac \in \{\pm 1\}\), and \(ad + b \in \Z\). Therefore, \(T_{a,b} \circ T_{c,d} = T_{ac, ad + b} \in G\), so \(G\) is closed under composition.
+
+    \subsubsection*{Associativity}
+    Composition of functions is always associative.
+
+    \subsubsection*{Identity Element}
+    The identity element in \(G\) is the bijection \(T_{1,0}\), since:
+    \[
+    T_{1,0}(x) = 1 \cdot x + 0 = x.
+    \]
+    For any \(T_{a,b} \in G\):
+    \[
+    T_{1,0} \circ T_{a,b} = T_{a,b} \quad \text{and} \quad T_{a,b} \circ T_{1,0} = T_{a,b}.
+    \]
+
+    \subsubsection*{Inverses}
+    The inverse of \(T_{a,b}\) is \(T_{a,b}^{-1} = T_{a^{-1}, -a^{-1}b}\), where \(a^{-1} = a\) since \(a \in \{\pm 1\}\). Therefore:
+    \[
+    T_{a,b} \circ T_{a^{-1}, -a^{-1}b} = T_{1,0} \quad \text{and} \quad T_{a^{-1}, -a^{-1}b} \circ T_{a,b} = T_{1,0}.
+    \]
+    This shows that every element in \(G\) has an inverse.
+
+    \subsubsection*{Generating Elements and Identities}
+    Consider \(r = T_{1,1}\) and \(j = T_{-1,0}\):
+    \[
+    r(x) = x + 1 \quad \text{and} \quad j(x) = -x.
+    \]
+
+    Compute \(j^2\):
+    \[
+    j^2(x) = j(j(x)) = j(-x) = -(-x) = x,
+    \]
+    which shows \(j^2 = \text{id}\).
+
+    Compute \(jr\):
+    \[
+    jr(x) = j(r(x)) = j(x + 1) = -(x + 1) = -x - 1.
+    \]
+    Compute \(r^{-1}j\):
+    \[
+    r^{-1}(x) = x - 1 \quad \text{and} \quad r^{-1}j(x) = r^{-1}(-x) = -x - 1.
+    \]
+    Thus, \(jr = r^{-1}j\).
+
+    \subsection*{(ii) Unique Representation in \(G\)}
+
+    We need to show that every element in \(G\) can be written uniquely in the form \(r^a j^b\), where \(a \in \Z\) and \(b \in \{0,1\}\).
+
+    \begin{proof} \( \)
+    
+    Consider an arbitrary element \(T_{a,b} \in G\). There are two cases for \(a\):
+    \begin{itemize}
+        \item \(a = 1\):
+        \[
+        T_{1,b}(x) = x + b = r^b(x).
+        \]
+        \item \(a = -1\):
+        \[
+        T_{-1,b}(x) = -x + b.
+        \]
+        We can rewrite \(T_{-1,b}(x)\) using \(j\) and \(r\):
+        \[
+        T_{-1,b}(x) = j(x) + b = j(r^b(x)) = jr^b(x).
+        \]
+    \end{itemize}
+
+    Therefore, every element \(T_{a,b} \in G\) can be written as:
+    \[
+    T_{a,b}(x) = \begin{cases} r^b(x) & \text{if } a = 1, \\ jr^b(x) & \text{if } a = -1. \end{cases}
+    \]
+    This shows that every element can be written uniquely in the form \(r^a j^b\), where \(a \in \Z\) and \(b \in \{0,1\}\).
+    
+    \end{proof}
+
+    \subsection*{(iii) Isomorphism with Semidirect Product \(\Z \rtimes_\gamma \Z_2\)}
+
+    To show that \(G\) is isomorphic to \(\Z \rtimes_\gamma \Z_2\), we need to define the homomorphism \(\gamma: \Z_2 \rightarrow \text{Aut}(\Z)\) and verify the isomorphism.
+
+    \begin{proof} \( \)
+    
+    Let \(\Z_2 = \{0, 1\}\) with addition modulo 2. Define \(\gamma\) by:
+    \[
+    \gamma_0(a) = a \quad \text{and} \quad \gamma_1(a) = -a.
+    \]
+
+    We have:
+    \[
+    \gamma_0: \Z \rightarrow \Z \quad \text{is the identity automorphism, and}
+    \]
+    \[
+    \gamma_1: \Z \rightarrow \Z \quad \text{is the automorphism given by negation}.
+    \]
+
+    Consider the semidirect product \(G = \Z \rtimes_\gamma \Z_2\). The elements of \(G\) are pairs \((a,b)\), where \(a \in \Z\) and \(b \in \Z_2\), with the multiplication:
+    \[
+    (a_1, b_1) \cdot (a_2, b_2) = (a_1 + \gamma_{b_1}(a_2), b_1 + b_2).
+    \]
+
+    The isomorphism \(\phi: \Z \rtimes_\gamma \Z_2 \rightarrow G\) is defined by:
+    \[
+    \phi((a,b)) = r^a j^b.
+    \]
+
+    Check that \(\phi\) is a homomorphism:
+    \[
+    \phi((a_1, b_1) \cdot (a_2, b_2)) = \phi((a_1 + \gamma_{b_1}(a_2), b_1 + b_2)) = r^{a_1 + \gamma_{b_1}(a_2)} j^{b_1 + b_2},
+    \]
+    \[
+    \phi((a_1, b_1)) \cdot \phi((a_2, b_2)) = (r^{a_1} j^{b_1}) \cdot (r^{a_2} j^{b_2}).
+    \]
+
+    Since:
+    \[
+    j^{b_1} r^{a_2} = r^{\gamma_{b_1}(a_2)} j^{b_1},
+    \]
+    \[
+    \phi((a_1, b_1)) \cdot \phi((a_2, b_2)) = r^{a_1} r^{\gamma_{b_1}(a_2)} j^{b_1 + b_2} = r^{a_1 + \gamma_{b_1}(a_2)} j^{b_1 + b_2}.
+    \]
+
+    Therefore, \(\phi\) is a homomorphism.
+
+    Since \(\phi\) is bijective and a homomorphism, it is an isomorphism. Thus, \(G \cong \Z \rtimes_\gamma \Z_2\), where \(\gamma: \Z_2 \rightarrow \text{Aut}(\Z)\) is defined by \(\gamma_0(a) = a\) and \(\gamma_1(a) = -a\).
+
+    \end{proof}
+    
+    
+\end{exercise}
+\newpage
+
+
+\end{document}

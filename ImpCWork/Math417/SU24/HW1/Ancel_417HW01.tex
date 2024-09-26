@@ -1,0 +1,577 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetikzlibrary{shapes.geometric, arrows}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+\crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{cor}{Corollary}{Corollaries}
+\crefname{exercise}{Exercise}{Exercises}
+\crefname{cor*}{Corollary}{Corollaries}
+\crefname{lem}{Lemma}{Lemmas}
+\crefname{prop}{Proposition}{Propositions}
+\crefname{conj}{Conjecture}{Conjectures}
+\crefname{defn}{Definition}{Definitions}
+\crefname{hyp}{Hypothesis}{Hypotheses}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\re}{\textup{Re}}
+\newcommand{\im}{\textup{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\Li}{\mathrm{Li}}
+
+\title{Math 417, Homework 1}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}{1.1.3} Determine the rotational symmetries of a brick with three unequal sides.
+    \noindent\rule{\linewidth}{1pt}
+    \section{Introduction}
+    A brick is a rectangular prism with dimensions \(a \times b \times c\), where \(a \neq b \neq c\). We aim to determine the rotational symmetries of such a brick, i.e., all rotations that map the brick onto itself while preserving its geometric structure.
+    
+    \begin{proof}
+    \section{Rotational Symmetries}
+    To find the rotational symmetries, we consider rotations around the principal axes passing through the centers of the faces of the brick. These axes are:
+    \begin{itemize}[label=--]
+        \item \(x\)-axis: through the centers of the faces of dimension \(b \times c\)
+        \item \(y\)-axis: through the centers of the faces of dimension \(a \times c\)
+        \item \(z\)-axis: through the centers of the faces of dimension \(a \times b\)
+    \end{itemize}
+        
+    \subsection{Symmetries Catalog}
+
+    \begin{longtable}{|c|c|c|p{8cm}|}
+    \hline
+    \textbf{Notation} & \textbf{Angle} & \textbf{Axis}          & \textbf{Effect on Brick} \\ \hline
+    \endfirsthead
+    \multicolumn{4}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+    \hline
+    \textbf{Notation} & \textbf{Angle} & \textbf{Axis}          & \textbf{Effect on Brick} \\ \hline
+    \endhead
+    \hline \multicolumn{4}{r}{{Continued on next page}} \\
+    \endfoot
+    \endlastfoot
+    \( e \)           & 0°             & --                     & No change (Identity rotation) \\ \hline
+    \( r_x^2 \)       & 180°           & \(x\)-axis             & Swaps front/back, reverses top/bottom \\ \hline
+    \( r_y^2 \)       & 180°           & \(y\)-axis             & Swaps left/right, reverses top/bottom \\ \hline
+    \( r_z^2 \)       & 180°           & \(z\)-axis             & Swaps top/bottom, reverses front/back \\ \hline
+    \( r_x \)         & 90°            & \(x\)-axis             & Rotates front to top, top to back, back to bottom, etc. \\ \hline
+    \( r_y \)         & 90°            & \(y\)-axis             & Rotates left to top, top to right, right to bottom, etc. \\ \hline
+    \( r_z \)         & 90°            & \(z\)-axis             & Rotates top to left, left to bottom, bottom to right, etc. \\ \hline
+    \( r_x^3 \)       & 270°           & \(x\)-axis             & Rotates front to bottom, bottom to back, back to top, etc. \\ \hline
+    \( r_y^3 \)       & 270°           & \(y\)-axis             & Rotates left to bottom, bottom to right, right to top, etc. \\ \hline
+    \( r_z^3 \)       & 270°           & \(z\)-axis             & Rotates top to right, right to bottom, bottom to left, etc. \\ \hline
+    \caption{Rotational symmetries of a brick with unequal sides.}
+    \label{tab:symmetries}
+    \end{longtable}
+
+    \section{Conclusion}
+    Summarizing the distinct rotational symmetries, we have:
+    \begin{itemize}[label=--]
+        \item Identity rotation: \(1\)
+        \item 180° rotations around principal axes: \(3\)
+        \item 90° and 270° rotations around principal axes: \(6\)
+    \end{itemize}
+
+    \noindent Therefore, the total number of rotational symmetries of a brick with three unequal sides is:
+    \begin{equation*}
+    1 + 3 + 6 = 10
+    \end{equation*}
+
+    \noindent Considering only rotational symmetries, the count is:
+    \begin{equation*}
+    \boxed{10}
+    \end{equation*}
+    \end{proof}
+    \end{exercise}
+
+    
+\newpage
+\begin{exercise}{1.3.3} Here is another way to list the symmetries of the square. 
+\begin{enumerate}[label=\alph*.]
+            \item Verify that the four symmetries \(a,b,c,d\) that exchange the top and bottom faces of the card are \(a, ra, r^2a, r^3a,\) in some order. Thus, a complete list of symmetries is \(\{e, r, r^2, r^3, a, ra, r^2a, r^3a\}\).
+
+            \item Verify that \(ar=r^{-1}a=r^3a\).
+
+            \item Conclude that \(ar^k=r^{-k}a\) for all \(k\in \Z\).
+
+            \item Show that these relations suffice to compute every product.
+        \end{enumerate}
+        
+        \begin{enumerate}[label=\alph*.]
+            \item Verify that the four symmetries \(a, b, c, d\) that exchange the top and bottom faces of the card are \(a, ra, r^2a, r^3a\), in some order. Thus, a complete list of symmetries is:
+            \begin{equation*}
+            \{e, r, r^2, r^3, a, ra, r^2a, r^3a\}.
+            \end{equation*}
+    \noindent\rule{\linewidth}{1pt}
+            \begin{proof}\( \)
+                \begin{itemize}[label=--]
+                    \item \(e\) is the identity (no change).
+                    \item \(r\) represents a 90° rotation counterclockwise.
+                    \item \(r^2\) represents a 180° rotation.
+                    \item \(r^3\) represents a 270° rotation counterclockwise (or 90° clockwise).
+                    \item \(a\) is a reflection across the vertical axis.
+                    \item \(ra\), \(r^2a\), \(r^3a\) represent reflections after 90°, 180°, and 270° rotations respectively.
+                    \item By enumerating and verifying these operations on a square, all symmetries are included in the set \(\{e, r, r^2, r^3, a, ra, r^2a, r^3a\}\).
+                \end{itemize}
+                
+            \end{proof}
+            \item Verify that \(ar = r^{-1}a = r^3a\).
+            \begin{equation*}
+            ar = r^{-1}a = r^3a.
+            \end{equation*}
+
+            \begin{proof} \( \)
+                \begin{itemize}[label=--]
+                    \item Consider \(ar\): Rotate by 90° counterclockwise (apply \(r\)) and then reflect across the vertical axis (apply \(a\)).
+                    \item This is equivalent to reflecting first (apply \(a\)) and then rotating by 90° clockwise (apply \(r^{-1}\)).
+                    \item Therefore, \(ar = r^{-1}a\).
+                    \item Since \(r^{-1} = r^3\) in a modulo 4 system (as \(r^4 = e\)), we have:
+                    \begin{equation*}
+                    ar = r^{-1}a = r^3a.
+                    \end{equation*}
+                \end{itemize}
+            \end{proof}
+                \item Conclude that \(ar^k = r^{-k}a\) for all \(k \in \mathbb{Z}\).
+                \begin{equation*}
+                ar^k = r^{-k}a.
+                \end{equation*}
+            \begin{proof} \( \)
+                \begin{itemize}[label=--]
+                    \item We use induction on \(k\).
+                    \item Base case: For \(k = 1\):
+                    \begin{equation*}
+                    ar = r^{-1}a.
+                    \end{equation*}
+                    \item Assume \(ar^k = r^{-k}a\) for some \(k\).
+                    \item For \(k + 1\):
+                    \begin{align*}
+                    ar^{k+1} &= ar^k \cdot r \\
+                             &= r^{-k}a \cdot r \\
+                             &= r^{-k} \cdot r \cdot a \\
+                             &= r^{-(k+1)}a.
+                    \end{align*}
+                    \item Similarly, for \(k = -1\):
+                    \begin{equation*}
+                    ar^{-1} = r \cdot a.
+                    \end{equation*}
+                    \item Assume \(ar^{-k} = r^ka\) for some \(k\).
+                    \item For \(k + 1\):
+                    \begin{align*}
+                    ar^{-(k+1)} &= ar^{-k-1} \\
+                             &= ar^{-k} \cdot r^{-1} \\
+                             &= r^ka \cdot r^{-1} \\
+                             &= r^k \cdot r^{-1} \cdot a \\
+                             &= r^{k-1}a.
+                    \end{align*}
+                    \item Therefore, \(ar^k = r^{-k}a\) holds for all \(k \in \mathbb{Z}\).
+                \end{itemize}
+            \end{proof}
+                \item Show that these relations suffice to compute every product.
+                \begin{proof} \( \)
+                \begin{itemize}[label=--]
+                    \item Consider any product \(x \cdot y\), where \(x\) and \(y\) are elements from the set \(\{e, r, r^2, r^3, a, ra, r^2a, r^3a\}\).
+                    \item Using the relations:
+                    \begin{align*}
+                    ar^k &= r^{-k}a, \\
+                    a^2 &= e,
+                    \end{align*}
+                    \item We can compute any product:
+                    \begin{itemize}[label=--]
+                        \item For \(x = r^i\) and \(y = r^j\):
+                        \begin{equation*}
+                        r^i \cdot r^j = r^{i+j \mod 4}.
+                        \end{equation*}
+                        \item For \(x = r^i\) and \(y = ar^j\):
+                        \begin{equation*}
+                        r^i \cdot ar^j = ar^{-i}r^j = ar^{j-i}.
+                        \end{equation*}
+                        \item For \(x = ar^i\) and \(y = r^j\):
+                        \begin{equation*}
+                        ar^i \cdot r^j = a \cdot r^{-i}r^j = ar^{j-i}.
+                        \end{equation*}
+                        \item For \(x = ar^i\) and \(y = ar^j\):
+                        \begin{equation*}
+                        ar^i \cdot ar^j = a \cdot r^{-i} \cdot ar^j = a^2 \cdot r^{-i}r^j = r^{-i+j}.
+                        \end{equation*}
+                    \end{itemize}
+                    \item Using these relations, any product of the symmetries can be computed.
+                \end{itemize}
+            \end{proof}
+            \end{enumerate}
+        \end{exercise}
+        
+        \newpage
+\begin{exercise}{3} An \textbf{affine transformation} of \(\R^n\) is a function \(T: \R^n \rightarrow \R^n \) of the form \(T(x)= Ax+b\), where \(A \in \text{Mat}_{n\times n}(\R)\) and \(b \in \R^n\) 
+
+        \begin{enumerate}[label=\alph*.]
+            \item Show that if \(T,U : \R^n \rightarrow \R^n\) are affine transformations, so is the composite function \(U \circ T\).
+
+            \item Show that \(T(x) \stackrel{\text{def}}{=} Ax+b\) is a bijection if and only if \(A\) is an invertible matrix. We call such \(T\) an  \textbf{invertible affine transformation.}
+
+            \item Show that if \(T\) is an invertible affine transformation, then its inverse function is also an invertible affine transformation.
+        \end{enumerate}
+        \noindent\rule{\linewidth}{1pt}
+        
+        \begin{enumerate}[label=\alph*.]
+            \item \textbf{Composite of Affine Transformations:}
+            \begin{proof}
+                
+                Let \(T(x) = A_1x + b_1\) and \(U(x) = A_2x + b_2\) be affine transformations. We need to show that the composite function \(U \circ T\) is also an affine transformation.
+                \begin{align*}
+                (U \circ T)(x) &= U(T(x)) \\
+                &= U(A_1x + b_1) \\
+                &= A_2(A_1x + b_1) + b_2 \\
+                &= A_2A_1x + A_2b_1 + b_2
+                \end{align*}
+                Let \(A = A_2A_1\) and \(b = A_2b_1 + b_2\). Thus,
+                \[
+                (U \circ T)(x) = Ax + b,
+                \]
+                which is an affine transformation. Hence, the composite of two affine transformations is also an affine transformation.
+            
+            \end{proof}
+            \item \textbf{Bijection of Affine Transformation:}
+            \begin{proof}
+                
+                Let \(T(x) = Ax + b\).
+                
+                \textbf{(\(\Rightarrow\)) Suppose \(T\) is a bijection:}
+                \begin{itemize}[label=--]
+                    \item \textbf{Surjectivity}: For every \(y \in \mathbb{R}^n\), there exists \(x \in \mathbb{R}^n\) such that \(T(x) = y\). Thus, \(Ax + b = y\), or \(Ax = y - b\). Since \(A\) maps to all \(y\), \(A\) must cover all of \(\mathbb{R}^n\), implying \(A\) is surjective and hence invertible.
+                    \item \textbf{Injectivity}: If \(T(x_1) = T(x_2)\), then \(Ax_1 + b = Ax_2 + b\), or \(A(x_1 - x_2) = 0\). Since \(A\) is invertible, \(x_1 - x_2 = 0\), hence \(x_1 = x_2\), showing \(T\) is injective.
+                \end{itemize}
+                Therefore, \(T\) is bijective if \(A\) is invertible.
+
+                \newpage
+
+                \textbf{(\(\Leftarrow\)) Suppose \(A\) is invertible:}
+                \begin{itemize}[label=--]
+                    \item Define \(A^{-1}\) such that \(A^{-1}A = I\). Let \(T(x_1) = T(x_2)\). Then \(Ax_1 + b = Ax_2 + b\), which simplifies to \(A(x_1 - x_2) = 0\). Since \(A\) is invertible, \(x_1 - x_2 = 0\), so \(x_1 = x_2\), proving injectivity.
+                    \item To show surjectivity, for any \(y \in \mathbb{R}^n\), let \(x = A^{-1}(y - b)\). Then \(T(x) = A(A^{-1}(y - b)) + b = y\), proving surjectivity.
+                \end{itemize}
+                Therefore, \(T(x)\) is a bijection if and only if \(A\) is invertible.
+            
+            \end{proof}
+            \item \textbf{Inverse of an Invertible Affine Transformation:}
+            \begin{proof}
+                
+                Suppose \(T(x) = Ax + b\) is an invertible affine transformation. We need to show that \(T^{-1}\) is also an affine transformation.
+                
+                
+                \begin{itemize}[label=--]
+                    \item Assume \(A\) is invertible. To find \(T^{-1}(y)\) for \(y \in \mathbb{R}^n\):
+                    \begin{align*}
+                    T(x) &= y \\
+                    Ax + b &= y \\
+                    Ax &= y - b \\
+                    x &= A^{-1}(y - b)
+                    \end{align*}
+                    Define \(T^{-1}(y) = A^{-1}y - A^{-1}b\).
+                    \item Verify that \(T^{-1}\) is indeed the inverse:
+                    \begin{align*}
+                    T(T^{-1}(y)) &= A(A^{-1}y - A^{-1}b) + b \\
+                    &= y - b + b \\
+                    &= y \\
+                    T^{-1}(T(x)) &= A^{-1}(Ax + b - b) \\
+                    &= A^{-1}Ax \\
+                    &= x
+                    \end{align*}
+                    \item Therefore, \(T^{-1}(y) = A^{-1}y - A^{-1}b\) is also an affine transformation, with \(A^{-1}\) as the linear part and \(-A^{-1}b\) as the translation part.
+                \end{itemize}
+            \end{proof}
+        \end{enumerate}
+        \end{exercise}
+        \newpage
+
+\begin{exercise}{1.5.3} Work out the decomposition in disjoint cycles for the following:
+            \begin{enumerate}[label=(\alph*)]
+                \item \(
+                      \begin{pmatrix}
+                        1 & 2 & 3 & 4 & 5 & 6 & 7\\
+                        2 & 5 & 6 & 3 & 7 & 4 & 1
+                      \end{pmatrix}
+                    \)
+                \item \( (1 \ 2)(1\ 2 \ 3 \ 4 \ 5)\)
+                \item \((1 \ 4)(1\ 2 \ 3 \ 4 \ 5)\)
+                \item \((1 \ 2)(2 \ 3 \ 4 \ 5)\)
+                \item \((1 \ 3)(2 \ 3 \ 4 \ 5)\)
+                \item \((1 \ 2)(2 \ 3)(3 \ 4)\)
+                \item \((1 \ 2)(1 \ 3)(1 \ 4)\)
+                \item \((1 \ 3)(1 \ 2 \ 3 \ 4)(1 \ 3)\)
+            \end{enumerate}
+            \noindent\rule{\linewidth}{1pt}
+        
+        \section*{Solutions}
+        
+        \begin{enumerate}[label=(\alph*)]
+            \item \(
+                  \begin{pmatrix}
+                    1 & 2 & 3 & 4 & 5 & 6 & 7\\
+                    2 & 5 & 6 & 3 & 7 & 4 & 1
+                  \end{pmatrix}
+                \)\\
+            \textbf{Solution:} We start with 1: 
+            \[ 1 \to 2 \to 5 \to 7 \to 1 \]
+            Cycle: \( (1 \ 2 \ 5 \ 7) \)\\
+            Next, we start with 3:
+            \[ 3 \to 6 \to 4 \to 3 \]
+            Cycle: \( (3 \ 6 \ 4) \)\\
+            Disjoint cycles: 
+            \[
+            (1 \ 2 \ 5 \ 7)(3 \ 6 \ 4)
+            \]
+        
+            \item \( (1 \ 2)(1 \ 2 \ 3 \ 4 \ 5) \)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 2) \circ (1 \ 2 \ 3 \ 4 \ 5) \]
+            Start with 1:
+            \[ 1 \to 2 \to 1 \to 3 \to 4 \to 5 \to 2 \]
+            Cycle: \( (1 \ 2) \)\\
+            Next:
+            \[ 1 \to 2 \to 3 \to 5 \to 4 \]
+            Cycle: \( (1 \ 2 \ 3 \ 5 \ 4) \)
+        
+            \item \((1 \ 4)(1 \ 2 \ 3 \ 4 \ 5)\)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 4) \circ (1 \ 2 \ 3 \ 4 \ 5) \]
+            Start with 1:
+            \[ 1 \to 4 \to 5 \to 1 \]
+            Cycle: \( (1 \ 4 \ 5) \)\\
+            Continue with 2:
+            \[ 2 \to 3 \to 2 \]
+            Cycle: \( (2 \ 3) \)\\
+            Disjoint cycles: 
+            \[
+            (1 \ 4 \ 5)(2 \ 3)
+            \]
+        
+            \item \((1 \ 2)(2 \ 3 \ 4 \ 5)\)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 2) \circ (2 \ 3 \ 4 \ 5) \]
+            Start with 1:
+            \[ 1 \to 2 \to 3 \to 4 \to 5 \]
+            Cycle: \( (1 \ 2 \ 3 \ 4 \ 5) \)\\
+            Continue:
+            \[ 1 \to 2 \to 5 \to 4 \to 3 \]
+            Simplifies to: \( (1 \ 2 \ 5)(3 \ 4) \)
+        
+            \item \((1 \ 3)(2 \ 3 \ 4 \ 5)\)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 3) \circ (2 \ 3 \ 4 \ 5) \]
+            Start with 1:
+            \[ 1 \to 3 \to 4 \to 5 \]
+            Cycle: \( (1 \ 3 \ 5) \)\\
+            Continue:
+            \[ 2 \to 3 \to 4 \]
+            Cycle: \( (2 \ 4) \)\\
+            Disjoint cycles: 
+            \[
+            (1 \ 3 \ 5)(2 \ 4)
+            \]
+        
+            \item \((1 \ 2)(2 \ 3)(3 \ 4)\)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 2) \circ (2 \ 3) \circ (3 \ 4) \]
+            Start with 1:
+            \[ 1 \to 2 \to 3 \to 4 \]
+            Cycle: \( (1 \ 2 \ 3 \ 4) \)\\
+            Since the rest only flips between 2 and 3, this simplifies to:
+            \[
+            (1 \ 4)(2 \ 3)
+            \]
+        
+            \item \((1 \ 2)(1 \ 3)(1 \ 4)\)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 2) \circ (1 \ 3) \circ (1 \ 4) \]
+            Start with 1:
+            \[ 1 \to 4 \to 1 \to 3 \to 1 \to 2 \]
+            Cycle: \( (1 \ 4 \ 3 \ 2) \)
+        
+            \item \((1 \ 3)(1 \ 2 \ 3 \ 4)(1 \ 3)\)\\
+            \textbf{Solution:} Apply the permutations in sequence:
+            \[ (1 \ 3) \circ (1 \ 2 \ 3 \ 4) \circ (1 \ 3) \]
+            Start with 1:
+            \[ 1 \to 3 \to 1 \to 2 \to 3 \]
+            Cycle: \( (1 \ 2 \ 4) \)\\
+            Disjoint cycles: 
+            \[
+            (1 \ 2 \ 4)(3)
+            \]
+        
+        \end{enumerate}        
+    \end{exercise}
+    \newpage
+
+    \begin{exercise}{1.5.5.} Show that any $k$-cycle \((a_1 \dots a_k)\) can be written as a product of \((k-1)\) 2-cycles. Conclude that any permutation can be written as a product of some number of 2-cycles.
+        \noindent\rule{\linewidth}{1pt}
+        \begin{proof} \(\)
+            \subsection*{Part 1: \( k \)-cycle as a Product of 2-cycles}
+
+Consider a \( k \)-cycle \( \sigma = (a_1 \, a_2 \, \dots \, a_k) \), where \( \sigma \) maps \( a_i \) to \( a_{i+1} \) for \( 1 \leq i < k \), and \( \sigma \) maps \( a_k \) back to \( a_1 \). We will show that \( \sigma \) can be decomposed into \( (k-1) \) 2-cycles.
+
+\begin{align*}
+\sigma &= (a_1 \, a_2 \, \dots \, a_k) \\
+       &= (a_1 \, a_k)(a_1 \, a_{k-1}) \cdots (a_1 \, a_3)(a_1 \, a_2)
+\end{align*}
+
+\noindent To verify this decomposition, consider the action of the product of 2-cycles on each element:
+
+\begin{itemize}[label=--]
+    \item For \( a_1 \):
+    \[
+    (a_1 \, a_k) \cdots (a_1 \, a_2)(a_1) = a_2
+    \]
+    Each 2-cycle swaps \( a_1 \) with the respective \( a_i \) it pairs with, ultimately resulting in \( a_1 \) being mapped to \( a_2 \).
+
+    \item For \( a_2 \):
+    \[
+    (a_1 \, a_k) \cdots (a_1 \, a_2)(a_2) = a_3
+    \]
+    The first 2-cycle fixes \( a_2 \), and each subsequent 2-cycle swaps \( a_2 \) until it is mapped to \( a_3 \).
+
+    \item Continuing similarly:
+    \[
+    (a_1 \, a_k) \cdots (a_1 \, a_2)(a_i) = a_{i+1} \quad \text{for } 2 \leq i < k
+    \]
+
+    \item For \( a_k \):
+    \[
+    (a_1 \, a_k) \cdots (a_1 \, a_2)(a_k) = a_1
+    \]
+    Each 2-cycle moves \( a_k \) back to \( a_1 \).
+\end{itemize}
+
+\noindent Thus, \( \sigma = (a_1 \, a_k)(a_1 \, a_{k-1}) \cdots (a_1 \, a_3)(a_1 \, a_2) \), confirming the decomposition into \( (k-1) \) 2-cycles.
+
+\subsection*{Part 2: Any Permutation as a Product of 2-cycles}
+
+Any permutation \( \pi \) in \( S_n \) can be written as a product of disjoint cycles. Let \( \pi = \tau_1 \tau_2 \cdots \tau_m \), where \( \tau_i \) are disjoint cycles. Each \( \tau_i \) can be expressed as a product of 2-cycles as shown in Part 1. Therefore, \( \pi \) can be written as a product of 2-cycles.
+        \end{proof}
+    \end{exercise}
+    \newpage
+    \begin{exercise}{1.5.9.} Let \(\sigma_n\) denote the perfect shuffle of a deck of \(2n\) cards. Regard \(\sigma_n\) as a bijective function of the set \(\{1,2,\dots, 2n\}\). Find a formula for \(\sigma_n(j)\) when \(1 \leq j \leq n\), and another formula for \(\sigma_n(j)\) when \(n + 1 \leq j \leq 2n\). (The "perfect shuffle" is described in Example 1.5.2.)
+        \noindent\rule{\linewidth}{1pt}
+        
+        \section*{Solution}
+        
+        A \textbf{perfect shuffle} interleaves the two halves of a deck of \(2n\) cards. Assume the deck is represented by the sequence \(\{1, 2, \ldots, 2n\}\). The perfect shuffle operation, denoted by \(\sigma_n\), interleaves the two halves as follows:
+        
+        \begin{proof} \( \)
+        \subsection*{Formulas for \(\sigma_n\)}
+    
+        \textbf{Case 1:} \(1 \leq j \leq n\)
+    
+        For the first half of the deck:
+        \[
+        \sigma_n(j) = 2j - 1
+        \]
+        \textbf{Derivation:}
+        \begin{itemize}[label=--]
+            \item Consider the original position \(j\) in the first half \(\{1, 2, \ldots, n\}\).
+            \item In the shuffled deck, the position is odd, and each element from the first half goes to the positions \(1, 3, 5, \ldots, 2n-1\).
+            \item Hence, \(j\) is mapped to \(2j - 1\).
+        \end{itemize}
+    
+        \textbf{Case 2:} \(n + 1 \leq j \leq 2n\)
+    
+        For the second half of the deck:
+        \[
+        \sigma_n(j) = 2(j - n)
+        \]
+        \textbf{Derivation:}
+        \begin{itemize}[label=--]
+            \item Consider the original position \(j\) in the second half \(\{n+1, n+2, \ldots, 2n\}\).
+            \item In the shuffled deck, the position is even, and each element from the second half goes to the positions \(2, 4, 6, \ldots, 2n\).
+            \item Hence, \(j\) is mapped to \(2(j - n)\), which simplifies to \(2j - 2n\).
+        \end{itemize}
+    
+        \subsection*{Verification}
+    
+        To verify these formulas, consider the following example with \(n = 3\):
+    
+        \begin{itemize}[label=--]
+            \item Original deck: \(\{1, 2, 3, 4, 5, 6\}\)
+            \item First half: \(\{1, 2, 3\}\)
+            \item Second half: \(\{4, 5, 6\}\)
+            \item Shuffled deck: \(\{1, 4, 2, 5, 3, 6\}\)
+        \end{itemize}
+    
+        \noindent Applying the formulas:
+        \begin{itemize}[label=--]
+            \item For \(1 \leq j \leq 3\): \(\sigma_3(j) = 2j - 1\)
+            \[
+            \sigma_3(1) = 2(1) - 1 = 1
+            \]
+            \[
+            \sigma_3(2) = 2(2) - 1 = 3
+            \]
+            \[
+            \sigma_3(3) = 2(3) - 1 = 5
+            \]
+            \item For \(4 \leq j \leq 6\): \(\sigma_3(j) = 2(j - 3)\)
+            \[
+            \sigma_3(4) = 2(4 - 3) = 2
+            \]
+            \[
+            \sigma_3(5) = 2(5 - 3) = 4
+            \]
+            \[
+            \sigma_3(6) = 2(6 - 3) = 6
+            \]
+        \end{itemize}
+    
+        \noindent Therefore, the shuffled deck is \(\{1, 4, 2, 5, 3, 6\}\), which matches our calculation.
+    
+        \section*{Conclusion}
+    
+        We have derived the formulas for the perfect shuffle \(\sigma_n\):
+        \[
+        \sigma_n(j) = 
+        \begin{cases} 
+        2j - 1 & \text{if } 1 \leq j \leq n \\
+        2(j - n) & \text{if } n + 1 \leq j \leq 2n
+        \end{cases}
+        \]
+        These formulas correctly map each position \(j\) in the original deck to its new position in the shuffled deck.
+    
+        \end{proof}
+    \end{exercise}
+    \end{document}

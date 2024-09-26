@@ -1,0 +1,45 @@
+Input,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Name of Arrangement,,European Garden Bouquet,,European Garden Bouquet,,European Garden Bouquet,,European Garden Bouquet
+,Size of Arrangement,,Standard,,Deluxe,,Premium,,Exquisite
+,SRP,,79.99,,104.99,,124.99,,
+,Total SRP of Bundle,,79.99,,104.99,,124.99,,0
+,,,,,,,,,
+,,,,,,,,,
+,Member Profitability,,,,,,,,
+,SRP,,79.99,,104.99,,124.99,,0
+,Less Commission (20%),,-15.998,,-20.998,,-24.998,,0
+,Less C/H Fee (9%),,-7.1991,,-9.4491,,-11.249099999999999,,0
+,Less UCP Fee,,-4.99,,-4.99,,-4.99,,-4.99
+,Less Transmission Fee,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Delivery Fee,,-10,,-10,,-10,,-10
+,Less Labor (10%),,-7.999,,-10.499,,-12.499,,0
+,Less Other,,-3,,-3,,-3,,-3
+,Less Hardgood,,-2.75,,-2.75,,-2.75,,-2.75
+,Less Floral Cost,,-11.04,,-16.330000000000002,,-17.91,,0
+,Total Gross Margin,,14.263899999999996,,24.22389999999999,,34.84389999999999,,-23.490000000000002
+,Gross Margin %,,0.1783210401300162,,0.23072578340794353,,0.2787735018801504,,
+,,,**GM should not be below 20%,,,,,,
+,,,,,,,,,
+Color,Floral Costs,Qty,,Qty,,Qty,,Qty,
+Yellow,Sunflowers,2,2.24,3,3.3600000000000003,3,3.3600000000000003,,0
+Yellow,Asiatic Lily stems,2,2.94,2,2.94,2,2.94,,0
+Orange,50 cm Roses,0,0,3,2.88,4,3.84,,0
+Purple,Monte Casino stems,3,1.98,4,2.64,4,2.64,,0
+Green,Button Pompon stems,2,1.26,3,1.8900000000000001,3,1.8900000000000001,,0
+Hot Pink,Alstroemeria stems,2,1.24,2,1.24,3,1.8599999999999999,,0
+,Variegated Pittosporum stems,2,1.38,2,1.38,2,1.38,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,11.04,,16.330000000000002,,17.91,,0
+,,,,,,,,,
+,Hardgood Costs,Qty,,Qty,,Qty,,Qty,
+,Clear Glass,1,2.5,1,2.5,1,2.5,1,2.5
+,Raffia,1,0.25,1,0.25,1,0.25,1,0.25
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,0,,0,,0,,0
+,,,2.75,,2.75,,2.75,,2.75

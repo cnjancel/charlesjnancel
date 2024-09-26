@@ -1,0 +1,81 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{constants}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\hfuzz=200pt
+
+%----Theorem Environments----
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{problem*}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\exercise}[1]{\noindent {\bf Exercise #1.}}
+
+\numberwithin{equation}{section}
+
+\title{Econ 203, Challenge Quiz 7, Part One}
+\author{Charles Ancel}
+
+\begin{document}
+\maketitle
+
+Consider a random sample \((Y_i,X_i)\), \(i=1,\ldots,n,\) from a population such that \(m(x):=\mathbb{E}(Y_i|X_i=x)=\beta_0+\beta_1x\). Write the linear regression model as \(Y_i=\mathbb{E}(Y_i|X_i=x)+U_i=\beta_0+\beta_1x+U_i\), where \(U_i\) is the random error with \(\mathbb{E}(U_i^2)=\sigma^2\). Show that:
+\begin{align*}
+\widehat{m}(x)=\beta_0+\beta_1x+\frac{1}{n}\sum_{i=1}^n\left[1+(x-\bar{X})\frac{(X_i-\bar{X})}{s_X^2}\right]U_i,
+\end{align*}
+where \(s_X^2=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^2\).
+
+\begin{proof}
+    Consider the linear regression model \( Y_i = \beta_0 + \beta_1 X_i + U_i \), where:
+    \begin{itemize}
+        \item  \(Y_i\) is the dependent variable.
+        \item  \(X_i\) is the independent variable.
+        \item  \(U_i\) is the error term with \(E(U_i) = 0\) and \(Var(U_i) = \sigma^2\).
+        \item  \(\beta_0\) and \(\beta_1\) are parameters.
+    \end{itemize}
+    
+    The OLS estimators are:
+    \[ \hat{\beta}_1 = \frac{\sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})}{\sum_{i=1}^n (X_i - \bar{X})^2}, \quad \hat{\beta}_0 = \bar{Y} - \hat{\beta}_1 \bar{X}. \]
+
+    The predicted value for \(Y_i\) is:
+    \[ \hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i. \]
+
+    The residual \(U_i\) is defined as:
+    \[ U_i = Y_i - \hat{Y}_i. \]
+
+    To express \( \widehat{m}(x) \), substitute \( \hat{\beta}_0 \) and \( \hat{\beta}_1 \):
+    \[ \widehat{m}(x) = \hat{\beta}_0 + \hat{\beta}_1 x = (\bar{Y} - \hat{\beta}_1 \bar{X}) + \hat{\beta}_1 x. \]
+
+    Now, consider the expression for \( \hat{\beta}_1 \) and substitute it to obtain \( \widehat{m}(x) \):
+    \[ \widehat{m}(x) = \bar{Y} + \left( \frac{\sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})}{s_X^2} \right) (x - \bar{X}). \]
+
+    Express \( Y_i - \bar{Y} \) as \( \beta_1 (X_i - \bar{X}) + U_i \) and substitute back to get:
+    \begin{align*}
+    \widehat{m}(x) &= \bar{Y} + \left( \frac{\sum_{i=1}^n (X_i - \bar{X})(\beta_1 (X_i - \bar{X}) + U_i)}{s_X^2} \right) (x - \bar{X}), \\
+    &= \bar{Y} + \beta_1 (x - \bar{X}) + \frac{(x - \bar{X})}{s_X^2} \sum_{i=1}^n (X_i - \bar{X})U_i.
+    \end{align*}
+
+    Finally, incorporate \(\beta_0\) and \(\beta_1\) to isolate \(U_i\):
+    \[ \widehat{m}(x) = \beta_0 + \beta_1x + \frac{1}{n}\sum_{i=1}^n\left[1 + (x - \bar{X})\frac{(X_i - \bar{X})}{s_X^2}\right]U_i. \]
+
+    This equation highlights the adjustment for each observation's residual, factoring in the distance from the mean and normalized by the sample variance, thus showing the detailed derivation of \( \widehat{m}(x) \).
+\end{proof}
+
+\end{document}

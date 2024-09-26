@@ -1,0 +1,117 @@
+Menu,has_chicken,has_meat,category,Serving size,Calories,Fat (G),Sat. Fat (G),Trans Fat (G),Cholesterol (MG),Sodium (MG),Carbohydrates (G),Fiber (G),Sugar (G),Protein (G)
+Chick-fil-A® Chicken Biscuit,1,1,breakfast,153,460,23,8,0,45,1510,45,2,6,19
+Chick-fil-A Chick-n-Minis™,1,1,breakfast,127,360,13,4,0,60,1050,41,2,8,19
+Egg White Grill,0,0,breakfast,172,290,8,3.5,0,60,980,30,1,2,26
+Hash Brown Scramble Burrito,1,1,breakfast,302,700,40,12,0.5,415,1750,51,3,2,34
+Hash Brown Scramble Bowl,1,1,breakfast,233,470,30,9,0,415,1340,19,2,2,29
+"Bacon, Egg & Cheese Biscuit",0,1,breakfast,145,420,23,11,0,180,1290,38,2,4,15
+"Sausage, Egg & Cheese Biscuit",0,1,breakfast,191,610,42,18,0,205,1510,38,2,4,22
+"Bacon, Egg & Cheese Muffin",0,1,breakfast,129,310,14,6,0,180,810,29,1,2,16
+"Sausage, Egg & Cheese Muffin",0,1,breakfast,175,500,33,12,0,205,1030,30,1,2,23
+Buttered Biscuit,0,0,breakfast,82,290,15,6,0,0,760,37,2,4,4
+English Muffin,0,0,breakfast,61,140,2,0,0,0,220,29,1,1,5
+Hash Browns,0,0,breakfast,77,270,18,2.5,0,0,440,23,3,0,3
+Greek Yogurt Parfait,0,0,breakfast,221,270,9,3.5,0,20,80,36,1,26,13
+Fruit Cup,0,0,breakfast,119,60,0,0,0,0,0,15,2,11,1
+Chick-fil-A® Chicken Sandwich,1,1,entree,183,440,17,4,0,70,1400,41,1,6,29
+Chick-fil-A® Deluxe Sandwich,1,1,entree,247,500,22,7,0,85,1640,44,2,7,32
+Spicy Chicken Sandwich,1,1,entree,188,460,19,4,0,65,1670,45,2,6,28
+Spicy Deluxe Sandwich,1,1,entree,259,550,25,8,0,85,1810,47,3,7,33
+Grilled Chicken Sandwich,1,1,entree,206,380,11,2,0,75,755,44,2,11,28
+Chick-fil-A® Grilled Chicken Club Sandwich,1,1,entree,237,520,22,8,0,105,1115,44,2,11,37
+Chick-fil-A® Nuggets,1,1,entree,113,250,11,2.5,0,85,1210,11,0,1,27
+Grilled Nuggets,1,1,entree,95,130,3,0.5,0,85,440,1,0,1,25
+Chick-fil-A Chick-n-Strips®,1,1,entree,136,310,14,2.5,0,75,870,16,0,2,29
+Chick-fil-A® Cool Wrap,1,1,entree,231,660,45,9,0,110,1420,32,14,4,43
+Cobb Salad,1,1,salad,413,850,61,13,0,235,2220,34,5,9,42
+Spicy Southwest Salad,1,1,salad,424,690,49,10,0,100,1570,29,8,8,33
+Market Salad,1,1,salad,321,540,31,6,0,80,1020,41,5,26,28
+Chick-fil-A Waffle Potato Fries®,0,0,side,125,420,24,4,0,0,240,45,5,1,5
+Side Salad,0,0,side,166,470,42,8,0,35,690,16,4,5,7
+Mac & Cheese,0,0,side,227,450,29,16,0,70,1190,28,3,3,20
+Chicken Noodle Soup,1,1,side,233,145,3.5,1,0,30,1130,21,1,1,9
+Chicken Tortilla Soup,1,1,side,262,340,10,3,0,45,1050,38,17,4,23
+Kale Crunch Side,0,0,side,61,120,9,1,0,0,140,8,2,3,3
+Waffle Potato Chips,0,0,side,43,220,13,3.5,0,0,250,25,2,0,3
+Buddy Fruits® Apple Sauce,0,0,side,90,45,0,0,0,0,0,12,1,8,0
+Chick-fil-A® Nuggets Kid's Meal,1,1,kids,71,160,7,1.5,0,50,760,7,0,1,17
+Chick-fil-A Chick-n-Strips® Kid's Meal,1,1,kids,91,200,9,2,0,50,580,11,0,1,19
+Grilled Nuggets Kid's Meal,1,1,kids,59,80,2,0,0,55,270,1,0,0,16
+Frosted Lemonade,0,0,treats,383,330,6,4,0,25,120,65,0,63,6
+Frosted Coffee,0,0,treats,383,250,6,4,0,25,120,43,1,39,6
+Chocolate Chunk Cookie,0,0,treats,78,370,17,9,0,15,230,49,3,26,5
+Chocolate Fudge Brownie,0,0,treats,85,380,21,7,0,65,150,48,2,36,4
+Cookies & Cream Milkshake,0,0,treats,411,630,25,15,1,85,410,90,1,84,13
+Chocolate Milkshake,0,0,treats,399,590,22,14,1,85,350,90,1,87,12
+Strawberry Milkshake,0,0,treats,412,570,19,12,0.5,75,380,93,1,87,11
+Vanilla Milkshake,0,0,treats,409,580,23,15,1,90,380,82,0,80,13
+Icedream® Cone,0,0,treats,135,180,4,2.5,0,15,90,32,0,25,4
+Icedream® Cup,0,0,treats,122,140,3.5,2.5,0,15,70,24,0,24,4
+Freshly-Brewed Iced Tea Sweetened,0,0,drinks,320,120,0,0,0,0,10,31,0,31,0
+Freshly-Brewed Iced Tea Unsweetened,0,0,drinks,306,0,0,0,0,0,10,0,0,0,0
+Chick-fil-A® Lemonade,0,0,drinks,410,220,0,0,0,0,10,58,0,55,0
+Chick-fil-A® Diet Lemonade,0,0,drinks,410,50,0,0,0,0,10,14,0,10,0
+"Sunjoy® (1/2 Sweet Tea, 1/2 Lemonade)",0,0,drinks,557,160,0,0,0,0,5,44,0,42,0
+"Sunjoy® (1/2 Sweet Tea, 1/2 Diet Lemonade)",0,0,drinks,551,90,0,0,0,0,10,25,0,23,0
+"Sunjoy® (1/2 Unsweet Tea, 1/2 Lemonade)",0,0,drinks,551,90,0,0,0,0,0,25,0,23,0
+"Sunjoy® (1/2 Unsweet Tea, 1/2 Diet Lemonade)",0,0,drinks,551,20,0,0,0,0,0,6,0,4,0
+Iced Coffee,0,0,drinks,438,150,2.5,1.5,0,0,75,30,0,24,5
+Coca-Cola®,0,0,drinks,354,140,0,0,0,0,45,39,0,39,0
+Dr Pepper®,0,0,drinks,434,180,0,0,0,0,75,48,0,47,0
+DASANI® Bottled Water,0,0,drinks,479,0,0,0,0,0,0,0,0,0,0
+Honest Kids® Apple Juice,0,0,drinks,170,35,0,0,0,0,15,9,0,8,0
+Simply Orange®,0,0,drinks,326,160,0,0,0,0,10,34,0,30,2
+1% Chocolate Milk,0,0,drinks,198,140,2,1.5,0,10,160,23,0,21,7
+1% Milk,0,0,drinks,213,90,2,1.5,0,10,105,10,0,10,7
+Coffee,0,0,drinks,340,0,0,0,0,0,10,0,0,0,0
+5 lb Bag of Ice,0,0,drinks,28,0,0,0,0,0,0,0,0,0,0
+Grilled Chicken Bundle  (per sandwich),1,1,trays,249,520,22,8,0,105,1110,44,3,12,37
+Hot Chick-fil-A® Nugget Trays,1,1,trays,14,30,1.5,0,0,10,150,1,0,0,3
+Hot Chick-n-Strips® Trays,1,1,trays,48,110,5,1,0,25,300,6,0,1,10
+Chilled Grilled Chicken Sub Sandwich Tray,1,1,trays,115,220,6,2.5,0,50,450,24,0,5,18
+Spicy Chilled Grilled Chicken Sub Sandwich Tray,1,1,trays,115,210,6,2.5,0,40,590,24,0,5,16
+Chick-fil-A® Cool Wrap Trays,1,1,trays,116,480,39,7,0,70,970,18,7,3,22
+Fruit Tray,0,0,trays,1446,780,2.5,0,0,0,10,181,29,135,9
+Mac & Cheese Tray,0,0,trays,2481,4920,312,178,3.5,750,13020,308,31,36,221
+Garden Salad Tray,0,0,trays,595,350,19,11,0.5,55,410,27,10,13,20
+Kale Crunch Side Tray,0,0,trays,510,570,37,6,0,0,1120,56,12,30,11
+Chocolate Chunk Cookie Tray,0,0,trays,78,370,17,9,0,15,230,49,3,26,5
+Chocolate Fudge Brownie Tray,0,0,trays,43,190,10,3.5,0,35,75,24,1,18,2
+Chocolate Chunk Cookie and Chocolate Fudge Brownie Tray,0,0,trays,120,560,28,13,0,50,300,73,4,44,7
+Chilled Grilled Chicken Sub Sandwich,1,1,entree,230,440,12,5,0,90,840,47,0,10,35
+Spicy Chilled Grilled Chicken Sub Sandwich,1,1,entree,230,430,12,4.5,0,85,1190,48,1,10,32
+Catering Coffee,0,0,drinks,2722,0,0,0,0,0,80,0,0,0,0
+Barbeque Sauce,0,0,sauces,28,45,0,0,0,0,200,11,0,9,0
+Chick-fil-A® Sauce,0,0,sauces,28,140,13,2,0,10,170,7,0,6,0
+Garden Herb Ranch Sauce,0,0,sauces,28,140,15,2.5,0,15,210,1,0,1,1
+Honey Mustard Sauce,0,0,sauces,28,50,0,0,0,0,160,12,0,10,0
+Polynesian Sauce,0,0,sauces,28,110,6,1,0,0,220,14,0,12,0
+Sweet and Spicy Sriracha Sauce,0,0,sauces,28,45,0,0,0,0,380,11,0,10,0
+Zesty Buffalo Sauce,0,0,sauces,21,25,2.5,0,0,5,570,1,0,0,0
+Honey Roasted BBQ Sauce,0,0,sauces,12,60,5,1,0,5,75,3,0,2,0
+Avocado Lime Ranch Dressing,0,0,sauces,57,310,32,5,0,25,520,3,1,2,1
+Creamy Salsa Dressing,0,0,sauces,57,290,31,5,0,25,630,2,0,1,1
+Fat Free Honey Mustard Dressing,0,0,sauces,57,90,0,0,0,0,330,23,1,19,0
+Garden Herb Ranch Dressing,0,0,sauces,57,280,29,5,0,25,450,2,0,1,1
+Light Balsamic Vinaigrette Dressing,0,0,sauces,57,80,4,0.5,0,0,360,10,0,9,0
+Light Italian Dressing,0,0,sauces,57,25,1,0,0,0,470,3,0,2,0
+Zesty Apple Cider Vinaigrette Dressing,0,0,sauces,56,230,19,3,0,0,460,16,0,14,0
+Grilled Breakfast Filet,1,1,single_item,50,60,1,0,0,40,420,0,0,0,13
+Bacon,0,1,single_item,10,50,3.5,1.5,0,10,210,0,0,0,4
+Chick-fil-A® Breakfast Filet,1,1,single_item,72,160,8,1.5,0,45,750,8,0,2,15
+Sausage,0,1,single_item,57,240,22,8,0,35,430,1,0,0,11
+Grilled Filet,1,1,single_item,84,110,2,0,0,70,370,1,0,1,21
+Spicy Filet,1,1,single_item,120,280,13,2.5,0,65,1390,16,1,2,23
+Chick-fil-A® Filet,1,1,single_item,115,250,12,2.5,0,70,1120,12,0,1,24
+Lettuce,0,0,single_item,20,5,0,0,0,0,5,1,0,0,0
+Pickles,0,0,single_item,10,0,0,0,0,0,115,0,0,0,0
+Tomato,0,0,single_item,30,5,0,0,0,0,0,1,0,1,0
+American Cheese,0,0,single_item,14,50,4.5,2.5,0,15,230,1,0,0,3
+Colby Jack Cheese,0,0,single_item,21,80,7,4,0,20,140,0,0,0,5
+Pepper Jack Cheese,0,0,single_item,21,80,6,4,0,20,140,0,0,0,4
+Chili Lime Pepitas,0,0,single_item,14,80,7,1,0,0,50,2,1,0,4
+Crispy Bell Peppers,0,0,single_item,14,80,6,0,0,0,75,6,0,0,1
+Harvest Nut Granola,0,0,single_item,14,70,2,0,0,0,35,10,0,4,1
+Seasoned Tortilla Strips,0,0,single_item,14,70,4,0,0,0,55,8,1,0,1
+Lemon Parmesan Panko,0,0,single_item,0,0,0,0,0,0,0,0,0,0,0
+Saltines,0,0,single_item,6,25,0.5,0,0,0,90,5,0,0,0
