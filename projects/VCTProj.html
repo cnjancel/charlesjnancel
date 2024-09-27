@@ -3,38 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VCT Project</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <title>2023 Valorant Champions Tour Analysis</title>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../index.html">Home</a> | <a href="#projects">Projects</a>
+        <nav class="navbar">
+            <h1>2023 Valorant Champions Tour Analysis</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#discussion">Discussion</a></li>
+                <li><a href="#files">Files</a></li>
+            </ul>
         </nav>
-        <h1>VCT Project</h1>
     </header>
 
-    <section>
-        <h2>Project Overview</h2>
-        <p>This project involves visual communication techniques to convey complex data insights clearly and effectively.</p>
+    <section id="overview" class="section" data-aos="fade-up">
+        <h2>Overview</h2>
+        <p>This project analyzes data from the 2023 Valorant Champions Tour, focusing on key performance metrics of players and teams. The study examines factors such as win rates, individual player impact, team dynamics, and strategic elements that influenced match outcomes.</p>
     </section>
 
-    <section>
-        <h2>Key Features</h2>
+    <section id="results" class="section" data-aos="fade-up">
+        <h2>Results</h2>
+        <p>The analysis identifies top-performing players, highlights strategic plays, and reveals patterns that contribute to winning strategies. Key findings include the importance of agent selection, map control, and round economy management.</p>
+    </section>
+
+    <section id="discussion" class="section" data-aos="fade-up">
+        <h2>Discussion</h2>
+        <p>The insights from this analysis provide valuable perspectives for players, coaches, and analysts in the eSports community. Understanding the nuances of agent roles, team coordination, and individual performance metrics can guide strategic decision-making in future competitions.</p>
+    </section>
+
+    <section id="files" class="section" data-aos="fade-up">
+        <h2>Files and Reports</h2>
         <ul>
-            <li>Data Visualization</li>
-            <li>Design and Layout Optimization</li>
+            <li><a href="../Project/project2-VCT/vlr.ipynb" target="_blank">Jupyter Notebook Analysis</a></li>
+            <li><a href="../Project/project2-VCT/champions-tour-2023.csv" target="_blank">Champions Tour 2023 Data (CSV)</a></li>
+            <li><a href="../Project/project2-VCT/merged_data.csv" target="_blank">Merged Data (CSV)</a></li>
         </ul>
     </section>
 
-    <section>
-        <h2>Technical Details</h2>
-        <p>Technologies used: Adobe Illustrator, Tableau.</p>
-        <p><a href="https://github.com/cnjancel/charlesjnancel.github.io/tree/main/Project/project2-VCT">View Project on GitHub</a></p>
-    </section>
-
     <footer>
-        <p>© 2024 Charles | Built with GitHub Pages</p>
+        <p>© 2024 Charles Ancel | Built with GitHub Pages</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
