@@ -71,6 +71,45 @@
         </ul>
     </section>
 
+    <section id="visuals" class="section" data-aos="fade-up">
+        <h2>Visuals and Analysis</h2>
+    
+        <!-- Forecasted vs Real CPI -->
+        <div id="forecasted-vs-real">
+            <h3>Comparison of Forecasted CPI vs. Real CPI</h3>
+            <img src="../assets/images/output.png" alt="Comparison of Forecasted CPI vs. Real CPI" class="content-image">
+            <p>This graph compares the forecasted Consumer Price Index (CPI) with the actual CPI over time. The forecasted CPI (dashed line) closely follows the general trend of the real CPI (solid line), validating the model's ability to capture long-term inflation trends. However, deviations between the two lines highlight periods where unexpected economic factors, such as supply chain disruptions or fiscal policy changes, influenced inflation beyond the model's predictions. This visual underscores the importance of considering external factors in monetary policy decision-making.</p>
+        </div>
+    
+        <!-- CPI Forecast -->
+        <div id="cpi-forecast">
+            <h3>CPI Forecast</h3>
+            <img src="../assets/images/output1.png" alt="CPI Forecast" class="content-image">
+            <p>The CPI forecast chart provides a closer look at the historical and projected movements of the Consumer Price Index. The model's forecast (dashed line) aligns with past CPI trends, indicating its effectiveness in anticipating inflationary patterns. However, slight underestimations during economic booms suggest the need for model adjustments during periods of rapid economic growth. This reinforces the concept that monetary policy must be adaptable to unforeseen economic shifts.</p>
+        </div>
+    
+        <!-- Impulse Response Functions -->
+        <div id="impulse-responses">
+            <h3>Impulse Response Functions</h3>
+            <img src="../assets/images/output3.png" alt="Impulse Response Functions" class="content-image">
+            <p>The Impulse Response Functions (IRFs) depict how a shock to the federal funds rate affects key economic variables over time. Each panel shows the response of one variable (e.g., CPI, GDP, unemployment) to a one-standard-deviation shock in another variable (e.g., federal funds rate). The results indicate that a positive shock to the federal funds rate initially reduces inflation and GDP, while unemployment temporarily increases. These visualizations provide crucial insights into the timing and magnitude of monetary policy effects, helping to inform more precise policy actions.</p>
+        </div>
+    
+        <!-- Scenario Analysis: Federal Funds Rate Impact -->
+        <div id="scenario-analysis">
+            <h3>Scenario Analysis: Impact of a 1% Increase in the Federal Funds Rate</h3>
+            <img src="../assets/images/output2.png" alt="Scenario Analysis of Federal Funds Rate Impact" class="content-image">
+            <p>This scenario analysis simulates a 1% increase in the federal funds rate and its subsequent effects on CPI, GDP, and unemployment. The analysis demonstrates that the initial tightening effect slows inflation but at the cost of reduced GDP growth and higher unemployment. This visual aids in understanding the complex trade-offs inherent in monetary policy decisions and highlights the need for balanced approaches that minimize adverse impacts on the economy.</p>
+        </div>
+    
+        <!-- Forecast Error Variance Decomposition -->
+        <div id="variance-decomposition">
+            <h3>Forecast Error Variance Decomposition</h3>
+            <img src="../assets/images/output4.png" alt="Forecast Error Variance Decomposition" class="content-image">
+            <p>The Forecast Error Variance Decomposition chart breaks down the proportion of variance in each variable that can be attributed to shocks in other variables. For example, a significant portion of the forecast variance in GDP can be attributed to changes in the federal funds rate, emphasizing the interconnected nature of these economic indicators. This analysis helps policymakers understand which variables exert the most influence over time, guiding more targeted interventions.</p>
+        </div>
+    </section>    
+
     <footer>
         <p>© 2024 Charles Ancel | Built with GitHub Pages</p>
     </footer>
