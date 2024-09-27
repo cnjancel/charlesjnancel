@@ -1,8 +1,8 @@
 /* Brand Colors */
 :root {
     --primary-color: #333; /* Dark Gray for primary text and sections */
-    --secondary-color: #0073e6; /* Blue for main elements like navbar and buttons */
-    --accent-color: #2E8B57; /* Sea Green as an accent */
+    --secondary-color: #0066CC; /* Blue for main elements like navbar and buttons */
+    --accent-color: #28774A; /* Sea Green as an accent */
     --background-color: #f4f4f4; /* Light Gray for backgrounds */
 }
 
