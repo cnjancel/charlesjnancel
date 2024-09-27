@@ -3,54 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles.css">
-    <title>STAT 420 - College Football Performance</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>College Football Performance Analysis</title>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <h1>STAT 420 - College Football Performance Dynamics</h1>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#results">Results</a></li>
-                <li><a href="#discussion">Discussion</a></li>
-                <li><a href="#files">Files</a></li>
-            </ul>
-        </nav>
+        <h1>College Football Performance Dynamics</h1>
     </header>
-
-    <section id="overview" class="section" data-aos="fade-up">
-        <h2>Overview</h2>
-        <p>This project delves into two decades of college football games, exploring factors influencing team performance and the excitement level of games. Key data points include team scores, game dates, and an 'excitement index,' which helps in understanding the dynamics of audience engagement.</p>
-    </section>
-
-    <section id="results" class="section" data-aos="fade-up">
-        <h2>Results</h2>
-        <p>The analysis highlights key factors such as home and away ELO ratings, showing strong connections with game outcomes. The 'excitement index' was found to significantly correlate with audience engagement, suggesting more thrilling games attract larger audiences.</p>
-    </section>
-
-    <section id="discussion" class="section" data-aos="fade-up">
-        <h2>Discussion</h2>
-        <p>Our findings offer valuable insights for teams and stakeholders. Recognizing the influence of ELO ratings can guide performance strategies, while understanding the excitement index's impact helps optimize audience engagement tactics.</p>
-    </section>
-
-    <section id="files" class="section" data-aos="fade-up">
-        <h2>Files and Reports</h2>
+    <nav>
         <ul>
-            <li><a href="../ImpCWork/Stat420/CFBProj/Executive Summary/Charles_Ancel_STAT420_ExecutiveSummary.pdf" target="_blank">Executive Summary PDF</a></li>
-            <li><a href="../ImpCWork/Stat420/CFBProj/STAT420Proj.pdf" target="_blank">Full Project Report PDF</a></li>
-            <li><a href="../ImpCWork/Stat420/CFBProj/STAT420Proj.html" target="_blank">HTML Report</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data Description</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="summary.html">Executive Summary</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
         </ul>
-    </section>
+    </nav>
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>Welcome to the College Football Performance Analysis project. This project provides a comprehensive analysis of college football games over the past twenty years, exploring various factors influencing game dynamics and team performance.</p>
+        </section>
 
+        <!-- Executive Summary -->
+        <section>
+            <h2>Executive Summary</h2>
+            <p>This report delves deeply into a dataset that covers twenty years of college football games, marked by significant changes and advancements in the sport. Our analysis utilizes this data to explore factors influencing team performance and the excitement level of the games.</p>
+            <p>Our findings emphasize the importance of ELO ratings and the excitement index in predicting game outcomes and audience engagement, providing invaluable insights for stakeholders in the college football industry.</p>
+        </section>
+
+        <!-- Analysis and Data Preparation -->
+        <section>
+            <h2>Data Loading and Preparation</h2>
+            <p>The dataset was meticulously cleaned and prepared to ensure accuracy. Key steps included removing columns with high missingness, imputing missing values for critical variables such as attendance and excitement index, and filtering out rows with missing ELO ratings.</p>
+        </section>
+
+        <!-- Visual Insights -->
+        <section>
+            <h2>Visual Insights</h2>
+            <div class="graph-container">
+                <figure>
+                    <img src="assets/images/unnamed-chunk-11-1.png" alt="Residuals vs Fitted Plot">
+                    <figcaption>Figure 1: Residuals vs Fitted Plot - Assessing model fit quality.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/unnamed-chunk-13-1.png" alt="Q-Q Plot of Residuals">
+                    <figcaption>Figure 2: Q-Q Plot - Evaluating normality of residuals.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/unnamed-chunk-16-1.png" alt="Scale-Location Plot">
+                    <figcaption>Figure 3: Scale-Location Plot - Checking homoscedasticity of residuals.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/unnamed-chunk-19-1.png" alt="Residuals vs Leverage Plot">
+                    <figcaption>Figure 4: Residuals vs Leverage Plot - Identifying influential observations.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/unnamed-chunk-26-1.png" alt="Histogram of Total Wins">
+                    <figcaption>Figure 5: Histogram of Total Wins - Distribution of wins across teams.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/unnamed-chunk-26-2.png" alt="Correlation Plot">
+                    <figcaption>Figure 6: Correlation Plot - Assessing relationships between performance metrics.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>Despite the comprehensive nature of the dataset, potential exclusions of factors like weather conditions or player injuries can impact game outcomes. Future analyses could explore these additional variables or employ advanced statistical methods to enhance understanding.</p>
+            <p>Stakeholders should be cautious in applying these insights, considering potential biases and dataset limitations.</p>
+        </section>
+    </main>
     <footer>
-        <p>© 2024 Charles Ancel | Built with GitHub Pages</p>
+        <p>&copy; 2024 Charles Ancel</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 800,
+            offset: 200,
+            once: true,
+        });
     </script>
 </body>
 </html>
