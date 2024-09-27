@@ -3,39 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Federal Reserve Project</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <title>Federal Reserve Economic Analysis</title>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../index.html">Home</a> | <a href="#projects">Projects</a>
+        <nav class="navbar">
+            <h1>Federal Reserve Economic Analysis</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#policy-implications">Policy Implications</a></li>
+                <li><a href="#limitations">Limitations and Future Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        <h1>Federal Reserve Project</h1>
     </header>
 
-    <section>
-        <h2>Project Overview</h2>
-        <p>This project analyzes the Federal Reserve's policies and their economic impact, with a focus on monetary policy and financial stability.</p>
+    <section id="overview" class="section" data-aos="fade-up">
+        <h2>Overview</h2>
+        <p>This analysis explores the dynamic effects of monetary policy on key economic variables such as inflation (CPI), GDP, and unemployment using a Vector Autoregression (VAR) model. The study assesses the responses of these indicators to shocks in the federal funds rate, providing insights into the trade-offs faced by policymakers when adjusting monetary policy.</p>
     </section>
 
-    <section>
-        <h2>Key Features</h2>
+    <section id="methodology" class="section" data-aos="fade-up">
+        <h2>Methodology</h2>
+        <p>The analysis employed a VAR model to examine the interrelationships between the federal funds rate, CPI, GDP, and unemployment. Here’s a deeper look into the methodological approach:</p>
         <ul>
-            <li>Policy Analysis</li>
-            <li>Data Interpretation and Forecasting</li>
+            <li><strong>Data Collection and Preparation:</strong> Historical data from FRED on the federal funds rate, CPI, GDP, and unemployment were collected. Each series was examined for stationarity, and necessary transformations (e.g., differencing) were applied to achieve stationarity, as verified by Augmented Dickey-Fuller (ADF) tests.</li>
+            <li><strong>Lag Selection and Model Fit:</strong> The optimal lag length was determined using the Akaike Information Criterion (AIC), which balances model fit and complexity. This step ensures that the VAR captures relevant historical dependencies without overfitting.</li>
+            <li><strong>Impulse Response Functions (IRFs):</strong> IRFs were used to trace the effects of a one-time shock to the federal funds rate on other variables over time, showing how these effects dissipate or accumulate across periods.</li>
+            <li><strong>Forecast Error Variance Decomposition:</strong> This technique quantified the proportion of forecast variance in each variable attributed to shocks in other variables, highlighting the interconnectedness of monetary policy with economic outcomes.</li>
+            <li><strong>Sensitivity and Robustness Checks:</strong> The model’s robustness was tested by altering lag lengths and including additional economic variables such as oil prices to see if the primary results held consistent.</li>
         </ul>
     </section>
 
-    <section id="files" class="section" data-aos="fade-up">
-        <h2>Files and Reports</h2>
+    <section id="results" class="section" data-aos="fade-up">
+        <h2>Results</h2>
+        <p>The results from the VAR model reveal the complexities of monetary policy's impact on the economy. Here is a detailed breakdown:</p>
         <ul>
-            <li><a href="../assets/files/FedReserveAnalysis.pdf" target="_blank">Federal Reserve Analysis PDF</a></li>
+            <li><strong>Impact on CPI:</strong> The model shows that an increase in the federal funds rate leads to a gradual reduction in CPI, consistent with contractionary monetary policy lowering inflation. However, the effect is delayed, typically peaking several quarters after the initial rate change.</li>
+            <li><strong>Impact on GDP:</strong> A rise in the federal funds rate initially dampens GDP growth, reflecting the cost of borrowing increases and reduced consumer spending. The effect is most pronounced in the short term, with the economy gradually adjusting back to trend.</li>
+            <li><strong>Impact on Unemployment:</strong> Unemployment rises following a rate hike, demonstrating the trade-off between controlling inflation and maintaining employment levels. The effect diminishes over time as the economy adjusts to new policy settings.</li>
+            <li><strong>Forecast Accuracy:</strong> The VAR model closely follows historical trends but shows limitations in predicting abrupt economic shocks, such as those caused by sudden geopolitical events or supply chain disruptions.</li>
+            <li><strong>Scenario Analysis:</strong> A hypothetical 1% rate increase scenario indicated a peak impact on CPI within 4-6 quarters and a similar response period for GDP and unemployment adjustments.</li>
         </ul>
-    </section>    
+    </section>
+
+    <section id="policy-implications" class="section" data-aos="fade-up">
+        <h2>Policy Implications</h2>
+        <p>The findings have several implications for policymakers:</p>
+        <ul>
+            <li><strong>Monetary Policy Lag:</strong> Policymakers must consider the delayed effects of rate changes on inflation and economic growth. The results suggest that rate adjustments should be forward-looking, anticipating future economic conditions rather than reacting to current data alone.</li>
+            <li><strong>Trade-offs in Monetary Tightening:</strong> The temporary rise in unemployment following rate hikes highlights the social costs associated with contractionary policy. These effects should be weighed carefully, particularly during periods of economic fragility.</li>
+            <li><strong>Flexibility in Policy Decisions:</strong> Given the varied responses across time and indicators, flexible policy frameworks that allow for gradual adjustments rather than abrupt rate changes may help mitigate adverse impacts on GDP and employment.</li>
+        </ul>
+    </section>
+
+    <section id="limitations" class="section" data-aos="fade-up">
+        <h2>Limitations and Future Research</h2>
+        <ul>
+            <li><strong>Model Limitations:</strong> The VAR model, while powerful, assumes linear relationships and may not fully capture the complexities of monetary transmission mechanisms, particularly during periods of economic stress or rapid technological change.</li>
+            <li><strong>Exclusion of External Shocks:</strong> The analysis does not explicitly account for external factors such as global trade dynamics or fiscal policy shifts, which could significantly influence the observed economic responses.</li>
+            <li><strong>Future Research Directions:</strong> Expanding the model to include additional variables such as consumer confidence, housing market data, or global commodity prices could provide a more comprehensive understanding of monetary policy impacts.</li>
+            <li><strong>Nonlinear Effects:</strong> Future research could explore nonlinear models, such as threshold VARs, to assess whether the impact of monetary policy differs during periods of high vs. low economic volatility.</li>
+        </ul>
+    </section>
 
     <footer>
-        <p>© 2024 Charles | Built with GitHub Pages</p>
+        <p>© 2024 Charles Ancel | Built with GitHub Pages</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
