@@ -6,24 +6,56 @@
     --background-color: #f4f4f4; /* Light Gray for backgrounds */
 }
 
+/* Basic Styles */
 body {
     font-family: 'Arial', sans-serif;
     color: var(--primary-color);
     background-color: var(--background-color);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
-.navbar, footer {
-    background: var(--secondary-color);
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Sticks the navbar at the top while scrolling */
+    top: 0;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background: var(--accent-color);
     color: #fff;
 }
 
-h1, h2 {
-    text-align: center;
-    color: var(--primary-color);
+/* Header and Hero Section */
+header h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0;
 }
 
 .hero {
-    background: var(--secondary-color);
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
     color: #fff;
     padding: 100px 20px;
     text-align: center;
@@ -47,12 +79,14 @@ h1, h2 {
     background-color: var(--secondary-color);
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #005bb5;
+    background-color: #004d00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* About Me Section */
@@ -101,11 +135,10 @@ h1, h2 {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Project Image Styles */
 .project-image {
     width: 100%;
     height: 180px;
@@ -118,25 +151,21 @@ h1, h2 {
     transform: scale(1.05);
 }
 
-/* Project Title */
 .project-card h3 {
     font-size: 1.4rem;
     margin: 1rem 0 0.5rem;
-    color: var(--primary-color);
 }
 
-/* Project Description */
 .project-card p {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
-/* Project Button */
 .project-btn {
     text-decoration: none;
     color: #fff;
-    background-color: var(--accent-color); /* Green accent */
+    background-color: var(--secondary-color);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -144,7 +173,7 @@ h1, h2 {
 }
 
 .project-btn:hover {
-    background-color: #228B22; /* Darker Green for hover effect */
+    background-color: var(--accent-color);
 }
 
 /* Skills Section */
@@ -155,18 +184,18 @@ h1, h2 {
 }
 
 .skill-item {
-    background: var(--accent-color); /* Use light green for skills */
+    background: var(--accent-color);
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
     font-weight: bold;
-    color: #fff; /* White text for contrast */
+    color: #fff;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
