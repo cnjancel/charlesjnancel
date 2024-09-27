@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <title>FTD Profitability Analysis</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>FTD Profitability Analysis</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#visuals">Visuals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="overview" class="section" data-aos="fade-up">
+        <h2>Overview</h2>
+        <p>The FTD Profitability Analysis page provides insights into various projects aimed at enhancing FTD’s financial performance. Key analyses include evaluating current and new SRPs (Suggested Retail Prices), adjusting pricing formulas, and optimizing cost structures for Sympathy and EDay categories.</p>
+    </section>
+
+    <section id="projects" class="section" data-aos="fade-up">
+        <h2>Key Projects</h2>
+        <ul>
+            <li><strong>FTD Profitability Analysis:</strong> An in-depth review of current profitability metrics, focusing on cost adjustments and SRP recalibration.</li>
+            <li><strong>Sympathy and EDay Pricing Adjustments:</strong> Comparative analysis of current vs. new SRPs for key categories, including visualizations that highlight the impact of pricing changes.</li>
+            <li><strong>Formula Implementation:</strong> Applying new pricing formulas based on the 75th percentile margin to ensure competitive and profitable pricing strategies.</li>
+        </ul>
+    </section>
+
+    <section id="visuals" class="section" data-aos="fade-up">
+        <h2>Visuals and Analysis</h2>
+
+        <!-- Sympathy: Current SRP vs New SRP -->
+        <div id="sympathy-srp">
+            <h3>Sympathy: Current SRP vs New SRP</h3>
+            <img src="../assets/images/sympathy_plot.png" alt="Sympathy Current SRP vs New SRP" class="content-image">
+            <p>This graph illustrates the adjustments made to the Sympathy category’s SRP based on updated cost metrics and profitability targets.</p>
+        </div>
+
+        <!-- EDay: Current SRP vs New SRP -->
+        <div id="eday-srp">
+            <h3>EDay: Current SRP vs New SRP</h3>
+            <img src="../assets/images/eday_plot.png" alt="EDay Current SRP vs New SRP" class="content-image">
+            <p>The chart shows the changes in SRP for EDay products, ensuring alignment with updated cost and pricing formulas.</p>
+        </div>
+
+        <!-- Combined Sympathy and EDay SRP Comparison -->
+        <div id="combined-srp">
+            <h3>Combined Sympathy and EDay SRP Comparison</h3>
+            <img src="../assets/images/EDay+Sympathy SRP.png" alt="Combined Sympathy and EDay SRP Comparison" class="content-image">
+            <p>This side-by-side comparison shows the SRP adjustments for both Sympathy and EDay categories, highlighting the impact of the new pricing strategies.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Charles Ancel | Built with GitHub Pages</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
